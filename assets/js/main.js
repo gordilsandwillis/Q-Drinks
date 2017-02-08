@@ -113,7 +113,7 @@ document.addEventListener('scroll', function(event) {
       var sectionHeight = parallaxBlock[i].clientHeight;
       console.log(sectionHeight);
       if (sectionTop < windowHeight && sectionBottom > 0) {
-        var speed = (sectionHeight/4)/(windowHeight + sectionHeight);
+        var speed = (sectionHeight/4)/(windowHeight - 150 + sectionHeight);
         section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
       }
     }
@@ -129,7 +129,7 @@ document.addEventListener('scroll', function(event) {
       var sectionHeight = parallaxBlock[i].clientHeight;
       console.log(sectionHeight);
       if (sectionTop < windowHeight && sectionBottom > 0) {
-        var speed = (sectionHeight/-4)/(windowHeight + sectionHeight);
+        var speed = (sectionHeight/-4)/(windowHeight - 150 + sectionHeight);
         section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
       }
     }
