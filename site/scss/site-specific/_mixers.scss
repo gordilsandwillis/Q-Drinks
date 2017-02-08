@@ -1,0 +1,53 @@
+main.mixers {
+	.top-area {
+		.top-image {
+			height: 30vh;
+			min-height: 200px;
+			@include respond($md) {
+				height: 40vh;
+				min-height: 400px;
+			}
+		}
+	}
+	.mixer-list {
+		.col {
+			width: 50%;
+			margin-bottom: $margin;
+			img {
+				width: 300px;
+			}
+			@include respond($sm) {
+				width: 50%;
+			}
+			@include respond($md) {
+				width: 33.333%;
+			}
+		}
+	}
+}
+
+.mixer-list {
+	a {
+		display: block;
+		border: none;
+		&:hover {
+			opacity: .8;
+			img {
+				// transform: scale(1.05);
+				transform: translate3d(0, -10px, 0);
+			}
+			+ .thumb-title {
+				border-color: $text-color;
+			}
+		}
+	}
+	img {
+		transition: transform $med-speed $ease;
+	}
+	.thumb-title {
+		border-bottom: 1px solid transparent;
+		display: inline-block;
+		transition: border $med-speed $ease;
+		padding-bottom: .25em;
+	}
+}

@@ -1,0 +1,32 @@
+main.inspiration {
+	.container.very-narrow {
+		max-width: 36em;
+	}
+	.text-wrap {
+		&:after {
+			content: '';
+			display: block;
+			width: 2rem;
+			height: 2px;
+			background: $text-color;
+			margin: 1em auto 0;
+		}
+		@include respond($md) {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.inspiration-text {
+		.container {
+			padding: $margin 0 0;
+		}
+	}
+
+	.signature {
+		margin: 1.5rem 0;
+		image {
+			max-width: 200px;
+		}
+	}
+}

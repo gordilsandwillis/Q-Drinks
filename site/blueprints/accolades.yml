@@ -1,0 +1,28 @@
+title: Accolades
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  headerImage:
+    label: Header Image
+    type: image
+
+  builder:
+    label: Ingredients
+    type: builder
+    fieldsets:
+      accoladeBlock:
+        label: Add Accolade
+        snippet: sections/accoladeBlock
+        fields:
+          quote: 
+            label: Quote <span class="panel-field-description">leave out the quotation marks</span>
+            type: text
+          by: 
+            label: By <span class="panel-field-description">leave out the "—"</span>
+            type: text
+            width: 1/2

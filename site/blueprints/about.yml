@@ -1,0 +1,52 @@
+title: About
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  headerImage:
+    label: Header Image
+    type: image
+
+  availablityIntro:
+    label: Availablity Intro
+    type: textarea
+    buttons: false
+
+  logos:
+    label: Logos
+    type: builder
+    fieldsets:
+      logoBlock:
+        label: Add Logo
+        snippet: sections/logoBlock
+        fields:
+          logoImage:
+            label: Logo
+            type: image
+
+  packageIntro:
+    label: Package Configurations Intro
+    type: textarea
+    buttons: false
+
+  packageTypes:
+    label: Package
+    type: builder
+    fieldsets:
+      packageBlock:
+        label: Add Package
+        snippet: sections/packageBlock
+        fields:
+          packageImage:
+            label: Image
+            type: image
+          volume:
+            label: Volume
+            type: text
+          flavors:
+            label: Flavors Availablity
+            type: text

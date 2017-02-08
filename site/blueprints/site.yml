@@ -1,0 +1,36 @@
+title: Site
+
+pages: true
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  author:
+    label: Author
+    type:  text
+
+  description:
+    label: Description
+    type:  textarea
+    
+  email:
+    label: Email
+    type:  email
+
+  phone:
+    label: Phone
+    type:  text
+
+  instagramUrl:
+    label: Instagram URL
+    type: url
+  
+  facebookUrl:
+    label: Facebook URL
+    type: url
+
+  twitterUrl:
+    label: Twitter URL
+    type: url

@@ -1,0 +1,15 @@
+footer {
+	background: white;
+	.container {
+		padding: 20px 0;
+		a {
+			text-transform: uppercase;
+			letter-spacing: $very-tracked-out;
+			font-weight: 700;
+			font-size: 10px;
+			@include respond($huge) {
+				font-size: 12px;
+			}
+		}
+	}
+}

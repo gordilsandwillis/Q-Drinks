@@ -1,0 +1,51 @@
+title: Recipe
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  image:
+    label: Image
+    type:  image
+
+  recipeMixer:
+    label: Q Mixer
+    type: select
+    options: query
+    query:
+      page: mixers/
+
+  ingredients:
+    label: Ingredients
+    type: builder
+    fieldsets:
+      ingredient:
+        label: Add Ingredient
+        fields:
+          ingredient:
+            label: Add Ingredient
+            type: text
+
+  servings:
+    label: Serving
+    type: text
+
+  method:
+    label: Method
+    type: builder
+    fieldsets:
+      recipeStepBlock:
+        label: Add Step
+        fields:
+          step:
+            label: Instructions
+            type: textarea
+            buttons: false
+
+  variations:
+    label: Variations
+    type: textarea
+    buttons: false

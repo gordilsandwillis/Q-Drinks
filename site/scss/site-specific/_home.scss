@@ -1,0 +1,36 @@
+.home {
+	.text-overlay {
+		color: #fff;
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: calc(100px + 20%);
+		right: 0;
+		z-index: 2;
+		text-align: center;
+		display: block;
+		h1 {
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: $tracked-out;
+			font-size: 1.25rem;
+			line-height: 1.5em;
+			@include font-smooth();
+			max-width: 12.5em;
+			margin: 0 auto;
+			padding-bottom: 5em;
+			@include respond($sm) {
+				font-size: 1.65rem;
+			}
+			@include respond($md) {
+				font-size: 2.125rem;
+			}
+			@include respond($lg) {
+				max-width: 17.5em;
+			}
+			@include respond($xlg) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}

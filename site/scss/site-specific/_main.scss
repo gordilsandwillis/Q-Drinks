@@ -1,0 +1,256 @@
+.container.narrow {
+	max-width: 1200px;
+}
+
+.container.very-narrow {
+	max-width: 800px;
+}
+
+.cc {
+	padding-top: $collapsed-header-height;
+	@include respond($md) {
+		padding-top: 120px;
+	}
+	@include respond($lg) {
+		padding-top: $header-height;
+	}
+	&.inverted,
+	&.transparent {
+		padding-top: 0;
+	}
+}
+
+.bg-image {
+	background-position: center;
+	background-size: cover;
+	min-height: 200px;
+	img {
+		display: none;
+	}
+}
+
+main {
+	background: $grey-bg;
+	&.padded-bottom {
+		padding-bottom: $margin;
+	}
+}
+
+.top-area {
+	position: relative;
+	.top-image {
+		min-height: 250px;
+		height: 40vh;
+		position: relative;
+		background: #000;
+		overflow: hidden;
+		&.push-down {
+			margin-bottom: $margin;
+			@include respond($md) {
+				margin-bottom: 0;
+			}
+		}
+		@include respond($md) {
+			min-height: 400px;
+			height: 70vh;
+		}
+		&.full-height {
+			height: 100vh;
+		}
+		.bg-image {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+	.text-overlay {
+		.text-wrap {
+			@include respond($md) {
+				max-width: 22em;
+				margin: 0 auto;
+				@include font-smooth();
+				&.right {
+					float: right;
+				}
+			}	
+		}
+		@include respond($md) {
+			color: #fff;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			text-align: center;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.section-header {
+	text-align: center;
+	.container {
+		padding: 3rem 0;
+		@include respond($md) {
+			padding: 4.5rem 0 4.75rem;
+		}
+		@include respond($xlg) {
+			padding: 6rem 0 6rem;
+		}
+	}
+	h1, h2, h3 {
+		text-transform: uppercase;
+		letter-spacing: .15em;
+		font-weight: 900;
+		font-size: 1.5rem;
+		line-height: 1.333em;
+		margin: 0;
+		@include respond($md) {
+			font-size: 2rem;
+		}
+	}
+}
+
+section {
+	&.white {
+		background: #fff;
+		.alternating-blocks {
+			&:last-child {
+				padding-bottom: $margin;
+			}
+		}
+	}
+	&.grey {
+		background: $grey-bg;
+	}
+}
+
+section.alternating-blocks {
+	+ section.alternating-blocks {
+		padding-top: $margin;
+	}
+	.row {
+		@include respond($md) {
+			position: relative;
+		}
+		.col,
+		*[class^="col-"] {
+			&:nth-child(even) {
+				@include respond($md) {
+					position: absolute !important;
+					height: 100%;
+				}
+				.info {
+					align-items: center;
+					@include respond($md) {
+						display: flex;
+						height: 100%;
+					}
+					div {
+						width: 80%;
+						max-width: 300px;
+						margin: 0 auto 1rem;
+						&.centered {
+							text-align: center;
+						}
+						h5 {
+							font-size: 18px;
+							font-weight: 900;
+							text-transform: uppercase;
+							letter-spacing: $tracked-out;
+							margin-bottom: 1em;
+							@include respond($md) {
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&:nth-child(even) {
+		.row {
+			.col,
+			*[class^="col-"] {
+				&:nth-child(odd) {
+					float: right !important;
+				}
+			}
+		}
+	}
+}
+
+.thumb-title {
+	display: block;
+	margin-top: 1.5em;
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: $tracked-out;
+	font-weight: 900;
+	line-height: 1.333em;
+	margin-bottom: .5em;
+	@include respond($md) {
+		font-size: 14px;
+	}
+}
+
+.newsletter-form {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	max-width: 350px;
+	input.newsletter-signup {
+		-webkit-appearance: none;
+		appearance: none;
+		border: 2px solid $text-color;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: $tracked-out;
+		font-weight: 700;
+		outline: none;
+		height: 40px;
+		padding: 0 12px;
+		width: 100%;
+	}
+	button.newsletter-submit {
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-indent: -9999px;
+		overflow: hidden;
+		border: none;
+		background: transparent;
+		&:hover {
+			background: $text-color;
+			&:after {
+				border-color: #fff;
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 24px;
+			left: 23px;
+			border-right: 2px solid $text-color;
+			border-bottom: 2px solid $text-color;
+			transform: rotate(-45deg);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

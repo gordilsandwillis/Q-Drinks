@@ -1,0 +1,43 @@
+.builder-entries {
+	img, video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+	.builder-entry-content section {
+		margin: -1em -1.5em;
+		border-radius: 4px 4px 0 0;
+		overflow: hidden;
+		.ingredient-block  {
+			background: #fdfdfd;
+			img {
+				
+			}
+			.col-6 {
+				@include respond($md) {
+					width: 50%;
+					display: inline-block;
+					margin-right: -4px;
+					vertical-align: middle;
+				}
+			}
+			.info {
+				text-align: center;
+				display: block;
+				padding: 30px;
+				@include respond($md) {
+					padding: 50px;
+				}
+				h5 {
+					margin-bottom: 10px;
+				}
+				p {
+					margin-bottom: 0;
+					+ {
+						margin-top: 1em;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+title: Highball
+
+pages:
+  hide: true
+  template: recipe
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  headerImage:
+    label: Header Image
+    type: image
+
+  recipes:
+    label: Recipes
+    type: subpagelist

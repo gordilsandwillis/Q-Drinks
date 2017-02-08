@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Futura';
+  src:  url('../fonts/futura-std-book.woff') format('woff'),
+  			url('../fonts/futura-std-book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// change to medium if necessary
+@font-face {
+  font-family: 'Futura';
+  src:  url('../fonts/futura-std-heavy.woff') format('woff'),
+        url('../fonts/futura-std-heavy.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src:  url('../fonts/futura-std-bold.woff') format('woff'),
+        url('../fonts/futura-std-bold.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}

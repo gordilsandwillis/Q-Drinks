@@ -1,0 +1,23 @@
+title: Mixers
+
+files: true
+
+pages: false
+  hide: true
+  template: mixer
+
+options: 
+  template: false  
+  status: false  
+  url: false  
+
+fields:
+  title:
+    label: Page Title
+    type:  text
+  headerImage:
+    label: Header Image
+    type: image
+  mixers:
+    label: Mixers
+    type: subpagelist

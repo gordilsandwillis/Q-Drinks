@@ -1,0 +1,170 @@
+.project.main {
+	clip: rect(0, auto, auto, 0);
+}
+
+.header.project {
+	display: flex;
+	align-items: center;
+	align-items: stretch;
+	height: 20vh;
+	min-height: 140px;
+	width: 100%;
+	div.left,
+	div.right {
+		a {
+			height: 20vh;
+			min-height: 140px;
+			position: fixed;
+			z-index: 10;
+			width: $margin;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			border: none;
+			font-size: 1em;
+			line-height: 1em;
+			padding: 0;
+			svg {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+				* {
+					fill: red !important;
+				}
+			}
+		}
+	}
+	div.left {
+		line-height: 1em;
+		flex-grow: 0;
+		width: $margin;
+	}
+	div.center {
+		line-height: 1em;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		h1 {
+			font-size: 1em;
+			margin: 0 0 3px 0;
+		}
+	}
+	div.right {
+		line-height: 1em;
+		flex-grow: 0;
+		width: $margin;
+	}
+}
+
+.project-images {
+	*[class^="col"] {
+		margin-bottom: $margin;
+	}
+
+	.col-6 {
+		@include respond($md) {
+			&.no-gutter {
+				padding-left: 0 !important;
+		    padding-right: 0 !important;
+		    margin-left: -3px !important;
+		    margin-right: -3px !important;
+		    width: calc(50% - (#{$gutter}/2 - 1px)) !important;
+		    .web-layout,
+		    .mobile {
+		    	padding: 12% 6% 12% 12%;
+		    }
+		    &.on-right {
+		    	.web-layout,
+		    	.mobile {
+			    	padding: 12% 12% 12% 6%;
+			    }	
+		    }
+			}
+		}
+	}
+
+	.col-4 {
+		@include respond($md) {
+			&.no-gutter {
+				padding-left: 0 !important;
+		    padding-right: 0 !important;
+		    margin-left: -3px !important;
+		    margin-right: -3px !important;
+		    width: calc(33.333% - #{$gutter / 3}) !important;
+		    .web-layout,
+		    .mobile {
+		    	padding: 18% 6% 18% 18%;
+		    }
+		    &.on-right {
+		    	.web-layout,
+		    	.mobile {
+			    	padding: 18% 18% 18% 6%;
+			    }	
+		    }
+		    &.in-middle {
+		    	.web-layout,
+		    	.mobile {
+			    	padding: 18% 12%;
+			    }	
+		    }
+			}
+		}
+	}
+
+	.image-block {
+		&.web-layout,
+		&.mobile {
+			background: #ccc;
+			padding: 7%;
+			@include respond($md) {
+				padding: 12%;
+			}
+			img, video {
+				border-radius: 2px;
+			}
+		}
+		&.mobile {
+			img, video {
+				max-height: 76vh;
+			}
+		}
+		img,
+		video {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.logo {
+		img {
+			height: 80vh;
+			max-height: 800px;
+		}
+	}
+
+}
+
+.project-footer {
+	.inline-grid,
+	.row {
+		padding-top: $container-margin;
+	}
+	.project-thumb {
+		a,
+		.dead-link {
+			height: 65vw;
+			min-height: none;
+			@include respond($md) {
+				height: 30vw;
+			}
+			&:hover {
+				+ .project-title {
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}

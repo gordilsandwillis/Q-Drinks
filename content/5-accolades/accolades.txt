@@ -1,0 +1,34 @@
+Title: Accolades
+
+----
+
+Text: 
+
+----
+
+Headerimage: q-placeholder-1.jpg
+
+----
+
+Builder: 
+
+- 
+  quote: Upgrade your fizz
+  by: Bon Appetit
+  _fieldset: accoladeBlock
+- 
+  quote: Revelatory
+  by: Wall Street Journal
+  _fieldset: accoladeBlock
+- 
+  quote: Makes a more elegant drink
+  by: New York Times
+  _fieldset: accoladeBlock
+- 
+  quote: Revelatory
+  by: Wall Street Journal
+  _fieldset: accoladeBlock
+- 
+  quote: Makes a more elegant drink
+  by: New York Times
+  _fieldset: accoladeBlock

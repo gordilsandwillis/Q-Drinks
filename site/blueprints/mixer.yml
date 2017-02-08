@@ -1,0 +1,56 @@
+title: Mixer
+
+files:
+  sortable: true
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  thumbnail:
+    label: Thumbnail
+    type:  image 
+
+  mixerColor:
+    label: Mixer Color <span class="panel-field-description">See brand guide for hex value</span>
+    type: color
+    default: '#cccccc'
+
+  mixerImage:
+    label: Open Bottle Image
+    type: image
+
+  description:
+    label: Intro Description
+    type: textarea
+    buttons: false
+
+  builder:
+    label: Ingredients
+    type: builder
+    fieldsets:
+      ingredientBlock:
+        label: Add Ingredient
+        snippet: sections/ingredientBlock
+        fields:
+          picture:
+            label: Image
+            type: image
+          title: 
+            label: Title
+            type: textarea
+            width: 1/2
+          description: 
+            label: Description
+            type: textarea
+            width: 1/2
+
+  mixerRecipes:
+    label: Recipes
+    type: checkboxes
+    options: query
+    query:
+      page: highball/

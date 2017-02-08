@@ -1,0 +1,64 @@
+Title: Grapefruit
+
+----
+
+Thumbnail: q-drink-1.jpg
+
+----
+
+Thumbsize: auto
+
+----
+
+Thumbstyle: normal
+
+----
+
+Thumbmattecolor: #cccccc
+
+----
+
+Mattecolor: #e3e3e3
+
+----
+
+Tags: 
+
+----
+
+Builder: 
+
+- 
+  picture: q-ingredient-1.jpg
+  title: Kola Nut
+  description: >
+    Beneath the purple-spotted yellow
+    flowers, is a seedpod. Within this pod
+    are sweet-smelling but bitter-tasting
+    nuts that contains natural caffeine.
+  _fieldset: ingredientBlock
+- 
+  picture: q-ingredient-1.jpg
+  title: Kola Nut
+  description: >
+    Beneath the purple-spotted yellow
+    flowers, is a seedpod. Within this pod
+    are sweet-smelling but bitter-tasting
+    nuts that contains natural caffeine.
+  _fieldset: ingredientBlock
+
+----
+
+Mixercolor: #ffc99b
+
+----
+
+Mixerimage: 
+
+----
+
+Description: 
+
+----
+
+Mixerrecipes: 

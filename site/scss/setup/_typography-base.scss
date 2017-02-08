@@ -1,0 +1,65 @@
+html, form, textarea, input, input[type="text"], input[type="search"], input[type="password"], input[type="email"], button, select {
+  font-family: $main-font;
+  text-rendering: auto; 
+}
+
+.font-smooth {
+  @include font-smooth();
+}
+
+body{ 
+  -webkit-text-size-adjust:none; 
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  font-weight: normal;
+}
+
+a { 
+  text-decoration: none; 
+  color: $link-color;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  @include transition ((color $med-speed ease-in-out, border $med-speed ease-in-out, background-color $med-speed ease-in-out, opacity $med-speed ease-in-out));
+  &:hover,
+  &:focus { 
+    border-color: $link-hover-color;
+  }
+}
+
+.light-text-color {
+  color: $light-text-color;
+}
+
+.primary-color {
+  color: $light-text-color;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: $hr-styles;
+}
+
+// Webkit
+::-webkit-input-placeholder { color: $placeholder-color; @include transition((color 0.3s ease-in-out));}
+:focus::-webkit-input-placeholder { color: transparent; }
+
+// Mozilla
+:-moz-placeholder { color: $placeholder-color; @include transition((color 0.3s ease-in-out));}
+:focus:-moz-placeholder { color: transparent; }
+::-moz-placeholder { color: $placeholder-color; @include transition((color 0.3s ease-in-out));}
+:focus::-moz-placeholder { color: transparent; }
+
+// IE
+:-ms-input-placeholder { color: $placeholder-color; @include transition((color 0.3s ease-in-out));}
+:focus:-ms-input-placeholder {color: transparent; }
+
+::selection {
+  background: $primary-color;
+  color: $bg-color;
+}
+::-moz-selection {
+  background: $primary-color;
+  color: $bg-color;
+}

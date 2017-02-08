@@ -1,0 +1,95 @@
+main.mixer {
+	.mixer-intro {
+		min-height: 500px;
+		.container {
+			padding: 5% 0 12%;
+			@include respond($md) {
+				padding: 5% 0 6%;
+			}
+		}
+		.img-wrap {
+			max-width: 200px;
+			margin: 0 auto;
+			@include respond($md) {
+				max-width: 400px;
+				margin-left: -18%;
+				margin-right: 2%;
+			}
+			img {
+				margin: 0 auto;
+				display: block;
+				max-height: 60vh;
+				min-height: 200px;
+			}
+		}
+		.text-wrap {
+			text-align: center;
+			margin-top: $margin;
+			@include respond($md) {
+				margin-top: 0;
+			}
+			h1 {
+				font-size: 1.5rem;
+				margin-bottom: .65em;
+				font-weight: 900;
+				text-transform: uppercase;
+				letter-spacing: $tracked-out;
+				opacity: 0;
+				transform: translate3d(0, 40px, 0);
+				animation: transition-in .65s ease forwards;
+				animation-delay: .6s;
+				line-height: 1.333em;
+				@include respond($md) {
+					font-size: 2rem;
+				}
+			}
+			p {
+				font-weight: 700;
+				opacity: 0;
+				transform: translate3d(0, 40px, 0);
+				animation: transition-in .65s ease forwards;
+				animation-delay: .7s;
+				+ p {
+					animation-delay: .8s;
+				}
+			}
+		}
+	}
+	.mixer-recipes {
+		min-height: 300px;
+		position: relative;
+		.bg-color {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			opacity: .4;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.container {
+			z-index: 2;
+		}
+	}
+	.mixer-list {
+		padding-bottom: $margin;
+		.col {
+			img {
+				width: 165px;
+			}
+			margin-bottom: $margin * 2;
+			@include respond($sm) {
+				width: 50%;
+			}
+			@include respond($md) {
+				margin-bottom: 0;
+				width: 25%;
+				img {
+					width: 225px;
+				}
+			}
+		}
+	}
+}

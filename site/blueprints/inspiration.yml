@@ -1,0 +1,28 @@
+title: Inspiration
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  topText:
+    label: Top Text
+    type:  textarea
+
+  headerImage:
+    label: Header Image
+    type:  image
+
+  inspirationText:
+    label: Text
+    type:  textarea
+
+  signatureImage:
+    label: Signature
+    type:  image
+
+  signatureName:
+    label: Name
+    type:  text

@@ -1,0 +1,32 @@
+title: Servex
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  headerImage:
+    label: Header Image
+    type: image
+
+  builder:
+    label: Ingredients
+    type: builder
+    fieldsets:
+      stepBlock:
+        label: Add Step
+        snippet: sections/ingredientBlock
+        fields:
+          picture:
+            label: Image
+            type: image
+          title: 
+            label: Title
+            type: textarea
+            width: 1/2
+          description: 
+            label: Description
+            type: textarea
+            width: 1/2

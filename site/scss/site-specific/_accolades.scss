@@ -1,0 +1,23 @@
+main.accolades {
+	.accolades-list {
+		padding-bottom: $margin * .5;
+		section {
+			padding-bottom: $margin * .75;
+			.quote {
+				&:before {
+					content: '“'
+				}
+				&:after {
+					content: '”'
+				}
+			}
+			.quote-by {
+				font-size: 14px;
+				font-weight: 900;
+				letter-spacing: $tracked-out;
+				text-transform: uppercase;
+				margin-top: .5em;
+			}
+		}
+	}
+}

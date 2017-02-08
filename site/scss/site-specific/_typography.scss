@@ -1,0 +1,57 @@
+a { 
+  padding-bottom: .15em;
+  border-bottom: 1px solid transparent;
+  &:hover,
+  &:focus { 
+    border-color: $text-color;
+  }
+}
+
+h1 {
+  font-size: 1.25em;
+  line-height: $base-line-height;
+  margin-bottom: .5em;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.lg p,
+p.lg,
+.large-text {
+  font-family: $secondary-font;
+  font-size: 1.25rem;
+  line-height: $base-line-height;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  font-size: .875rem;
+  letter-spacing: .05em;
+  line-height: $base-line-height;
+  + p {
+    margin-top: $base-line-height;
+  }
+}
+
+hr {
+  &.spaced {
+    margin: 1rem 0;
+  }
+  &.spaced-top {
+    margin: 1rem 0 0;
+  }
+  &.spaced-bottom {
+    margin: 0 0 1rem;
+  }
+  &.tiny {
+    width: 30px;
+    height: 2px;
+    background: $text-color;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
