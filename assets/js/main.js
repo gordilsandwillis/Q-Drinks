@@ -1,154 +1,169 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//   document.querySelector('.page').classList.add('loaded');
-// });
+document.addEventListener("DOMContentLoaded", function() {
+  Barba.Pjax.start();
+  transitionIn();
+});
 
-/*
-https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
+var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+    /**
+     * This function is automatically called as soon the Transition starts
+     * this.newContainerLoading is a Promise for the loading of the new container
+     * (Barba.js also comes with an handy Promise polyfill!)
+     */
 
-You can copy paste this code in your console on smashingmagazine.com
-in order to have cross-fade transition when change page.
-*/
+    // As soon the loading is finished and the old page is faded out, let's fade the new page
+    Promise
+      .all([this.newContainerLoading, this.fadeOut()])
+      .then(this.fadeIn.bind(this));
+  },
 
-var cache = {};
-function loadPage(url) {
-  if (cache[url]) {
-    return new Promise(function(resolve) {
-      resolve(cache[url]);
+  fadeOut: function() {
+    /**
+     * this.oldContainer is the HTMLElement of the old Container
+     */
+
+    return $(this.oldContainer).animate({ opacity: 0 }).promise();
+  },
+
+  fadeIn: function() {
+    /**
+     * this.newContainer is the HTMLElement of the new Container
+     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+     * Please note, newContainer is available just after newContainerLoading is resolved!
+     */
+
+    var _this = this;
+    var $el = $(this.newContainer);
+
+    $(this.oldContainer).hide();
+
+    $el.css({
+      visibility : 'visible',
+      opacity : 0
     });
-  }
 
-  return fetch(url, {
-    method: 'GET'
-  }).then(function(response) {
-    cache[url] = response.text();
-    return cache[url];
-  });
-}
+    $el.animate({ opacity: 1 }, 400, function() {
+      /**
+       * Do not forget to call .done() as soon your transition is finished!
+       * .done() will automatically remove from the DOM the old Container
+       */
 
-var main = document.querySelector('.content');
-
-function changePage() {
-  var url = window.location.href;
-
-  loadPage(url).then(function(responseText) {
-    var wrapper = document.createElement('div');
-        wrapper.innerHTML = responseText;
-
-    var oldContent = document.querySelector('.cc');
-    var newContent = wrapper.querySelector('.cc');
-
-    main.appendChild(newContent);
-    animate(oldContent, newContent);
-  });
-}
-
-function animate(oldContent, newContent) {
-	var cssString = "position: absolute; width: 100%; top: 0;"
-  // var cssString = "position: fixed; width: 100%; height: 100%; top: 0; overflow: hidden;"
-
-  oldContent.style.cssText = cssString;
-
-  var fadeOut = oldContent.animate({
-    opacity: [1, 0, 0]
-  }, 1000);
-
-  setTimeout(function(){ 
-    console.log("out"); 
-    document.body.scrollTop = 0;
-  }, 500);
-
-  var fadeIn = newContent.animate({
-    opacity: [0, 0, 1]
-  }, 1000);
-
-  fadeIn.onfinish = function() {
-    oldContent.parentNode.removeChild(oldContent);
-  };
-}
-
-window.addEventListener('popstate', changePage);
-
-document.addEventListener('click', function(e) {
-  var el = e.target;
-
-  while (el && !el.href) {
-    el = el.parentNode;
-  }
-
-  if (el) {
-    e.preventDefault();
-    history.pushState(null, null, el.href);
-    changePage();
-
-    return;
+      _this.done();
+    });
   }
 });
 
+/**
+ * Next step, you have to tell Barba to use the new Transition
+ */
+
+Barba.Pjax.getTransition = function() {
+  return FadeTransition;
+};
+
+
 // Parallax stuff
 
-document.addEventListener('scroll', function(event) {
-  var scrollTop = document.body.scrollTop;
-  var windowHeight = window.innerHeight;
-  var windowWidth = window.innerWidth;
+var fancyHeader = function() {
   var header = document.querySelector('header');
-
+  var scrollTop = document.body.scrollTop;
   if (scrollTop >= 75) {
     header.classList.add('collapsed');
   } else {
     header.classList.remove('collapsed');
   }
+}
 
+var parallaxTop = function() {
   if (document.querySelector('.bg-image.parallax-top') !== null) {
+    var scrollTop = document.body.scrollTop;
     var parallaxTop = document.querySelector('.bg-image.parallax-top');
     parallaxTop.style.cssText += 'transform: translate3d(0, ' + scrollTop/2 + 'px, 0)';
   }
+}
 
+var parallaxblock = function() {
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  var parallaxBlock = document.querySelectorAll('.parallax-block');
   if (document.querySelector('.parallax-block') !== null && windowWidth > 600) {
-    var parallaxBlock = document.querySelectorAll('.parallax-block');
 
     for(var i = 0; i < parallaxBlock.length; i++) {
       var section = parallaxBlock[i];
       var sectionTop = parallaxBlock[i].getBoundingClientRect().top;
       var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
       var sectionHeight = parallaxBlock[i].clientHeight;
-      console.log(sectionHeight);
-      if (sectionTop < windowHeight && sectionBottom > 0) {
+      if (sectionTop < windowHeight && sectionBottom > 0 && sectionTop < windowHeight - 200) {
         var speed = (sectionHeight/4)/(windowHeight - 150 + sectionHeight);
         section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
       }
     }
+  } else {
+    for(var i = 0; i < parallaxBlock.length; i++) {
+      var section = parallaxBlock[i];
+      section.style.cssText += 'transform: translate3d(0, 0, 0)';
+    }
   }
+}
 
+var parallaxblock2 = function() {
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  var parallaxBlock = document.querySelectorAll('.parallax-block-opposite');
+  console.log('width ' + windowWidth)
+  console.log('height ' + windowHeight)
   if (document.querySelector('.parallax-block-opposite') !== null && windowWidth > 600) {
-    var parallaxBlock = document.querySelectorAll('.parallax-block-opposite');
 
     for(var i = 0; i < parallaxBlock.length; i++) {
       var section = parallaxBlock[i];
       var sectionTop = parallaxBlock[i].getBoundingClientRect().top;
       var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
       var sectionHeight = parallaxBlock[i].clientHeight;
-      console.log(sectionHeight);
       if (sectionTop < windowHeight && sectionBottom > 0) {
         var speed = (sectionHeight/-4)/(windowHeight - 150 + sectionHeight);
         section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
       }
     }
+  } else {
+    for(var i = 0; i < parallaxBlock.length; i++) {
+      var section = parallaxBlock[i];
+      section.style.cssText += 'transform: translate3d(0, 0, 0)';
+    }
   }
+}
 
+var transitionIn = function() {
   if (document.querySelector('.transition-in') !== null) {
+    var scrollTop = document.body.scrollTop;
+    var windowHeight = window.innerHeight;
     var transitionBlock = document.querySelectorAll('.transition-in');
 
     for(var i = 0; i < transitionBlock.length; i++) {
       var section = transitionBlock[i];
       var sectionTop = transitionBlock[i].getBoundingClientRect().top;
-      // console.log('Height '+windowHeight)
 
-      if (sectionTop < windowHeight - windowHeight/10) {
+      // if (sectionTop < windowHeight - windowHeight/10) {
+        if (sectionTop < windowHeight) {
         section.classList.add('visible');
       } else {
         section.classList.remove('visible');
       }
     }
   }
+}
 
+document.addEventListener('scroll', function(event) {
+  fancyHeader();
+  parallaxTop();
+  parallaxblock();
+  parallaxblock2();
+  transitionIn();
+});
+
+window.addEventListener('resize', function(event) {
+  fancyHeader();
+  parallaxTop();
+  parallaxblock();
+  parallaxblock2();
+  transitionIn();
 });
