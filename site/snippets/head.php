@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  <div class="page">
+  <div id="top" class="page">
 	  <div class="content">
 	  <div id="barba-wrapper">
 	  	<div class="barba-container <?php echo $headerClass ?>">

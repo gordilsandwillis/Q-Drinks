@@ -4,17 +4,19 @@
     <nav class="secondary">
       <div class="container">
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Availability</a></li>
-          <li><a href="#">Find Q Near You</a></li>
-          <li><a href="#">Package Configurations</a></li>
+          <li><a href="#top">About Us</a></li>
+          <li><a href="#availability">Availability</a></li>
+          <li><a href="#find-q">Find Q Near You</a></li>
+          <li><a href="#package">Package Configurations</a></li>
         </ul>
       </div>
     </nav>
 
     <section class="white split">
       <div class="left">
-        <div class="bg-image" style="background-image: url(<?= $page->images()->find($page->headerImage())->crop(1000, 1000)->url() ?>)">
+        <div class="top-image">
+          <div class="bg-image" style="background-image: url(<?= $page->images()->find($page->headerImage())->crop(1000, 1000)->url() ?>)">
+          </div>
         </div>
       </div>
       <div class="right about-info">
@@ -49,7 +51,7 @@
       </div>
     </section>
 
-    <section class="availability grey">
+    <section id="availability" class="availability grey">
       <?php snippet('section-header', ['text' => 'Availability']) ?>
       <div class="container very-narrow align-center intro-p">
         <p><?= $page->availablityIntro()->html() ?></p>
@@ -65,14 +67,14 @@
       </div>
     </section>
 
-    <section class="white">
+    <section id="find-q" class="white">
       <?php snippet('section-header', ['text' => 'Find Q Near You']) ?>
       <div class="container">
         
       </div>
     </section>
 
-    <section class="package-configs grey">
+    <section id="package" class="package-configs grey">
       <?php snippet('section-header', ['text' => 'Package Configurations']) ?>
       <div class="container very-narrow align-center lg intro-p">
         <p><?= $page->packageIntro()->html() ?></p>
