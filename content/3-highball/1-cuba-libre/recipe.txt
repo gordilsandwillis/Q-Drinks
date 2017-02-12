@@ -73,4 +73,4 @@ Variations: Try it with your favorite mescal rather than tequila for a smokier d
 
 ----
 
-Recipemixer: grapefruit
+Recipemixer: tonic-water

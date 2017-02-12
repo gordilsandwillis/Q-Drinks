@@ -51,9 +51,12 @@ main {
 				margin-bottom: 0;
 			}
 		}
-		@include respond($md) {
+		@include respond($sm) {
+			height: 50vh;
+		}
+		@include respond($lg) {
 			min-height: 400px;
-			height: 70vh;
+			height: 60vh;
 		}
 		&.full-height {
 			height: 100vh;
@@ -151,6 +154,8 @@ section.alternating-blocks {
 					}
 					&.centered {
 						text-align: center;
+						margin-left: auto;
+						margin-right: auto;
 					}
 					h5 {
 						font-size: 18px;
@@ -259,5 +264,17 @@ section.alternating-blocks {
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+}
+
+.intro-p {
+	margin-top: -2rem;
+	margin-bottom: 3rem;
+	@include respond($md) {
+		margin-top: -4rem;
+		margin-bottom: 4rem;
+	}
+	@include respond($xlg) {
+		margin-bottom: 6rem;
 	}
 }

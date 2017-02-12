@@ -23,11 +23,12 @@ button {
   margin: 0px;
   font-family: $secondary-font !important;
   font-size: 12px;
-  font-weight: 400;
-  letter-spacing: .02em;
+  font-weight: 700;
+  letter-spacing: $very-tracked-out;
+  @include font-smooth();
   cursor: pointer;
   line-height: $btn-height - 4px;
-  width: 100%;
+  // width: 100%;
   max-width: 400px;
   border: $btn-border;
   position: relative;

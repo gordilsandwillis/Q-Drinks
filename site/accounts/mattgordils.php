@@ -7,8 +7,8 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
+  - highball/cuba-libre
+  - highball
+  - mixers
   - about
   - inspiration
-  - highball/moscow-mule
-  - mixers/club-soda
-  - mixers/kola

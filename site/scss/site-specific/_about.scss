@@ -120,16 +120,8 @@ main.about {
 	}
 }
 
-.intro-p {
-	margin-top: -2rem;
-	@include respond($md) {
-		margin-top: -4rem;
-	}
-}
-
 .availability {
 	.inline-grid {
-		padding-top: 4rem;
 		padding-bottom: $margin/3;
 		*[class^="col"] {
 			margin-bottom: $margin;
@@ -145,7 +137,6 @@ main.about {
 		max-width: 30em;
 	}
 	.inline-grid {
-		padding-top: 4rem;
 		padding-bottom: $margin/3;
 		*[class^="col"] {
 			margin-bottom: $margin;

@@ -43,6 +43,8 @@ var FadeTransition = Barba.BaseTransition.extend({
     });
 
     document.body.scrollTop = 0;
+    fancyHeader();
+    loadedTransitionIn();
 
     $el.animate({ opacity: 1 }, 400, function() {
       /**
@@ -97,7 +99,7 @@ var parallaxblock = function() {
       var sectionHeight = parallaxBlock[i].clientHeight;
       if (sectionTop < windowHeight && sectionBottom > 0 && sectionTop < windowHeight - 200) {
         var speed = (sectionHeight/4)/(windowHeight - 150 + sectionHeight);
-        section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
+        section.style.cssText += 'transform: translate3d(0, ' - 200 + sectionTop * speed + 'px, 0)';
       }
     }
   } else {
@@ -142,8 +144,27 @@ var transitionIn = function() {
       var section = transitionBlock[i];
       var sectionTop = transitionBlock[i].getBoundingClientRect().top;
 
-      // if (sectionTop < windowHeight - windowHeight/10) {
-        if (sectionTop < windowHeight) {
+      if (sectionTop < windowHeight - windowHeight/8) {
+        section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
+      }
+    }
+  }
+}
+
+var loadedTransitionIn = function() {
+  console.log('running at least')
+  if (document.querySelector('.transition-in') !== null) {
+    var scrollTop = document.body.scrollTop;
+    var windowHeight = window.innerHeight;
+    var transitionBlock = document.querySelectorAll('.transition-in');
+
+    for(var i = 0; i < transitionBlock.length; i++) {
+      var section = transitionBlock[i];
+      var sectionTop = transitionBlock[i].getBoundingClientRect().top;
+
+      if (sectionTop < windowHeight) {
         section.classList.add('visible');
       } else {
         section.classList.remove('visible');
@@ -172,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
   Barba.Pjax.start();
   transitionIn();
   fancyHeader();
+  loadedTransitionIn();
 });
 
 document.addEventListener('scroll', function(event) {

@@ -33,8 +33,53 @@
 
   <section class="mixer-recipes">
     <?php snippet('section-header', ['text' => 'Spectacular With']) ?>
-    <div class="container">
-      <?php $page->mixerRecipes()->html() ?>
+    <div class="container transition-in">
+      <? $recipes = page('highball')->children()->visible(); ?>
+      <?php foreach($recipes as $recipe): ?>
+        <? $recipeTitle = $recipe->title() ?>
+        <? $mixer = $recipe->recipeMixer() ?>
+        <? $title = $page->slug() ?>
+        <? if ($mixer == $title): ?>
+          <div class="recipe-card">
+            <div class="image">
+              <div class="bg-image" style="background-image: url(<?= $recipe->image()->crop(750, 750)->url() ?>);">
+                <img src="<?= $recipe->image()->crop(200, 200)->url() ?>">
+              </div>
+            </div>
+
+            <div class="instructions">
+              <div class="curved-serves">
+                <span class="letter s">S</span><span class="letter e">e</span><span class="letter r">r</span><span class="letter v">v</span><span class="letter e2">e</span><span class="letter s2">s</span>
+                <span class="number">00</span>
+              </div>
+              <div class="container">
+                <h3 class="recipe-title"><?= $recipe->title()->html() ?></h3>
+                
+                <h5 class="recipe-section-title">Ingredients</h5>
+                <ul>
+                <?php foreach($recipe->ingredients()->toStructure() as $step): ?>
+                  <li><p><?= $step->ingredient()->html() ?></p></li>
+                <?php endforeach ?>
+                </ul>
+
+                <h5 class="recipe-section-title">Variations</h5>
+                <p><?= $recipe->variations()->html() ?></p>
+                
+                <h5 class="recipe-section-title">Method</h5>
+                <p>
+                <?php foreach($recipe->method()->toStructure() as $step): ?>
+                  <?= $step->step()->html() ?>
+                <?php endforeach ?>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        <? endif; ?>
+      <?php endforeach ?>
+      <div class="more-btn-wrap">
+        <a href="<?= url() ?>/highball#recipes" class="btn">More Recipes</a>
+      </div>
     </div>
     <div class="bg-color" style="background-color: <?= $page->mixerColor() ?>"></div>
   </section>

@@ -14,7 +14,7 @@ main.mixers {
 			width: 50%;
 			margin-bottom: $margin;
 			img {
-				width: 300px;
+				width: 250px;
 			}
 			@include respond($sm) {
 				width: 50%;

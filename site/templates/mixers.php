@@ -11,11 +11,12 @@
     	</div>
     </div>
 
-    <div class="section-header">
-      <div class="container">
-        <h1>Our Mixers</h1>
+    <?php snippet('section-header', ['text' => 'Our Mixers']) ?>
+    <?php if ($page->introText()->isNotEmpty()):?>
+      <div class="container very-narrow align-center intro-p">
+        <p><?= $page->introText()->html() ?></p>
       </div>
-    </div>
+    <?php endif; ?>
       
     <section class="mixers">
       <div class="container">

@@ -185,9 +185,9 @@ a {
     content: attr(title);
     bottom: 100%;
     background-color: #333;
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     color: #fff;
     font-size: 12px;
     line-height: 1.3em;
@@ -5227,28 +5227,29 @@ button {
   -moz-appearance: caret;
   /* mobile firefox too! */
   -webkit-appearance: none;
-  background-color: #333;
-  color: #fff;
-  height: 60px;
-  max-height: 60px;
-  padding: 0px 15px 2px 15px;
+  background-color: transparent;
+  color: #333;
+  height: 40px;
+  max-height: 40px;
+  padding: 0px 20px 2px 20px;
   margin: 0px;
   font-family: "Futura", sans-serif !important;
   font-size: 12px;
-  font-weight: 400;
-  letter-spacing: .02em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  line-height: 56px;
-  width: 100%;
+  line-height: 36px;
   max-width: 400px;
-  border: 1px solid #333;
+  border: 2px solid #333;
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: .15em;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
   -webkit-transition: border 0.25s ease-in-out, background 0.25s ease-in-out, color 0.25s ease-in-out, background 0.25s ease-in-out, padding 0.25s ease-in-out;
   -moz-transition: border 0.25s ease-in-out, background 0.25s ease-in-out, color 0.25s ease-in-out, background 0.25s ease-in-out, padding 0.25s ease-in-out;
   -o-transition: border 0.25s ease-in-out, background 0.25s ease-in-out, color 0.25s ease-in-out, background 0.25s ease-in-out, padding 0.25s ease-in-out;
@@ -5257,22 +5258,22 @@ button {
 .btn .icon svg *,
 input[type="submit"] .icon svg *,
 button .icon svg * {
-  fill: #fff;
+  fill: #333;
 }
 
 .btn.medium,
 input[type="submit"].medium,
 button.medium {
-  height: 50px;
-  padding: 0px 15px 2px 15px;
-  line-height: 46px;
+  height: 40px;
+  padding: 0px 20px 2px 20px;
+  line-height: 36px;
 }
 
 .btn.tiny,
 input[type="submit"].tiny,
 button.tiny {
   height: 30px;
-  padding: 0px 15px 2px 15px;
+  padding: 0px 20px 2px 20px;
   line-height: 26px;
 }
 
@@ -5282,8 +5283,8 @@ input[type="submit"]:active,
 button:hover,
 button:active {
   color: #fff;
-  background-color: #000;
-  border: 1px solid #000;
+  background-color: #333;
+  border: 2px solid #333;
 }
 
 .btn:hover svg *, .btn:active svg *,
@@ -5340,9 +5341,9 @@ button:after {
 input[type="submit"].loading,
 button.loading {
   color: transparent;
-  background-color: #b3b3b3;
-  border: 1px solid #333;
-  border-color: #b3b3b3;
+  background-color: rgba(128, 128, 128, 0);
+  border: 2px solid #333;
+  border-color: rgba(128, 128, 128, 0);
   cursor: default;
 }
 
@@ -5364,10 +5365,10 @@ button.loading:before {
 input[type="submit"].success,
 button.success {
   color: transparent;
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: transparent;
+  border: 2px solid #333;
   cursor: default;
-  background-color: #000;
+  background-color: #333;
 }
 
 .btn.success:before,
@@ -5384,7 +5385,7 @@ button.success:after {
   opacity: 1;
   visibility: visible;
   content: '';
-  border: 2px solid #000;
+  border: 2px solid #333;
   border-left: none;
   border-top: none;
   -ms-transform: rotate(45deg);
@@ -5404,15 +5405,15 @@ button.success:after {
 input[type="submit"].error,
 button.error {
   color: transparent;
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: transparent;
+  border: 2px solid #333;
   cursor: default;
 }
 
 .btn.error:before,
 input[type="submit"].error:before,
 button.error:before {
-  color: #333;
+  color: transparent;
   content: '';
   background-color: #fff;
   opacity: 1;
@@ -5424,7 +5425,7 @@ input[type="submit"].error:after,
 button.error:after {
   opacity: 1;
   visibility: visible;
-  color: #333;
+  color: transparent;
   content: '×';
   line-height: 21px;
   font-size: 16px;
@@ -5631,10 +5632,16 @@ main.padded-bottom {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 450px) {
+  .top-area .top-image {
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .top-area .top-image {
     min-height: 400px;
-    height: 70vh;
+    height: 60vh;
   }
 }
 
@@ -5752,6 +5759,8 @@ section.alternating-blocks .row *[class^="col-"] .info div {
 section.alternating-blocks .row .col .info div.centered,
 section.alternating-blocks .row *[class^="col-"] .info div.centered {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section.alternating-blocks .row .col .info div h5,
@@ -5869,6 +5878,24 @@ section.alternating-blocks .row *[class^="col-"] .info div h5 {
   transform: rotate(-45deg);
   opacity: 1;
   visibility: visible;
+}
+
+.intro-p {
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .intro-p {
+    margin-top: -4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro-p {
+    margin-bottom: 6rem;
+  }
 }
 
 a {
@@ -6486,7 +6513,7 @@ main.mixers .mixer-list .col {
 }
 
 main.mixers .mixer-list .col img {
-  width: 300px;
+  width: 250px;
 }
 
 @media only screen and (min-width: 450px) {
@@ -6644,13 +6671,30 @@ main.mixer .mixer-list .col img {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   main.mixer .mixer-list .col {
     margin-bottom: 0;
     width: 25%;
   }
   main.mixer .mixer-list .col img {
     width: 225px;
+  }
+}
+
+.more-btn-wrap {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .more-btn-wrap {
+    padding: 4.5rem 0 4.75rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .more-btn-wrap {
+    padding: 6rem 0 6rem;
   }
 }
 
@@ -7107,18 +7151,7 @@ main.about .about-info p {
   letter-spacing: .075em;
 }
 
-.intro-p {
-  margin-top: -2rem;
-}
-
-@media only screen and (min-width: 600px) {
-  .intro-p {
-    margin-top: -4rem;
-  }
-}
-
 .availability .inline-grid {
-  padding-top: 4rem;
   padding-bottom: 2.5%;
 }
 
@@ -7137,12 +7170,174 @@ main.about .about-info p {
 }
 
 .package-configs .inline-grid {
-  padding-top: 4rem;
   padding-bottom: 2.5%;
 }
 
 .package-configs .inline-grid *[class^="col"] {
   margin-bottom: 7.5%;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-card {
+    background: #fff;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .recipe-card {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.recipe-card .image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  flex-grow: 1;
+}
+
+.recipe-card .image .bg-image {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  .recipe-card .image {
+    width: 50%;
+    padding-bottom: 50%;
+    background: #ccc;
+  }
+}
+
+.recipe-card .instructions {
+  text-align: center;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+@media only screen and (min-width: 900px) {
+  .recipe-card .instructions {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.recipe-card .instructions .container {
+  width: 100%;
+  padding: 2rem 0 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-card .instructions .container {
+    padding: 40px 50px 55px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .recipe-card .instructions {
+    width: 50%;
+  }
+}
+
+.recipe-card .instructions .recipe-title {
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.recipe-card .instructions .recipe-section-title {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  margin-top: 2em;
+}
+
+.recipe-card .instructions li {
+  list-style: none;
+}
+
+.recipe-card .curved-serves {
+  width: 55px;
+  height: 40px;
+  position: relative;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-card .curved-serves {
+    position: absolute;
+    top: 23px;
+    right: 30px;
+  }
+}
+
+.recipe-card .curved-serves .letter {
+  position: absolute;
+  line-height: 1em;
+  height: 40px;
+  transform-origin: 50% 100%;
+  left: 50%;
+  bottom: 0;
+  font-size: 10px;
+  margin-left: -10px;
+  width: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.recipe-card .curved-serves .letter.s {
+  transform: rotate(-45deg);
+}
+
+.recipe-card .curved-serves .letter.e {
+  transform: rotate(-27deg);
+}
+
+.recipe-card .curved-serves .letter.r {
+  transform: rotate(-9deg);
+}
+
+.recipe-card .curved-serves .letter.v {
+  transform: rotate(9deg);
+}
+
+.recipe-card .curved-serves .letter.e2 {
+  transform: rotate(27deg);
+}
+
+.recipe-card .curved-serves .letter.s2 {
+  transform: rotate(45deg);
+}
+
+.recipe-card .number {
+  position: relative;
+  z-index: 2;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1em;
+  padding-top: 20px;
+  letter-spacing: 0.2em;
+  margin-left: 0.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*# sourceMappingURL=style.css.map */

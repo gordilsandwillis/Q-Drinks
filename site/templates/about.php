@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="right about-info">
-        <div>
+        <div class="transition-in">
           <?php snippet('section-header', ['text' => 'About Us']) ?>
           <div class="container align-center">
             <section>
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section id="availability" class="availability grey">
+    <section id="availability" class="availability grey transition-in">
       <?php snippet('section-header', ['text' => 'Availability']) ?>
       <div class="container very-narrow align-center intro-p">
         <p><?= $page->availablityIntro()->html() ?></p>
@@ -67,14 +67,14 @@
       </div>
     </section>
 
-    <section id="find-q" class="white">
+    <section id="find-q" class="white transition-in">
       <?php snippet('section-header', ['text' => 'Find Q Near You']) ?>
       <div class="container">
         
       </div>
     </section>
 
-    <section id="package" class="package-configs grey">
+    <section id="package" class="package-configs grey transition-in">
       <?php snippet('section-header', ['text' => 'Package Configurations']) ?>
       <div class="container very-narrow align-center lg intro-p">
         <p><?= $page->packageIntro()->html() ?></p>

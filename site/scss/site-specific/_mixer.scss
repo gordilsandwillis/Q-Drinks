@@ -83,7 +83,7 @@ main.mixer {
 			@include respond($sm) {
 				width: 50%;
 			}
-			@include respond($md) {
+			@include respond($lg) {
 				margin-bottom: 0;
 				width: 25%;
 				img {
@@ -91,5 +91,16 @@ main.mixer {
 				}
 			}
 		}
+	}
+}
+
+.more-btn-wrap {
+	padding: 3rem 0;
+	text-align: center;
+	@include respond($md) {
+		padding: 4.5rem 0 4.75rem;
+	}
+	@include respond($xlg) {
+		padding: 6rem 0 6rem;
 	}
 }

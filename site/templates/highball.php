@@ -10,11 +10,12 @@
         <?php endif; ?>
     	</div>
     </div>
-  	<div class="section-header">
-	    <div class="container">
-	      <h1>Recipes</h1>
-	    </div>
-    </div>
+    <?php snippet('section-header', ['text' => 'Recipes']) ?>
+    <?php if ($page->introText()->isNotEmpty()):?>
+      <div class="container very-narrow align-center intro-p">
+        <p><?= $page->introText()->html() ?></p>
+      </div>
+    <?php endif; ?>
     <section class="recipe-list">
       <div class="container">
         <?php snippet('recipe-list', ['limit' => 100]) ?>

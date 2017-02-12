@@ -18,6 +18,10 @@ fields:
   headerImage:
     label: Header Image
     type: image
+  introText:
+    label: Intro Text
+    type:  textarea
+    buttons: false
   mixers:
     label: Mixers
     type: subpagelist
