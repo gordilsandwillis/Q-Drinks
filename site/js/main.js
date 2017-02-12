@@ -2,6 +2,7 @@
 
 var $ = require('jquery');
 var Barba = require('barba.js');
+var Slick = require('slick-carousel');
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -45,6 +46,7 @@ var FadeTransition = Barba.BaseTransition.extend({
     document.body.scrollTop = 0;
     fancyHeader();
     loadedTransitionIn();
+    slideshow();
 
     $el.animate({ opacity: 1 }, 400, function() {
       /**
@@ -154,7 +156,6 @@ var transitionIn = function() {
 }
 
 var loadedTransitionIn = function() {
-  console.log('running at least')
   if (document.querySelector('.transition-in') !== null) {
     var scrollTop = document.body.scrollTop;
     var windowHeight = window.innerHeight;
@@ -173,6 +174,28 @@ var loadedTransitionIn = function() {
   }
 }
 
+$('.one-time').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+
+var slideshow = function() {
+  if (document.querySelector('.slideshow') !== null) {
+    console.log('penis')
+    $('.recipe-slideshow').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+  }
+}
+
+// Smooth Scrolling #Links
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -194,6 +217,7 @@ document.addEventListener("DOMContentLoaded", function() {
   transitionIn();
   fancyHeader();
   loadedTransitionIn();
+  slideshow();
 });
 
 document.addEventListener('scroll', function(event) {
