@@ -6,7 +6,7 @@ var Slick = require('slick-carousel');
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
-    /**
+    /*
      * This function is automatically called as soon the Transition starts
      * this.newContainerLoading is a Promise for the loading of the new container
      * (Barba.js also comes with an handy Promise polyfill!)
@@ -16,10 +16,11 @@ var FadeTransition = Barba.BaseTransition.extend({
     Promise
       .all([this.newContainerLoading, this.fadeOut()])
       .then(this.fadeIn.bind(this));
+
   },
 
   fadeOut: function() {
-    /**
+    /*
      * this.oldContainer is the HTMLElement of the old Container
      */
 
@@ -27,7 +28,7 @@ var FadeTransition = Barba.BaseTransition.extend({
   },
 
   fadeIn: function() {
-    /**
+    /*
      * this.newContainer is the HTMLElement of the new Container
      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
      * Please note, newContainer is available just after newContainerLoading is resolved!
@@ -46,10 +47,10 @@ var FadeTransition = Barba.BaseTransition.extend({
     document.body.scrollTop = 0;
     fancyHeader();
     loadedTransitionIn();
-    slideshow();
+    smoothScroll();
 
     $el.animate({ opacity: 1 }, 400, function() {
-      /**
+      /*
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container
        */
@@ -59,13 +60,15 @@ var FadeTransition = Barba.BaseTransition.extend({
   }
 });
 
-/**
- * Next step, you have to tell Barba to use the new Transition
- */
+// Next step, you have to tell Barba to use the new Transition
 
 Barba.Pjax.getTransition = function() {
   return FadeTransition;
 };
+
+Barba.Dispatcher.on('transitionCompleted', function() {
+  slideshow();
+});
 
 
 // Parallax stuff
@@ -184,7 +187,7 @@ $('.one-time').slick({
 
 var slideshow = function() {
   if (document.querySelector('.slideshow') !== null) {
-    console.log('penis')
+    console.log('slideshow')
     $('.recipe-slideshow').slick({
       dots: false,
       infinite: true,
@@ -195,8 +198,9 @@ var slideshow = function() {
   }
 }
 
+
 // Smooth Scrolling #Links
-$(function() {
+var smoothScroll = function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -210,14 +214,13 @@ $(function() {
       }
     }
   });
-});
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   Barba.Pjax.start();
   transitionIn();
   fancyHeader();
   loadedTransitionIn();
-  slideshow();
 });
 
 document.addEventListener('scroll', function(event) {

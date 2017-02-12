@@ -5967,7 +5967,7 @@ body {
   left: 0;
   position: absolute;
   padding: 20px;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-20px, -50%, 0);
   z-index: 2;
   cursor: pointer;
 }
@@ -6439,6 +6439,8 @@ body {
   opacity: 0;
   transform: translate3d(0, 40px, 0);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: relative;
+  z-index: 3;
 }
 
 .transition-in.visible {
@@ -7203,6 +7205,10 @@ main.about .about-info p {
   width: 100%;
 }
 
+.recipe-card .image .bg-image img {
+  display: none;
+}
+
 @media only screen and (min-width: 900px) {
   .recipe-card .image {
     width: 50%;
@@ -7340,7 +7346,43 @@ main.about .about-info p {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.recipe-slideshow .slick-arrow {
+  width: 34px;
+  height: 50px;
+  text-indent: -1000px;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  background-size: 34px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+
+.recipe-slideshow .slick-arrow:active {
+  transform: scale(0.7);
+}
+
+.recipe-slideshow .slick-arrow.slick-prev {
+  left: -64px;
+  background-image: url(../images/arrow-left-lg.svg);
+}
+
+.recipe-slideshow .slick-arrow.slick-next {
+  right: -64px;
+  background-image: url(../images/arrow-right-lg.svg);
+}
+
 /* Slider */
+*:focus {
+  outline: none !important;
+}
+
 .slick-slider {
   position: relative;
   display: block;

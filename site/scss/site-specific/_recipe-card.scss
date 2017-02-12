@@ -15,6 +15,9 @@
 			position: absolute;
 			min-height: 100%;
 			width: 100%;
+			img {
+				display: none;
+			}
 		}
 		@include respond($lg) {
 			width: 50%;
@@ -123,5 +126,36 @@
 		letter-spacing: $very-tracked-out;
 		margin-left: $very-tracked-out/2;
 		@include font-smooth();
+	}
+}
+
+.recipe-slideshow {
+	.slick-arrow {
+		width: 34px;
+		height: 50px;
+		text-indent: -1000px;
+		overflow: hidden;
+		border: none;
+		background-color: transparent;
+		position: absolute;
+		top: 50%;
+		margin-top: -25px;
+		background-size: 34px auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 0;
+		cursor: pointer;
+		transition: transform $med-speed $ease;
+		&:active {
+			transform: scale(.7);
+		}
+		&.slick-prev {
+			left: -64px;
+			background-image: url(../images/arrow-left-lg.svg);
+		}
+		&.slick-next {
+			right: -64px;
+			background-image: url(../images/arrow-right-lg.svg);
+		}
 	}
 }

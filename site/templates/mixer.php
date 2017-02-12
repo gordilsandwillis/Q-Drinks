@@ -32,7 +32,7 @@
   </section>
 
   <section class="mixer-recipes">
-    <?php snippet('section-header', ['text' => 'Spectacular With']) ?>
+    <?php snippet('section-header', ['text' => 'Spectacular With', 'transition' => 'transition-in']) ?>
     <div class="container transition-in">
       <div class="slideshow recipe-slideshow">
       <? $recipes = page('highball')->children()->visible(); ?>
@@ -45,7 +45,7 @@
             <div class="recipe-card">
               <div class="image">
                 <div class="bg-image" style="background-image: url(<?= $recipe->image()->crop(750, 750)->url() ?>);">
-                  <img src="<?= $recipe->image()->crop(200, 200)->url() ?>">
+                  <img src="<?= $recipe->image()->crop(750, 750)->url() ?>">
                 </div>
               </div>
 
@@ -89,7 +89,7 @@
   </section>
 
   <section class="other-mixers grey">
-    <?php snippet('section-header', ['text' => 'Other Products']) ?>
+    <?php snippet('section-header', ['text' => 'Other Products', 'transition' => 'transition-in']) ?>
     <div class="container">
       <?php snippet('mixer-list', ['siblings' => 'true', 'limit' => 4, 'order' => 'shuffle']) ?>
     </div>
