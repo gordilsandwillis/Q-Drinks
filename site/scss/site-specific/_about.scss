@@ -125,8 +125,18 @@ main.about {
 		padding-bottom: $margin/3;
 		*[class^="col"] {
 			margin-bottom: $margin;
-			@include respond($md) {
+			img {
+				opacity: .2;
+				width: 150px;
+				margin: 0 auto;
+				display: block;
+			}
+			@include respond($sm) {
+				width: 33.333%;
+			}
+			@include respond($lg) {
 				width: 20%;
+				margin-left: -.125em !important;
 			}
 		}
 	}
@@ -140,6 +150,15 @@ main.about {
 		padding-bottom: $margin/3;
 		*[class^="col"] {
 			margin-bottom: $margin;
+			img {
+				margin-bottom: 1rem;
+			}
+			h5 {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: $tracked-out;
+				font-weight: 900;
+			}
 		}
 	}
 }

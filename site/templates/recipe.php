@@ -1,24 +1,57 @@
 <?php snippet('head') ?>
 
-<main class="recipe" role="main">
-  <div class="container">
-    <h1><?= $page->title()->html() ?></h1>
-  </div>
-  
-  <section class="project-images">
-    <div class="container">
-      <div class="inline-grid middle center">
-        <?php foreach($page->builder()->toStructure() as $section): ?>
-          <?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
-        <?php endforeach ?>
+  <main class="recipe" role="main">
+
+  	<? $recipeMixer = $page->recipeMixer()->html() ?>
+  	<? $mixerPage = page('mixers')->children()->find($recipeMixer); ?>
+
+  	<div class="recipe-card" style="background-color: <?= $mixerPage->mixerColor() ?>">
+      <div class="image">
+        <div class="bg-image" style="background-image: url(<?= $page->image()->crop(1500)->url() ?>);">
+          <img src="<?= $page->image()->crop(750, 750)->url() ?>">
+        </div>
       </div>
+
+      <div class="instructions">
+        <div class="curved-serves">
+          <span class="letter s">S</span><span class="letter e">e</span><span class="letter r">r</span><span class="letter v">v</span><span class="letter e2">e</span><span class="letter s2">s</span>
+          <span class="number">00</span>
+        </div>
+        <div class="container">
+          <h3 class="recipe-title"><?= $page->title()->html() ?></h3>
+          <div class="inline-grid">
+	          <div class="col-6">
+		          <h5 class="recipe-section-title">Ingredients</h5>
+		          <ul>
+		          <?php foreach($page->ingredients()->toStructure() as $step): ?>
+		            <li><p><?= $step->ingredient()->html() ?></p></li>
+		          <?php endforeach ?>
+		          </ul>
+		        </div>
+		        <div class="col-6">
+		          <h5 class="recipe-section-title">Variations</h5>
+		          <p><?= $page->variations()->html() ?></p>
+          	</div>
+          </div>
+          
+          <h5 class="recipe-section-title">Method</h5>
+          <p>
+          <?php foreach($page->method()->toStructure() as $step): ?>
+            <?= $step->step()->html() ?>
+          <?php endforeach ?>
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
+    
+    <?php snippet('section-header', ['text' => 'More Recipes']) ?>
 
-  <div class="project-footer dark">
-    <?php snippet('prevnext') ?>
-  </div>
-
-</main>
+    <section class="recipe-list">
+      <div class="container">
+        <?php snippet('recipe-list', ['limit' => 100]) ?>
+      </div>
+    </section>
+  </main>
 
 <?php snippet('footer') ?>

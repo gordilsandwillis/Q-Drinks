@@ -5595,6 +5595,7 @@ hr {
   background-position: center;
   background-size: cover;
   min-height: 200px;
+  background-repeat: no-repeat;
 }
 
 .bg-image img {
@@ -5888,13 +5889,13 @@ section.alternating-blocks .row *[class^="col-"] .info div h5 {
 @media only screen and (min-width: 600px) {
   .intro-p {
     margin-top: -4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .intro-p {
-    margin-bottom: 6rem;
+    margin-bottom: 4.5rem;
   }
 }
 
@@ -6651,8 +6652,14 @@ main.mixer .mixer-recipes .bg-color {
   bottom: 0;
 }
 
-main.mixer .mixer-recipes .container {
+main.mixer .mixer-recipes > .container {
   z-index: 2;
+}
+
+@media only screen and (min-width: 600px) {
+  main.mixer .mixer-recipes > .container {
+    width: 75%;
+  }
 }
 
 main.mixer .mixer-list {
@@ -6733,7 +6740,7 @@ main.mixer .mixer-list .col img {
 .recipe-list .flex-col {
   width: 100%;
   flex-shrink: 0;
-  padding-bottom: 3.75%;
+  padding-bottom: 6.5%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -6752,6 +6759,7 @@ main.mixer .mixer-list .col img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 3%;
   margin-left: -1.97368%;
   margin-right: -1.97368%;
 }
@@ -6761,19 +6769,25 @@ main.mixer .mixer-list .col img {
   padding-right: 1.875%;
   order: 0;
   position: relative;
-  padding-bottom: 2rem;
 }
 
 @media only screen and (min-width: 600px) {
-  .flex-grid .flex-col:not(.inline-recipe) .nipple {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
+  .flex-grid .flex-col:not(.inline-recipe) .nipple-wrap {
+    width: 20px;
+    height: 10px;
     position: absolute;
     bottom: 0;
     left: 50%;
     margin-left: -10px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    height: 0;
+  }
+  .flex-grid .flex-col:not(.inline-recipe) .nipple-wrap .nipple {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
     border: 10px solid transparent;
     border-top: none;
     border-bottom-color: #ffc99b;
@@ -6851,8 +6865,17 @@ main.mixer .mixer-list .col img {
   flex-grow: 1;
   background-color: #ffc99b;
   padding-bottom: 0;
-  margin-bottom: 3.75%;
   display: none;
+  position: relative;
+  max-height: 0;
+  margin-bottom: 0;
+  transition: max-height 0.5s ease-in-out, margin 0.3s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe .inline-recipe-wrap {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 600px) {
@@ -7161,9 +7184,23 @@ main.about .about-info p {
   margin-bottom: 7.5%;
 }
 
-@media only screen and (min-width: 600px) {
+.availability .inline-grid *[class^="col"] img {
+  opacity: .2;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width: 450px) {
+  .availability .inline-grid *[class^="col"] {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .availability .inline-grid *[class^="col"] {
     width: 20%;
+    margin-left: -.125em !important;
   }
 }
 
@@ -7177,6 +7214,17 @@ main.about .about-info p {
 
 .package-configs .inline-grid *[class^="col"] {
   margin-bottom: 7.5%;
+}
+
+.package-configs .inline-grid *[class^="col"] img {
+  margin-bottom: 1rem;
+}
+
+.package-configs .inline-grid *[class^="col"] h5 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 900;
 }
 
 @media only screen and (min-width: 600px) {
@@ -7276,6 +7324,8 @@ main.about .about-info p {
   width: 55px;
   height: 40px;
   position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -7376,6 +7426,19 @@ main.about .about-info p {
 .recipe-slideshow .slick-arrow.slick-next {
   right: -64px;
   background-image: url(../images/arrow-right-lg.svg);
+}
+
+main.recipe .recipe-card .instructions .container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 600px;
+  width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+  main.recipe .recipe-card .instructions .container {
+    width: 70%;
+  }
 }
 
 /* Slider */

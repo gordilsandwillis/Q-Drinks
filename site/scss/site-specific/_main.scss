@@ -24,6 +24,7 @@
 	background-position: center;
 	background-size: cover;
 	min-height: 200px;
+	background-repeat: no-repeat;
 	img {
 		display: none;
 	}
@@ -272,9 +273,9 @@ section.alternating-blocks {
 	margin-bottom: 3rem;
 	@include respond($md) {
 		margin-top: -4rem;
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 	@include respond($xlg) {
-		margin-bottom: 6rem;
+		margin-bottom: 4.5rem;
 	}
 }

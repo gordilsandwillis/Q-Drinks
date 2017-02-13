@@ -56,16 +56,20 @@
                 </div>
                 <div class="container">
                   <h3 class="recipe-title"><?= $recipe->title()->html() ?></h3>
-                  
-                  <h5 class="recipe-section-title">Ingredients</h5>
-                  <ul>
-                  <?php foreach($recipe->ingredients()->toStructure() as $step): ?>
-                    <li><p><?= $step->ingredient()->html() ?></p></li>
-                  <?php endforeach ?>
-                  </ul>
-
-                  <h5 class="recipe-section-title">Variations</h5>
-                  <p><?= $recipe->variations()->html() ?></p>
+                  <div class="inline-grid">
+                    <div class="col-6">
+                      <h5 class="recipe-section-title">Ingredients</h5>
+                      <ul>
+                      <?php foreach($recipe->ingredients()->toStructure() as $step): ?>
+                        <li><p><?= $step->ingredient()->html() ?></p></li>
+                      <?php endforeach ?>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+                      <h5 class="recipe-section-title">Variations</h5>
+                      <p><?= $recipe->variations()->html() ?></p>
+                    </div>
+                  </div>
                   
                   <h5 class="recipe-section-title">Method</h5>
                   <p>

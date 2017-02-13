@@ -68,7 +68,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
   gulp.watch('./site/scss/*.scss', ['styles']);
   gulp.watch('./site/scss/setup/*.scss', ['styles']);
-  gulp.watch('./site/scss/panel-style/*.scss', ['styles']);
+  gulp.watch('./site/scss/panel-style/*.scss', ['panel-styles']);
   gulp.watch('./site/scss/site-specific/*.scss', ['styles']);
   gulp.watch('./site/js/*.js', ['scripts']);
 });

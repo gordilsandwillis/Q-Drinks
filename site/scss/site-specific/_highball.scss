@@ -21,7 +21,7 @@
 	.flex-col {
 		width: 100%;
 		flex-shrink: 0;
-		padding-bottom: $gutter;
+		padding-bottom: 6.5%;
 		@include respond($md) {
 			width: 50%;
 		}
@@ -35,6 +35,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	padding-bottom: 3%;
 	margin-left: (-$gutter/1.9);
   margin-right: (-$gutter/1.9);
 	.flex-col {
@@ -42,21 +43,27 @@
 		padding-right: $gutter/2;
 		order: 0;
 		position: relative;
-		padding-bottom: 2rem;
 		&:not(.inline-recipe) {
 			@include respond($md) {
-				.nipple {
-					content: '';
-					display: block;
-					width: 0;
-					height: 0;
+				.nipple-wrap {
+					width: 20px;
+					height: 10px;
 					position: absolute;
 					bottom: 0;
 					left: 50%;
 					margin-left: -10px;
-					border: 10px solid transparent;
-					border-top: none;
-					border-bottom-color: #ffc99b;
+					overflow: hidden;
+					transition: height .3s $ease;
+					height: 0; // change to 10px show nipple
+					.nipple {
+						content: '';
+						display: block;
+						width: 0;
+						height: 0;
+						border: 10px solid transparent;
+						border-top: none;
+						border-bottom-color: #ffc99b;
+					}
 				}
 			}
 		}
@@ -131,8 +138,16 @@
 			flex-grow: 1;
 			background-color: #ffc99b;
 			padding-bottom: 0;
-			margin-bottom: $gutter;
 			display: none;
+			position: relative;
+			max-height: 0; // change to max-height: 600px to show
+			margin-bottom: 0; // change to margin-bottom: $gutter to show
+			transition: max-height .5s $ease, margin .3s $ease;
+			.inline-recipe-wrap {
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+			}
 			@include respond($md) {
 				display: block;
 			}

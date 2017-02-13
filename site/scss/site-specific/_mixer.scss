@@ -69,8 +69,11 @@ main.mixer {
 			right: 0;
 			bottom: 0;
 		}
-		.container {
+		> .container {
 			z-index: 2;
+			@include respond($md) {
+				width: 75%;
+			}
 		}
 	}
 	.mixer-list {

@@ -25,17 +25,17 @@ Packageintro: Q Drinks are packaged in various sizes Nam porttitor massa egeta p
 Packagetypes: 
 
 - 
-  packageimage: q-placeholder-1.jpg
+  packageimage: q-pkg-1.jpg
   volume: 4 Pack
   flavors: All Flavors Available
   _fieldset: packageBlock
 - 
-  packageimage: q-placeholder-1.jpg
+  packageimage: q-pkg-3.jpg
   volume: 750 mL
   flavors: All Flavors Available
   _fieldset: packageBlock
 - 
-  packageimage: q-placeholder-1.jpg
+  packageimage: q-pkg-2.jpg
   volume: 6 Pack
   flavors: All Flavors Available
   _fieldset: packageBlock
@@ -49,17 +49,17 @@ Packagetypess:
 Logos: 
 
 - 
-  logoimage: q-placeholder-1.jpg
+  logoimage: logo.gif
   _fieldset: logoBlock
 - 
-  logoimage: q-placeholder-1.jpg
+  logoimage: logo.gif
   _fieldset: logoBlock
 - 
-  logoimage: q-placeholder-1.jpg
+  logoimage: logo.gif
   _fieldset: logoBlock
 - 
-  logoimage: q-placeholder-1.jpg
+  logoimage: logo.gif
   _fieldset: logoBlock
 - 
-  logoimage: q-placeholder-1.jpg
+  logoimage: logo.gif
   _fieldset: logoBlock

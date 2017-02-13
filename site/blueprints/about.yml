@@ -22,7 +22,7 @@ fields:
     fieldsets:
       logoBlock:
         label: Add Logo
-        snippet: sections/logoBlock
+        snippet: sections/panel-about-logos
         fields:
           logoImage:
             label: Logo
@@ -38,8 +38,8 @@ fields:
     type: builder
     fieldsets:
       packageBlock:
-        label: Add Package
-        snippet: sections/packageBlock
+        label: Package
+        snippet: sections/panel-about-pkg
         fields:
           packageImage:
             label: Image

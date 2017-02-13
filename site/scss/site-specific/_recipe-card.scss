@@ -71,6 +71,8 @@
 		width: 55px;
 		height: 40px;
 		position: relative;
+		display: block;
+		margin: 0 auto;
 		@include respond($md) {
 			position: absolute;
 			top: 23px;

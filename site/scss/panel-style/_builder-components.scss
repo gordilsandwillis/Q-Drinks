@@ -8,6 +8,49 @@
 		margin: -1em -1.5em;
 		border-radius: 4px 4px 0 0;
 		overflow: hidden;
+		.panel-block {
+			.text {
+				padding: 20px;
+			}
+			@include respond(550) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.panel-image, .panel-text {
+					padding: 20px;
+				}
+				.panel-image {
+					width: 33.333%;
+					max-width: 350px;
+					min-width: 200px;
+					img {
+						border-radius: 4px;
+					}
+					+ .panel-text {
+						padding-left: 0;
+					}
+				}
+				.panel-text {
+					width: 33.333%;
+					flex-grow: 1;
+					&.centered {
+						max-width: 28em;
+						text-align: center;
+					}
+					h5 {
+						margin-bottom: .5em;
+					}
+					p {
+						max-width: 36em;
+						margin-bottom: 0;
+						margin-top: 0;
+						+ p {
+							margin-top: 1em;
+						}
+					}
+				}
+			}
+		}
 		.ingredient-block  {
 			background: #fdfdfd;
 			img {

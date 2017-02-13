@@ -17,7 +17,7 @@ fields:
     fieldsets:
       accoladeBlock:
         label: Add Accolade
-        snippet: sections/accoladeBlock
+        snippet: sections/panel-accolades-quote
         fields:
           quote: 
             label: Quote <span class="panel-field-description">leave out the quotation marks</span>

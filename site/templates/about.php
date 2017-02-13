@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="right about-info">
-        <div class="transition-in">
+        <div>
           <?php snippet('section-header', ['text' => 'About Us']) ?>
           <div class="container align-center">
             <section>
@@ -56,8 +56,8 @@
       <div class="container very-narrow align-center intro-p">
         <p><?= $page->availablityIntro()->html() ?></p>
       </div>
-      <div class="container">
-        <div class="inline-grid center middle logos">
+      <div class="container narrow">
+        <div class="inline-grid center middle logos break-sm">
           <?php foreach($page->logos()->toStructure() as $section): ?>
             <div class="col">
               <?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>

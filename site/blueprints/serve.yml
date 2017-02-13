@@ -17,7 +17,7 @@ fields:
     fieldsets:
       stepBlock:
         label: Add Step
-        snippet: sections/ingredientBlock
+        snippet: sections/panel-serve-step
         fields:
           picture:
             label: Image
