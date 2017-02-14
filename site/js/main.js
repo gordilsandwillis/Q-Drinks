@@ -76,7 +76,7 @@ Barba.Dispatcher.on('transitionCompleted', function() {
 var fancyHeader = function() {
   var header = document.querySelector('header');
   var scrollTop = document.body.scrollTop;
-  if (scrollTop >= 75) {
+  if (scrollTop >= 7) {
     header.classList.add('collapsed');
   } else {
     header.classList.remove('collapsed');
