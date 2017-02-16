@@ -9,7 +9,17 @@
 	    </div>
 	    <div class="text-overlay">
 	    	<div class="container">
-		      <h1><?= $page->headline()->html() ?></h1>
+		      <h1>
+		      	<div class="h1-wrap">
+			      	<div class="q-question">
+			      		<?php snippet('icons/logo') ?>
+			      		<span class="colon">:</span>
+			      	</div>
+			      	<div class="text">
+				      	<?= $page->headline()->html() ?>
+			      	</div>
+		      	</div>
+		      </h1>
 		    </div>
 	    </div>
     </div>

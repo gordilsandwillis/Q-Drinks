@@ -19,17 +19,67 @@
 			max-width: 12.5em;
 			margin: 0 auto;
 			padding-bottom: 5em;
+			text-align: left;
+			.h1-wrap {
+				padding-left: 3.5em;
+				display: block;
+				position: relative;
+				.text {
+					transform: translate3d(0, 40px, 0);
+					opacity: 0;
+					animation: transition-in 1s .3s $ease forwards;
+				}
+				.q-question {
+					display: block;
+					float: left;
+					width: 3.5em;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translate3d(0,-50%,0);
+					svg {
+						display: inline-block;
+						vertical-align: middle;
+						height: 3em;
+						margin-bottom: -.55em;
+						margin: 0 0 -1.25rem -.5rem;
+						transition: none;
+						transform: translate3d(0, 40px, 0);
+						opacity: 0;
+						animation: transition-in 1s .2s $ease forwards;
+						.mixers {
+							display: none;
+						}
+						* {
+							fill: #fff;
+						}
+					}
+					.colon {
+						position: absolute;
+						top: 50%;
+						line-height: 1em;
+						margin-top: -.65em;
+						right: .25em;
+						display: inline-block;
+						vertical-align: middle;
+						font-size: 1.25em;
+						transform: translate3d(0, 40px, 0);
+						opacity: 0;
+						animation: transition-in 1s .25s $ease forwards;
+					}
+				}
+			}
 			@include respond($sm) {
-				font-size: 1.65rem;
+				font-size: 1.65em;
 			}
 			@include respond($md) {
-				font-size: 2.125rem;
+				font-size: 2.125em;
 			}
 			@include respond($lg) {
-				max-width: 17.5em;
+				max-width: 19.5em;
 			}
 			@include respond($xlg) {
-				font-size: 2.5rem;
+				font-size: 2.5em;
 			}
 		}
 	}

@@ -52,11 +52,11 @@
               <div class="instructions">
                 <div class="curved-serves">
                   <span class="letter s">S</span><span class="letter e">e</span><span class="letter r">r</span><span class="letter v">v</span><span class="letter e2">e</span><span class="letter s2">s</span>
-                  <span class="number">00</span>
+                  <span class="number"><?= $recipe->servingsNumber()->html() ?></span>
                 </div>
                 <div class="container">
                   <h3 class="recipe-title"><?= $recipe->title()->html() ?></h3>
-                  <div class="inline-grid">
+                  <div class="inline-grid mobile-hide">
                     <div class="col-6">
                       <h5 class="recipe-section-title">Ingredients</h5>
                       <ul>
@@ -71,8 +71,8 @@
                     </div>
                   </div>
                   
-                  <h5 class="recipe-section-title">Method</h5>
-                  <p>
+                  <h5 class="recipe-section-title mobile-hide">Method</h5>
+                  <p class="mobile-hide">
                   <?php foreach($recipe->method()->toStructure() as $step): ?>
                     <?= $step->step()->html() ?>
                   <?php endforeach ?>

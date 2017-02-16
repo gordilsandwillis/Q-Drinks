@@ -1,9 +1,16 @@
 
 	<footer class="<?php echo $footerClass ?>">
 		<div class="container">
-			<a href="<? echo $site->instagramUrl() ?>">Instagram</a>
-			<a href="<? echo $site->facebookUrl() ?>">Facebook</a>
-			<a href="<? echo $site->twitterUrl() ?>">Twitter</a>
+			<ul>
+				<li><a href="<? echo $site->instagramUrl() ?>">Instagram</a></li>
+				<li><a href="<? echo $site->facebookUrl() ?>">Facebook</a></li>
+				<li><a href="#">Careers</a></li>
+				<li class="placeholder-li"></li>
+				<li><a href="<?= url() ?>/about#contact">Contact</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li class="q-footer-title">Q Mixers</li>
+			</ul>
 		</div>
 	</footer>
 

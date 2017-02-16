@@ -34,34 +34,7 @@ Ingredients:
 
 ----
 
-Method: 
-
-- 
-  step: >
-    Mix salt and finely chopped jalapeno in
-    a small bowl and spread out on a small
-    plate
-  _fieldset: recipeStepBlock
-- 
-  step: >
-    Rub the rim of a highball glass with the
-    lime wedge, the dip into a salt mixture,
-    pushing through to evenly coat rim
-  _fieldset: recipeStepBlock
-- 
-  step: >
-    Fill the highball glass with ice and
-    then pour in the tequila and squeeze in
-    a lime
-  _fieldset: recipeStepBlock
-- 
-  step: Pour in Q Grapefruit
-  _fieldset: recipeStepBlock
-- 
-  step: >
-    Gently Stir and garnish with a lime
-    wedge
-  _fieldset: recipeStepBlock
+Method: Mix salt and finely chopped jalapeno in a small bowl and spread out on a small plate. Rub the rim of a highball glass with the lime wedge, the dip into a salt mixture, pushing through to evenly coat rim. Fill the highball glass with ice and then pour in the tequila and squeeze in a lime. Pour in Q Grapefruit Gently. Stir and garnish with a lime wedge
 
 ----
 
@@ -74,3 +47,7 @@ Variations: Try it with your favorite mescal rather than tequila for a smokier d
 ----
 
 Recipemixer: tonic-water
+
+----
+
+Servingsnumber: 02

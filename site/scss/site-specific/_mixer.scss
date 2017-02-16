@@ -44,7 +44,6 @@ main.mixer {
 				}
 			}
 			p {
-				font-weight: 700;
 				opacity: 0;
 				transform: translate3d(0, 40px, 0);
 				animation: transition-in .65s ease forwards;
@@ -74,6 +73,13 @@ main.mixer {
 				width: 75%;
 			}
 		}
+		.recipe-card {
+			.mobile-hide {
+				@include respond-smaller-than($md) {
+					display: none;
+				}
+			}
+		}
 	}
 	.mixer-list {
 		padding-bottom: $margin;
@@ -97,7 +103,7 @@ main.mixer {
 }
 
 .more-btn-wrap {
-	padding: 3rem 0;
+	padding: 1.5rem 0 4rem;
 	text-align: center;
 	@include respond($md) {
 		padding: 4.5rem 0 4.75rem;

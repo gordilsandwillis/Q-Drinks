@@ -58,11 +58,7 @@ if(isset($limit)) $highball = $highball->limit($limit);
             <div class="col-4">
               <div class="recipe-section">
                 <h3>Method</h3>
-                <ol class="recipe-steps">
-                  <?php foreach($recipe->method()->toStructure() as $step): ?>
-                    <li><p><?= $step->step()->html() ?></p></li>
-                  <?php endforeach ?>
-                </ol>
+                <p><?= $recipe->method()->html() ?></p>
               </div>
             </div>
 

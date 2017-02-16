@@ -2,13 +2,101 @@ footer {
 	background: white;
 	.container {
 		padding: 20px 0;
-		a {
-			text-transform: uppercase;
-			letter-spacing: $very-tracked-out;
-			font-weight: 700;
-			font-size: 10px;
-			@include respond($huge) {
-				font-size: 12px;
+		text-align: center;
+		@include respond($lg) {
+			max-width: 100%;
+			width: 100%;
+		}
+		@include respond-smaller-than($lg) {
+			width: 100%;
+			max-width: 100%;
+			padding: 20px 0 0 0;
+		}
+		ul {
+			@include respond($lg) {
+				display: flex;
+				// justify-content: space-between;
+				align-items: center;
+				justify-content: center;
+			}
+			li {
+				text-transform: uppercase;
+				letter-spacing: $very-tracked-out;
+				font-weight: 700;
+				font-size: 10px;
+				&:nth-child(-n + 3) {
+					@include respond($lg) {
+						text-align: right;
+						margin-left: 5%;	
+					}
+					@include respond($xlg) {
+						margin-left: 7%;
+					}
+				}
+				&:nth-child(n + 4):nth-child(-n + 6) {
+					@include respond($lg) {
+						text-align: left;
+						margin-right: 4%;
+					}
+					@include respond($xlg) {
+						margin-right: 6%;
+					}
+				}
+				&:nth-child(1) {
+					@include respond($lg) {
+						margin-left: 3.25em;
+					}
+					@include respond($xlg) {
+						margin-left: 2.5em;
+					}
+				}
+				&.placeholder-li {
+					display: none;
+					@include respond($lg) {
+						display: block;
+						width: 130px;
+						margin: 0 4%;
+					}
+					@include respond($xlg) {
+						margin: 0 7%;	
+					}
+				}
+				a {
+					display: inline-block;
+					line-height: 1.25em;
+					@include respond-smaller-than($lg) {
+						display: block;
+						border: none;
+						padding: 7px 0;
+					}
+				}
+				@include respond($huge) {
+					font-size: 12px;
+				}
+				&.q-footer-title {
+					background: #000;
+					color: #fff;
+					margin-top: 20px;
+					padding: 10px 0;
+					font-weight: 900;
+					@include font-smooth();
+					@include respond($lg) {
+						margin: 0;
+						position: absolute;
+						left: 50%;
+						font-size: 16px;
+						width: 130px;
+						margin-left: -65px;
+						text-align: center;
+						padding: 0;
+						padding-left: $very-tracked-out * 1.5;
+						color: $text-color;
+						background: transparent;
+					}
+					@include respond($xlg) {
+						font-size: 18px;
+					}
+				}
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 a { 
   padding-bottom: .15em;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   &:hover,
   &:focus { 
     border-color: $text-color;
@@ -23,13 +23,12 @@ p.lg,
   font-family: $secondary-font;
   font-size: 1.25rem;
   line-height: $base-line-height;
-  font-weight: 700;
 }
 
 p {
   font-size: 1rem;
   font-size: .875rem;
-  letter-spacing: .05em;
+  letter-spacing: .03em;
   line-height: $base-line-height;
   + p {
     margin-top: $base-line-height;

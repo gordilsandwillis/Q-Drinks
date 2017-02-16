@@ -1,4 +1,8 @@
 main.about {
+	@include respond($md) {
+		position: relative;
+		padding-top: 60px;
+	}
 	.split {
 		position: relative;
 		min-height: 60vh;
@@ -55,6 +59,22 @@ main.about {
 		text-align: center;
 		align-items: center;
 		display: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 120px;
+		z-index: 10;
+		@include transition((top $header-transition-speed $ease));
+		&.collapsed {
+			top: $collapsed-header-height;
+		}
+		@include respond($lg) {
+			top: 150px;
+		}
+		.container {
+			max-width: 100%;
+			width: 100%;
+		}
 		@include respond($md) {
 			display: flex;
 		}

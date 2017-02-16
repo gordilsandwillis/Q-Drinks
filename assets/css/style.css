@@ -5901,7 +5901,7 @@ section.alternating-blocks .row *[class^="col-"] .info div h5 {
 
 a {
   padding-bottom: .15em;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 a:hover, a:focus {
@@ -5924,13 +5924,12 @@ p.lg,
   font-family: "Futura", sans-serif;
   font-size: 1.25rem;
   line-height: 1.65em;
-  font-weight: 700;
 }
 
 p {
   font-size: 1rem;
   font-size: .875rem;
-  letter-spacing: .05em;
+  letter-spacing: .03em;
   line-height: 1.65em;
 }
 
@@ -6067,6 +6066,7 @@ header .container {
 @media only screen and (min-width: 900px) {
   header .container {
     width: 100%;
+    max-width: none;
   }
 }
 
@@ -6172,7 +6172,7 @@ header nav a {
   header nav a:after {
     content: '';
     display: block;
-    height: 1px;
+    height: 2px;
     left: 0;
     right: .15em;
     bottom: 50%;
@@ -6212,8 +6212,8 @@ header nav .left {
 
 @media only screen and (min-width: 900px) {
   header nav .left {
-    padding-right: 80px;
-    text-align: right;
+    padding-right: 40px;
+    text-align: center;
     width: 50%;
     display: inline-block;
     display: block;
@@ -6224,18 +6224,18 @@ header nav .left {
   }
 }
 
-@media only screen and (min-width: 1500px) {
-  header nav .left {
-    margin-right: 115px;
-  }
-}
-
 @media only screen and (min-width: 900px) {
   header nav .left a {
-    margin-left: 3.2em;
+    margin-left: 11%;
   }
   header nav .left a:first-child {
     margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  header nav .left a {
+    margin-left: 13%;
   }
 }
 
@@ -6245,8 +6245,8 @@ header nav .right {
 
 @media only screen and (min-width: 900px) {
   header nav .right {
-    padding-left: 75px;
-    text-align: left;
+    padding-left: 55px;
+    text-align: center;
     width: 50%;
     display: inline-block;
     display: block;
@@ -6259,16 +6259,22 @@ header nav .right {
 
 @media only screen and (min-width: 1500px) {
   header nav .right {
-    margin-left: 115px;
+    padding-left: 50px;
   }
 }
 
 @media only screen and (min-width: 900px) {
   header nav .right a {
-    margin-right: 2.4em;
+    margin-right: 8%;
   }
   header nav .right a:last-child {
     margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  header nav .right a {
+    margin-right: 10%;
   }
 }
 
@@ -6378,18 +6384,143 @@ footer {
 
 footer .container {
   padding: 20px 0;
+  text-align: center;
 }
 
-footer .container a {
+@media only screen and (min-width: 900px) {
+  footer .container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  footer .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  footer .container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+footer .container ul li {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
   font-size: 10px;
 }
 
+@media only screen and (min-width: 900px) {
+  footer .container ul li:nth-child(-n + 3) {
+    text-align: right;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .container ul li:nth-child(-n + 3) {
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  footer .container ul li:nth-child(n + 4):nth-child(-n + 6) {
+    text-align: left;
+    margin-right: 4%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .container ul li:nth-child(n + 4):nth-child(-n + 6) {
+    margin-right: 6%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  footer .container ul li:nth-child(1) {
+    margin-left: 3.25em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .container ul li:nth-child(1) {
+    margin-left: 2.5em;
+  }
+}
+
+footer .container ul li.placeholder-li {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  footer .container ul li.placeholder-li {
+    display: block;
+    width: 130px;
+    margin: 0 4%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .container ul li.placeholder-li {
+    margin: 0 7%;
+  }
+}
+
+footer .container ul li a {
+  display: inline-block;
+  line-height: 1.25em;
+}
+
+@media only screen and (max-width: 900px) {
+  footer .container ul li a {
+    display: block;
+    border: none;
+    padding: 7px 0;
+  }
+}
+
 @media only screen and (min-width: 1500px) {
-  footer .container a {
+  footer .container ul li {
     font-size: 12px;
+  }
+}
+
+footer .container ul li.q-footer-title {
+  background: #000;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 0;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 900px) {
+  footer .container ul li.q-footer-title {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    font-size: 16px;
+    width: 130px;
+    margin-left: -65px;
+    text-align: center;
+    padding: 0;
+    padding-left: 0.3em;
+    color: #333;
+    background: transparent;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .container ul li.q-footer-title {
+    font-size: 18px;
   }
 }
 
@@ -6472,29 +6603,86 @@ body {
   max-width: 12.5em;
   margin: 0 auto;
   padding-bottom: 5em;
+  text-align: left;
+}
+
+.home .text-overlay h1 .h1-wrap {
+  padding-left: 3.5em;
+  display: block;
+  position: relative;
+}
+
+.home .text-overlay h1 .h1-wrap .text {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  animation: transition-in 1s 0.3s ease-in-out forwards;
+}
+
+.home .text-overlay h1 .h1-wrap .q-question {
+  display: block;
+  float: left;
+  width: 3.5em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.home .text-overlay h1 .h1-wrap .q-question svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 3em;
+  margin-bottom: -.55em;
+  margin: 0 0 -1.25rem -.5rem;
+  transition: none;
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  animation: transition-in 1s 0.2s ease-in-out forwards;
+}
+
+.home .text-overlay h1 .h1-wrap .q-question svg .mixers {
+  display: none;
+}
+
+.home .text-overlay h1 .h1-wrap .q-question svg * {
+  fill: #fff;
+}
+
+.home .text-overlay h1 .h1-wrap .q-question .colon {
+  position: absolute;
+  top: 50%;
+  line-height: 1em;
+  margin-top: -.65em;
+  right: .25em;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  animation: transition-in 1s 0.25s ease-in-out forwards;
 }
 
 @media only screen and (min-width: 450px) {
   .home .text-overlay h1 {
-    font-size: 1.65rem;
+    font-size: 1.65em;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .home .text-overlay h1 {
-    font-size: 2.125rem;
+    font-size: 2.125em;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .home .text-overlay h1 {
-    max-width: 17.5em;
+    max-width: 19.5em;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .home .text-overlay h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 }
 
@@ -6553,7 +6741,7 @@ main.mixers .mixer-list .col img {
 }
 
 .mixer-list .thumb-title {
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   display: inline-block;
   transition: border 0.25s ease-in-out;
   padding-bottom: .25em;
@@ -6624,7 +6812,6 @@ main.mixer .mixer-intro .text-wrap h1 {
 }
 
 main.mixer .mixer-intro .text-wrap p {
-  font-weight: 700;
   opacity: 0;
   transform: translate3d(0, 40px, 0);
   animation: transition-in .65s ease forwards;
@@ -6661,6 +6848,12 @@ main.mixer .mixer-recipes > .container {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  main.mixer .mixer-recipes .recipe-card .mobile-hide {
+    display: none;
+  }
+}
+
 main.mixer .mixer-list {
   padding-bottom: 7.5%;
 }
@@ -6690,7 +6883,7 @@ main.mixer .mixer-list .col img {
 }
 
 .more-btn-wrap {
-  padding: 3rem 0;
+  padding: 1.5rem 0 4rem;
   text-align: center;
 }
 
@@ -6866,7 +7059,6 @@ main.mixer .mixer-list .col img {
   padding-bottom: 0;
   display: none;
   position: relative;
-  max-height: 0;
   margin-bottom: 0;
   transition: max-height 0.5s ease-in-out, margin 0.3s ease-in-out;
 }
@@ -7005,10 +7197,17 @@ main.inspiration .signature image {
 
 main.accolades .accolades-list {
   padding-bottom: 3.75%;
+  text-align: center;
 }
 
 main.accolades .accolades-list section {
-  padding-bottom: 5.625%;
+  padding-bottom: 15%;
+}
+
+@media only screen and (min-width: 600px) {
+  main.accolades .accolades-list section {
+    padding-bottom: 5.625%;
+  }
 }
 
 main.accolades .accolades-list section .quote:before {
@@ -7025,6 +7224,13 @@ main.accolades .accolades-list section .quote-by {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-top: .5em;
+}
+
+@media only screen and (min-width: 600px) {
+  main.about {
+    position: relative;
+    padding-top: 60px;
+  }
 }
 
 main.about .split {
@@ -7094,6 +7300,29 @@ main.about nav.secondary {
   text-align: center;
   align-items: center;
   display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120px;
+  z-index: 10;
+  -webkit-transition: top 0.4s ease-in-out;
+  -moz-transition: top 0.4s ease-in-out;
+  -o-transition: top 0.4s ease-in-out;
+}
+
+main.about nav.secondary.collapsed {
+  top: 76px;
+}
+
+@media only screen and (min-width: 900px) {
+  main.about nav.secondary {
+    top: 150px;
+  }
+}
+
+main.about nav.secondary .container {
+  max-width: 100%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -7280,7 +7509,7 @@ main.about .about-info p {
 
 .recipe-card .instructions .container {
   width: 100%;
-  padding: 2rem 0 3rem;
+  padding: 10px 0 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -7303,7 +7532,14 @@ main.about .about-info p {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 1em;
+  margin: .5em 0 .7em;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-card .instructions .recipe-title {
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
 }
 
 .recipe-card .instructions .recipe-section-title {
@@ -7324,11 +7560,12 @@ main.about .about-info p {
   height: 40px;
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin: 2em auto 0;
 }
 
 @media only screen and (min-width: 600px) {
   .recipe-card .curved-serves {
+    margin: 0;
     position: absolute;
     top: 23px;
     right: 30px;
@@ -7413,6 +7650,12 @@ main.about .about-info p {
   transition: transform 0.25s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+  .recipe-slideshow .slick-arrow {
+    display: none !important;
+  }
+}
+
 .recipe-slideshow .slick-arrow:active {
   transform: scale(0.7);
 }
@@ -7425,6 +7668,41 @@ main.about .about-info p {
 .recipe-slideshow .slick-arrow.slick-next {
   right: -64px;
   background-image: url(../images/arrow-right-lg.svg);
+}
+
+.recipe-slideshow .slick-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-slideshow .slick-dots {
+    display: none !important;
+  }
+}
+
+.recipe-slideshow .slick-dots li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.recipe-slideshow .slick-dots li:last-child {
+  margin-right: 0;
+}
+
+.recipe-slideshow .slick-dots li.slick-active button {
+  background: #333;
+}
+
+.recipe-slideshow .slick-dots li button {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0;
 }
 
 main.recipe .recipe-card .instructions .container {

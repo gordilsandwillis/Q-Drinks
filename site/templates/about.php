@@ -4,7 +4,7 @@
     <nav class="secondary">
       <div class="container">
         <ul>
-          <li><a href="#top">About Us</a></li>
+          <li><a href="#top">Contact Us</a></li>
           <li><a href="#availability">Availability</a></li>
           <li><a href="#find-q">Find Q Near You</a></li>
           <li><a href="#package">Package Configurations</a></li>
@@ -74,12 +74,14 @@
       </div>
     </section>
 
-    <section id="package" class="package-configs grey transition-in">
-      <?php snippet('section-header', ['text' => 'Package Configurations']) ?>
-      <div class="container very-narrow align-center lg intro-p">
-        <p><?= $page->packageIntro()->html() ?></p>
+    <section id="package" class="package-configs grey">
+      <div class="transition-in">
+        <?php snippet('section-header', ['text' => 'Package Configurations']) ?>
+        <div class="container very-narrow align-center lg intro-p">
+          <p><?= $page->packageIntro()->html() ?></p>
+        </div>
       </div>
-      <div class="container">
+      <div class="container transition-in">
         <div class="inline-grid center bottom">
           <?php foreach($page->packageTypes()->toStructure() as $section): ?>
             <div class="col-4">

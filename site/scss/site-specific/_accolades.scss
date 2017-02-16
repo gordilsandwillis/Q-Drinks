@@ -1,8 +1,12 @@
 main.accolades {
 	.accolades-list {
 		padding-bottom: $margin * .5;
+		text-align: center;
 		section {
-			padding-bottom: $margin * .75;
+			padding-bottom: $margin * 2;
+			@include respond($md) {
+				padding-bottom: $margin * .75;
+			}
 			.quote {
 				&:before {
 					content: '“'

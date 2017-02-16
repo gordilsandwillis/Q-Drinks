@@ -30,20 +30,19 @@ fields:
             type: text
 
   servings:
-    label: Serving
+    label: Serving <span class="panel-field-description">Text Description like "Serves one glass"</span>
     type: text
+    width: 1/2
+
+  servingsNumber:
+    label: Serves <span class="panel-field-description">Should be a number like "01"</span>
+    type: number
+    width: 1/2
 
   method:
     label: Method
-    type: builder
-    fieldsets:
-      recipeStepBlock:
-        label: Add Step
-        fields:
-          step:
-            label: Instructions
-            type: textarea
-            buttons: false
+    type: textarea
+    buttons: false
 
   variations:
     label: Variations

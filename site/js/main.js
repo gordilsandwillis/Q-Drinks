@@ -78,8 +78,14 @@ var fancyHeader = function() {
   var scrollTop = document.body.scrollTop;
   if (scrollTop >= 7) {
     header.classList.add('collapsed');
+    if (document.querySelector('nav.secondary') !== null) {
+      document.querySelector('nav.secondary').classList.add('collapsed');
+    }
   } else {
     header.classList.remove('collapsed');
+    if (document.querySelector('nav.secondary') !== null) {
+      document.querySelector('nav.secondary').classList.remove('collapsed');
+    }
   }
 }
 
@@ -189,7 +195,7 @@ var slideshow = function() {
   if (document.querySelector('.slideshow') !== null) {
     console.log('slideshow')
     $('.recipe-slideshow').slick({
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 300,
       slidesToShow: 1,
@@ -221,6 +227,7 @@ document.addEventListener("DOMContentLoaded", function() {
   transitionIn();
   fancyHeader();
   loadedTransitionIn();
+  smoothScroll();
 });
 
 document.addEventListener('scroll', function(event) {

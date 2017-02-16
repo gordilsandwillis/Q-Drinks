@@ -21,6 +21,7 @@ header {
 		margin-top: -($collapsed-header-height/2);
 		@include respond($lg) {
 			width: 100%;
+			max-width: none;
 		}
 	}
 	.menu-link {
@@ -95,7 +96,7 @@ header {
 				@include respond($lg) {
 					content: '';
 					display: block;
-					height: 1px;
+					height: 2px;
 					left: 0;
 					right: .15em;
 					bottom: 50%;
@@ -127,8 +128,8 @@ header {
 		.left {
 			display: inline;
 			@include respond($lg) {
-				padding-right: 80px;
-				text-align: right;
+				padding-right: 40px;
+				text-align: center;
 				width: 50%;
 				display: inline-block;
 				display: block;
@@ -137,23 +138,23 @@ header {
 				top: 0;
 				z-index: 1;
 			}
-			@include respond($huge) {
-				margin-right: 115px;
-			}
 			a {
 				@include respond($lg) {
-					margin-left: 3.2em;
+					margin-left: 11%;
 					&:first-child {
 						margin-left: 0;
 					}
+				}
+				@include respond($huge) {
+					margin-left: 13%;
 				}
 			}
 		}
 		.right {
 			display: inline;
 			@include respond($lg) {
-				padding-left: 75px;
-				text-align: left;
+				padding-left: 55px;
+				text-align: center;
 				width: 50%;
 				display: inline-block;
 				display: block;
@@ -163,14 +164,17 @@ header {
 				z-index: 1;
 			}
 			@include respond($huge) {
-				margin-left: 115px;
+				padding-left: 50px;
 			}
 			a {
 				@include respond($lg) {
-					margin-right: 2.4em;
+					margin-right: 8%;
 					&:last-child {
 						margin-right: 0;
 					}
+				}
+				@include respond($huge) {
+					margin-right: 10%;
 				}
 			}
 		}
