@@ -68,10 +68,6 @@ img, video {
   height: auto;
 }
 
-body.mobile-menu {
-  overflow: hidden;
-}
-
 svg, svg * {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -5976,28 +5972,28 @@ body {
   cursor: pointer;
 }
 
-.mobile-menu .menu-link .menu-icon {
+.menu-link:hover .menu-icon {
   opacity: 1;
   transform: rotate(-180deg);
 }
 
-.mobile-menu .menu-link .menu-icon:before {
+.menu-link:hover .menu-icon:before {
   transform: translate3d(-100%, 5px, 0);
   opacity: 0;
   width: 0;
 }
 
-.mobile-menu .menu-link .menu-icon:after {
+.menu-link:hover .menu-icon:after {
   transform: translate3d(100%, -5px, 0);
   opacity: 0;
   width: 0;
 }
 
-.mobile-menu .menu-link .menu-icon .center {
+.menu-link:hover .menu-icon .center {
   transform: rotate(-45deg);
 }
 
-.mobile-menu .menu-link .menu-icon .center:before {
+.menu-link:hover .menu-icon .center:before {
   transform: rotate(-90deg);
 }
 
@@ -6617,7 +6613,7 @@ body {
 }
 
 .home .text-overlay h1 .h1-wrap .text {
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 40px, 0);
   opacity: 0;
   animation: transition-in 1s 0.3s ease-in-out forwards;
 }
@@ -6639,7 +6635,7 @@ body {
   margin-bottom: -.55em;
   margin: 0 0 -1.25rem -.5rem;
   transition: none;
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 40px, 0);
   opacity: 0;
   animation: transition-in 1s 0.2s ease-in-out forwards;
 }
@@ -6661,7 +6657,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   font-size: 1.25em;
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 40px, 0);
   opacity: 0;
   animation: transition-in 1s 0.25s ease-in-out forwards;
 }
@@ -6684,7 +6680,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1200px) {
   .home .text-overlay h1 {
     font-size: 2.5em;
   }
@@ -6700,10 +6696,6 @@ main.mixers .top-area .top-image {
     height: 40vh;
     min-height: 400px;
   }
-}
-
-main.mixers .mixers .container {
-  padding-bottom: 3.75%;
 }
 
 main.mixers .mixer-list .col {
@@ -6829,14 +6821,6 @@ main.mixer .mixer-intro .text-wrap p {
 
 main.mixer .mixer-intro .text-wrap p + p {
   animation-delay: 0.5s;
-}
-
-main.mixer .ingredient-images {
-  overflow: hidden;
-}
-
-main.mixer .ingredient-images .container {
-  padding-bottom: 7.5%;
 }
 
 main.mixer .mixer-recipes {
@@ -7154,7 +7138,7 @@ main.mixer .mixer-list .col img {
 }
 
 .flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a {
-  margin-left: 22px;
+  margin-left: 26px;
 }
 
 .flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a .icon {
@@ -7162,15 +7146,7 @@ main.mixer .mixer-list .col img {
   width: 16px;
   position: absolute;
   left: 0;
-  top: 50%;
-  margin-left: -3px;
-  transform: translate3d(0, -52%, 0);
-}
-
-.flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a .icon svg {
-  margin: 0 auto;
-  transform: scale(0.8);
-  display: block;
+  top: 2px;
 }
 
 .flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a .icon svg * {
@@ -7210,14 +7186,6 @@ main.mixer .mixer-list .col img {
     left: auto;
     right: 100%;
   }
-}
-
-main.serve .serve-steps {
-  overflow: hidden;
-}
-
-main.serve .serve-steps .container {
-  padding-bottom: 7.5%;
 }
 
 main.inspiration .text-wrap:after {
@@ -7513,7 +7481,7 @@ main.about .about-info p {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
   .recipe-card {
     display: flex;
     align-items: stretch;
@@ -7523,7 +7491,7 @@ main.about .about-info p {
 .recipe-card .image {
   position: relative;
   overflow: hidden;
-  padding-bottom: 66.666%;
+  padding-bottom: 100%;
   flex-grow: 1;
 }
 
@@ -7537,7 +7505,7 @@ main.about .about-info p {
   display: none;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
   .recipe-card .image {
     width: 50%;
     padding-bottom: 50%;
@@ -7551,7 +7519,7 @@ main.about .about-info p {
   position: relative;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
   .recipe-card .instructions {
     display: flex;
     align-items: center;
@@ -7570,7 +7538,7 @@ main.about .about-info p {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
   .recipe-card .instructions {
     width: 50%;
   }
@@ -7773,13 +7741,6 @@ main.recipe .recipe-card .instructions .container {
 main.recipe .recipe-card .share-recipe {
   text-align: center;
   width: 100%;
-  padding-bottom: 15%;
-}
-
-@media only screen and (min-width: 600px) {
-  main.recipe .recipe-card .share-recipe {
-    padding-bottom: 0;
-  }
 }
 
 main.recipe .recipe-card .share-recipe li {
