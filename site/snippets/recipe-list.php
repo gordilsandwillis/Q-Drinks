@@ -23,9 +23,9 @@ if(isset($limit)) $highball = $highball->limit($limit);
 
   <?php foreach($highball as $recipe): ?>
 
-    <li class="flex-col">
+    <li class="flex-col recipe-thumb-toggle">
       <div class="recipe-thumb">
-        <a href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
+        <a class="recipe-thumb-link" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
           <img src="<?= $recipe->image()->crop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" >
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
           <h6 class="recipe-mixer">Q <?= $recipe->recipeMixer()->title()->html() ?></h6>

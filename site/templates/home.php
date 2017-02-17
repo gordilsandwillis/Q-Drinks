@@ -3,8 +3,8 @@
   <main class="home" role="main">
   	<div class="top-area">
 	    <div class="top-image full-height">
-		    <div class="bg-image" style="background-image: url(<?= $page->image()->crop(2000, 1500)->url();?>)">
-		    	<?= $page->image()->crop(800, 600);?>
+		    <div class="bg-image" style="background-image: url(<?= $page->images()->shuffle()->first()->crop(2000, 1500)->url() ?>)">
+		    	<img src="<?= $page->images()->shuffle()->first()->crop(800, 600)->url() ?>">
 		    </div>
 	    </div>
 	    <div class="text-overlay">

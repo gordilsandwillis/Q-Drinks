@@ -2,14 +2,14 @@
 	@include respond($md) {
 		background: #fff;
 	}
-	@include respond($lg) {
+	@include respond($lg + 100) {
 		display: flex;
 		align-items: stretch;
 	}
 	.image {
 		position: relative;
 		overflow: hidden;
-		padding-bottom: 100%;
+		padding-bottom: 66.666%;
 		flex-grow: 1;
 		.bg-image {
 			position: absolute;
@@ -19,7 +19,7 @@
 				display: none;
 			}
 		}
-		@include respond($lg) {
+		@include respond($lg + 100) {
 			width: 50%;
 			padding-bottom: 50%;
 			background: #ccc;
@@ -29,7 +29,7 @@
 		text-align: center;
 		transform-style: preserve-3d;
 		position: relative;
-		@include respond($lg) {
+		@include respond($lg + 100) {
 			display: flex;
 			align-items: center;
 			text-align: left;
@@ -41,7 +41,7 @@
 				padding: 40px 50px 55px;
 			}
 		}
-		@include respond($lg) {
+		@include respond($lg + 100) {
 			width: 50%;
 		}
 		.recipe-title {

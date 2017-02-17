@@ -55,6 +55,12 @@ main.mixer {
 			}
 		}
 	}
+	.ingredient-images {
+		overflow: hidden;
+		.container {
+			padding-bottom: $margin;
+		}
+	}
 	.mixer-recipes {
 		min-height: 300px;
 		position: relative;

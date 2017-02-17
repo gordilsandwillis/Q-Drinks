@@ -46,6 +46,11 @@
 		padding-right: $gutter/2;
 		order: 0;
 		position: relative;
+		.recipe-thumb-link {
+			@include respond(900) {
+				// pointer-events: none;
+			}
+		}
 		&:not(.inline-recipe) {
 			@include respond($md) {
 				.nipple-wrap {
@@ -197,14 +202,19 @@
 						letter-spacing: .05em;
 						position: relative;
 						a {
-							margin-left: 26px;
+							margin-left: 22px;
 							.icon {
 								display: block;
 								width: 16px;
 								position: absolute;
 								left: 0;
-								top: 2px;
+								top: 50%;
+								margin-left: -3px;
+								transform: translate3d(0, -52%, 0);
 								svg {
+									margin: 0 auto;
+									transform: scale(.8);
+									display: block;
 									* {
 										fill: $text-color;
 									}

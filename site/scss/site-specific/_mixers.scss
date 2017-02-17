@@ -9,6 +9,11 @@ main.mixers {
 			}
 		}
 	}
+	.mixers {
+		.container {
+			padding-bottom: $margin / 2;
+		}
+	}
 	.mixer-list {
 		.col {
 			width: 50%;

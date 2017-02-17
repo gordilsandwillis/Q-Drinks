@@ -13,6 +13,12 @@ img, video {
   height: auto;
 }
 
+body {
+  &.mobile-menu {
+    overflow: hidden;
+  }
+}
+
 svg, svg * {
   @include transition((all $med-speed ease-in-out));
 }

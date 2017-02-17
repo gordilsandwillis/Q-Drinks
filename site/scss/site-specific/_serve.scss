@@ -1,5 +1,8 @@
 main.serve {
 	.serve-steps {
-
+		overflow: hidden;
+		.container {
+			padding-bottom: $margin;
+		}
 	}
 }

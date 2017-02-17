@@ -7,8 +7,8 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
-  - highball/cuba-libre
-  - home
-  - mixers/tonic-water
-  - about
-  - highball
+  - mixers/club-soda
+  - mixers/kola
+  - mixers/ginger-ale
+  - mixers/grapefruit
+  - mixers/ginger-beer

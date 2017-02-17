@@ -25,4 +25,8 @@ Headline: Shouldn’t your mixer be as great as your spirit?
 
 ----
 
-Image: q-placeholder-1.jpg
+Image: Q-Drinks-photo-shoot-by-Daniel-Krieger-1537.jpg
+
+----
+
+Headerimage: Q-Drinks-photo-shoot-by-Daniel-Krieger-1537.jpg

@@ -46,8 +46,11 @@ var FadeTransition = Barba.BaseTransition.extend({
 
     document.body.scrollTop = 0;
     fancyHeader();
+    mobileMenu();
     loadedTransitionIn();
     smoothScroll();
+    parallaxblock();
+    parallaxblock2();
 
     $el.animate({ opacity: 1 }, 400, function() {
       /*
@@ -68,6 +71,7 @@ Barba.Pjax.getTransition = function() {
 
 Barba.Dispatcher.on('transitionCompleted', function() {
   slideshow();
+  highballGrid();
 });
 
 
@@ -105,22 +109,29 @@ var parallaxblock = function() {
 
     for(var i = 0; i < parallaxBlock.length; i++) {
       var section = parallaxBlock[i];
-      var sectionTop = parallaxBlock[i].getBoundingClientRect().top;
-      var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
-      var sectionHeight = parallaxBlock[i].clientHeight;
-      if (sectionTop < windowHeight && sectionBottom > 0 && sectionTop < windowHeight - 200) {
-        console.log('para')
-        var speed = 3.3;
-        section.style.cssText += 'transform: translate3d(0, ' - 200 + (sectionTop * speed) + 'px, 0)';
+      var sectionTop = section.getBoundingClientRect().top;
+      var sectionBottom = section.getBoundingClientRect().bottom;
+      var sectionHeight = section.clientHeight;
+      if (sectionTop < windowHeight - 0 && sectionBottom > 60) {
+        var speed = sectionTop/windowHeight;
+        section.style.cssText += 'transform: translate3d(0, ' + sectionHeight/3 * speed + 'px, 0)';
       }
     }
 
   } else {
+
     for(var i = 0; i < parallaxBlock.length; i++) {
       var section = parallaxBlock[i];
-      section.style.cssText += 'transform: translate3d(0, 0, 0)';
+      var sectionTop = section.getBoundingClientRect().top;
+      var sectionBottom = section.getBoundingClientRect().bottom;
+      var sectionHeight = section.clientHeight;
+      if (sectionTop < windowHeight - 0 && sectionBottom > 60) {
+        section.style.cssText += 'transform: translate3d(0, 0, 0)';
+      }
     }
+
   }
+
 }
 
 var parallaxblock2 = function() {
@@ -225,12 +236,45 @@ var smoothScroll = function() {
   });
 }
 
+var highballGrid = function () {
+  var windowWidth = window.innerWidth;
+  var recipeThumb = document.querySelectorAll('.recipe-thumb-link');
+  if (recipeThumb !== null && windowWidth > 900) {
+    console.log('> 900')
+    for(var i = 0; i < recipeThumb.length; i++) {
+      var thumb = recipeThumb[i];
+      thumb.addEventListener('click', function(event) {
+        Barba.Pjax.preventCheck()
+        // event.stopPropagation()
+        console.log('kaboom')
+      });
+    }
+  }
+}
+
+
+var mobileMenu = function () {
+  var windowWidth = window.innerWidth;
+  var menuToggle = document.querySelector('#menu-toggle');
+  if (windowWidth < 900) {
+    menuToggle.addEventListener('click', function(event) {
+      document.querySelector('body').classList.toggle('mobile-menu');
+    });
+  } else {
+    document.querySelector('body').classList.remove('mobile-menu');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   Barba.Pjax.start();
   transitionIn();
   fancyHeader();
+  mobileMenu();
+  parallaxblock();
+  parallaxblock2();
   loadedTransitionIn();
   smoothScroll();
+  highballGrid();
 });
 
 document.addEventListener('scroll', function(event) {
@@ -243,8 +287,10 @@ document.addEventListener('scroll', function(event) {
 
 window.addEventListener('resize', function(event) {
   fancyHeader();
+  mobileMenu();
   parallaxTop();
   parallaxblock();
   parallaxblock2();
   transitionIn();
+  highballGrid();
 });

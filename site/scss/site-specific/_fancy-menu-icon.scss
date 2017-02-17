@@ -12,7 +12,7 @@ body {
 	transform: translate3d(-20px, -50%, 0);
 	z-index: 2;
 	cursor: pointer;
-	&:hover {
+	.mobile-menu & {
 		.menu-icon {
 			opacity: 1;
 			transform: rotate(-180deg);

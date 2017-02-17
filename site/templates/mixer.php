@@ -56,7 +56,7 @@
                 </div>
                 <div class="container">
                   <h3 class="recipe-title"><?= $recipe->title()->html() ?></h3>
-                  <div class="inline-grid mobile-hide">
+                  <div class="inline-grid mobile-hide break-xlg">
                     <div class="col-6">
                       <h5 class="recipe-section-title">Ingredients</h5>
                       <ul>

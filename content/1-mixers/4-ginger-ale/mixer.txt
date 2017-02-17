@@ -2,7 +2,7 @@ Title: Ginger Ale
 
 ----
 
-Thumbnail: q-ginger-ale.jpg
+Thumbnail: Ginger_Ale-2.jpg
 
 ----
 
@@ -57,7 +57,7 @@ Mixerrecipes:
 
 ----
 
-Mixerimage: 
+Mixerimage: Ginger_Ale-2.jpg
 
 ----
 

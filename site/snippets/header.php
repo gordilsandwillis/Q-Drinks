@@ -6,7 +6,7 @@
         <?php snippet('icons/logo') ?>   
     </a>
 
-    <div class="menu-link">
+    <div id="menu-toggle" class="menu-link">
         <div class="menu-icon">
             <div class="center"></div>
         </div>
