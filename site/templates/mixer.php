@@ -3,7 +3,7 @@
 <main class="mixer" role="main">
 
   <section class="mixer-intro">
-    <div class="container very-narrow">
+    <div class="container narrow">
       <div class="inline-grid center middle">
         <div class="col-6">
           <div class="img-wrap">

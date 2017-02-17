@@ -1,9 +1,10 @@
-.container.narrow {
-	max-width: 1200px;
-}
-
-.container.very-narrow {
-	max-width: 800px;
+.container {
+	&.narrow {
+		max-width: 1200px;
+	}
+	&.very-narrow {
+		max-width: 36em;
+	}
 }
 
 .barba-container {
@@ -137,7 +138,7 @@ section {
 
 section.alternating-blocks {
 	+ section.alternating-blocks {
-		padding-top: $margin;
+		padding-top: $margin * 2;
 	}
 	.row {
 		@include respond($md) {

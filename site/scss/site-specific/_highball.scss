@@ -21,7 +21,10 @@
 	.flex-col {
 		width: 100%;
 		flex-shrink: 0;
-		padding-bottom: 6.5%;
+		padding-bottom: 2rem;
+		@include respond($md) {
+			padding-bottom: 5%;
+		}
 		@include respond($md) {
 			width: 50%;
 		}
@@ -192,6 +195,22 @@
 					li {
 						font-size: 14px;
 						letter-spacing: .05em;
+						position: relative;
+						a {
+							margin-left: 26px;
+							.icon {
+								display: block;
+								width: 16px;
+								position: absolute;
+								left: 0;
+								top: 2px;
+								svg {
+									* {
+										fill: $text-color;
+									}
+								}
+							}
+						}
 					}
 				}
 				.recipe-steps {

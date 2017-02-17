@@ -70,10 +70,10 @@ if(isset($limit)) $highball = $highball->limit($limit);
               <div class="recipe-section">
                 <h3>Share Recipe</h3>
                 <ul class="share-recipe">
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">Pinterest</a></li>
-                  <li><a href="#">Email</a></li>
+                  <li><a href="#"><span class="icon"><?php snippet('icons/fb-icon') ?></span> Facebook</a></li>
+                  <li><a href="#"><span class="icon"><?php snippet('icons/twitter-icon') ?></span> Twitter</a></li>
+                  <li><a href="#"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span> Pinterest</a></li>
+                  <li><a href="#"><span class="icon"><?php snippet('icons/email-icon') ?></span> Email</a></li>
                 </ul>
               </div>
             </div>

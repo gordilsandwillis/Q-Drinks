@@ -11,5 +11,31 @@ main.recipe {
 				}
 			}
 		}
+		.share-recipe {
+			text-align: center;
+			width: 100%;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				padding-top: 2rem;
+				a {
+					border: none;
+					padding: 12px;
+					display: block;
+					.icon {
+						display: block;
+						svg {
+							display: block;
+							* {
+								fill: $text-color;
+							}
+						}
+					}
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
 	}
 }

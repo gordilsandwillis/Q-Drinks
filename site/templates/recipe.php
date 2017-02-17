@@ -40,6 +40,12 @@
             <?= $step->step()->html() ?>
           <?php endforeach ?>
           </p>
+          <ul class="share-recipe">
+            <li><a href="#"><span class="icon"><?php snippet('icons/fb-icon') ?></span></a></li>
+            <li><a href="#"><span class="icon"><?php snippet('icons/twitter-icon') ?></span></a></li>
+            <li><a href="#"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span></a></li>
+            <li><a href="#"><span class="icon"><?php snippet('icons/email-icon') ?></span></a></li>
+          </ul>
         </div>
       </div>
 

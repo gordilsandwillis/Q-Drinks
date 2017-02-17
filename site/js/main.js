@@ -109,10 +109,12 @@ var parallaxblock = function() {
       var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
       var sectionHeight = parallaxBlock[i].clientHeight;
       if (sectionTop < windowHeight && sectionBottom > 0 && sectionTop < windowHeight - 200) {
-        var speed = (sectionHeight/4)/(windowHeight - 150 + sectionHeight);
-        section.style.cssText += 'transform: translate3d(0, ' - 200 + sectionTop * speed + 'px, 0)';
+        console.log('para')
+        var speed = 3.3;
+        section.style.cssText += 'transform: translate3d(0, ' - 200 + (sectionTop * speed) + 'px, 0)';
       }
     }
+
   } else {
     for(var i = 0; i < parallaxBlock.length; i++) {
       var section = parallaxBlock[i];
@@ -122,27 +124,27 @@ var parallaxblock = function() {
 }
 
 var parallaxblock2 = function() {
-  var windowWidth = window.innerWidth;
-  var windowHeight = window.innerHeight;
-  var parallaxBlock = document.querySelectorAll('.parallax-block-opposite');
-  if (document.querySelector('.parallax-block-opposite') !== null && windowWidth > 600) {
+  // var windowWidth = window.innerWidth;
+  // var windowHeight = window.innerHeight;
+  // var parallaxBlock = document.querySelectorAll('.parallax-block-opposite');
+  // if (document.querySelector('.parallax-block-opposite') !== null && windowWidth > 600) {
 
-    for(var i = 0; i < parallaxBlock.length; i++) {
-      var section = parallaxBlock[i];
-      var sectionTop = parallaxBlock[i].getBoundingClientRect().top;
-      var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
-      var sectionHeight = parallaxBlock[i].clientHeight;
-      if (sectionTop < windowHeight && sectionBottom > 0) {
-        var speed = (sectionHeight/-4)/(windowHeight - 150 + sectionHeight);
-        section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
-      }
-    }
-  } else {
-    for(var i = 0; i < parallaxBlock.length; i++) {
-      var section = parallaxBlock[i];
-      section.style.cssText += 'transform: translate3d(0, 0, 0)';
-    }
-  }
+  //   for(var i = 0; i < parallaxBlock.length; i++) {
+  //     var section = parallaxBlock[i];
+  //     var sectionTop = parallaxBlock[i].getBoundingClientRect().top;
+  //     var sectionBottom = parallaxBlock[i].getBoundingClientRect().bottom;
+  //     var sectionHeight = parallaxBlock[i].clientHeight;
+  //     if (sectionTop < windowHeight && sectionBottom > 0) {
+  //       var speed = (sectionHeight/-4)/(windowHeight - 150 + sectionHeight);
+  //       section.style.cssText += 'transform: translate3d(0, ' + sectionTop * speed + 'px, 0)';
+  //     }
+  //   }
+  // } else {
+  //   for(var i = 0; i < parallaxBlock.length; i++) {
+  //     var section = parallaxBlock[i];
+  //     section.style.cssText += 'transform: translate3d(0, 0, 0)';
+  //   }
+  // }
 }
 
 var transitionIn = function() {
@@ -211,10 +213,11 @@ var smoothScroll = function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       var headerHeight = $('header > .container').height() - 1;
+      var secondaryHeaderHeight = $('nav.secondary').height() - 1;
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top - headerHeight
+          scrollTop: target.offset().top - headerHeight - secondaryHeaderHeight
         }, 1000);
         return false;
       }

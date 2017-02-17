@@ -1,8 +1,9 @@
 main.mixer {
 	.mixer-intro {
 		min-height: 500px;
-		.container {
+		.container.narrow {
 			padding: 5% 0 12%;
+			max-width: 800px;
 			@include respond($md) {
 				padding: 5% 0 6%;
 			}

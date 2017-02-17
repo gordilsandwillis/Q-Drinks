@@ -5568,7 +5568,7 @@ hr {
 }
 
 .container.very-narrow {
-  max-width: 800px;
+  max-width: 36em;
 }
 
 .barba-container {
@@ -5734,7 +5734,7 @@ section.grey {
 }
 
 section.alternating-blocks + section.alternating-blocks {
-  padding-top: 7.5%;
+  padding-top: 15%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -6751,12 +6751,13 @@ main.mixer .mixer-intro {
   min-height: 500px;
 }
 
-main.mixer .mixer-intro .container {
+main.mixer .mixer-intro .container.narrow {
   padding: 5% 0 12%;
+  max-width: 800px;
 }
 
 @media only screen and (min-width: 600px) {
-  main.mixer .mixer-intro .container {
+  main.mixer .mixer-intro .container.narrow {
     padding: 5% 0 6%;
   }
 }
@@ -6932,7 +6933,13 @@ main.mixer .mixer-list .col img {
 .recipe-list .flex-col {
   width: 100%;
   flex-shrink: 0;
-  padding-bottom: 6.5%;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe-list .flex-col {
+    padding-bottom: 5%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -7127,6 +7134,23 @@ main.mixer .mixer-list .col img {
 .flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li {
   font-size: 14px;
   letter-spacing: .05em;
+  position: relative;
+}
+
+.flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a {
+  margin-left: 26px;
+}
+
+.flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a .icon {
+  display: block;
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.flex-grid .flex-col.inline-recipe .recipe-section .share-recipe li a .icon svg * {
+  fill: #333;
 }
 
 .flex-grid .flex-col.inline-recipe .recipe-section .recipe-steps {
@@ -7162,10 +7186,6 @@ main.mixer .mixer-list .col img {
     left: auto;
     right: 100%;
   }
-}
-
-main.inspiration .container.very-narrow {
-  max-width: 36em;
 }
 
 main.inspiration .text-wrap:after {
@@ -7716,6 +7736,39 @@ main.recipe .recipe-card .instructions .container {
   main.recipe .recipe-card .instructions .container {
     width: 70%;
   }
+}
+
+main.recipe .recipe-card .share-recipe {
+  text-align: center;
+  width: 100%;
+}
+
+main.recipe .recipe-card .share-recipe li {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 2rem;
+}
+
+main.recipe .recipe-card .share-recipe li a {
+  border: none;
+  padding: 12px;
+  display: block;
+}
+
+main.recipe .recipe-card .share-recipe li a .icon {
+  display: block;
+}
+
+main.recipe .recipe-card .share-recipe li a .icon svg {
+  display: block;
+}
+
+main.recipe .recipe-card .share-recipe li a .icon svg * {
+  fill: #333;
+}
+
+main.recipe .recipe-card .share-recipe li:last-child {
+  margin-right: 0;
 }
 
 /* Slider */
