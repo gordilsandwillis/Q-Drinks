@@ -55,9 +55,10 @@
 
     <section class="recipe-list">
       <div class="container">
-        <?php snippet('recipe-list', ['limit' => 100]) ?>
+        <?php snippet('recipe-list', ['siblings' => 'true', 'limit' => 100, 'order' => 'shuffle']) ?>
       </div>
     </section>
+
   </main>
 
 <?php snippet('footer') ?>

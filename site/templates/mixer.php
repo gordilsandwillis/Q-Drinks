@@ -86,7 +86,7 @@
       <?php endforeach ?>
       </div>
       <div class="more-btn-wrap">
-        <a href="<?= url() ?>/highball#recipes" class="btn">More Recipes</a>
+        <a href="<?= url() ?>/highball" class="btn">More Recipes</a>
       </div>
     </div>
     <div class="bg-color" style="background-color: <?= $page->mixerColor() ?>"></div>

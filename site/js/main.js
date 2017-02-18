@@ -243,8 +243,8 @@ var highballGrid = function () {
     console.log('> 900')
     for(var i = 0; i < recipeThumb.length; i++) {
       var thumb = recipeThumb[i];
+      Barba.Pjax.preventCheck()
       thumb.addEventListener('click', function(event) {
-        Barba.Pjax.preventCheck()
         // event.stopPropagation()
         console.log('kaboom')
       });
