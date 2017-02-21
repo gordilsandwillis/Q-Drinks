@@ -7,6 +7,12 @@
 	}
 }
 
+.hidden {
+	display: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
 .barba-container {
 	padding-top: $collapsed-header-height;
 	@include respond($md) {
@@ -230,6 +236,7 @@ section.alternating-blocks {
 		font-weight: 700;
 		outline: none;
 		height: 40px;
+		line-height: 40px;
 		padding: 0 12px;
 		width: 100%;
 	}

@@ -5575,6 +5575,12 @@ hr {
   max-width: 36em;
 }
 
+.hidden {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 .barba-container {
   padding-top: 76px;
 }
@@ -5843,6 +5849,7 @@ section.alternating-blocks .row *[class^="col-"] .info div h5 {
   font-weight: 700;
   outline: none;
   height: 40px;
+  line-height: 40px;
   padding: 0 12px;
   width: 100%;
 }
@@ -6596,7 +6603,7 @@ body {
   display: block;
 }
 
-.home .text-overlay h1 {
+.home .text-overlay .headline {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -6610,19 +6617,19 @@ body {
   text-align: left;
 }
 
-.home .text-overlay h1 .h1-wrap {
+.home .text-overlay .headline .h1-wrap {
   padding-left: 3.5em;
   display: block;
   position: relative;
 }
 
-.home .text-overlay h1 .h1-wrap .text {
+.home .text-overlay .headline .h1-wrap .text {
   transform: translate3d(0, 50px, 0);
   opacity: 0;
   animation: transition-in 1s 0.3s ease-in-out forwards;
 }
 
-.home .text-overlay h1 .h1-wrap .q-question {
+.home .text-overlay .headline .h1-wrap .q-question {
   display: block;
   float: left;
   width: 3.5em;
@@ -6632,7 +6639,7 @@ body {
   transform: translate3d(0, -50%, 0);
 }
 
-.home .text-overlay h1 .h1-wrap .q-question svg {
+.home .text-overlay .headline .h1-wrap .q-question svg {
   display: inline-block;
   vertical-align: middle;
   height: 3em;
@@ -6644,15 +6651,15 @@ body {
   animation: transition-in 1s 0.2s ease-in-out forwards;
 }
 
-.home .text-overlay h1 .h1-wrap .q-question svg .mixers {
+.home .text-overlay .headline .h1-wrap .q-question svg .mixers {
   display: none;
 }
 
-.home .text-overlay h1 .h1-wrap .q-question svg * {
+.home .text-overlay .headline .h1-wrap .q-question svg * {
   fill: #fff;
 }
 
-.home .text-overlay h1 .h1-wrap .q-question .colon {
+.home .text-overlay .headline .h1-wrap .q-question .colon {
   position: absolute;
   top: 50%;
   line-height: 1em;
@@ -6667,25 +6674,25 @@ body {
 }
 
 @media only screen and (min-width: 450px) {
-  .home .text-overlay h1 {
+  .home .text-overlay .headline {
     font-size: 1.65em;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .home .text-overlay h1 {
+  .home .text-overlay .headline {
     font-size: 2.125em;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .home .text-overlay h1 {
+  .home .text-overlay .headline {
     max-width: 19.5em;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .home .text-overlay h1 {
+  .home .text-overlay .headline {
     font-size: 2.5em;
   }
 }

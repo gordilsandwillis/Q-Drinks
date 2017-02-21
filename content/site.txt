@@ -6,7 +6,7 @@ Author: Matthew Gordils
 
 ----
 
-Description: Q Mixers Description Text
+Description: The amazing Q Mixers Description Text
 
 ----
 

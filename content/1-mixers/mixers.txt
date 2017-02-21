@@ -10,4 +10,4 @@ Headerimage: q-placeholder-1.jpg
 
 ----
 
-Introtext: Longum est enim ad omnia respondere, quae a te dicta sunt. Vide, quantum, inquam, fallare, Torquate. Hoc uno captus Erillus scientiam summum bonum esse defendit nec rem ullam aliam per se expetendam. Nos cum te, M. Hoc loco tenere se Triarius non potuit. At multis malis affectus. Nos vero, inquit ille;
+Introtext: Mixers Longum est enim ad omnia respondere, quae a te dicta sunt. Vide, quantum, inquam, fallare, Torquate. Hoc uno captus Erillus scientiam summum bonum esse defendit nec rem ullam aliam per se expetendam. Nos cum te, M. Hoc loco tenere se Triarius non potuit. At multis malis affectus. Nos vero, inquit ille;

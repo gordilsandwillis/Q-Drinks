@@ -74,6 +74,64 @@ Barba.Dispatcher.on('transitionCompleted', function() {
   highballGrid();
 });
 
+// Changes meta tags on new page
+Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+    // html head parser borrowed from jquery pjax
+    var $newPageHead = $( '<head />' ).html(
+        $.parseHTML(
+            newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
+          , document
+          , true
+        )
+    );
+    var headTags = [
+        "meta[name='keywords']"
+      , "meta[name='description']"
+      , "meta[property^='og']"
+      , "meta[name^='twitter']"
+      , "meta[itemprop]"
+      , "link[itemprop]"
+      , "link[rel='prev']"
+      , "link[rel='next']"
+      , "link[rel='canonical']"
+    ].join(',');
+    $( 'head' ).find( headTags ).remove(); // Remove current head tags
+    $newPageHead.find( headTags ).appendTo( 'head' ); // Append new tags to the head
+});
+
+
+// Newletter Signup
+// var newsletterSignup = function(e) {
+//   var form = $('.newsletter-signup');
+  
+//   e.preventDefault();
+//   var form = this.form,
+//     td = $('.newsletter-signup').attr('data-td'),
+//     link = td + '/assets/includes/mc_subscribe.php',
+//     request = $.ajax({
+//                 url: link,
+//                 type: 'POST',
+//                 data : $('.newsletter-signup').serialize()
+//               });
+//   request.done(function(response){
+//     function outputMessage(msg){
+//       $('.newsletter-signup').find('input[type=text]').val('');
+//       $('.newsletter-signup').find('input[type=text]').blur();
+//       $('.newsletter-signup').find('input[type=text]').attr('placeholder',msg);
+//     };
+//     var form = this.form;
+//     var resp = JSON.parse(response);      
+//     if (resp.status == 'subscribed')
+//     {
+//       outputMessage('Thank you!.');
+//     } else if (resp.title == 'Invalid Resource' || resp.title == 'Internal Server Error') {
+//       outputMessage('Please enter a valid email address.');
+//     } else if (resp.title == 'Member Exists') {
+//       outputMessage('You are already subscribed.');
+//     }
+//   });
+    
+// }
 
 // Parallax stuff
 

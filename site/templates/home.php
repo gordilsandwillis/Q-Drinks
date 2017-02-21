@@ -4,22 +4,23 @@
   	<div class="top-area">
 	    <div class="top-image full-height">
 		    <div class="bg-image" style="background-image: url(<?= $page->images()->shuffle()->first()->crop(2000, 1500)->url() ?>)">
-		    	<img src="<?= $page->images()->shuffle()->first()->crop(800, 600)->url() ?>">
+		    	<img src="<?= $page->images()->shuffle()->first()->crop(800, 600)->url() ?>" alt="Q Drinks">
 		    </div>
 	    </div>
 	    <div class="text-overlay">
 	    	<div class="container">
-		      <h1>
+	    		<h1 class="hidden">Q:<?= $page->headline()->html() ?></h1>
+		      <div class="headline">
 		      	<div class="h1-wrap">
 			      	<div class="q-question">
 			      		<?php snippet('icons/logo') ?>
 			      		<span class="colon">:</span>
 			      	</div>
-			      	<div class="text">
+			      	<h2 class="text">
 				      	<?= $page->headline()->html() ?>
-			      	</div>
+			      	</h2>
 		      	</div>
-		      </h1>
+		      </div>
 		    </div>
 	    </div>
     </div>

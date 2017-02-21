@@ -41,10 +41,14 @@
           <?php endforeach ?>
           </p>
           <ul class="share-recipe">
-            <li><a href="#"><span class="icon"><?php snippet('icons/fb-icon') ?></span></a></li>
-            <li><a href="#"><span class="icon"><?php snippet('icons/twitter-icon') ?></span></a></li>
-            <li><a href="#"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span></a></li>
-            <li><a href="#"><span class="icon"><?php snippet('icons/email-icon') ?></span></a></li>
+            <li><a target="_blank" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=700,height=700,toolbar=1,resizable=0'); return false;" href="https://www.facebook.com/sharer.php?u=<?= $page->url() ?>"><span class="icon"><?php snippet('icons/fb-icon') ?></span></a></li>
+                  <li><a target="_blank" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=600,height=600,toolbar=1,resizable=0'); return false;" href="https://twitter.com/intent/tweet?url=<?= $page->url() ?>&text=<?= $page->title() ?> using Q <?= $page->recipeMixer()->title()->html() ?>&hashtags=Mixer,QDrinks"><span class="icon"><?php snippet('icons/twitter-icon') ?></span></a></li>
+                  <li><a target="_blank" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=750,height=700,toolbar=1,resizable=0'); return false;" href="http://pinterest.com/pin/create/button/?url=<?= $page->url() ?>&media=<?= $page->image()->crop(750, 750)->url();?>&description=<?= $page->title() ?> using Q <?= $page->recipeMixer()->title()->html() ?>"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span></a></li>
+                  <li><a target="_blank" href="mailto:?subject=Q Mixer Recipe&amp;body=Check out this drink recipe using Q <?= $page->recipeMixer()->title()->html() ?> http://www.website.com."
+   title="Share by Email""><span class="icon"><?php snippet('icons/email-icon') ?></span></a></li>
           </ul>
         </div>
       </div>
