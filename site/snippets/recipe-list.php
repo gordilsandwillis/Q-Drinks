@@ -30,7 +30,7 @@ if(isset($order))     $highball = $highball->shuffle();
         <a class="recipe-thumb-link" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
           <img src="<?= $recipe->image()->crop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" >
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
-          <h6 class="recipe-mixer">Q <?= $recipe->recipeMixer()->title()->html() ?></h6>
+          <h6 class="recipe-mixer">Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?></h6>
         </a>
       </div>
       <div class="nipple-wrap">
