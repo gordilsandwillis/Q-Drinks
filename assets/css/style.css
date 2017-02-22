@@ -6591,6 +6591,15 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+.easy-locator-wrap #EasyLocator {
+  width: 100% !important;
+  height: 600px !important;
+}
+
+#container {
+  width: 100% !important;
+}
+
 .home .text-overlay {
   color: #fff;
   width: 100%;

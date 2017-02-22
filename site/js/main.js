@@ -101,37 +101,41 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
 
 
 // Newletter Signup
-// var newsletterSignup = function(e) {
-//   var form = $('.newsletter-signup');
+var newsletterSignup = function() {
+  var form = $('.newsletter-form');
   
-//   e.preventDefault();
-//   var form = this.form,
-//     td = $('.newsletter-signup').attr('data-td'),
-//     link = td + '/assets/includes/mc_subscribe.php',
-//     request = $.ajax({
-//                 url: link,
-//                 type: 'POST',
-//                 data : $('.newsletter-signup').serialize()
-//               });
-//   request.done(function(response){
-//     function outputMessage(msg){
-//       $('.newsletter-signup').find('input[type=text]').val('');
-//       $('.newsletter-signup').find('input[type=text]').blur();
-//       $('.newsletter-signup').find('input[type=text]').attr('placeholder',msg);
-//     };
-//     var form = this.form;
-//     var resp = JSON.parse(response);      
-//     if (resp.status == 'subscribed')
-//     {
-//       outputMessage('Thank you!.');
-//     } else if (resp.title == 'Invalid Resource' || resp.title == 'Internal Server Error') {
-//       outputMessage('Please enter a valid email address.');
-//     } else if (resp.title == 'Member Exists') {
-//       outputMessage('You are already subscribed.');
-//     }
-//   });
+  function outputMessage(msg){
+    $('.newsletter-form').find('input[type=text]').val('');
+    $('.newsletter-form').find('input[type=text]').blur();
+    $('.newsletter-form').find('input[type=text]').attr('placeholder',msg);
+  };
+
+  form.submit(function(e) {
     
-// }
+    e.preventDefault();
+    var form = this.form,
+      link = '/assets/includes/cc_subscribe.php',
+      request = $.ajax({
+                  url: link,
+                  type: 'POST',
+                  data : $('.newsletter-form').serialize()
+                });
+    request.done(function(response, textStatus, xhr){
+      var form = this.form;
+      var resp = JSON.parse(response);      
+      console.log(resp);
+      console.log(xhr);
+      if (xhr.status == 200) {
+        outputMessage('success');
+      }
+      else {
+        outputMessage('error');
+      }
+    });
+
+  });
+    
+};
 
 // Parallax stuff
 
@@ -333,6 +337,7 @@ document.addEventListener("DOMContentLoaded", function() {
   loadedTransitionIn();
   smoothScroll();
   highballGrid();
+  newsletterSignup();
 });
 
 document.addEventListener('scroll', function(event) {

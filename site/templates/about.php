@@ -34,8 +34,8 @@
             <section>
               <h5>Sign up for our newsletter</h5>
               <form class="newsletter-form">
-                <input class="newsletter-signup" type="text" name="signup" id="newsletterSignup" placeholder="Email Address" />
-                <button class="newsletter-submit" type="submit" name="signup"></button>
+                <input class="newsletter-signup" type="text" name="email" id="newsletterSignup" placeholder="Email Address" />
+                <button class="newsletter-submit" type="submit" name="email"></button>
               </form>
             </section>
             <section>
@@ -70,7 +70,9 @@
     <section id="find-q" class="white transition-in">
       <?php snippet('section-header', ['text' => 'Find Q Near You']) ?>
       <div class="container">
-        
+        <div class="easy-locator-wrap">
+          <iframe id="EasyLocator" width="645" height="580" scrolling="no" frameborder="0" src="https://www.easylocator.net/search/map3/Jordan@qdrinks.com" allowtransparency="true"></iframe>
+        </div>
       </div>
     </section>
 
