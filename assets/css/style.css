@@ -5629,7 +5629,7 @@ main.padded-bottom {
   min-height: 250px;
   height: 40vh;
   position: relative;
-  background: #EFECE2;
+  background: #f2f2f3;
   overflow: hidden;
 }
 
@@ -6389,6 +6389,75 @@ header.inverted.transparent .menu-icon .center:before {
   background: #333;
 }
 
+header.desktop-dark {
+  background: transparent;
+}
+
+header.desktop-dark .logo svg {
+  transform: translate3d(0, 13%, 0);
+}
+
+header.desktop-dark .logo svg * {
+  fill: #333;
+}
+
+header.desktop-dark a {
+  color: #333;
+}
+
+header.desktop-dark a:after {
+  background: #333;
+}
+
+header.desktop-light {
+  background: transparent;
+}
+
+header.desktop-light .logo svg {
+  transform: translate3d(0, 13%, 0);
+}
+
+header.desktop-light .logo svg * {
+  fill: #fff;
+}
+
+header.mobile-dark {
+  background: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  header.mobile-dark .logo svg {
+    transform: translate3d(0, 13%, 0);
+  }
+  header.mobile-dark .logo svg * {
+    fill: #333;
+  }
+  header.mobile-dark a {
+    color: #333;
+  }
+  header.mobile-dark a:after {
+    background: #333;
+  }
+  header.mobile-dark .menu-icon:before, header.mobile-dark .menu-icon:after,
+  header.mobile-dark .menu-icon .center,
+  header.mobile-dark .menu-icon .center:before {
+    background: #333;
+  }
+}
+
+header.mobile-light {
+  background: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  header.mobile-light .logo svg {
+    transform: translate3d(0, 13%, 0);
+  }
+  header.mobile-light .logo svg * {
+    fill: #fff;
+  }
+}
+
 footer {
   background: white;
 }
@@ -6617,11 +6686,52 @@ iframe#EasyLocator {
   width: 100%;
   height: auto;
   position: absolute;
-  top: calc(100px + 20%);
+  top: calc(100px + 25%);
   right: 0;
   z-index: 2;
   text-align: center;
   display: block;
+}
+
+.home .text-overlay.desktop-dark {
+  color: #333;
+}
+
+.home .text-overlay.desktop-dark .headline .h1-wrap .q-question svg * {
+  fill: #333;
+}
+
+.home .text-overlay.desktop-light {
+  color: #fff;
+}
+
+.home .text-overlay.desktop-light .headline .h1-wrap .q-question svg * {
+  fill: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+  .home .text-overlay.mobile-dark {
+    color: #333;
+  }
+  .home .text-overlay.mobile-dark .headline .h1-wrap .q-question svg * {
+    fill: #333;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home .text-overlay.mobile-light {
+    color: #fff;
+  }
+  .home .text-overlay.mobile-light .headline .h1-wrap .q-question svg * {
+    fill: #fff;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .home .text-overlay .container {
+    max-width: none;
+    width: 80%;
+  }
 }
 
 .home .text-overlay .headline {
@@ -6638,26 +6748,29 @@ iframe#EasyLocator {
   text-align: left;
 }
 
+@media only screen and (min-width: 900px) {
+  .home .text-overlay .headline {
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+
 .home .text-overlay .headline .h1-wrap {
-  padding-left: 3.5em;
   display: block;
   position: relative;
 }
 
 .home .text-overlay .headline .h1-wrap .text {
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(30px, 0, 0);
   opacity: 0;
   animation: transition-in 1s 0.3s ease-in-out forwards;
+  display: block;
 }
 
 .home .text-overlay .headline .h1-wrap .q-question {
   display: block;
-  float: left;
   width: 3.5em;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate3d(0, -50%, 0);
+  margin-bottom: .3em;
 }
 
 .home .text-overlay .headline .h1-wrap .q-question svg {
@@ -6667,7 +6780,7 @@ iframe#EasyLocator {
   margin-bottom: -.55em;
   margin: 0 0 -1.25rem -.5rem;
   transition: none;
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(30px, 0, 0);
   opacity: 0;
   animation: transition-in 1s 0.2s ease-in-out forwards;
 }
@@ -6677,19 +6790,18 @@ iframe#EasyLocator {
 }
 
 .home .text-overlay .headline .h1-wrap .q-question svg * {
+  transition: none;
   fill: #fff;
 }
 
 .home .text-overlay .headline .h1-wrap .q-question .colon {
-  position: absolute;
-  top: 50%;
   line-height: 1em;
-  margin-top: -.65em;
-  right: .25em;
+  margin-top: -.25em;
+  margin-left: -.1em;
   display: inline-block;
   vertical-align: middle;
   font-size: 1.25em;
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(30px, 0, 0);
   opacity: 0;
   animation: transition-in 1s 0.25s ease-in-out forwards;
 }
@@ -6709,12 +6821,27 @@ iframe#EasyLocator {
 @media only screen and (min-width: 900px) {
   .home .text-overlay .headline {
     max-width: 19.5em;
+    width: 50%;
   }
 }
 
-@media only screen and (min-width: 1500px) {
-  .home .text-overlay .headline {
-    font-size: 2.5em;
+.home-bg-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .home-bg-desktop {
+    display: block;
+  }
+}
+
+.home-bg-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .home-bg-mobile {
+    display: block;
   }
 }
 

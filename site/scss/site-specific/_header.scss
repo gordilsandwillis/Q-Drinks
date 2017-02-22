@@ -250,3 +250,75 @@ header.inverted.transparent {
 		}
 	}
 }
+
+header.desktop-dark {
+	background: transparent;
+	.logo {
+		svg {
+			transform: translate3d(0, 13%, 0);
+			* {
+				fill: $text-color;
+			}
+		}
+	}
+	a {
+		color: $text-color;
+		&:after {
+			background: $text-color;
+		}
+	}
+}
+
+header.desktop-light {
+	background: transparent;
+	.logo {
+		svg {
+			transform: translate3d(0, 13%, 0);
+			* {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+header.mobile-dark {
+	background: transparent;
+	@include respond-smaller-than($lg) {
+		.logo {
+			svg {
+				transform: translate3d(0, 13%, 0);
+				* {
+					fill: $text-color;
+				}
+			}
+		}
+		a {
+			color: $text-color;
+			&:after {
+				background: $text-color;
+			}
+		}
+		.menu-icon {
+			&:before,
+			&:after,
+			.center,
+			.center:before {
+				background: $text-color;
+			}
+		}
+	}
+}
+
+header.mobile-light {
+	background: transparent;
+	@include respond-smaller-than($lg) {
+		.logo {
+			svg {
+				transform: translate3d(0, 13%, 0);
+				* {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}

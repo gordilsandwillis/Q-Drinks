@@ -10,3 +10,34 @@ fields:
   headline:
     label: Intro
     type:  textarea
+
+  builder:
+    label: Images <span class="panel-field-description">Every time the page loads, a different image will show</span>
+    type: builder
+    fieldsets:
+      homeImageBlock:
+        label: Image
+        snippet: sections/panel-home-image
+        fields:
+          desktopImage:
+            label: Desktop Image <span class="panel-field-description">Image Cropped for desktop</span>
+            type: image
+            width: 1/2
+          desktopTextColor: 
+            label: Mobile Text Color <span class="panel-field-description">Text color for desktop</span>
+            type: radio
+            options:
+              000000: Black
+              ffffff: White
+            width: 1/2
+          mobileImage:
+            label: Desktop Image <span class="panel-field-description">Image Cropped for mobile</span>
+            type: image
+            width: 1/2
+          mobileTextColor: 
+            label: Desktop Text Color <span class="panel-field-description">Text color for mobile</span>
+            type: radio
+            options:
+              000000: Black
+              ffffff: White
+            width: 1/2

@@ -51,7 +51,7 @@ main {
 		min-height: 250px;
 		height: 40vh;
 		position: relative;
-		background: #EFECE2;
+		background: $grey-bg;
 		overflow: hidden;
 		&.push-down {
 			margin-bottom: $margin;

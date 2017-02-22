@@ -1,4 +1,4 @@
-<header class="header font-smooth <?php echo $headerClass ?>" role="banner">
+<header class="header font-smooth<?= ' ' . $headerClass ?><?= ' ' . $desktopTextColor ?><?= ' ' . $mobileTextColor ?>" role="banner">
   <div class="container">
 
     <!-- <?php snippet('menu') ?> -->

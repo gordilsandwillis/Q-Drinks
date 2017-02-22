@@ -39,4 +39,4 @@
 	  <div class="content">
 	  <div id="barba-wrapper">
 	  	<div class="barba-container <?php echo $headerClass ?>">
-	  		<?php snippet('header', array('headerClass' => $headerClass)) ?>
+	  		<?php snippet('header', array('headerClass' => $headerClass, 'desktopTextColor' => $desktopTextColor, 'mobileTextColor' => $mobileTextColor)) ?>

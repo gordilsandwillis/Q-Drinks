@@ -4,11 +4,45 @@
 		width: 100%;
 		height: auto;
 		position: absolute;
-		top: calc(100px + 20%);
+		top: calc(100px + 25%);
 		right: 0;
 		z-index: 2;
 		text-align: center;
 		display: block;
+		&.desktop-dark {
+			color: $text-color;
+			.headline .h1-wrap .q-question svg * {
+				fill: $text-color
+			}
+		}
+		&.desktop-light {
+			color: #fff;
+			.headline .h1-wrap .q-question svg * {
+				fill: #fff
+			}
+		}
+		&.mobile-dark {
+			@include respond-smaller-than($lg) {
+				color: $text-color;
+				.headline .h1-wrap .q-question svg * {
+					fill: $text-color
+				}
+			}
+		}
+		&.mobile-light {
+			@include respond-smaller-than($lg) {
+				color: #fff;
+				.headline .h1-wrap .q-question svg * {
+					fill: #fff
+				}
+			}
+		}
+		.container {
+			@include respond($lg) {
+				max-width: none;
+				width: 80%;
+			}
+		}
 		.headline {
 			font-weight: 700;
 			text-transform: uppercase;
@@ -20,23 +54,23 @@
 			margin: 0 auto;
 			padding-bottom: 5em;
 			text-align: left;
+			@include respond($lg) {
+				margin: 0;
+				padding-bottom: 0;
+			}
 			.h1-wrap {
-				padding-left: 3.5em;
 				display: block;
 				position: relative;
 				.text {
-					transform: translate3d(0, 50px, 0);
+					transform: translate3d(30px, 0, 0);
 					opacity: 0;
 					animation: transition-in 1s .3s $ease forwards;
+					display: block;
 				}
 				.q-question {
 					display: block;
-					float: left;
 					width: 3.5em;
-					position: absolute;
-					left: 0;
-					top: 50%;
-					transform: translate3d(0,-50%,0);
+					margin-bottom: .3em;
 					svg {
 						display: inline-block;
 						vertical-align: middle;
@@ -44,26 +78,25 @@
 						margin-bottom: -.55em;
 						margin: 0 0 -1.25rem -.5rem;
 						transition: none;
-						transform: translate3d(0, 50px, 0);
+						transform: translate3d(30px, 0, 0);
 						opacity: 0;
 						animation: transition-in 1s .2s $ease forwards;
 						.mixers {
 							display: none;
 						}
 						* {
+							transition: none;
 							fill: #fff;
 						}
 					}
 					.colon {
-						position: absolute;
-						top: 50%;
 						line-height: 1em;
-						margin-top: -.65em;
-						right: .25em;
+						margin-top: -.25em;
+						margin-left: -.1em;
 						display: inline-block;
 						vertical-align: middle;
 						font-size: 1.25em;
-						transform: translate3d(0, 50px, 0);
+						transform: translate3d(30px, 0, 0);
 						opacity: 0;
 						animation: transition-in 1s .25s $ease forwards;
 					}
@@ -77,10 +110,22 @@
 			}
 			@include respond($lg) {
 				max-width: 19.5em;
-			}
-			@include respond($huge) {
-				font-size: 2.5em;
+				width: 50%;
 			}
 		}
+	}
+}
+
+.home-bg-desktop {
+	display: none;
+	@include respond(700) {
+		display: block;
+	}
+}
+
+.home-bg-mobile {
+	display: none;
+	@include respond-smaller-than(700) {
+		display: block;
 	}
 }
