@@ -8,6 +8,7 @@ header {
 	width: 100%;
 	z-index: 10;
 	height: $collapsed-header-height;
+	height: 96px;
 	@include transition((height $header-transition-speed $ease, background $header-transition-speed $ease));
 	@include respond($md) {
 		height: 120px;
@@ -43,11 +44,12 @@ header {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		height: $collapsed-header-height - 30px;
+		height: 60px;
 		.mixers {
-			display: none;
-			@include respond($md) {
-				display: block;
-			}
+			// display: none;
+			// @include respond($md) {
+			// 	display: block;
+			// }
 		}
 		@include respond($md) {
 			height: 60px;
