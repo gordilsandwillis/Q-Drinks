@@ -2,10 +2,9 @@
 
   <main class="serve padded-bottom" role="main">
     <div class="top-area">
-    	<div class="top-image">
+    	<div class="top-image fancy-entrance">
         <?php if ($page->images()->find($page->headerImage())) : ?>
-          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->url() ?>)">
-            <img src="<?php echo $page->images()->find($page->headerImage())->url() ?>">
+          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->crop(2000, 1500)->url() ?>)">
           </div>
         <?php endif; ?>
     	</div>

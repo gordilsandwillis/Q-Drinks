@@ -45,7 +45,6 @@
             <div class="recipe-card">
               <div class="image">
                 <div class="bg-image" style="background-image: url(<?= $recipe->image()->crop(750, 750)->url() ?>);">
-                  <img src="<?= $recipe->image()->crop(750, 750)->url() ?>">
                 </div>
               </div>
 

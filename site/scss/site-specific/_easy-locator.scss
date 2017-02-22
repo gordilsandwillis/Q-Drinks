@@ -1,10 +1,20 @@
 .easy-locator-wrap {
-	#EasyLocator {
+	padding-bottom: $margin;
+	iframe#EasyLocator {
 		width: 100% !important;
-		height: 600px !important;
+		@include respond($md) {
+			// height: 600px !important;
+		}
+		body {
+			border: 3px solid red;
+		}
+	}
+	#container {
+		width: 100% !important;
+		background: blue !important;
 	}
 }
 
-#container {
-		width: 100% !important;
-	}
+iframe#EasyLocator {
+	height: 472px !important;
+}

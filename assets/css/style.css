@@ -6572,7 +6572,7 @@ body {
   position: relative;
 }
 
-.top-image {
+.top-image.fancy-entrance {
   opacity: 0;
   transform: scale(1.1);
   animation: transition-in 2s 0s ease forwards;
@@ -6591,13 +6591,25 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.easy-locator-wrap #EasyLocator {
-  width: 100% !important;
-  height: 600px !important;
+.easy-locator-wrap {
+  padding-bottom: 7.5%;
 }
 
-#container {
+.easy-locator-wrap iframe#EasyLocator {
   width: 100% !important;
+}
+
+.easy-locator-wrap iframe#EasyLocator body {
+  border: 3px solid red;
+}
+
+.easy-locator-wrap #container {
+  width: 100% !important;
+  background: blue !important;
+}
+
+iframe#EasyLocator {
+  height: 472px !important;
 }
 
 .home .text-overlay {

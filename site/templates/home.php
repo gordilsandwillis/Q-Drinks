@@ -2,9 +2,8 @@
 
   <main class="home" role="main">
   	<div class="top-area">
-	    <div class="top-image full-height">
+	    <div class="top-image fancy-entrance full-height">
 		    <div class="bg-image" style="background-image: url(<?= $page->images()->shuffle()->first()->crop(2000, 1500)->url() ?>)">
-		    	<img src="<?= $page->images()->shuffle()->first()->crop(800, 600)->url() ?>" alt="Q Drinks">
 		    </div>
 	    </div>
 	    <div class="text-overlay">

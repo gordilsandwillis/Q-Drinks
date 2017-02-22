@@ -314,6 +314,14 @@ var highballGrid = function () {
   }
 }
 
+var easyLocator = function () {
+  $('iframe#EasyLocator').load( function() {
+    console.log($('#EasyLocator').contents().find('head'));
+    console.log($('#EasyLocator head'));
+    $('iframe#EasyLocator').find('head').append('<style>* {background: black}</style>');
+  });
+}
+
 
 var mobileMenu = function () {
   var windowWidth = window.innerWidth;
@@ -338,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
   smoothScroll();
   highballGrid();
   newsletterSignup();
+  easyLocator();
 });
 
 document.addEventListener('scroll', function(event) {
