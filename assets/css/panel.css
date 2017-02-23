@@ -1,3 +1,93 @@
+@-webkit-keyframes loginEntrance {
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes loginEntrance {
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-ms-keyframes loginEntrance {
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes loginEntrance {
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+body.login {
+  background: #f2f2f3;
+}
+
+body.login .modal-content {
+  box-shadow: none;
+  background: transparent;
+}
+
+body.login .modal-content:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  margin: 0 1.5em;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/logo.svg");
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  animation: loginEntrance 0.7s 0.5s ease-in-out forwards;
+}
+
+body.login .modal-content .label {
+  font-size: 14px;
+  padding-bottom: .25em;
+}
+
+body.login .modal-content .input {
+  border: 2px solid #fff;
+  background: #fff;
+  height: 40px;
+}
+
+body.login .modal-content .field-icon {
+  display: none;
+}
+
+body.login .modal-content .field-grid-item {
+  margin-bottom: 1em;
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  animation: loginEntrance 0.7s 0.6s ease-in-out forwards;
+}
+
+body.login .modal-content .field-grid-item + .field-grid-item {
+  animation: loginEntrance 0.7s 0.7s ease-in-out forwards;
+}
+
+body.login .modal-content .buttons {
+  margin-top: 1.25em;
+}
+
+body.login .modal-content .buttons .btn {
+  height: 40px;
+  padding-top: .3em;
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  animation: loginEntrance 0.7s 0.8s ease-in-out forwards;
+}
+
 .builder-entries img, .builder-entries video {
   max-width: 100%;
   height: auto;

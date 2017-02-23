@@ -159,7 +159,7 @@ var newsletterSignup = function() {
 var fancyHeader = function() {
   var header = document.querySelector('header');
   var scrollTop = document.body.scrollTop;
-  if (scrollTop >= 7) {
+  if (scrollTop >= 70) {
     header.classList.add('collapsed');
     if (document.querySelector('nav.secondary') !== null) {
       document.querySelector('nav.secondary').classList.add('collapsed');

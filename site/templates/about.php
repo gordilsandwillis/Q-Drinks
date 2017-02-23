@@ -39,7 +39,7 @@
               <h5>Sign up for our newsletter</h5>
               <form class="newsletter-form">
                 <input class="newsletter-signup" type="text" name="email" id="newsletterSignup" placeholder="Email Address" />
-                <button class="newsletter-submit" type="submit" name="email"></button>
+                <button class="newsletter-submit" type="submit" for="newsletterSignup" name="email"></button>
               </form>
             </section>
             <section>

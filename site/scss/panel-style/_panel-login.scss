@@ -1,0 +1,59 @@
+@include keyframes(loginEntrance) {
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+$login-entrance-speed: .7s;
+$login-stagger-speed: .1s;
+
+body.login {
+	background: $login-bg;
+	.modal-content {
+		box-shadow: none;
+		background: transparent;
+		&:before {
+			content: '';
+			display: block;
+			margin: 0 auto;
+			margin: 0 1.5em;
+			height: $login-logo-height;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url('../images/logo.svg');
+			transform: translate3d(0, 50px, 0);
+			opacity: 0;
+			animation: loginEntrance $login-entrance-speed (.5s + $login-stagger-speed * 0) $ease forwards;
+		}
+		.label {
+			font-size: 14px;
+			padding-bottom: .25em;
+		}
+		.input {
+			border: $login-input-border;
+			background: $login-input-bg;
+			height: 40px;
+		}
+		.field-icon {
+			display: none;
+		}
+		.field-grid-item {
+			margin-bottom: 1em;
+			transform: translate3d(0, 50px, 0);
+			opacity: 0;
+			animation: loginEntrance $login-entrance-speed (.5s + $login-stagger-speed * 1) $ease forwards;
+			+ .field-grid-item {
+				animation: loginEntrance $login-entrance-speed (.5s + $login-stagger-speed * 2) $ease forwards;
+			}
+		}
+		.buttons {
+			margin-top: 1.25em;
+			.btn {
+				height: 40px;
+		    padding-top: .3em;
+		    transform: translate3d(0, 50px, 0);
+				opacity: 0;
+				animation: loginEntrance $login-entrance-speed (.5s + $login-stagger-speed * 3) $ease forwards;
+			}
+		}
+	}
+}
