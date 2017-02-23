@@ -10,6 +10,7 @@ body.login {
 	.modal-content {
 		box-shadow: none;
 		background: transparent;
+		overflow: visible;
 		&:before {
 			content: '';
 			display: block;

@@ -33,6 +33,7 @@ body.login {
 body.login .modal-content {
   box-shadow: none;
   background: transparent;
+  overflow: visible;
 }
 
 body.login .modal-content:before {
