@@ -23,14 +23,18 @@
         <div>
           <?php snippet('section-header', ['text' => 'About Us']) ?>
           <div class="container align-center">
-            <section>
-              <h5>Phone</h5>
-              <p><a href="tel:<? echo $site->phone()->html() ?>"><? echo $site->phone()->html() ?></a></p>
-            </section>
-            <section>
-              <h5>Email</h5>
-              <p><a href="<? echo $site->email()->html() ?>"><? echo $site->email()->html() ?></a></p>
-            </section>
+            <?php if ($site->phone()->isNotEmpty()): ?>
+              <section>
+                <h5>Phone</h5>
+                <p><a href="tel:<? echo $site->phone()->html() ?>"><? echo $site->phone()->html() ?></a></p>
+              </section>
+            <? endif; ?>
+            <?php if ($site->email()->isNotEmpty()): ?>
+              <section>
+                <h5>Email</h5>
+                <p><a href="<? echo $site->email()->html() ?>"><? echo $site->email()->html() ?></a></p>
+              </section>
+            <? endif; ?>
             <section>
               <h5>Sign up for our newsletter</h5>
               <form class="newsletter-form">
@@ -41,10 +45,14 @@
             <section>
               <hr class="tiny"/>
               <h5>Follow Us</h5>
-              <?php //if ($site->instagramUrl()->find($page->headerImage())) : ?>
-              <a href="<? echo $site->instagramUrl() ?>">Instagram</a>
-              <a href="<? echo $site->facebookUrl() ?>">Facebook</a>
-              <a href="<? echo $site->twitterUrl() ?>">Twitter</a>
+              <div class="follow-icons">
+                <?php if ($site->instagramUrl()->isNotEmpty()): ?>
+                  <a href="<? echo $site->instagramUrl() ?>" title="Follow on Instagram"><?php snippet('icons/instagram-icon') ?></a>
+                <? endif; ?>
+                <?php if ($site->facebookUrl()->isNotEmpty()): ?>
+                  <a href="<? echo $site->facebookUrl() ?>" title="Follow on Facebook"><?php snippet('icons/fb-icon') ?></a>
+                <? endif; ?>
+              </div>
             </section>
           </div>
         </div>

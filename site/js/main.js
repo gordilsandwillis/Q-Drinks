@@ -23,7 +23,8 @@ var FadeTransition = Barba.BaseTransition.extend({
      * this.oldContainer is the HTMLElement of the old Container
      */
     closeMobileMenu();
-    return $(this.oldContainer).animate({ opacity: 0 }).promise();
+    smoothScroll();
+    return $(this.oldContainer).animate({ opacity: 0 }, 250).promise();
   },
 
   fadeIn: function() {
@@ -50,7 +51,7 @@ var FadeTransition = Barba.BaseTransition.extend({
     parallaxblock();
     parallaxblock2();
 
-    $el.animate({ opacity: 1 }, 400, function() {
+    $el.animate({ opacity: 1 }, 750, function() {
       /*
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container
@@ -115,6 +116,7 @@ var newsletterSignup = function() {
   form.submit(function(e) {
 
     e.preventDefault();
+    $('.newsletter-form').find('button.newsletter-submit').addClass('loading');
     var form = this.form,
       link = '/assets/includes/cc_subscribe.php',
       request = $.ajax({
@@ -125,13 +127,26 @@ var newsletterSignup = function() {
     request.done(function(response, textStatus, xhr){
       var form = this.form;
       var resp = JSON.parse(response);
-      console.log(resp);
+      console.log(resp); 
+      // resp.status == 'ACTIVE' // Success?
+      // resp[0].error_key == json.email.invalid // Not an email
+      // resp[0].error_key == json.min.length.violation // Empty
       console.log(xhr);
-      if (xhr.status == 200) {
-        outputMessage('success');
+      if (resp.status == 'ACTIVE') {
+        outputMessage('Thank You');
+        $('.newsletter-form').find('button.newsletter-submit').removeClass('loading');
+        $('.newsletter-form').find('button.newsletter-submit').addClass('check');
+        setTimeout(function(){
+          $('.newsletter-form').find('button.newsletter-submit').removeClass('check');
+        }, 3000);
       }
       else {
-        outputMessage('error');
+        outputMessage('Invalid Email');
+        $('.newsletter-form').addClass('shake animated');
+        $('.newsletter-form').find('button.newsletter-submit').removeClass('loading');
+        setTimeout(function(){
+          $('.newsletter-form').removeClass('shake animated');
+        }, 1200);
       }
     });
 
@@ -318,15 +333,6 @@ var highballGrid = function () {
 
 }
 
-var easyLocator = function () {
-  $('iframe#EasyLocator').on( 'load', function() {
-    console.log($('#EasyLocator').contents().find('head'));
-    console.log($('#EasyLocator head'));
-    $('iframe#EasyLocator').find('head').append('<style>* {background: black}</style>');
-  });
-}
-
-
 var mobileMenu = function () {
   var menuToggle = document.querySelector('#menu-toggle');
   menuToggle.addEventListener('click', function(event) {
@@ -350,7 +356,6 @@ document.addEventListener("DOMContentLoaded", function() {
   loadedTransitionIn();
   smoothScroll();
   newsletterSignup();
-  easyLocator();
 });
 
 document.addEventListener('scroll', function(event) {

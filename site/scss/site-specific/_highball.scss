@@ -153,7 +153,7 @@
 			// change to margin-bottom: $gutter to show
 			// change to max-height: 600px to show
 			&.visible {
-				max-height: 600px;
+				max-height: 1000px;
 				margin-bottom:$gutter;
 			}
 			transition: max-height .5s $ease, margin .3s $ease;

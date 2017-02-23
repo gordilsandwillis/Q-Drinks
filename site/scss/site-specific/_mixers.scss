@@ -1,7 +1,7 @@
 main.mixers {
 	.top-area {
 		.top-image {
-			height: 30vh;
+			height: 250px;
 			min-height: 200px;
 			@include respond($md) {
 				height: 40vh;

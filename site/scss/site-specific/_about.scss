@@ -123,6 +123,17 @@ main.about {
 				padding-bottom: 5rem;
 			}
 		}
+		.follow-icons {
+			a {
+				border: none;
+				display: inline-block;
+				vertical-align: middle;
+				padding: 10px;
+				svg {
+					display: block;
+				}
+			}
+		}
 		hr.tiny {
 			margin-bottom: 1.35rem;
 		}
