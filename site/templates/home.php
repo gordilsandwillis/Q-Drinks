@@ -1,5 +1,7 @@
 
-<?= $desktopColorClass; ?>
+<?= $desktopColorClass = ''; ?>
+<?= $mobileColorClass = '' ?>
+
 <? foreach($page->builder()->toStructure()->shuffle()->limit(1) as $image): ?>
 	<!-- Get desktop color class -->
 	<? if ($image->desktopTextColor()->html() == '000000'): ?>

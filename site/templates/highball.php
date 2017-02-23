@@ -10,7 +10,7 @@
         <?php endif; ?>
     	</div>
     </div>
-    <?php snippet('section-header', ['text' => 'Recipes']) ?>
+    <?php snippet('section-header', ['text' => 'Recipes', 'transition' => '']) ?>
     <?php if ($page->introText()->isNotEmpty()):?>
       <div class="container very-narrow align-center intro-p">
         <p><?= $page->introText()->html() ?></p>
@@ -23,4 +23,4 @@
     </section>
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>

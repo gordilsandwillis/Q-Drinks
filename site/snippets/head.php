@@ -7,7 +7,7 @@
 
   <title><?= $site->title()->html() ?><?php if($page->isHomePage()): ?><?php else: ?> | <?= $page->title()->html() ?><?php endif ?></title>
 
-  <? 
+  <?
   if ($page->description()->isNotEmpty()):
     $description = $page->description()->html();
   elseif ($page->introText()->isNotEmpty()):
@@ -39,4 +39,5 @@
 	  <div class="content">
 	  <div id="barba-wrapper">
 	  	<div class="barba-container <?php echo $headerClass ?>">
-	  		<?php snippet('header', array('headerClass' => $headerClass, 'desktopTextColor' => $desktopTextColor, 'mobileTextColor' => $mobileTextColor)) ?>
+	  		<?php snippet('header', array('headerClass' => $headerClass, 'desktopTextColor' => isset($desktopTextColor) ? $desktopTextColor : '', 'mobileTextColor' => isset($mobileTextColor) ? $mobileTextColor : '' )) ?>
+

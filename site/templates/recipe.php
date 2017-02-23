@@ -33,7 +33,7 @@
 		          <p><?= $page->variations()->html() ?></p>
           	</div>
           </div>
-          
+
           <h5 class="recipe-section-title">Method</h5>
           <p>
           <?php foreach($page->method()->toStructure() as $step): ?>
@@ -54,7 +54,7 @@
       </div>
 
     </div>
-    
+
     <?php snippet('section-header', ['text' => 'More Recipes']) ?>
 
     <section class="recipe-list">
@@ -65,4 +65,4 @@
 
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>

@@ -68,8 +68,11 @@ Barba.Pjax.getTransition = function() {
 };
 
 Barba.Dispatcher.on('transitionCompleted', function() {
+  console.log('Barbara transitionCompleted');
   slideshow();
-  highballGrid();
+  if(window.location.pathname === '/highball') {
+    highballGrid();
+  }
   mobileMenu();
 });
 
@@ -102,7 +105,7 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
 // Newletter Signup
 var newsletterSignup = function() {
   var form = $('.newsletter-form');
-  
+
   function outputMessage(msg){
     $('.newsletter-form').find('input[type=text]').val('');
     $('.newsletter-form').find('input[type=text]').blur();
@@ -110,7 +113,7 @@ var newsletterSignup = function() {
   };
 
   form.submit(function(e) {
-    
+
     e.preventDefault();
     var form = this.form,
       link = '/assets/includes/cc_subscribe.php',
@@ -121,7 +124,7 @@ var newsletterSignup = function() {
                 });
     request.done(function(response, textStatus, xhr){
       var form = this.form;
-      var resp = JSON.parse(response);      
+      var resp = JSON.parse(response);
       console.log(resp);
       console.log(xhr);
       if (xhr.status == 200) {
@@ -133,7 +136,7 @@ var newsletterSignup = function() {
     });
 
   });
-    
+
 };
 
 // Parallax stuff
@@ -257,13 +260,13 @@ var loadedTransitionIn = function() {
   }
 }
 
-$('.one-time').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});
+// $('.one-time').slick({
+//   dots: true,
+//   infinite: true,
+//   speed: 300,
+//   slidesToShow: 1,
+//   adaptiveHeight: true
+// });
 
 var slideshow = function() {
   if (document.querySelector('.slideshow') !== null) {
@@ -298,23 +301,25 @@ var smoothScroll = function() {
 }
 
 var highballGrid = function () {
-  var windowWidth = window.innerWidth;
-  var recipeThumb = document.querySelectorAll('.recipe-thumb-link');
-  if (recipeThumb !== null && windowWidth > 900) {
-    console.log('> 900')
-    for(var i = 0; i < recipeThumb.length; i++) {
-      var thumb = recipeThumb[i];
-      Barba.Pjax.preventCheck()
-      thumb.addEventListener('click', function(event) {
-        // event.stopPropagation()
-        console.log('kaboom')
-      });
-    }
-  }
+  console.log('highballGrid Loaded');
+  $('.recipe-thumb-link').on('click', function(event) {
+    //if (window.innerWidth > 900) {
+      event.stopPropagation();
+      event.preventDefault();
+      var currentTarget = $(event.currentTarget);
+      //Change the Url of the page
+      var path = currentTarget.data('path');
+      window.history.pushState(null, null, '/'+path);
+      //Open the inline recipe
+      $('.inline-recipe').removeClass('visible');
+      currentTarget.parent().parent().next().addClass('visible');
+    //}
+  });
+
 }
 
 var easyLocator = function () {
-  $('iframe#EasyLocator').load( function() {
+  $('iframe#EasyLocator').on( 'load', function() {
     console.log($('#EasyLocator').contents().find('head'));
     console.log($('#EasyLocator head'));
     $('iframe#EasyLocator').find('head').append('<style>* {background: black}</style>');
@@ -344,7 +349,6 @@ document.addEventListener("DOMContentLoaded", function() {
   parallaxblock2();
   loadedTransitionIn();
   smoothScroll();
-  highballGrid();
   newsletterSignup();
   easyLocator();
 });
@@ -363,5 +367,4 @@ window.addEventListener('resize', function(event) {
   parallaxblock();
   parallaxblock2();
   transitionIn();
-  highballGrid();
 });

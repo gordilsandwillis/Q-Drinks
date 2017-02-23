@@ -1,7 +1,7 @@
 <?php snippet('head') ?>
 
   <main class="article" role="main">
-    
+
     <article class="article single wrap">
 
       <header class="article-header">
@@ -11,17 +11,17 @@
         </div>
         <hr />
       </header>
-      
+
       <?php snippet('coverimage', $page) ?>
-      
+
       <div class="text">
         <?= $page->text()->kirbytext() ?>
       </div>
-      
+
     </article>
-    
+
     <?php snippet('prevnext', ['flip' => true]) ?>
-    
+
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>

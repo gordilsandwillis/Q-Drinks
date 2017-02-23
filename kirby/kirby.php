@@ -68,7 +68,7 @@ class Kirby {
       'languages'                       => array(),
       'roles'                           => array(),
       'cache'                           => false,
-      'debug'                           => 'env',
+      'debug'                           => true,
       'whoops'                          => true,
       'ssl'                             => false,
       'cache.driver'                    => 'file',
@@ -165,7 +165,7 @@ class Kirby {
     foreach($configs as $config) {
       $file = $root . DS . $config;
       if(in_array($config, $allowed, true) and file_exists($file)) include_once($file);
-    } 
+    }
 
     // apply the options
     $this->options = array_merge($this->options, c::$data);
@@ -189,7 +189,7 @@ class Kirby {
         case '.':
           return page()->url() . '/' . $url;
           break;
-        default:                            
+        default:
           if($page = page($url)) {
             // use the "official" page url
             return $page->url($lang);
@@ -244,7 +244,7 @@ class Kirby {
           $language = $kirby->route->lang;
           s::set('kirby_language', $language->code());
         } else if(s::get('kirby_language') and $language = $site->sessionLanguage()) {
-          // $language is already set but the user wants to 
+          // $language is already set but the user wants to
           // select another language
           $referer = r::referer();
           if(!empty($referer) && str::startsWith($referer, $this->urls()->index())) {
@@ -324,7 +324,7 @@ class Kirby {
 
         if($file->exists()) {
           return new Response(f::read($root), f::extension($root));
-        } else {          
+        } else {
           return new Response('The file could not be found', f::extension($path), 404);
         }
       }
@@ -425,7 +425,7 @@ class Kirby {
     if(file_exists($file)) return $this->plugins[$name] = include_once($file);
 
     return false;
-  
+
   }
 
   /**
@@ -476,12 +476,12 @@ class Kirby {
 
     if($site->multilang() and !$site->language()) {
       $site->language = $site->languages()->findDefault();
-    }    
+    }
 
     // set the local for the specific language
     if(is_array($site->locale())) {
       foreach($site->locale() as $key => $value) {
-        setlocale($key, $value);        
+        setlocale($key, $value);
       }
     } else {
       setlocale(LC_ALL, $site->locale());
@@ -707,9 +707,9 @@ class Kirby {
     // store the current language in the session
     if(
         $this->option('language.detect') &&
-        $this->site()->multilang() && 
+        $this->site()->multilang() &&
         $this->site()->language()
-      ) {      
+      ) {
       s::set('kirby_language', $this->site()->language()->code());
     }
 
@@ -719,7 +719,7 @@ class Kirby {
 
   /**
    * Register a new hook
-   * 
+   *
    * @param string/array $hook The name of the hook
    * @param closure $callback
    */
@@ -740,7 +740,7 @@ class Kirby {
 
   /**
    * Trigger a hook
-   * 
+   *
    * @param Event $event Event object or a string with the event name
    * @param mixed $args Additional arguments for the hook
    * @return mixed
@@ -773,7 +773,7 @@ class Kirby {
 
         try {
           $callback = $callback->bindTo($event);
-          call($callback, $args);        
+          call($callback, $args);
         } catch(Exception $e) {
           // caught callback error
         }
@@ -795,7 +795,7 @@ class Kirby {
         if(file_exists(__DIR__ . DS . 'kirby' . DS . 'component' . DS . strtolower($name) . '.php')) {
           $this->component($name, 'Kirby\\Component\\' . $name);
         } else {
-          throw new Exception('The component "' . $name . '" does not exist');          
+          throw new Exception('The component "' . $name . '" does not exist');
         }
       }
       return $this->components[$name];
@@ -823,7 +823,7 @@ class Kirby {
       $object->configure();
 
       // register the component
-      $this->components[$name] = $object;       
+      $this->components[$name] = $object;
 
     }
   }

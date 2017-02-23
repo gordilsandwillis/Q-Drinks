@@ -7366,8 +7366,14 @@ main.mixer .mixer-list .col img {
   padding-bottom: 0;
   display: none;
   position: relative;
+  max-height: 0;
   margin-bottom: 0;
   transition: max-height 0.5s ease-in-out, margin 0.3s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe.visible {
+  max-height: 600px;
+  margin-bottom: 3.75%;
 }
 
 .flex-grid .flex-col.inline-recipe .inline-recipe-wrap {

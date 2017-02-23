@@ -24,10 +24,9 @@ if(isset($order))     $highball = $highball->shuffle();
 <ul class="flex-grid">
 
   <?php foreach($highball as $recipe): ?>
-
     <li class="flex-col recipe-thumb-toggle">
       <div class="recipe-thumb">
-        <a class="recipe-thumb-link" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
+        <a class="recipe-thumb-link" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
           <img src="<?= $recipe->image()->crop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" >
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
           <h6 class="recipe-mixer">Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?></h6>

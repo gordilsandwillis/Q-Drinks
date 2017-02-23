@@ -21,7 +21,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="white ingredient-images">
     <?php snippet('section-header', ['text' => 'Ingredients']) ?>
     <div class="container narrow">
@@ -69,7 +69,7 @@
                       <p><?= $recipe->variations()->html() ?></p>
                     </div>
                   </div>
-                  
+
                   <h5 class="recipe-section-title mobile-hide">Method</h5>
                   <p class="mobile-hide">
                   <?php foreach($recipe->method()->toStructure() as $step): ?>
@@ -104,4 +104,4 @@
 
 </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>

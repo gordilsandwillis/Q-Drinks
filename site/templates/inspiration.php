@@ -1,7 +1,7 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="inspiration padded-bottom" role="main">
-    
+
     <div class="top-area padded-bottom">
       <div class="top-image push-down">
         <?php if ($page->images()->find($page->headerImage())) : ?>
@@ -33,4 +33,4 @@
     </section>
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>

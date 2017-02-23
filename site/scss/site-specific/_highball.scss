@@ -148,8 +148,14 @@
 			padding-bottom: 0;
 			display: none;
 			position: relative;
-			//max-height: 0; // change to max-height: 600px to show
-			margin-bottom: 0; // change to margin-bottom: $gutter to show
+			max-height: 0;
+			margin-bottom: 0;
+			// change to margin-bottom: $gutter to show
+			// change to max-height: 600px to show
+			&.visible {
+				max-height: 600px;
+				margin-bottom:$gutter;
+			}
 			transition: max-height .5s $ease, margin .3s $ease;
 			.inline-recipe-wrap {
 				height: 100%;

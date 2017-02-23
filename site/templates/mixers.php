@@ -16,7 +16,7 @@
         <p><?= $page->introText()->html() ?></p>
       </div>
     <?php endif; ?>
-      
+
     <section class="mixers">
       <div class="container">
         <?php snippet('mixer-list', ['limit' => 100]) ?>
@@ -25,4 +25,4 @@
 
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer', ['footerClass' => '']) ?>
