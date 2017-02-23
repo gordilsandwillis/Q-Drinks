@@ -16,8 +16,8 @@
 		<? $mobileColorClass = 'mobile-light' ?>
 	<? endif; ?>
 	<!-- Get image urls -->
-	<? $desktopImage = $image->desktopImage()->toFile()->crop(2000, 1500)->url(); ?>
-	<? $mobileImage = $image->mobileImage()->toFile()->crop(800, 800)->url(); ?>
+	<? $desktopImage = $image->desktopImage()->toFile()->crop(2000, 1800)->url(); ?>
+	<? $mobileImage = $image->mobileImage()->toFile()->crop(1000, 1000)->url(); ?>
 <? endforeach; ?>
 
 <? snippet('head', array(
@@ -34,7 +34,7 @@
 	    </div>
 	    <div class="text-overlay <?= $desktopColorClass ?> <?= $mobileColorClass ?>">
 	    	<div class="container">
-	    		<h1 class="hidden">Q:<?= $page->headline()->html() ?></h1>
+	    		<h1 class="hidden">Q Mixers</h1>
 		      <div class="headline">
 		      	<div class="h1-wrap">
 			      	<div class="q-question">

@@ -4,11 +4,14 @@
 		width: 100%;
 		height: auto;
 		position: absolute;
-		top: calc(100px + 25%);
+		top: calc(100px + 7%);
 		right: 0;
 		z-index: 2;
 		text-align: center;
 		display: block;
+		@include respond($home-breakpoint) {
+			top: calc(100px + 35%);
+		}
 		&.desktop-dark {
 			color: $text-color;
 			.headline .h1-wrap .q-question svg * {
@@ -22,7 +25,7 @@
 			}
 		}
 		&.mobile-dark {
-			@include respond-smaller-than($lg) {
+			@include respond-smaller-than($home-breakpoint) {
 				color: $text-color;
 				.headline .h1-wrap .q-question svg * {
 					fill: $text-color
@@ -30,7 +33,7 @@
 			}
 		}
 		&.mobile-light {
-			@include respond-smaller-than($lg) {
+			@include respond-smaller-than($home-breakpoint) {
 				color: #fff;
 				.headline .h1-wrap .q-question svg * {
 					fill: #fff
@@ -38,8 +41,14 @@
 			}
 		}
 		.container {
-			@include respond($lg) {
+			@include respond($home-breakpoint) {
 				max-width: none;
+				width: 90%;
+			}
+			@include respond($xlg) {
+				width: 85%;
+			}
+			@include respond($xlg) {
 				width: 80%;
 			}
 		}
@@ -47,40 +56,69 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: $tracked-out;
-			font-size: 1.25rem;
+			font-size: 1.2rem;
 			line-height: 1.5em;
 			@include font-smooth();
-			max-width: 12.5em;
+			max-width: 15em;
 			margin: 0 auto;
 			padding-bottom: 5em;
-			text-align: left;
-			@include respond($lg) {
+			text-align: center;
+			transform: translate3d(0, 50px, 0);
+			opacity: 0;
+			animation: transition-in 1s .5s $ease forwards;
+			@include respond($sm) {
+				font-size: 1.5em;
+			}
+			@include respond($md) {
+				font-size: 1.75em;
+			}
+			@include respond($home-breakpoint) {
+				// font-size: 1.em;
+				text-align: left;
+				max-width: 20em;
 				margin: 0;
 				padding-bottom: 0;
+			}
+			@include respond($xlg) {
+				font-size: 2em;
 			}
 			.h1-wrap {
 				display: block;
 				position: relative;
+				@include respond($home-breakpoint) {
+					padding-left: 3.5em;
+				}
 				.text {
-					transform: translate3d(30px, 0, 0);
-					opacity: 0;
-					animation: transition-in 1s .3s $ease forwards;
-					display: block;
+					display: inline;
+					@include respond($home-breakpoint) {
+						display: block;
+					}
 				}
 				.q-question {
-					display: block;
-					width: 3.5em;
-					margin-bottom: .3em;
+					display: inline-block;
+					width: 2.4em;
+					margin-bottom: .5em;
+					text-align: left;
+					line-height: 1em;
+					margin: -.1em -.25em -.7em 0;
+					@include respond($home-breakpoint) {
+						display: block;
+						position: absolute;
+						top: .25em;
+						left: 0;
+						margin: 0 0 0 -.4em;
+						width: 3.75em;
+					}
 					svg {
 						display: inline-block;
 						vertical-align: middle;
-						height: 3em;
-						margin-bottom: -.55em;
-						margin: 0 0 -1.25rem -.5rem;
+						height: 2em;
 						transition: none;
-						transform: translate3d(30px, 0, 0);
-						opacity: 0;
-						animation: transition-in 1s .2s $ease forwards;
+						margin-top: -.2em;
+						@include respond($home-breakpoint) {
+							height: 3em;
+							margin: 0 0 -.7em 0;
+						}
 						.mixers {
 							display: none;
 						}
@@ -92,25 +130,15 @@
 					.colon {
 						line-height: 1em;
 						margin-top: -.25em;
-						margin-left: -.1em;
+						margin-left: -.25em;
 						display: inline-block;
 						vertical-align: middle;
 						font-size: 1.25em;
-						transform: translate3d(30px, 0, 0);
-						opacity: 0;
-						animation: transition-in 1s .25s $ease forwards;
+						@include respond($home-breakpoint) {
+							margin-left: -.1em;
+						}
 					}
 				}
-			}
-			@include respond($sm) {
-				font-size: 1.65em;
-			}
-			@include respond($md) {
-				font-size: 2.125em;
-			}
-			@include respond($lg) {
-				max-width: 19.5em;
-				width: 50%;
 			}
 		}
 	}
@@ -118,14 +146,14 @@
 
 .home-bg-desktop {
 	display: none;
-	@include respond(700) {
+	@include respond($home-breakpoint) {
 		display: block;
 	}
 }
 
 .home-bg-mobile {
 	display: none;
-	@include respond-smaller-than(700) {
+	@include respond-smaller-than($home-breakpoint) {
 		display: block;
 	}
 }

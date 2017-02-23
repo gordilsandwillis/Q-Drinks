@@ -36,26 +36,20 @@ Headerimage: Q-Drinks-photo-shoot-by-Daniel-Krieger-1537.jpg
 Builder: 
 
 - 
-  desktopimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1136.jpg
+  desktopimage: Q_Homepage_1.jpg
   desktoptextcolor: ffffff
-  mobileimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1512.jpg
+  mobileimage: Q_HomepageMobile_1.jpg
   mobiletextcolor: "000000"
   _fieldset: homeImageBlock
 - 
-  desktopimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1512.jpg
-  desktoptextcolor: "000000"
-  mobileimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1136.jpg
-  mobiletextcolor: "000000"
+  desktopimage: Q_HomepageMobile_2.jpg
+  desktoptextcolor: ffffff
+  mobileimage: Q_HomepageMobile_2.jpg
+  mobiletextcolor: ffffff
   _fieldset: homeImageBlock
 - 
-  desktopimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1537.jpg
-  desktoptextcolor: "000000"
-  mobileimage: >
-    Q-Drinks-photo-shoot-by-Daniel-Krieger-1136.jpg
+  desktopimage: Q_Homepage_3.jpg
+  desktoptextcolor: ffffff
+  mobileimage: Q_HomepageMobile_3.jpg
   mobiletextcolor: ffffff
   _fieldset: homeImageBlock

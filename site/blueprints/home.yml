@@ -10,6 +10,7 @@ fields:
   headline:
     label: Intro
     type:  textarea
+    buttons: false
 
   builder:
     label: Images <span class="panel-field-description">Every time the page loads, a different image will show</span>

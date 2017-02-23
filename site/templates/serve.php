@@ -14,11 +14,8 @@
         </div>
       </div> -->
     </div>
-  	<div class="section-header">
-	    <div class="container">
-	      <h1>Step By Step</h1>
-	    </div>
-    </div>
+
+    <?php snippet('section-header', array('text' => 'Step By Step', 'tag' => 'h1')) ?>
 
     <section class="serve-steps">
       <div class="container">

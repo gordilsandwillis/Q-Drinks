@@ -8,7 +8,7 @@
   	<div class="recipe-card" style="background-color: <?= $mixerPage->mixerColor() ?>">
       <div class="image">
         <div class="bg-image" style="background-image: url(<?= $page->image()->crop(1500)->url() ?>);">
-          <img src="<?= $page->image()->crop(750, 750)->url() ?>">
+          <img src="<?= $page->image()->crop(750, 750)->url() ?>" alt="<?= $page->title()->html() ?>" width="750" height="750">
         </div>
       </div>
 
@@ -18,10 +18,10 @@
           <span class="number">00</span>
         </div>
         <div class="container">
-          <h3 class="recipe-title"><?= $page->title()->html() ?></h3>
+          <h1 class="recipe-title"><?= $page->title()->html() ?></h1>
           <div class="inline-grid">
 	          <div class="col-6">
-		          <h5 class="recipe-section-title">Ingredients</h5>
+		          <h4 class="recipe-section-title">Ingredients</h4>
 		          <ul>
 		          <?php foreach($page->ingredients()->toStructure() as $step): ?>
 		            <li><p><?= $step->ingredient()->html() ?></p></li>
@@ -29,12 +29,12 @@
 		          </ul>
 		        </div>
 		        <div class="col-6">
-		          <h5 class="recipe-section-title">Variations</h5>
+		          <h4 class="recipe-section-title">Variations</h4>
 		          <p><?= $page->variations()->html() ?></p>
           	</div>
           </div>
 
-          <h5 class="recipe-section-title">Method</h5>
+          <h4 class="recipe-section-title">Method</h4>
           <p>
           <?php foreach($page->method()->toStructure() as $step): ?>
             <?= $step->step()->html() ?>

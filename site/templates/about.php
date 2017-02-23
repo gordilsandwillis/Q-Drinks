@@ -21,7 +21,7 @@
       </div>
       <div class="right about-info">
         <div>
-          <?php snippet('section-header', ['text' => 'About Us']) ?>
+          <?php snippet('section-header', array('text' => 'About Us', 'tag' => 'h1')) ?>
           <div class="container align-center">
             <?php if ($site->phone()->isNotEmpty()): ?>
               <section>

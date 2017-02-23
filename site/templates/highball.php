@@ -5,12 +5,11 @@
     	<div class="top-image fancy-entrance">
     		<?php if ($page->images()->find($page->headerImage())) : ?>
           <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->crop(2000, 1500)->url() ?>)">
-            <img src="<?php echo $page->images()->find($page->headerImage())->url() ?>">
           </div>
         <?php endif; ?>
     	</div>
     </div>
-    <?php snippet('section-header', ['text' => 'Recipes', 'transition' => '']) ?>
+    <?php snippet('section-header', array('text' => 'Recipes', 'tag' => 'h1')) ?>
     <?php if ($page->introText()->isNotEmpty()):?>
       <div class="container very-narrow align-center intro-p">
         <p><?= $page->introText()->html() ?></p>

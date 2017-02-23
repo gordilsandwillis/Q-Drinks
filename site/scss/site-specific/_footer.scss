@@ -63,7 +63,7 @@ footer {
 				}
 				a {
 					display: inline-block;
-					line-height: 1.25em;
+					line-height: 2em;
 					@include respond-smaller-than($lg) {
 						display: block;
 						border: none;

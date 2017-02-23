@@ -1,5 +1,23 @@
-<div class="section-header <?php echo $transition ?>">
+<?php
+$elementTag = 'h3';
+$elementTransition = '';
+
+if(isset($tag)) {
+	$elementTag = $tag;
+} else {
+	$elementTag = 'h3';
+}
+
+if(isset($transition)) {
+	$elementTransition = $transition;
+} else {
+	$elementTransition = '';
+}
+
+?>
+
+<div class="section-header <?= $elementTransition ?>">
   <div class="container">
-    <h1><?php echo $text ?></h1>
+    <<?= $elementTag ?>><?= $text ?></<?= $elementTag ?>>
   </div>
 </div>

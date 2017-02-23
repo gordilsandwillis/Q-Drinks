@@ -32,7 +32,7 @@ if(isset($order))     $mixers = $mixers->shuffle();
       <div class="mixer-thumb">
         <a href="<?= $mixer->url() ?>" title="<?= $mixer->title()->html() ?>" >
           <?php if ($mixer->images()->find($mixer->thumbnail())) : ?>
-            <img src="<?php echo $mixer->images()->find($mixer->thumbnail())->crop(600, 1000)->url() ?>" alt="<?= $mixer->title()->html() ?>">
+            <img src="<?php echo $mixer->images()->find($mixer->thumbnail())->crop(600, 1000)->url() ?>" alt="<?= $mixer->title()->html() ?>" width="600" height="1000">
           <?php endif; ?>
         </a>
         <h3 class="thumb-title"><?= $mixer->title()->html() ?></h3>

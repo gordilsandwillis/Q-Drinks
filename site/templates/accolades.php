@@ -9,11 +9,8 @@
         <?php endif; ?>
       </div>
     </div>
-    <div class="section-header">
-      <div class="container">
-        <h1>Accolades</h1>
-      </div>
-    </div>
+
+    <?php snippet('section-header', array('text' => 'Accolades', 'tag' => 'h1')) ?>
 
     <section class="accolades-list">
       <div class="container">
