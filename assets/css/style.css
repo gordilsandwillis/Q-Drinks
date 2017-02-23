@@ -5582,7 +5582,7 @@ hr {
 }
 
 .barba-container {
-  padding-top: 76px;
+  padding-top: 96px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -6122,7 +6122,6 @@ header .logo {
 header .logo svg {
   height: 100%;
   width: 100%;
-  transform: translate3d(0, 13%, 0);
   transition: all 0.4s ease-in-out;
 }
 

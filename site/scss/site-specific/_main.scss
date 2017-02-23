@@ -14,7 +14,7 @@
 }
 
 .barba-container {
-	padding-top: $collapsed-header-height;
+	padding-top: 96px;
 	@include respond($md) {
 		padding-top: 120px;
 	}
