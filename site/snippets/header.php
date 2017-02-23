@@ -13,6 +13,7 @@
     </div>
 
     <nav>
+    <div>
         <div class="left">
     		<a href="<?= url() ?>/mixers">Our Mixers</a>
     		<a href="<?= url() ?>/inspiration">Inspiration</a>
@@ -23,6 +24,7 @@
     		<a href="<?= url() ?>/accolades">Accolades</a>
     		<a href="<?= url() ?>/about">About Us</a>
         </div>
+    </div>
     </nav>
 
   </div>

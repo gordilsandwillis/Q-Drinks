@@ -6142,13 +6142,50 @@ header .logo svg .mixers {
 }
 
 header nav {
-  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: background 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.mobile-menu-open header nav {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(255, 127, 80, 0.9);
+  transition: opacity 0.4s ease-in-out, background 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+header nav > div {
+  width: 100%;
 }
 
 @media only screen and (min-width: 900px) {
   header nav {
+    opacity: 1;
+    visibility: visible;
     display: block;
     *zoom: 1;
+    padding-top: 0;
+    position: static;
+    background: transparent;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    overflow: hidden;
+    min-height: 0;
   }
   header nav:before, header nav:after {
     content: "";
@@ -6164,11 +6201,19 @@ header nav a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 14px;
   display: block;
   text-align: center;
   position: relative;
   cursor: pointer;
+  padding: .75em;
+}
+
+@media only screen and (min-width: 900px) {
+  header nav a {
+    font-size: 10px;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -6227,6 +6272,28 @@ header nav .left {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  header nav .left a {
+    color: #333;
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  header nav .left a:nth-child(1) {
+    transition-delay: 0s;
+  }
+  header nav .left a:nth-child(2) {
+    transition-delay: .05s;
+  }
+  header nav .left a:nth-child(3) {
+    transition-delay: .1s;
+  }
+  .mobile-menu-open header nav .left a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @media only screen and (min-width: 900px) {
   header nav .left a {
     margin-left: 11%;
@@ -6263,6 +6330,28 @@ header nav .right {
 @media only screen and (min-width: 1500px) {
   header nav .right {
     padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header nav .right a {
+    color: #333;
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  header nav .right a:nth-child(1) {
+    transition-delay: .15s;
+  }
+  header nav .right a:nth-child(2) {
+    transition-delay: .2s;
+  }
+  header nav .right a:nth-child(3) {
+    transition-delay: .25s;
+  }
+  .mobile-menu-open header nav .right a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -6447,6 +6536,54 @@ header.mobile-light {
   }
   header.mobile-light .logo svg * {
     fill: #fff;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-menu-open header {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mobile-menu-open header {
+    height: 76px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mobile-menu-open header a {
+    color: #333;
+  }
+  .mobile-menu-open header a:after {
+    background: #333;
+  }
+  .mobile-menu-open header .logo {
+    height: 46px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+  .mobile-menu-open header .logo {
+    height: 54px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mobile-menu-open header .logo svg {
+    transform: translate3d(0, 13%, 0);
+  }
+  .mobile-menu-open header .logo svg * {
+    fill: #333;
+  }
+  .mobile-menu-open header .logo svg .mixers {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  .mobile-menu-open header .menu-icon:before, .mobile-menu-open header .menu-icon:after,
+  .mobile-menu-open header .menu-icon .center,
+  .mobile-menu-open header .menu-icon .center:before {
+    background: #333;
   }
 }
 
@@ -7503,7 +7640,7 @@ main.about nav.secondary {
   left: 0;
   right: 0;
   top: 120px;
-  z-index: 10;
+  z-index: 9;
   -webkit-transition: top 0.4s ease-in-out;
   -moz-transition: top 0.4s ease-in-out;
   -o-transition: top 0.4s ease-in-out;

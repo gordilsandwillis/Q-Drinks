@@ -63,7 +63,7 @@ main.about {
 		left: 0;
 		right: 0;
 		top: 120px;
-		z-index: 10;
+		z-index: 9;
 		@include transition((top $header-transition-speed $ease));
 		&.collapsed {
 			top: $collapsed-header-height;

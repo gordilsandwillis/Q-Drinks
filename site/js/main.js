@@ -16,14 +16,13 @@ var FadeTransition = Barba.BaseTransition.extend({
     Promise
       .all([this.newContainerLoading, this.fadeOut()])
       .then(this.fadeIn.bind(this));
-
   },
 
   fadeOut: function() {
     /*
      * this.oldContainer is the HTMLElement of the old Container
      */
-
+    closeMobileMenu();
     return $(this.oldContainer).animate({ opacity: 0 }).promise();
   },
 
@@ -46,7 +45,6 @@ var FadeTransition = Barba.BaseTransition.extend({
 
     document.body.scrollTop = 0;
     fancyHeader();
-    mobileMenu();
     loadedTransitionIn();
     smoothScroll();
     parallaxblock();
@@ -72,6 +70,7 @@ Barba.Pjax.getTransition = function() {
 Barba.Dispatcher.on('transitionCompleted', function() {
   slideshow();
   highballGrid();
+  mobileMenu();
 });
 
 // Changes meta tags on new page
@@ -324,22 +323,23 @@ var easyLocator = function () {
 
 
 var mobileMenu = function () {
-  var windowWidth = window.innerWidth;
   var menuToggle = document.querySelector('#menu-toggle');
-  if (windowWidth < 900) {
-    menuToggle.addEventListener('click', function(event) {
-      document.querySelector('body').classList.toggle('mobile-menu');
-    });
-  } else {
-    document.querySelector('body').classList.remove('mobile-menu');
-  }
+  menuToggle.addEventListener('click', function(event) {
+    console.log('mobile menu');
+    document.querySelector('body').classList.toggle('mobile-menu-open');
+  });
+}
+
+var closeMobileMenu = function () {
+  console.log('close it');
+  document.querySelector('body').classList.remove('mobile-menu-open');
 }
 
 document.addEventListener("DOMContentLoaded", function() {
   Barba.Pjax.start();
   transitionIn();
   fancyHeader();
-  mobileMenu();
+  // mobileMenu();
   parallaxblock();
   parallaxblock2();
   loadedTransitionIn();
@@ -359,7 +359,6 @@ document.addEventListener('scroll', function(event) {
 
 window.addEventListener('resize', function(event) {
   fancyHeader();
-  mobileMenu();
   parallaxTop();
   parallaxblock();
   parallaxblock2();
