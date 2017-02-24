@@ -1,3 +1,153 @@
+.builder-add-content-wrapper {
+  position: relative;
+}
+
+.builder-add-content-button {
+  -webkit-appearance: none;
+  background: #000;
+  display: block;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  transition: background .3s ease-in-out, opacity .3s ease-in-out;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.builder-add-content-button:hover {
+  background: #555;
+}
+
+.builder-add-content-button.open {
+  opacity: .3;
+}
+
+.builder-add-content-button.open + .builder-add-buttons {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.builder-add-buttons.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  position: static;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  background: transparent;
+}
+
+.builder-add-buttons.visible a {
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.builder-add-content-button.open:before {
+  transform: rotate(135deg);
+}
+
+.builder-add-content-button.open:after {
+  transform: rotate(135deg);
+}
+
+.builder-add-content-button:hover:after,
+.builder-add-content-button:hover:before {
+  background: #fff;
+}
+
+.builder-add-buttons {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  margin-left: -100px;
+  bottom: 55px;
+  background: #000;
+  border-radius: 4px;
+  padding: 9px 0;
+  text-align: left;
+  z-index: 6;
+}
+
+.builder-add-buttons a {
+  display: block;
+  margin: 0 8px;
+  padding: 7px 8px 8px;
+  font-size: 14px;
+  color: #fff;
+  box-sizing: border-box;
+  line-height: 1em;
+  opacity: .7;
+  transition: opacity .2s ease-in-out, background .2s ease-in-out;
+  border-radius: 4px;
+}
+
+.builder-add-buttons a:hover {
+  opacity: 1;
+  background: #444;
+}
+
+.builder-add-content-button:after,
+.builder-add-content-button:before {
+  content: '';
+  display: block;
+  background: #efefef;
+  transition: transform .3s ease-in-out, background .2s ease-in-out;
+  width: 2px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7px 0 0 -1px;
+}
+
+.builder-add-content-button:before {
+  width: 14px;
+  height: 2px;
+  margin: -1px 0 0 -7px;
+}
+
+.builder-add-container {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  animation: enter-new-block .5s ease-in-out forwards;
+}
+
+.field,
+.builder-label,
+.structure-entry {
+  transition: opacity .3s ease-in-out;
+}
+
+fieldset.buttons.buttons-centered {
+  transition: transform .3s ease-in-out;
+}
+
+fieldset.buttons.buttons-centered.disabled {
+  transform: translate3d(0, 100%, 0);
+  pointer-events: none;
+}
+
+@keyframes enter-new-block {
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes loginEntrance {
   100% {
     opacity: 1;
