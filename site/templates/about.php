@@ -15,7 +15,7 @@
     <section class="white split">
       <div class="left">
         <div class="top-image">
-          <div class="bg-image" style="background-image: url(<?= $page->images()->find($page->headerImage())->crop(1000, 1000)->url() ?>)">
+          <div class="bg-image" style="background-image: url(<?= $page->images()->find($page->headerImage())->focusCrop(1000, 1000)->url() ?>)">
           </div>
         </div>
       </div>

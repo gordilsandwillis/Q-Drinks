@@ -1,6 +1,10 @@
 title: Mixers
 
 files: true
+  fields:
+    focus:
+      label: Focus Crop
+      type: focus
 
 pages: false
   hide: true

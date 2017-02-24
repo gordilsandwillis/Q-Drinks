@@ -1,5 +1,11 @@
 title: Highball
 
+files:
+  fields:
+    focus:
+      label: Focus Crop
+      type: focus
+
 pages:
   hide: true
   template: recipe

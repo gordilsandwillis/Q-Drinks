@@ -2,6 +2,12 @@ title: Recipe
 
 pages: false
 
+files:
+  fields:
+    focus:
+      label: Focus Crop
+      type: focus
+
 fields:
   title:
     label: Title

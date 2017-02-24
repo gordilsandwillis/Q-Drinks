@@ -1,5 +1,11 @@
 title: About
 
+files:
+  fields:
+    focus:
+      label: Focus Crop
+      type: focus
+
 pages: false
 
 fields:

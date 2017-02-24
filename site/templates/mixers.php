@@ -4,7 +4,7 @@
   	<div class="top-area">
     	<div class="top-image fancy-entrance">
     		<?php if ($page->images()->find($page->headerImage())) : ?>
-          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->crop(2000, 1500)->url() ?>)">
+          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->focusCrop(2000, 1500)->url() ?>)">
           </div>
         <?php endif; ?>
     	</div>

@@ -12,8 +12,12 @@ fields:
     type:  text
 
   description:
-    label: Description
+    label: SEO Description
     type:  textarea
+
+  keywords:
+    label: SEO Keywords
+    type:  tags
     
   email:
     label: Email

@@ -28,8 +28,8 @@ fields:
             label: Mobile Text Color <span class="panel-field-description">Text color for desktop</span>
             type: radio
             options:
-              000000: Black
               ffffff: White
+              000000: Black
             width: 1/2
           mobileImage:
             label: Desktop Image <span class="panel-field-description">Image Cropped for mobile</span>
@@ -39,6 +39,6 @@ fields:
             label: Desktop Text Color <span class="panel-field-description">Text color for mobile</span>
             type: radio
             options:
-              000000: Black
               ffffff: White
+              000000: Black
             width: 1/2

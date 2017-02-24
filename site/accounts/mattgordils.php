@@ -11,4 +11,3 @@ history:
   - mixers
   - mixers/club-soda
   - mixers/kola
-  - mixers/ginger-ale

@@ -27,7 +27,7 @@ if(isset($order))     $highball = $highball->shuffle();
     <li class="flex-col recipe-thumb-toggle">
       <div class="recipe-thumb">
         <a class="recipe-thumb-link" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
-          <img src="<?= $recipe->image()->crop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
+          <img src="<?= $recipe->image()->focusCrop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
           <h6 class="recipe-mixer">Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?></h6>
         </a>
