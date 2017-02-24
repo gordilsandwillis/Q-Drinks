@@ -10319,6 +10319,10 @@ main.mixer .mixer-list .col img {
   }
 }
 
+.recipe-list > .container > .flex-grid {
+  margin-top: -5%;
+}
+
 .recipe-list .col {
   margin-bottom: 7.5%;
 }
@@ -10357,7 +10361,8 @@ main.mixer .mixer-list .col img {
 
 @media only screen and (min-width: 600px) {
   .recipe-list .flex-col {
-    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 3%;
   }
 }
 
@@ -10387,6 +10392,28 @@ main.mixer .mixer-list .col img {
   padding-right: 1.875%;
   order: 0;
   position: relative;
+}
+
+.flex-grid .flex-col .img-wrap {
+  overflow: hidden;
+}
+
+.flex-grid .flex-col .img-wrap img {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.flex-grid .flex-col .recipe-thumb-link {
+  display: block;
+  border: none;
+}
+
+.flex-grid .flex-col .recipe-thumb-link:hover .img-wrap {
+  transform-style: preserve-3d;
+}
+
+.flex-grid .flex-col .recipe-thumb-link:hover .img-wrap img {
+  transform: translate3d(0, 0, 0) scale(1.03);
 }
 
 @media only screen and (min-width: 600px) {
@@ -10458,11 +10485,17 @@ main.mixer .mixer-list .col img {
   .flex-grid .flex-col:nth-child(n+2):nth-child(even):nth-child(-n+6) {
     order: 2;
   }
+  .flex-grid .flex-col:nth-child(n+3):nth-child(even):nth-child(-n+6) {
+    margin-left: -100%;
+  }
   .flex-grid .flex-col:nth-child(n+7):nth-child(odd):nth-child(-n+11) {
     order: 3;
   }
   .flex-grid .flex-col:nth-child(n+8):nth-child(even):nth-child(-n+12) {
     order: 4;
+  }
+  .flex-grid .flex-col:nth-child(n+9):nth-child(even):nth-child(-n+12) {
+    margin-left: -100%;
   }
   .flex-grid .flex-col:nth-child(n+13):nth-child(odd):nth-child(-n+17) {
     order: 5;
@@ -10470,29 +10503,97 @@ main.mixer .mixer-list .col img {
   .flex-grid .flex-col:nth-child(n+14):nth-child(even):nth-child(-n+18) {
     order: 6;
   }
+  .flex-grid .flex-col:nth-child(n+15):nth-child(even):nth-child(-n+18) {
+    margin-left: -100%;
+  }
   .flex-grid .flex-col:nth-child(n+19):nth-child(odd):nth-child(-n+23) {
     order: 7;
   }
   .flex-grid .flex-col:nth-child(n+20):nth-child(even):nth-child(-n+24) {
     order: 8;
   }
+  .flex-grid .flex-col:nth-child(n+21):nth-child(even):nth-child(-n+24) {
+    margin-left: -100%;
+  }
 }
 
 .flex-grid .flex-col.inline-recipe {
   min-width: 100%;
   flex-grow: 1;
-  background-color: #ffc99b;
-  padding-bottom: 0;
+  padding: 0;
   display: none;
   position: relative;
-  max-height: 0;
+  z-index: 1;
   margin-bottom: 0;
-  transition: max-height 0.5s ease-in-out, margin 0.3s ease-in-out;
+  transition: height 0.4s 0.4s ease-in-out, opacity 0.3s 0.4s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe.nipple-left .nipple-wrap .nipple-container {
+  transform: translate3d(0, 0, 0);
+}
+
+.flex-grid .flex-col.inline-recipe.nipple-right .nipple-wrap .nipple-container {
+  transform: translate3d(224.375%, 0, 0);
+}
+
+.flex-grid .flex-col.inline-recipe.nipple-center .nipple-wrap .nipple-container {
+  transform: translate3d(112.1875%, 0, 0);
+}
+
+.flex-grid .flex-col.inline-recipe .nipple-wrap {
+  position: absolute;
+  top: 0;
+  left: 1.875%;
+  right: 1.875%;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe .nipple-wrap .nipple-container {
+  width: 30.833%;
+  position: absolute;
+  left: 0;
+  transition: transform .4s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe .nipple-wrap .nipple-container div {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: none;
+  border-bottom-color: currentcolor;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  transition: border .4s ease-in-out;
 }
 
 .flex-grid .flex-col.inline-recipe.visible {
-  max-height: 1000px;
-  margin-bottom: 3.75%;
+  height: auto;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.flex-grid .flex-col.inline-recipe.visible .container {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition: opacity 0.2s 0.4s ease-in-out, transform 0.2s 0.4s ease-in-out;
+}
+
+.flex-grid .flex-col.inline-recipe.visible .nipple-wrap {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .flex-grid .flex-col.inline-recipe.visible {
+    display: none;
+  }
+}
+
+.flex-grid .flex-col.inline-recipe.visible .inline-recipe-wrap {
+  overflow: visible;
 }
 
 .flex-grid .flex-col.inline-recipe .inline-recipe-wrap {
@@ -10516,13 +10617,19 @@ main.mixer .mixer-list .col img {
   left: -100%;
   right: -100%;
   background-color: #ffffff;
-  z-index: 0;
+  z-index: 1;
+  transition: background 0.4s ease-in-out;
 }
 
 .flex-grid .flex-col.inline-recipe .container {
-  width: 100%;
+  color: #333;
+  width: 96%;
   z-index: 1;
   padding: 0rem 0 4rem;
+  z-index: 2;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 @media only screen and (min-width: 900px) {

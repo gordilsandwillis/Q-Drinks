@@ -26,8 +26,10 @@ if(isset($order))     $highball = $highball->shuffle();
   <?php foreach($highball as $recipe): ?>
     <li class="flex-col recipe-thumb-toggle">
       <div class="recipe-thumb">
-        <a class="recipe-thumb-link" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
-          <img src="<?= $recipe->image()->focusCrop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
+        <a class="recipe-thumb-link" data-bg-color="<?= page('mixers/' . $recipe->recipeMixer()->html())->mixerColor() ?>" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
+          <div class="img-wrap">
+            <img src="<?= $recipe->image()->focusCrop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
+          </div>
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
           <h6 class="recipe-mixer">Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?></h6>
         </a>
@@ -37,7 +39,12 @@ if(isset($order))     $highball = $highball->shuffle();
       </div>
     </li>
 
-    <li class="flex-col inline-recipe">
+    <div class="flex-col inline-recipe" style="color: <?= page('mixers/' . $recipe->recipeMixer()->html())->mixerColor() ?>">
+      <div class="nipple-wrap">
+        <div class="nipple-container">
+          <div></div>
+        </div>
+      </div>
       <div class="inline-recipe-wrap">
         <div class="container">
           <div class="inline-grid break-lg">
@@ -85,8 +92,9 @@ if(isset($order))     $highball = $highball->shuffle();
           </div>
         </div>
       </div>
-      <div class="bg-color" style="background-color: <?= page('mixers/' . $recipe->recipeMixer()->html())->mixerColor() ?>"></div>
-    </li>
+      <?//= page('mixers/' . $recipe->recipeMixer()->html())->mixerColor() ?>
+      <div class="bg-color" style="background-color: currentcolor"></div>
+    </div>
 
   <?php endforeach ?>
 

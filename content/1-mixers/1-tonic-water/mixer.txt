@@ -76,7 +76,7 @@ Builder:
 
 ----
 
-Mixercolor: #ffc999
+Mixercolor: #b5ebf2
 
 ----
 

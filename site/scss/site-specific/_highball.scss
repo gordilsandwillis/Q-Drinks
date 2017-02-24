@@ -1,4 +1,7 @@
 .recipe-list {
+	> .container > .flex-grid {
+		margin-top: -5%;
+	}
 	.col {
 		margin-bottom: $margin;
 		@include respond($sm) {
@@ -23,13 +26,21 @@
 		flex-shrink: 0;
 		padding-bottom: 2rem;
 		@include respond($md) {
-			padding-bottom: 5%;
+			padding-top: 5%;
+			padding-bottom: 3%;
 		}
 		@include respond($md) {
 			width: 50%;
 		}
 		@include respond($lg) {
 			width: 33.333%;
+		}
+		@include respond(900) {
+			&.show-nipple {
+				// .nipple-wrap {
+				// 	height: 10px !important;
+				// }
+			}
 		}
 	}
 }
@@ -46,9 +57,23 @@
 		padding-right: $gutter/2;
 		order: 0;
 		position: relative;
+		.img-wrap {
+			overflow: hidden;
+			img {
+				transform: translate3d(0, 0, 0);
+				transition: transform $med-speed $ease;
+			}
+		}
 		.recipe-thumb-link {
-			@include respond(900) {
-				// pointer-events: none;
+			display: block;
+			border: none;
+			&:hover {
+				.img-wrap {
+					transform-style: preserve-3d;
+					img {
+						transform: translate3d(0, 0, 0) scale(1.03);
+					}
+				}
 			}
 		}
 		&:not(.inline-recipe) {
@@ -118,52 +143,129 @@
 			&:nth-child(n+1):nth-child(odd):nth-child(-n+5) {
 				order: 1;
 			}
+			// inline grid row 1
 			&:nth-child(n+2):nth-child(even):nth-child(-n+6) {
 				order: 2;
 			}
+			&:nth-child(n+3):nth-child(even):nth-child(-n+6) {
+				margin-left: -100%;
+			}
+
 			&:nth-child(n+7):nth-child(odd):nth-child(-n+11) {
 				order: 3;
 			}
+			// inline grid row 2
 			&:nth-child(n+8):nth-child(even):nth-child(-n+12) {
 				order: 4;
 			}
+			&:nth-child(n+9):nth-child(even):nth-child(-n+12) {
+				margin-left: -100%;
+			}
+
 			&:nth-child(n+13):nth-child(odd):nth-child(-n+17) {
 				order: 5;
 			}
+
+			// inline grid row 3
 			&:nth-child(n+14):nth-child(even):nth-child(-n+18) {
 				order: 6;
 			}
+			&:nth-child(n+15):nth-child(even):nth-child(-n+18) {
+				margin-left: -100%;
+			}
+			
 			&:nth-child(n+19):nth-child(odd):nth-child(-n+23) {
 				order: 7;
 			}
+
+			// inline grid row 4
 			&:nth-child(n+20):nth-child(even):nth-child(-n+24) {
 				order: 8;
+			}
+			&:nth-child(n+21):nth-child(even):nth-child(-n+24) {
+				margin-left: -100%;
 			}
 		}
 
 		&.inline-recipe {
 			min-width: 100%;
 			flex-grow: 1;
-			background-color: #ffc99b;
-			padding-bottom: 0;
+			padding: 0;
 			display: none;
 			position: relative;
-			max-height: 0;
+			z-index: 1;
 			margin-bottom: 0;
-			// change to margin-bottom: $gutter to show
-			// change to max-height: 600px to show
-			&.visible {
-				max-height: 1000px;
-				margin-bottom:$gutter;
+			// height: 0;
+			// opacity: 0;
+			transition: height .4s .4s $ease, opacity .3s .4s $ease;
+			&.nipple-left .nipple-wrap .nipple-container {
+				transform: translate3d(0, 0, 0); // left
 			}
-			transition: max-height .5s $ease, margin .3s $ease;
+			&.nipple-right .nipple-wrap .nipple-container {
+				transform: translate3d(#{200% + $gutter*6.5}, 0, 0); // right
+			}
+			&.nipple-center .nipple-wrap .nipple-container {
+				transform: translate3d(#{100% + $gutter*3.25}, 0, 0); // center
+			}
+			.nipple-wrap {
+				position: absolute;
+				top: 0;
+				left: $gutter/2;
+				right: $gutter/2;
+				z-index: 4;
+				opacity: 0;
+				transition: opacity .4s $ease;
+				.nipple-container {
+					width: 33.333% - $gutter/1.5;
+					position: absolute;
+					left: 0;
+					transition: transform .4s ease-in-out;
+					div {
+						width: 0;
+						height: 0;
+						border: 10px solid transparent;
+						border-top: none;
+						border-bottom-color: currentcolor;
+						position: absolute;
+						top: -10px;
+						left: 50%;
+						margin-left: -10px;
+						transition: border .4s ease-in-out;
+					}
+				}
+			}
+			&.visible {
+				height: auto;
+				transition: height .3s $ease, opacity .3s $ease;
+				opacity: 1;
+				.container {
+					transform: translate3d(0, 0, 0);
+					opacity: 1;
+					transition: opacity .2s .4s $ease, transform .2s .4s $ease;
+				}
+				.nipple-wrap {
+					opacity: 1;
+				}
+				@include respond-smaller-than($lg) {
+					display: none;
+				}
+				.inline-recipe-wrap {
+					overflow: visible;
+				}
+			}
 			.inline-recipe-wrap {
 				height: 100%;
 				position: relative;
 				overflow: hidden;
+				// transition: overflow 0s .5s $ease;
 			}
 			@include respond($md) {
 				display: block;
+			}
+			&:not(.visible) {
+				.bg-color {
+					// background: transparent !important;
+				}
 			}
 			.bg-color {
 				content: '';
@@ -174,12 +276,18 @@
 				left: -100%;
 				right: -100%;
 				background-color: #ffffff;
-				z-index: 0;
+				z-index: 1;
+				transition: background .4s $ease;
 			}
 			.container {
-				width: 100%;
+				color: $text-color;
+				width: 96%;
 				z-index: 1;
 				padding: 0rem 0 4rem;
+				z-index: 2;
+				opacity: 0;
+				transform: translate3d(0, 20px, 0);
+				transition: opacity .15s $ease, transform .15s $ease;
 				@include respond($lg) {
 					padding: 3rem 0;
 				}

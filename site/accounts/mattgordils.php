@@ -7,7 +7,7 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
+  - mixers/tonic-water
   - home
   - mixers
-  - mixers/club-soda
   - mixers/kola

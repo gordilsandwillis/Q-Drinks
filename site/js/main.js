@@ -328,8 +328,38 @@ var highballGrid = function () {
       window.history.pushState(null, null, '/'+path);
       //Open the inline recipe
       $('.inline-recipe').removeClass('visible');
+      $('.flex-col.show-nipple').removeClass('show-nipple');
+      
+      var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
+      var contentBg = currentTarget.data('bg-color');
+
+      console.log(contentBg);
+
+      currentTarget.parent().parent().addClass('show-nipple');
       currentTarget.parent().parent().next().addClass('visible');
+
+      $('.inline-recipe').css({'color' : contentBg})
+      $('.inline-recipe').css({ 'height' : 0 });
+      currentTarget.parent().parent().next().css({ 'height' : contentHeight });
     //}
+  });
+  $('.recipe-list li:nth-of-type(3n) .recipe-thumb-link').on('click', function(event) {
+    console.log('every 3rd')
+    $('.inline-recipe').removeClass('nipple-left');
+    $('.inline-recipe').removeClass('nipple-center');
+    $('.inline-recipe').addClass('nipple-right');
+  });
+  
+  $('.recipe-list li:nth-of-type(3n - 1) .recipe-thumb-link').on('click', function(event) {
+    $('.inline-recipe').removeClass('nipple-left');
+    $('.inline-recipe').addClass('nipple-center');
+    $('.inline-recipe').removeClass('nipple-right');
+  });
+
+  $('.recipe-list li:nth-of-type(3n - 2) .recipe-thumb-link').on('click', function(event) {
+    $('.inline-recipe').addClass('nipple-left');
+    $('.inline-recipe').removeClass('nipple-center');
+    $('.inline-recipe').removeClass('nipple-right');
   });
 
 }
