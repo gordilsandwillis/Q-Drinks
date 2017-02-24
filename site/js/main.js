@@ -357,6 +357,11 @@ var highballGrid = function () {
     $('.inline-recipe').removeClass('nipple-center');
     $('.inline-recipe').removeClass('nipple-right');
   });
+  $('.close-recipe').on('click', function() {
+    $('.inline-recipe').css({ 'height' : 0 });
+    $('.inline-recipe').removeClass('visible');
+    $('.flex-col.show-nipple').removeClass('show-nipple');
+  });
 }
 
 var mobileMenu = function () {

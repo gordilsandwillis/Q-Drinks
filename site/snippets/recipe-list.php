@@ -44,6 +44,7 @@ if(isset($order))     $highball = $highball->shuffle();
         <div class="nipple-container">
           <div></div>
         </div>
+        <div class="close-recipe">Close</div>
       </div>
       <div class="inline-recipe-wrap">
         <div class="container">

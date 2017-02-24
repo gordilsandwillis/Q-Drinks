@@ -10585,6 +10585,45 @@ main.mixer .mixer-list .col img {
   transform: translate3d(112.1875%, 0, 0);
 }
 
+.flex-grid .flex-col.inline-recipe .close-recipe {
+  color: red;
+  position: absolute;
+  z-index: 5;
+  right: -30px;
+  top: 30px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.flex-grid .flex-col.inline-recipe .close-recipe:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px -1px;
+  background: #333;
+}
+
+.flex-grid .flex-col.inline-recipe .close-recipe:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px -10px;
+  background: #333;
+}
+
 .flex-grid .flex-col.inline-recipe .nipple-wrap {
   position: absolute;
   top: 0;
@@ -10592,7 +10631,7 @@ main.mixer .mixer-list .col img {
   right: 1.875%;
   z-index: 4;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s 0.4s ease-in-out;
 }
 
 .flex-grid .flex-col.inline-recipe .nipple-wrap .nipple-container {
@@ -10629,6 +10668,7 @@ main.mixer .mixer-list .col img {
 
 .flex-grid .flex-col.inline-recipe.visible .nipple-wrap {
   opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 
 @media only screen and (max-width: 900px) {

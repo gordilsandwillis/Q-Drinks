@@ -188,6 +188,42 @@
 			&.nipple-center .nipple-wrap .nipple-container {
 				transform: translate3d(#{100% + $gutter*3.25}, 0, 0); // center
 			}
+			.close-recipe {
+		    color: red;
+		    position: absolute;
+		    z-index: 5;
+		    right: -30px;
+		    top: 30px;
+		    cursor: pointer;
+		    width: 40px;
+		    height: 40px;
+		    text-indent: -999px;
+		    overflow: hidden;
+		    &:after {
+		    	content: '';
+		    	display: block;
+		    	width: 2px;
+		    	height: 20px;
+		    	transform: rotate(45deg);
+		    	position: absolute;
+		    	top: 50%;
+		    	left: 50%;
+		    	margin: -10px -1px;
+		    	background: $text-color;
+		    }
+		    &:before {
+		    	content: '';
+		    	display: block;
+		    	width: 20px;
+		    	height: 2px;
+		    	transform: rotate(45deg);
+		    	position: absolute;
+		    	top: 50%;
+		    	left: 50%;
+		    	margin: -1px -10px;
+		    	background: $text-color;
+		    }
+			}
 			.nipple-wrap {
 				position: absolute;
 				top: 0;
@@ -195,7 +231,7 @@
 				right: $gutter/2;
 				z-index: 4;
 				opacity: 0;
-				transition: opacity .4s $ease;
+				transition: opacity .4s .4s $ease;
 				.nipple-container {
 					width: 33.333% - $gutter/1.5;
 					position: absolute;
@@ -226,6 +262,7 @@
 				}
 				.nipple-wrap {
 					opacity: 1;
+					transition: opacity .4s $ease;
 				}
 				@include respond-smaller-than($lg) {
 					display: none;
