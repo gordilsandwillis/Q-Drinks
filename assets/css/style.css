@@ -10387,6 +10387,111 @@ main.mixer .mixer-list .col img {
   margin-right: -1.97368%;
 }
 
+@media only screen and (min-width: 900px) {
+  .flex-grid li.flex-col:nth-of-type(n+0) {
+    order: 0;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+4) {
+    order: 2;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+7) {
+    order: 4;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+10) {
+    order: 6;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+13) {
+    order: 8;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+16) {
+    order: 10;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+19) {
+    order: 12;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+22) {
+    order: 14;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+25) {
+    order: 16;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+28) {
+    order: 18;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+31) {
+    order: 20;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+34) {
+    order: 22;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+37) {
+    order: 24;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+40) {
+    order: 26;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+43) {
+    order: 28;
+  }
+  .flex-grid li.flex-col:nth-of-type(n+46) {
+    order: 30;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .flex-grid div.flex-col:nth-of-type(n+0) {
+    order: 1;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+4) {
+    order: 3;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+7) {
+    order: 5;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+10) {
+    order: 7;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+13) {
+    order: 9;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+16) {
+    order: 11;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+19) {
+    order: 13;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+22) {
+    order: 15;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+25) {
+    order: 17;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+28) {
+    order: 19;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+31) {
+    order: 21;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+34) {
+    order: 23;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+37) {
+    order: 25;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+40) {
+    order: 27;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+43) {
+    order: 29;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+46) {
+    order: 31;
+  }
+  .flex-grid div.flex-col:nth-of-type(n+2):nth-of-type(-n+3), .flex-grid div.flex-col:nth-of-type(n+5):nth-of-type(-n+6), .flex-grid div.flex-col:nth-of-type(n+8):nth-of-type(-n+9), .flex-grid div.flex-col:nth-of-type(n+11):nth-of-type(-n+12), .flex-grid div.flex-col:nth-of-type(n+14):nth-of-type(-n+15), .flex-grid div.flex-col:nth-of-type(n+17):nth-of-type(-n+18), .flex-grid div.flex-col:nth-of-type(n+20):nth-of-type(-n+21), .flex-grid div.flex-col:nth-of-type(n+23):nth-of-type(-n+24), .flex-grid div.flex-col:nth-of-type(n+26):nth-of-type(-n+27), .flex-grid div.flex-col:nth-of-type(n+29):nth-of-type(-n+30), .flex-grid div.flex-col:nth-of-type(n+32):nth-of-type(-n+33), .flex-grid div.flex-col:nth-of-type(n+35):nth-of-type(-n+36), .flex-grid div.flex-col:nth-of-type(n+38):nth-of-type(-n+39), .flex-grid div.flex-col:nth-of-type(n+41):nth-of-type(-n+42), .flex-grid div.flex-col:nth-of-type(n+44):nth-of-type(-n+45), .flex-grid div.flex-col:nth-of-type(n+47):nth-of-type(-n+48) {
+    margin-left: -100%;
+  }
+}
+
 .flex-grid .flex-col {
   padding-left: 1.875%;
   padding-right: 1.875%;
@@ -10439,84 +10544,6 @@ main.mixer .mixer-list .col img {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .flex-grid .flex-col:nth-child(n+1):nth-child(odd):nth-child(-n+3) {
-    order: 1;
-  }
-  .flex-grid .flex-col:nth-child(n+2):nth-child(even):nth-child(-n+4) {
-    order: 2;
-  }
-  .flex-grid .flex-col:nth-child(n+5):nth-child(odd):nth-child(-n+7) {
-    order: 3;
-  }
-  .flex-grid .flex-col:nth-child(n+6):nth-child(even):nth-child(-n+8) {
-    order: 4;
-  }
-  .flex-grid .flex-col:nth-child(n+9):nth-child(odd):nth-child(-n+11) {
-    order: 5;
-  }
-  .flex-grid .flex-col:nth-child(n+10):nth-child(even):nth-child(-n+12) {
-    order: 6;
-  }
-  .flex-grid .flex-col:nth-child(n+13):nth-child(odd):nth-child(-n+15) {
-    order: 7;
-  }
-  .flex-grid .flex-col:nth-child(n+14):nth-child(even):nth-child(-n+16) {
-    order: 8;
-  }
-  .flex-grid .flex-col:nth-child(n+17):nth-child(odd):nth-child(-n+19) {
-    order: 9;
-  }
-  .flex-grid .flex-col:nth-child(n+18):nth-child(even):nth-child(-n+20) {
-    order: 10;
-  }
-  .flex-grid .flex-col:nth-child(n+21):nth-child(odd):nth-child(-n+23) {
-    order: 11;
-  }
-  .flex-grid .flex-col:nth-child(n+22):nth-child(even):nth-child(-n+24) {
-    order: 12;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .flex-grid .flex-col:nth-child(n+1):nth-child(odd):nth-child(-n+5) {
-    order: 1;
-  }
-  .flex-grid .flex-col:nth-child(n+2):nth-child(even):nth-child(-n+6) {
-    order: 2;
-  }
-  .flex-grid .flex-col:nth-child(n+3):nth-child(even):nth-child(-n+6) {
-    margin-left: -100%;
-  }
-  .flex-grid .flex-col:nth-child(n+7):nth-child(odd):nth-child(-n+11) {
-    order: 3;
-  }
-  .flex-grid .flex-col:nth-child(n+8):nth-child(even):nth-child(-n+12) {
-    order: 4;
-  }
-  .flex-grid .flex-col:nth-child(n+9):nth-child(even):nth-child(-n+12) {
-    margin-left: -100%;
-  }
-  .flex-grid .flex-col:nth-child(n+13):nth-child(odd):nth-child(-n+17) {
-    order: 5;
-  }
-  .flex-grid .flex-col:nth-child(n+14):nth-child(even):nth-child(-n+18) {
-    order: 6;
-  }
-  .flex-grid .flex-col:nth-child(n+15):nth-child(even):nth-child(-n+18) {
-    margin-left: -100%;
-  }
-  .flex-grid .flex-col:nth-child(n+19):nth-child(odd):nth-child(-n+23) {
-    order: 7;
-  }
-  .flex-grid .flex-col:nth-child(n+20):nth-child(even):nth-child(-n+24) {
-    order: 8;
-  }
-  .flex-grid .flex-col:nth-child(n+21):nth-child(even):nth-child(-n+24) {
-    margin-left: -100%;
-  }
-}
-
 .flex-grid .flex-col.inline-recipe {
   min-width: 100%;
   flex-grow: 1;
@@ -10525,7 +10552,16 @@ main.mixer .mixer-list .col img {
   position: relative;
   z-index: 1;
   margin-bottom: 0;
+  height: 0;
+  opacity: 0;
   transition: height 0.4s 0.4s ease-in-out, opacity 0.3s 0.4s ease-in-out;
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .flex-grid .flex-col.inline-recipe {
+    display: block;
+  }
 }
 
 .flex-grid .flex-col.inline-recipe.nipple-left .nipple-wrap .nipple-container {
@@ -10600,12 +10636,6 @@ main.mixer .mixer-list .col img {
   height: 100%;
   position: relative;
   overflow: hidden;
-}
-
-@media only screen and (min-width: 600px) {
-  .flex-grid .flex-col.inline-recipe {
-    display: block;
-  }
 }
 
 .flex-grid .flex-col.inline-recipe .bg-color {

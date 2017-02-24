@@ -1,0 +1,76 @@
+Title: Paloma
+
+----
+
+Image: q-highball-1.jpg
+
+----
+
+Text: 
+
+----
+
+Related: grapefruit
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 6 oz. Q Grapefruit
+  _fieldset: ingredient
+- 
+  ingredient: 2 oz. of your favorite tequila
+  _fieldset: ingredient
+- 
+  ingredient: Course salt
+  _fieldset: ingredient
+- 
+  ingredient: Half a jalapeno, finely chopped
+  _fieldset: ingredient
+- 
+  ingredient: Two lime wedges
+  _fieldset: ingredient
+
+----
+
+Method: 
+
+- 
+  step: >
+    Mix salt and finely chopped jalapeno in
+    a small bowl and spread out on a small
+    plate
+  _fieldset: recipeStepBlock
+- 
+  step: >
+    Rub the rim of a highball glass with the
+    lime wedge, the dip into a salt mixture,
+    pushing through to evenly coat rim
+  _fieldset: recipeStepBlock
+- 
+  step: >
+    Fill the highball glass with ice and
+    then pour in the tequila and squeeze in
+    a lime
+  _fieldset: recipeStepBlock
+- 
+  step: Pour in Q Grapefruit
+  _fieldset: recipeStepBlock
+- 
+  step: >
+    Gently Stir and garnish with a lime
+    wedge
+  _fieldset: recipeStepBlock
+
+----
+
+Servings: For one glass
+
+----
+
+Variations: Try it with your favorite mescal rather than tequila for a smokier drink.
+
+----
+
+Recipemixer: grapefruit
