@@ -50,14 +50,16 @@ var FadeTransition = Barba.BaseTransition.extend({
     smoothScroll();
     parallaxblock();
     parallaxblock2();
+    $el.ready(function(){
+      console.log('loaded');
+      $el.animate({ opacity: 1 }, 750, function() {
+        /*
+         * Do not forget to call .done() as soon your transition is finished!
+         * .done() will automatically remove from the DOM the old Container
+         */
 
-    $el.animate({ opacity: 1 }, 750, function() {
-      /*
-       * Do not forget to call .done() as soon your transition is finished!
-       * .done() will automatically remove from the DOM the old Container
-       */
-
-      _this.done();
+        _this.done();
+      });
     });
   }
 });
@@ -285,7 +287,6 @@ var loadedTransitionIn = function() {
 
 var slideshow = function() {
   if (document.querySelector('.slideshow') !== null) {
-    console.log('slideshow')
     $('.recipe-slideshow').slick({
       dots: true,
       infinite: true,
@@ -342,7 +343,6 @@ var mobileMenu = function () {
 }
 
 var closeMobileMenu = function () {
-  console.log('close it');
   document.querySelector('body').classList.remove('mobile-menu-open');
 }
 
