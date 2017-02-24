@@ -95,6 +95,12 @@ header {
 		overflow-y: auto;
 		opacity: 0;
 		transition: background $header-transition-speed $ease, visibility $header-transition-speed $ease;
+		@include respond-smaller-than($lg) {
+			pointer-events: none;
+			.mobile-menu-open & {
+				pointer-events: inherit;
+			}
+		}
 		@include respond($lg) {
 			opacity: 1;
 			visibility: inherit;
@@ -114,7 +120,7 @@ header {
 		.mobile-menu-open & {
 			opacity: 1;
 			visibility: visible;
-			background: rgba(coral, .9);
+			background: rgba(#fff, .9);
 			transition: opacity $header-transition-speed $ease, background $header-transition-speed $ease, visibility $header-transition-speed $ease;
 		}
 		> div {

@@ -9227,6 +9227,15 @@ header nav {
   transition: background 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
+@media only screen and (max-width: 900px) {
+  header nav {
+    pointer-events: none;
+  }
+  .mobile-menu-open header nav {
+    pointer-events: inherit;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   header nav {
     opacity: 1;
@@ -9256,7 +9265,7 @@ header nav {
 .mobile-menu-open header nav {
   opacity: 1;
   visibility: visible;
-  background: rgba(255, 127, 80, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   transition: opacity 0.4s ease-in-out, background 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
@@ -10626,10 +10635,6 @@ main.mixer .mixer-list .col img {
   .flex-grid .flex-col.inline-recipe.visible {
     display: none;
   }
-}
-
-.flex-grid .flex-col.inline-recipe.visible .inline-recipe-wrap {
-  overflow: visible;
 }
 
 .flex-grid .flex-col.inline-recipe .inline-recipe-wrap {

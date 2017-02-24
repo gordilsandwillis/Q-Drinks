@@ -317,34 +317,30 @@ var smoothScroll = function() {
 }
 
 var highballGrid = function () {
-  console.log('highballGrid Loaded');
+  console.log('highballGrid happening');
   $('.recipe-thumb-link').on('click', function(event) {
-    //if (window.innerWidth > 900) {
-      event.stopPropagation();
-      event.preventDefault();
-      var currentTarget = $(event.currentTarget);
-      //Change the Url of the page
-      var path = currentTarget.data('path');
-      window.history.pushState(null, null, '/'+path);
-      //Open the inline recipe
-      $('.inline-recipe').removeClass('visible');
-      $('.flex-col.show-nipple').removeClass('show-nipple');
-      
-      var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
-      var contentBg = currentTarget.data('bg-color');
+    event.stopPropagation();
+    event.preventDefault();
+    console.log('still clicking')
+    var currentTarget = $(event.currentTarget);
+    //Change the Url of the page
+    var path = currentTarget.data('path');
+    window.history.pushState(null, null, '/'+path);
+    //Open the inline recipe
+    $('.inline-recipe').removeClass('visible');
+    $('.flex-col.show-nipple').removeClass('show-nipple');
+    
+    var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
+    var contentBg = currentTarget.data('bg-color');
 
-      console.log(contentBg);
+    currentTarget.parent().parent().addClass('show-nipple');
+    currentTarget.parent().parent().next().addClass('visible');
 
-      currentTarget.parent().parent().addClass('show-nipple');
-      currentTarget.parent().parent().next().addClass('visible');
-
-      $('.inline-recipe').css({'color' : contentBg})
-      $('.inline-recipe').css({ 'height' : 0 });
-      currentTarget.parent().parent().next().css({ 'height' : contentHeight });
-    //}
+    $('.inline-recipe').css({'color' : contentBg})
+    $('.inline-recipe').css({ 'height' : 0 });
+    currentTarget.parent().parent().next().css({ 'height' : contentHeight });
   });
   $('.recipe-list li:nth-of-type(3n) .recipe-thumb-link').on('click', function(event) {
-    console.log('every 3rd')
     $('.inline-recipe').removeClass('nipple-left');
     $('.inline-recipe').removeClass('nipple-center');
     $('.inline-recipe').addClass('nipple-right');
@@ -361,7 +357,6 @@ var highballGrid = function () {
     $('.inline-recipe').removeClass('nipple-center');
     $('.inline-recipe').removeClass('nipple-right');
   });
-
 }
 
 var mobileMenu = function () {
@@ -397,9 +392,13 @@ document.addEventListener('scroll', function(event) {
 });
 
 window.addEventListener('resize', function(event) {
+  var windowWidth = window.innerWidth;
   fancyHeader();
   parallaxTop();
   parallaxblock();
   parallaxblock2();
   transitionIn();
+  if (windowWidth > 900) {
+    highballGrid();
+  }
 });

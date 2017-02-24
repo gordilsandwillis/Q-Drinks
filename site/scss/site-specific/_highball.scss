@@ -230,9 +230,9 @@
 				@include respond-smaller-than($lg) {
 					display: none;
 				}
-				.inline-recipe-wrap {
-					overflow: visible;
-				}
+				// .inline-recipe-wrap {
+				// 	overflow: visible;
+				// }
 			}
 			.inline-recipe-wrap {
 				height: 100%;
