@@ -11153,6 +11153,12 @@ main.about .about-info p {
   position: relative;
 }
 
+@media only screen and (min-width: 600px) {
+  .recipe-card .instructions {
+    text-align: left;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .recipe-card .instructions {
     display: flex;

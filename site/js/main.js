@@ -73,9 +73,7 @@ Barba.Pjax.getTransition = function() {
 Barba.Dispatcher.on('transitionCompleted', function() {
   console.log('Barbara transitionCompleted');
   slideshow();
-  if(window.location.pathname === '/highball') {
-    highballGrid();
-  }
+  highballGrid();
   mobileMenu();
 });
 
@@ -317,51 +315,65 @@ var smoothScroll = function() {
 }
 
 var highballGrid = function () {
-  console.log('highballGrid happening');
-  $('.recipe-thumb-link').on('click', function(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    console.log('still clicking')
-    var currentTarget = $(event.currentTarget);
-    //Change the Url of the page
-    var path = currentTarget.data('path');
-    window.history.pushState(null, null, '/'+path);
-    //Open the inline recipe
-    $('.inline-recipe').removeClass('visible');
-    $('.flex-col.show-nipple').removeClass('show-nipple');
+  var windowWidth = window.innerWidth;
+
+  if (document.querySelector('.recipe-list') !== null && windowWidth > 900) {
+    console.log('highballGrid happening');
+    $('.recipe-thumb-link').on('click', function(event) {
+      event.stopPropagation();
+      event.preventDefault();
+      console.log('still clicking')
+      var currentTarget = $(event.currentTarget);
+      //Change the Url of the page
+      var path = currentTarget.data('path');
+      window.history.pushState(null, null, '/'+path);
+      //Open the inline recipe
+      $('.inline-recipe').removeClass('visible');
+      $('.flex-col.show-nipple').removeClass('show-nipple');
+      
+      var headerHeight = $('header > .container').height() - 1;
+      var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
+      var contentBg = currentTarget.data('bg-color');
+
+      setTimeout(function(){
+        var itemOffset = currentTarget.offset().top;
+        console.log(itemOffset);
+
+        $('html, body').animate({
+          scrollTop: itemOffset - (headerHeight * 2)
+        }, 1000);
+      }, 700);
+
+      currentTarget.parent().parent().addClass('show-nipple');
+      currentTarget.parent().parent().next().addClass('visible');
+
+      $('.inline-recipe').css({'color' : contentBg})
+      $('.inline-recipe').css({ 'height' : 0 });
+      currentTarget.parent().parent().next().css({ 'height' : contentHeight });
+    });
+    $('.recipe-list li:nth-of-type(3n) .recipe-thumb-link').on('click', function(event) {
+      $('.inline-recipe').removeClass('nipple-left');
+      $('.inline-recipe').removeClass('nipple-center');
+      $('.inline-recipe').addClass('nipple-right');
+    });
     
-    var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
-    var contentBg = currentTarget.data('bg-color');
+    $('.recipe-list li:nth-of-type(3n - 1) .recipe-thumb-link').on('click', function(event) {
+      $('.inline-recipe').removeClass('nipple-left');
+      $('.inline-recipe').addClass('nipple-center');
+      $('.inline-recipe').removeClass('nipple-right');
+    });
 
-    currentTarget.parent().parent().addClass('show-nipple');
-    currentTarget.parent().parent().next().addClass('visible');
-
-    $('.inline-recipe').css({'color' : contentBg})
-    $('.inline-recipe').css({ 'height' : 0 });
-    currentTarget.parent().parent().next().css({ 'height' : contentHeight });
-  });
-  $('.recipe-list li:nth-of-type(3n) .recipe-thumb-link').on('click', function(event) {
-    $('.inline-recipe').removeClass('nipple-left');
-    $('.inline-recipe').removeClass('nipple-center');
-    $('.inline-recipe').addClass('nipple-right');
-  });
-  
-  $('.recipe-list li:nth-of-type(3n - 1) .recipe-thumb-link').on('click', function(event) {
-    $('.inline-recipe').removeClass('nipple-left');
-    $('.inline-recipe').addClass('nipple-center');
-    $('.inline-recipe').removeClass('nipple-right');
-  });
-
-  $('.recipe-list li:nth-of-type(3n - 2) .recipe-thumb-link').on('click', function(event) {
-    $('.inline-recipe').addClass('nipple-left');
-    $('.inline-recipe').removeClass('nipple-center');
-    $('.inline-recipe').removeClass('nipple-right');
-  });
-  $('.close-recipe').on('click', function() {
-    $('.inline-recipe').css({ 'height' : 0 });
-    $('.inline-recipe').removeClass('visible');
-    $('.flex-col.show-nipple').removeClass('show-nipple');
-  });
+    $('.recipe-list li:nth-of-type(3n - 2) .recipe-thumb-link').on('click', function(event) {
+      $('.inline-recipe').addClass('nipple-left');
+      $('.inline-recipe').removeClass('nipple-center');
+      $('.inline-recipe').removeClass('nipple-right');
+    });
+    $('.close-recipe').on('click', function() {
+      $('.inline-recipe').css({ 'height' : 0 });
+      $('.inline-recipe').removeClass('visible');
+      $('.flex-col.show-nipple').removeClass('show-nipple');
+    });
+  }
 }
 
 var mobileMenu = function () {
@@ -397,13 +409,10 @@ document.addEventListener('scroll', function(event) {
 });
 
 window.addEventListener('resize', function(event) {
-  var windowWidth = window.innerWidth;
   fancyHeader();
   parallaxTop();
   parallaxblock();
   parallaxblock2();
   transitionIn();
-  if (windowWidth > 900) {
-    highballGrid();
-  }
+  highballGrid();
 });
