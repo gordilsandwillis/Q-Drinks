@@ -10563,7 +10563,7 @@ main.mixer .mixer-list .col img {
   margin-bottom: 0;
   height: 0;
   opacity: 0;
-  transition: height 0.4s 0.4s ease-in-out, opacity 0.3s 0.4s ease-in-out;
+  transition: height 0.4s 0.4s ease-in-out, opacity 0.3s 0.4s ease-in-out, color 0.3s 0.4s ease-in-out;
   display: none;
 }
 

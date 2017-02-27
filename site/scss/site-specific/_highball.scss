@@ -174,7 +174,7 @@
 			margin-bottom: 0;
 			height: 0;
 			opacity: 0;
-			transition: height .4s .4s $ease, opacity .3s .4s $ease;
+			transition: height .4s .4s $ease, opacity .3s .4s $ease, color .3s .4s $ease;
 			display: none;
 			@include respond($lg) {
 				display: block;
