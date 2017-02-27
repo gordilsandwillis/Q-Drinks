@@ -82,10 +82,10 @@ if(isset($order))     $highball = $highball->shuffle();
                   <li><a target="_blank" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=700,height=700,toolbar=1,resizable=0'); return false;" href="https://www.facebook.com/sharer.php?u=<?= $recipe->url() ?>"><span class="icon"><?php snippet('icons/fb-icon') ?></span> Facebook</a></li>
                   <li><a target="_blank" onclick="window.open(this.href, 'mywin',
-'left=20,top=20,width=600,height=600,toolbar=1,resizable=0'); return false;" href="https://twitter.com/intent/tweet?url=<?= $recipe->url() ?>&text=<?= $recipe->title() ?> using Q <?= $recipe->recipeMixer()->title()->html() ?>&hashtags=Mixer,QDrinks"><span class="icon"><?php snippet('icons/twitter-icon') ?></span> Twitter</a></li>
+'left=20,top=20,width=600,height=600,toolbar=1,resizable=0'); return false;" href="https://twitter.com/intent/tweet?url=<?= $recipe->url() ?>&text=<?= $recipe->title() ?> using Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?>&hashtags=Mixer,QDrinks"><span class="icon"><?php snippet('icons/twitter-icon') ?></span> Twitter</a></li>
                   <li><a target="_blank" onclick="window.open(this.href, 'mywin',
-'left=20,top=20,width=750,height=700,toolbar=1,resizable=0'); return false;" href="http://pinterest.com/pin/create/button/?url=<?= $recipe->url() ?>&media=<?= $recipe->image()->crop(750, 750)->url();?>&description=<?= $recipe->title() ?> using Q <?= $recipe->recipeMixer()->title()->html() ?>"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span> Pinterest</a></li>
-                  <li><a target="_blank" href="mailto:?subject=Q Mixer Recipe&amp;body=Check out this drink recipe using Q <?= $recipe->recipeMixer()->title()->html() ?> http://www.website.com."
+'left=20,top=20,width=750,height=700,toolbar=1,resizable=0'); return false;" href="http://pinterest.com/pin/create/button/?url=<?= $recipe->url() ?>&media=<?= $recipe->image()->crop(750, 750)->url();?>&description=<?= $recipe->title() ?> using Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?>"><span class="icon"><?php snippet('icons/pinterest-icon') ?></span> Pinterest</a></li>
+                  <li><a target="_blank" href="mailto:?subject=Q Mixer Recipe&amp;body=Check out this drink recipe using Q <?= page('mixers/' . $recipe->recipeMixer()->html())->title() ?> http://www.website.com."
    title="Share by Email""><span class="icon"><?php snippet('icons/email-icon') ?></span> Email</a></li>
                 </ul>
               </div>
