@@ -21,12 +21,31 @@
   endif;
   ?>
 
+  <?
+  if($page->isHomePage()):
+    foreach($page->images()->shuffle()->limit(1) as $image):
+      $seoImage = $image->crop(800, 600)->url();
+    endforeach;
+  elseif ($page->headerImage()->isNotEmpty()):
+    $seoImage = $page->images()->find($page->headerImage())->crop(800, 600)->url();
+  elseif ($page->thumbnail()->isNotEmpty()):
+    $seoImage = $page->thumbnail()->crop(800, 600)->url();
+  elseif($page->image()->isNotEmpty()):
+    $seoImage = $page->image()->crop(800, 600)->url();
+  else:
+    foreach($page->images()->shuffle()->limit(1) as $image):
+      $seoImage = $image->crop(800, 600)->url();
+    endforeach;
+  endif;
+  ?>
+
   <meta name="description" content="<?= $description ?>">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <link rel="shortcut icon" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon.png" />
 
+  <meta property="og:image" content="<?= $seoImage ?>" />
   <meta property="og:site_name" content="<?= $site->title()->html() ?>">
   <meta property="og:title" content="<?php if($page->isHomePage()): ?><?php else: ?><?= $page->title()->html() ?><?php endif ?>">
   <meta property="og:description" content="<?= $description ?>">
