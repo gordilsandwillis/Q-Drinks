@@ -7,8 +7,8 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
+  - spectacular-serve
   - highball/cuba-libre
   - highball/test
   - highball
   - mixers/grapefruit
-  - home

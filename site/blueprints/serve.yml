@@ -17,6 +17,11 @@ fields:
     label: Header Image
     type: image
 
+  topText:
+    label: Top Text
+    type:  textarea
+    buttons: false
+
   builder:
     label: Ingredients
     type: builder

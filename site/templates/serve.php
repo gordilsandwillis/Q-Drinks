@@ -8,11 +8,13 @@
           </div>
         <?php endif; ?>
     	</div>
-      <!-- <div class="text-overlay">
-        <div class="container">
-          <h1><?= $page->topText()->html() ?></h1>
+      <div class="text-overlay">
+        <div class="container narrow">
+          <div class="text-wrap lg right align-center">
+            <p><?= $page->topText()->html() ?></p>
+          </div>
         </div>
-      </div> -->
+      </div>
     </div>
 
     <?php snippet('section-header', array('text' => 'Step By Step', 'tag' => 'h1')) ?>

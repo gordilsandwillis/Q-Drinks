@@ -16,6 +16,7 @@ fields:
   topText:
     label: Top Text
     type:  textarea
+    buttons: false
 
   headerImage:
     label: Header Image
