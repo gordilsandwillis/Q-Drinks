@@ -1,7 +1,7 @@
 <section class="alternating-blocks">
 	<div class="ingredient-block <?= $data->style()->html() ?>">
 		<div class="row transition-in">
-			<div class="col-6 parallax-block"><img src="<?= $page->image($data->picture())->crop(750, 750)->url();?>"></div>
+			<div class="col-6 parallax-block"><img src="<?= $page->image($data->picture())->crop(750, 750, 144)->url();?>"></div>
 			<div class="col-6 parallax-block-opposite">
 				<div class="info">
 					<div class="centered">

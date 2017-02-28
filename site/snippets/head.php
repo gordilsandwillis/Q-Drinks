@@ -8,6 +8,7 @@
   <title><?= $site->title()->html() ?><?php if($page->isHomePage()): ?><?php else: ?> | <?= $page->title()->html() ?><?php endif ?></title>
 
   <?
+  $description = '';
   if ($page->description()->isNotEmpty()):
     $description = $page->description()->html();
   elseif ($page->introText()->isNotEmpty()):
@@ -22,6 +23,7 @@
   ?>
 
   <?
+  $seoImage = '';
   if($page->isHomePage()):
     foreach($page->images()->shuffle()->limit(1) as $image):
       $seoImage = $image->crop(800, 600)->url();
@@ -30,10 +32,10 @@
     $seoImage = $page->images()->find($page->headerImage())->crop(800, 600)->url();
   elseif ($page->thumbnail()->isNotEmpty()):
     $seoImage = $page->thumbnail()->crop(800, 600)->url();
-  elseif ($page->image()->isNotEmpty()):
-    $seoImage = $page->image()->crop(800, 600)->url();
+  elseif ($page->mixerImage()->isNotEmpty()):
+    $seoImage = $page->mixerImage()->crop(800, 600)->url();
   else:
-    foreach($page->images()->shuffle()->limit(1) as $image):
+    foreach($pages->find('home')->images()->shuffle()->limit(1) as $image):
       $seoImage = $image->crop(800, 600)->url();
     endforeach;
   endif;
