@@ -8610,15 +8610,20 @@ hr {
 }
 
 main.error {
-  height: calc(100vh - 220px);
+  min-height: calc(100vh - 120px);
 }
 
 main.error .container {
-  padding: 4em 0;
+  min-height: calc(100vh - 200px);
+  padding: 6em 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+main.error .container > div {
+  width: 100%;
 }
 
 main.error .container h1 {
@@ -8630,8 +8635,18 @@ main.error .container h1 {
   margin: 0 0 .5em 0;
 }
 
-main.error .container.4-up-grid .inline-grid .col {
+main.error .mixer-list.inline-grid {
+  padding: 2rem 0 3rem;
+}
+
+main.error .mixer-list.inline-grid .col {
   width: 50%;
+}
+
+@media only screen and (min-width: 900px) {
+  main.error .mixer-list.inline-grid .col {
+    width: 25%;
+  }
 }
 
 .container.narrow {
