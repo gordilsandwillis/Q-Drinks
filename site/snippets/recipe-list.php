@@ -15,7 +15,7 @@ https://getkirby.com/docs/templates/snippets
 
 */
 
-if(isset($siblings))  $highball = $page->siblings($self = false);
+// if(isset($siblings))  $highball = $page->siblings($self = false);
 if(isset($limit))     $highball = $highball->limit($limit);
 if(isset($order))     $highball = $highball->shuffle();
 
