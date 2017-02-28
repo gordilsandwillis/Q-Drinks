@@ -26,10 +26,9 @@ if(isset($order))     $highball = $highball->shuffle();
   <? foreach($highball as $recipe): ?>
 
     <li class="flex-col recipe-thumb-toggle">
-    <? $recipeMixer = $recipe->recipeMixer(); ?>
-    <? $findString = 'mixers/' . $recipeMixer; ?>
-    <? $recipeMixerPage = $pages->find($findString); ?>
-    <? $recipeMixerPage->mixerColor()->html() ?>
+      <? $recipeMixer = $recipe->recipeMixer(); ?>
+      <? $findString = 'mixers/' . $recipeMixer; ?>
+      <? $recipeMixerPage = $pages->find($findString); ?>
       <div class="recipe-thumb">
       <a class="recipe-thumb-link" data-bg-color="<?= $recipeMixerPage->mixerColor()->html() ?>" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
           <div class="img-wrap">
