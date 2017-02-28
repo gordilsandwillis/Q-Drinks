@@ -1,4 +1,29 @@
-<header class="header font-smooth<?= ' ' . $headerClass ?><?= ' ' . $desktopTextColor ?><?= ' ' . $mobileTextColor ?>" role="banner">
+<?php
+$theHeaderClass = '';
+$theDesktopTextColor = '';
+$theMobileTextColor = '';
+
+if(isset($headerClass)) {
+    $theHeaderClass = $headerClass;
+} else {
+    $theHeaderClass = '';
+}
+
+if(isset($desktopTextColor)) {
+    $theDesktopTextColor = $desktopTextColor;
+} else {
+    $theDesktopTextColor = '';
+}
+
+if(isset($mobileTextColor)) {
+    $theMobileTextColor = $mobileTextColor;
+} else {
+    $theMobileTextColor = '';
+}
+
+?>
+
+<header class="header font-smooth<?= ' ' . $theHeaderClass ?><?= ' ' . $theDesktopTextColor ?><?= ' ' . $theMobileTextColor ?>" role="banner">
   <div class="container">
 
     <!-- <?php snippet('menu') ?> -->

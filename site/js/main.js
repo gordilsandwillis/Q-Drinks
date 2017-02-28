@@ -341,7 +341,7 @@ var highballGrid = function () {
 
         $('html, body').animate({
           scrollTop: itemOffset - (headerHeight * 2)
-        }, 1000);
+        }, 500);
       }, 700);
 
       currentTarget.parent().parent().addClass('show-nipple');

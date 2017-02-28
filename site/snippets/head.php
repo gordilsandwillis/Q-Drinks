@@ -30,7 +30,7 @@
     $seoImage = $page->images()->find($page->headerImage())->crop(800, 600)->url();
   elseif ($page->thumbnail()->isNotEmpty()):
     $seoImage = $page->thumbnail()->crop(800, 600)->url();
-  elseif($page->image()->isNotEmpty()):
+  elseif ($page->image()->isNotEmpty()):
     $seoImage = $page->image()->crop(800, 600)->url();
   else:
     foreach($page->images()->shuffle()->limit(1) as $image):
@@ -47,16 +47,28 @@
 
   <meta property="og:image" content="<?= $seoImage ?>" />
   <meta property="og:site_name" content="<?= $site->title()->html() ?>">
-  <meta property="og:title" content="<?php if($page->isHomePage()): ?><?php else: ?><?= $page->title()->html() ?><?php endif ?>">
+  <meta property="og:title" content="<? if($page->isHomePage()): ?><? else: ?><?= $page->title()->html() ?><? endif ?>">
   <meta property="og:description" content="<?= $description ?>">
 
   <?= css('assets/css/style.css') ?>
 
 </head>
+
+<?php
+$theHeaderClass = '';
+
+if(isset($headerClass)) {
+    $theHeaderClass = $headerClass;
+} else {
+    $theHeaderClass = '';
+}
+
+?>
+
 <body>
   <div id="top" class="page">
 	  <div class="content">
 	  <div id="barba-wrapper">
-	  	<div class="barba-container <?php echo $headerClass ?>">
-	  		<?php snippet('header', array('headerClass' => $headerClass, 'desktopTextColor' => isset($desktopTextColor) ? $desktopTextColor : '', 'mobileTextColor' => isset($mobileTextColor) ? $mobileTextColor : '' )) ?>
+	  	<div class="barba-container <?php echo $theHeaderClass ?>">
+	  		<?php snippet('header', array('headerClass' => $theHeaderClass, 'desktopTextColor' => isset($desktopTextColor) ? $desktopTextColor : '', 'mobileTextColor' => isset($mobileTextColor) ? $mobileTextColor : '' )) ?>
 

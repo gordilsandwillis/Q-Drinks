@@ -9190,6 +9190,7 @@ header .logo {
 
 header .logo svg {
   height: 100%;
+  max-height: 100%;
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
@@ -9517,7 +9518,8 @@ header.inverted.transparent .logo {
 header.collapsed .logo svg,
 header.inverted.collapsed .logo svg,
 header.inverted.transparent .logo svg {
-  transform: translate3d(0, 13%, 0);
+  margin-top: -1px;
+  transform: translate3d(0, 6px, 0);
 }
 
 header.collapsed .logo svg *,
@@ -9552,7 +9554,8 @@ header.desktop-dark {
 }
 
 header.desktop-dark .logo svg {
-  transform: translate3d(0, 13%, 0);
+  margin-top: -1px;
+  transform: translate3d(0, 6px, 0);
 }
 
 header.desktop-dark .logo svg * {
@@ -9572,7 +9575,8 @@ header.desktop-light {
 }
 
 header.desktop-light .logo svg {
-  transform: translate3d(0, 13%, 0);
+  margin-top: -1px;
+  transform: translate3d(0, 6px, 0);
 }
 
 header.desktop-light .logo svg * {
@@ -9585,7 +9589,8 @@ header.mobile-dark {
 
 @media only screen and (max-width: 700px) {
   header.mobile-dark .logo svg {
-    transform: translate3d(0, 13%, 0);
+    margin-top: -1px;
+    transform: translate3d(0, 6px, 0);
   }
   header.mobile-dark .logo svg * {
     fill: #333;
@@ -9609,7 +9614,8 @@ header.mobile-light {
 
 @media only screen and (max-width: 700px) {
   header.mobile-light .logo svg {
-    transform: translate3d(0, 13%, 0);
+    margin-top: -1px;
+    transform: translate3d(0, 6px, 0);
   }
   header.mobile-light .logo svg * {
     fill: #fff;
@@ -9648,7 +9654,8 @@ header.mobile-light {
 
 @media only screen and (max-width: 900px) {
   .mobile-menu-open header .logo svg {
-    transform: translate3d(0, 13%, 0);
+    margin-top: -1px;
+    transform: translate3d(0, 6px, 0);
   }
   .mobile-menu-open header .logo svg * {
     fill: #333;
@@ -10328,6 +10335,10 @@ main.mixer .mixer-list .col img {
   }
 }
 
+.recipe-list {
+  overflow: hidden;
+}
+
 .recipe-list > .container > .flex-grid {
   margin-top: -5%;
 }
@@ -10555,6 +10566,7 @@ main.mixer .mixer-list .col img {
 
 .flex-grid .flex-col.inline-recipe {
   min-width: 100%;
+  width: 100%;
   flex-grow: 1;
   padding: 0;
   display: none;
@@ -10626,7 +10638,7 @@ main.mixer .mixer-list .col img {
 
 .flex-grid .flex-col.inline-recipe .nipple-wrap {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 1.875%;
   right: 1.875%;
   z-index: 4;
@@ -10691,6 +10703,7 @@ main.mixer .mixer-list .col img {
   bottom: 0;
   left: -100%;
   right: -100%;
+  margin: 0 -100%;
   background-color: #ffffff;
   z-index: 1;
   transition: background 0.4s ease-in-out;
