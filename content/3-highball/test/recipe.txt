@@ -1,0 +1,29 @@
+Title: Test
+
+----
+
+Image: ginger_beer.jpg
+
+----
+
+Recipemixer: grapefruit
+
+----
+
+Ingredients: 
+
+----
+
+Servings: 
+
+----
+
+Servingsnumber: 
+
+----
+
+Method: 
+
+----
+
+Variations: 

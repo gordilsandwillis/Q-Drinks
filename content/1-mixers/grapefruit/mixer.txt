@@ -1,0 +1,21 @@
+Title: Grapefruit
+
+----
+
+Thumbnail: 
+
+----
+
+Mixercolor: #cccccc
+
+----
+
+Mixerimage: 
+
+----
+
+Description: 
+
+----
+
+Builder: 
