@@ -10367,6 +10367,9 @@ main.mixer .mixer-list .col img {
   main.mixer .mixer-list .col img {
     width: 225px;
   }
+  main.mixer .mixer-list .col .thumb-title {
+    font-size: 10px;
+  }
 }
 
 .more-btn-wrap {
@@ -11299,6 +11302,8 @@ main.about .about-info p {
   .recipe-card .instructions .recipe-title {
     margin-bottom: 1em;
     margin-top: 0;
+    max-width: 85%;
+    margin: 0 auto;
   }
 }
 

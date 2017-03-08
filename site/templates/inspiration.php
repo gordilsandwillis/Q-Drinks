@@ -23,7 +23,11 @@
   	    <?= $page->inspirationText()->kirbytext() ?>
         <?php if ($page->images()->find($page->signatureImage())) : ?>
           <div class="signature">
-            <img src="<?php echo $page->images()->find($page->signatureImage())->url() ?>">
+            <img 
+              src="<?= $page->images()->find($page->signatureImage())->url() ?>"
+              width="<?= $page->images()->find($page->signatureImage())->width() / 2 ?>"
+              height="<?= $page->images()->find($page->signatureImage())->height() / 2 ?>"
+            />
           </div>
         <?php endif; ?>
         <p>

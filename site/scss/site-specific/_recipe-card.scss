@@ -61,6 +61,8 @@
 			@include respond($md) {
 				margin-bottom: 1em;
 				margin-top: 0;
+				max-width: 85%;
+		    margin: 0 auto;
 			}
 		}
 		.recipe-section-title {

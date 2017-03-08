@@ -17,10 +17,14 @@
     $description = $site->description()->html();
   elseif($page->title()->html() == 'Inspiration'):
     $description = $page->topText()->html();
+  elseif ($page->method()->isNotEmpty()):
+    $description = $page->method()->html();
   else:
     $description = $site->description()->html();
   endif;
   ?>
+
+  <? $keywords = $site->keywords()->html() ?>
 
   <?
   $seoImage = '';
@@ -42,6 +46,7 @@
   ?>
 
   <meta name="description" content="<?= $description ?>">
+  <meta name="keywords" content="<?= $keywords ?>">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <link rel="shortcut icon" href="/assets/images/favicon.png">
@@ -73,4 +78,3 @@ if(isset($headerClass)) {
 	  <div id="barba-wrapper">
 	  	<div class="barba-container <?php echo $theHeaderClass ?>">
 	  		<?php snippet('header', array('headerClass' => $theHeaderClass, 'desktopTextColor' => isset($desktopTextColor) ? $desktopTextColor : '', 'mobileTextColor' => isset($mobileTextColor) ? $mobileTextColor : '' )) ?>
-
