@@ -10,17 +10,17 @@
   <?
   $description = '';
   if ($page->description()->isNotEmpty()):
-    $description = $page->description()->html();
+    $description = $page->description();
   elseif ($page->introText()->isNotEmpty()):
-    $description = $page->introText()->html();
+    $description = $page->introText();
   elseif($page->isHomePage()):
-    $description = $site->description()->html();
-  elseif($page->title()->html() == 'Inspiration'):
-    $description = $page->topText()->html();
+    $description = $site->description();
+  elseif($page->title() == 'Inspiration'):
+    $description = $page->topText();
   elseif ($page->method()->isNotEmpty()):
-    $description = $page->method()->html();
+    $description = $page->method();
   else:
-    $description = $site->description()->html();
+    $description = $site->description();
   endif;
   ?>
 
@@ -38,6 +38,8 @@
     $seoImage = $page->thumbnail()->crop(800, 600)->url();
   elseif ($page->mixerImage()->isNotEmpty()):
     $seoImage = $page->mixerImage()->crop(800, 600)->url();
+  elseif ($page->image()->isNotEmpty()):
+    $seoImage = $page->image()->crop(800, 600)->url();
   else:
     foreach($pages->find('home')->images()->shuffle()->limit(1) as $image):
       $seoImage = $image->crop(800, 600)->url();
