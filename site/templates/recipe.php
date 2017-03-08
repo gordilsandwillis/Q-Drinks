@@ -35,11 +35,9 @@
           </div>
 
           <h4 class="recipe-section-title">Method</h4>
-          <p>
           <?php foreach($page->method()->toStructure() as $step): ?>
             <?= $step->step()->kirbytext() ?>
           <?php endforeach ?>
-          </p>
           <ul class="share-recipe">
             <li><a target="_blank" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=700,height=700,toolbar=1,resizable=0'); return false;" href="https://www.facebook.com/sharer.php?u=<?= $page->url() ?>"><span class="icon"><?php snippet('icons/fb-icon') ?></span></a></li>

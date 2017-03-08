@@ -11223,6 +11223,14 @@ main.about .about-info p {
   }
 }
 
+.recipe-card p {
+  margin: 0;
+}
+
+.recipe-card p + p {
+  margin: 0;
+}
+
 .recipe-card .image {
   position: relative;
   overflow: hidden;

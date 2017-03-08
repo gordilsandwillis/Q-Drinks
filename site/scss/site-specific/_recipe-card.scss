@@ -6,6 +6,12 @@
 		display: flex;
 		align-items: stretch;
 	}
+	p {
+		margin: 0;
+		+ p {
+			margin: 0;
+		}
+	}
 	.image {
 		position: relative;
 		overflow: hidden;
