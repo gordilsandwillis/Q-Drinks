@@ -48,7 +48,7 @@ Builder:
   mobiletextcolor: ffffff
   _fieldset: homeImageBlock
 - 
-  desktopimage: Q_Homepage_3.jpg
+  desktopimage: Q_Homepage_2.jpg
   desktoptextcolor: ffffff
   mobileimage: Q_HomepageMobile_3.jpg
   mobiletextcolor: ffffff

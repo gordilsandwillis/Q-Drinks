@@ -1,5 +1,5 @@
 <?php
-$highball = page('highball')->children()->visible();
+$cocktails = page('cocktails')->children()->visible();
 
 /*
 
@@ -15,15 +15,15 @@ https://getkirby.com/docs/templates/snippets
 
 */
 
-// if(isset($siblings))  $highball = $page->siblings($self = false);
-if(isset($limit))     $highball = $highball->limit($limit);
-// if(isset($order))     $highball = $highball->shuffle();
+// if(isset($siblings))  $cocktails = $page->siblings($self = false);
+if(isset($limit))     $cocktails = $cocktails->limit($limit);
+// if(isset($order))     $cocktails = $cocktails->shuffle();
 
 ?>
 
 <ul class="flex-grid">
 
-  <? foreach($highball as $recipe): ?>
+  <? foreach($cocktails as $recipe): ?>
 
     <li class="flex-col recipe-thumb-toggle">
       <? $recipeMixer = $recipe->recipeMixer(); ?>
@@ -89,7 +89,7 @@ if(isset($limit))     $highball = $highball->limit($limit);
 'left=20,top=20,width=600,height=600,toolbar=1,resizable=0'); return false;" href="https://twitter.com/intent/tweet?url=<?= $recipe->url() ?>&text=<?= $recipe->title() ?> using Q <?= $recipeMixerPage->title()->html() ?>&hashtags=Mixer,QDrinks"><span class="icon"><? snippet('icons/twitter-icon') ?></span> Twitter</a></li>
                   <li><a target="_blank" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=750,height=700,toolbar=1,resizable=0'); return false;" href="http://pinterest.com/pin/create/button/?url=<?= $recipe->url() ?>&media=<?= $recipe->image()->crop(750, 750)->url();?>&description=<?= $recipe->title() ?> using Q <?= $recipeMixerPage->title()->html() ?>"><span class="icon"><? snippet('icons/pinterest-icon') ?></span> Pinterest</a></li>
-                  <li><a target="_blank" href="mailto:?subject=Q Mixer Recipe&amp;body=Check out this drink recipe using Q <?= $recipeMixerPage->title()->html() ?> http://www.website.com."
+                  <li><a target="_blank" href="mailto:?subject=Q Mixer Recipe&amp;body=Check out this drink recipe using Q <?= $recipeMixerPage->title()->html(); ?> <?= $recipe->url(); ?>."
    title="Share by Email""><span class="icon"><? snippet('icons/email-icon') ?></span> Email</a></li>
                 </ul>
               </div>

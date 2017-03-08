@@ -44,8 +44,9 @@ var FadeTransition = Barba.BaseTransition.extend({
       opacity : 0
     });
 
+    // $(window).offset().top = 0;
+    document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-    fancyHeader();
     loadedTransitionIn();
     smoothScroll();
     parallaxblock();
@@ -157,17 +158,17 @@ var newsletterSignup = function() {
 // Parallax stuff
 
 var fancyHeader = function() {
-  var header = document.querySelector('header');
-  var scrollTop = document.body.scrollTop;
+  var header = $('header');
+  var scrollTop = $(window).scrollTop();
   if (scrollTop >= 70) {
-    header.classList.add('collapsed');
-    if (document.querySelector('nav.secondary') !== null) {
-      document.querySelector('nav.secondary').classList.add('collapsed');
+    header.addClass('collapsed');
+    if ($('nav.secondary') !== null) {
+      $('nav.secondary').addClass('collapsed');
     }
   } else {
-    header.classList.remove('collapsed');
-    if (document.querySelector('nav.secondary') !== null) {
-      document.querySelector('nav.secondary').classList.remove('collapsed');
+    header.removeClass('collapsed');
+    if ($('nav.secondary') !== null) {
+      $('nav.secondary').removeClass('collapsed');
     }
   }
 }
@@ -392,7 +393,6 @@ document.addEventListener("DOMContentLoaded", function() {
   Barba.Pjax.start();
   transitionIn();
   fancyHeader();
-  // mobileMenu();
   parallaxblock();
   parallaxblock2();
   loadedTransitionIn();
@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function() {
   newsletterSignup();
 });
 
-document.addEventListener('scroll', function(event) {
+$(window).scroll(function() {
   fancyHeader();
   parallaxTop();
   parallaxblock();

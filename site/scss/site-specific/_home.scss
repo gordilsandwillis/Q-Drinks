@@ -69,17 +69,18 @@
 			@include respond($sm) {
 				font-size: 1.5em;
 			}
-			@include respond($md) {
-				font-size: 1.75em;
-			}
+			// @include respond($xlg) {
+			// 	font-size: 1.75em;
+			// }
 			@include respond($home-breakpoint) {
 				// font-size: 1.em;
 				text-align: left;
-				max-width: 20em;
+				width: 20em;
+				max-width: 60%;
 				margin: 0;
 				padding-bottom: 0;
 			}
-			@include respond($xlg) {
+			@include respond($huge) {
 				font-size: 2em;
 			}
 			.h1-wrap {

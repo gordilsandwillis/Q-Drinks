@@ -1,3 +1,4 @@
+<? if ($data->picture()->isNotEmpty()): ?>
 <section class="alternating-blocks">
 	<div class="ingredient-block <?= $data->style()->html() ?>">
 		<div class="row transition-in">
@@ -13,3 +14,4 @@
 		</div>
 	</div>
 </section>
+<? endif; ?>

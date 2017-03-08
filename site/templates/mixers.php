@@ -13,7 +13,7 @@
     <?php snippet('section-header', array('text' => 'Our Mixers', 'tag' => 'h1')) ?>
     <?php if ($page->introText()->isNotEmpty()):?>
       <div class="container very-narrow align-center intro-p">
-        <p><?= $page->introText()->html() ?></p>
+        <?= $page->introText()->kirbytext() ?>
       </div>
     <?php endif; ?>
 

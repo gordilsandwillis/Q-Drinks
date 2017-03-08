@@ -8,16 +8,14 @@
           </div>
         <?php endif; ?>
     	</div>
-      <div class="text-overlay">
-        <div class="container narrow">
-          <div class="text-wrap lg right align-center">
-            <p><?= $page->topText()->html() ?></p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <?php snippet('section-header', array('text' => 'Step By Step', 'tag' => 'h1')) ?>
+    <?php if ($page->topText()->isNotEmpty()):?>
+      <div class="container very-narrow align-center intro-p">
+        <p><?= $page->topText()->html() ?></p>
+      </div>
+    <?php endif; ?>
 
     <section class="serve-steps">
       <div class="container">

@@ -42,7 +42,7 @@ if(isset($mobileTextColor)) {
         <div class="left">
     		<a href="<?= url() ?>/mixers">Our Mixers</a>
     		<a href="<?= url() ?>/inspiration">Inspiration</a>
-    		<a href="<?= url() ?>/highball">Highball</a>
+    		<a href="<?= url() ?>/cocktails">Cocktails</a>
         </div>
         <div class="right">
     		<a href="<?= url() ?>/spectacular-serve">Spectacular Serve</a>

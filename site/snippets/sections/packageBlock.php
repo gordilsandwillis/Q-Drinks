@@ -1,3 +1,4 @@
+<? if ($page->image($data->packageImage())) : ?>
 <section>
 	<div class="package-block">
 		<img src="<?= $page->image($data->packageImage())->crop(750)->url();?>">
@@ -7,3 +8,4 @@
 		</div>
 	</div>
 </section>
+<? endif; ?>

@@ -14,7 +14,7 @@ Headerimage: q-placeholder-1.jpg
 
 ----
 
-Availablityintro: Working Q Drinks carbonated mixers are proudly served by many of America’s leading bars and restaurants from Blue Hill in New York to San Francisco’s Bourbon & Branch and carried by nationally by retailers including:
+Availablityintro: Working Q Drinks carbonated mixers are proudly served by many of America’s leading bars and restaurants from Blue Hill in New York to San Francisco’s (link: http://google.com/ text: Bourbon & Branch) and carried by nationally by retailers including:
 
 ----
 
@@ -35,7 +35,7 @@ Packagetypes:
   flavors: All Flavors Available
   _fieldset: packageBlock
 - 
-  packageimage: q-pkg-2.jpg
+  packageimage: ""
   volume: 6 Pack
   flavors: All Flavors Available
   _fieldset: packageBlock
@@ -49,7 +49,7 @@ Packagetypess:
 Logos: 
 
 - 
-  logoimage: logo.gif
+  logoimage: ""
   _fieldset: logoBlock
 - 
   logoimage: logo.gif

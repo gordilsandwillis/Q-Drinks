@@ -1,8 +1,16 @@
 <section class="col-4">
-	<div class="accolade-block <?= $data->style()->html() ?>">
+	<div class="accolade-block">
 		<div class="info">
-			<h5 class="quote"><?= $data->quote()->html() ?></h5>
-			<p class="quote-by"><?= $data->by()->html() ?></p>
+			<? if ($data->quote()->html()) : ?>
+				<h5 class="quote">
+					<?= $data->quote()->html() ?>
+				</h5>
+			<? endif; ?>
+			<? if ($data->by()->html()) : ?>
+				<p class="quote-by">
+					<?= $data->by()->html() ?>
+				</p>
+			<? endif; ?>
 		</div>
 	</div>
 </section>

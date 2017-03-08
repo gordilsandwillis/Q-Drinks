@@ -59,6 +59,7 @@ main.mixer {
 		overflow: hidden;
 		.container {
 			padding-bottom: $margin;
+			max-width: 1000px;
 		}
 	}
 	.mixer-recipes {
@@ -98,9 +99,12 @@ main.mixer {
 			@include respond($sm) {
 				width: 50%;
 			}
-			@include respond($lg) {
+			@include respond($md) {
+				width: 33.333%;
+			}
+			@include respond($xlg) {
 				margin-bottom: 0;
-				width: 25%;
+				width: 16.6%;
 				img {
 					width: 225px;
 				}

@@ -25,10 +25,12 @@
 	.flex-col {
 		width: 100%;
 		flex-shrink: 0;
-		padding-bottom: 2rem;
+		margin-bottom: 2rem;
 		@include respond($md) {
-			padding-top: 5%;
-			padding-bottom: 3%;
+			margin-top: 5%;
+			margin-bottom: 3%;
+			margin-top: 3rem;
+			margin-bottom: 2rem;
 		}
 		@include respond($md) {
 			width: 50%;
@@ -170,6 +172,8 @@
 			width: 100%;
 			flex-grow: 1;
 			padding: 0;
+			margin-top: 0;
+			margin-bottom: 0;
 			display: none;
 			position: relative;
 			z-index: 1;

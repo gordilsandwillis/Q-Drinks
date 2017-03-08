@@ -25,7 +25,7 @@ fields:
   introText:
     label: Intro Text
     type:  textarea
-    buttons: false
+    buttons: true
   mixers:
     label: Mixers
     type: subpagelist

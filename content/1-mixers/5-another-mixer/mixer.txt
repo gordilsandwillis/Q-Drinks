@@ -1,0 +1,95 @@
+Title: Another Mixer
+
+----
+
+Thumbnail: Tonic-2.jpg
+
+----
+
+Thumbsize: auto
+
+----
+
+Thumbstyle: normal
+
+----
+
+Thumbmattecolor: #cccccc
+
+----
+
+Mattecolor: #e3e3e3
+
+----
+
+Tags: 
+
+----
+
+Builder: 
+
+- 
+  picture: 01.jpg
+  title: Kola Nut
+  description: >
+    Beneath the purple-spotted yellow
+    flowers, is a seedpod. Within this pod
+    are sweet-smelling but bitter-tasting
+    nuts that contains natural caffeine.
+  _fieldset: ingredientBlock
+- 
+  picture: 02.jpg
+  title: cinnamon
+  description: 'aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? Age, inquies, ista parva sunt. Deprehensus omnem poenam contemnet. Quae duo sunt, unum facit. Duo Reges: constructio interrete. Itaque hic ipse iam pridem est reiectus.'
+  _fieldset: ingredientBlock
+- 
+  picture: 03.jpg
+  title: Tasty Leaves
+  description: >
+    Ut non dicas, quid non probes eius, a
+    quo dissentias. Haec quo mo
+  _fieldset: ingredientBlock
+- 
+  picture: 04.jpg
+  title: Ginger
+  description: 'aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? Age, inquies, ista parva sunt. Deprehensus omnem poenam contemnet. Quae duo sunt, unum facit. Duo Reges: constructio interrete.'
+  _fieldset: ingredientBlock
+- 
+  picture: 05.jpg
+  title: Grapefruit
+  description: >
+    aliquid per se ipsum flagitiosum,
+    etiamsi nulla comitetur infamia? Age,
+    inquies, ista parva sunt. Deprehensus
+    omnem poenam contemnet. Quae duo sunt,
+    unum facit.
+  _fieldset: ingredientBlock
+- 
+  picture: 06.jpg
+  title: Another Ingredient
+  description: >
+    aliquid per se ipsum flagitiosum,
+    etiamsi nulla comitetur infamia? Age,
+    inquies, ista parva sunt. Deprehensus
+    omnem poenam contemnet.
+  _fieldset: ingredientBlock
+
+----
+
+Mixercolor: #b5ebf2
+
+----
+
+Mixerrecipes: cuba-libre, paloma, cuba-libre 2
+
+----
+
+Mixerimage: tonic-open-bottle.jpg
+
+----
+
+Description: 
+
+Cola should be a combination of tang, spice, sweet, and savory. But the balance in today's colas is all syrupy sweet with hardly any spice. Which is to say, there really is no balance at all.
+
+So we started over. With a mix of carefully selected spices from real trees and plants. Think you know how a cola should taste? If you haven’t tried Q Kola, you don’t.

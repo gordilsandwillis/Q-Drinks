@@ -20,7 +20,7 @@ fields:
   availablityIntro:
     label: Availablity Intro
     type: textarea
-    buttons: false
+    buttons: true
 
   logos:
     label: Logos

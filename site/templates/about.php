@@ -21,7 +21,7 @@
       </div>
       <div class="right about-info">
         <div>
-          <?php snippet('section-header', array('text' => 'About Us', 'tag' => 'h1')) ?>
+          <?php snippet('section-header', array('text' => "We'd love to hear from you", 'tag' => 'h1')) ?>
           <div class="container align-center">
             <?php if ($site->phone()->isNotEmpty()): ?>
               <section>
@@ -62,7 +62,7 @@
     <section id="availability" class="availability grey transition-in">
       <?php snippet('section-header', ['text' => 'Availability']) ?>
       <div class="container very-narrow align-center intro-p">
-        <p><?= $page->availablityIntro()->html() ?></p>
+        <?= $page->availablityIntro()->kirbytext() ?>
       </div>
       <div class="container narrow">
         <div class="inline-grid center middle logos break-sm">
@@ -96,7 +96,7 @@
       <div class="container transition-in">
         <div class="inline-grid center bottom">
           <?php foreach($page->packageTypes()->toStructure() as $section): ?>
-            <div class="col-4">
+            <div class="col-3">
               <?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
             </div>
           <?php endforeach ?>

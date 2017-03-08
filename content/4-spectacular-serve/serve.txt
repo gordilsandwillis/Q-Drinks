@@ -36,11 +36,6 @@ Builder:
     solemu.
   _fieldset: stepBlock
 - 
-  picture: q-step-1.jpg
-  title: "01"
-  description: 'Put ice and your spirit of choice in a highball glass and garnish it. Invidiosum nomen est, infame, suspectum. Deinde prima illa, quae in congressu solemus: Quid tu, inquit.'
-  _fieldset: stepBlock
-- 
   picture: q-placeholder-1.jpg
   title: "02"
   description: >

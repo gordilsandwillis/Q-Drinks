@@ -32,10 +32,10 @@
   </section>
 
   <section class="mixer-recipes">
-    <?php snippet('section-header', ['text' => 'Spectacular With', 'transition' => 'transition-in']) ?>
+    <?php snippet('section-header', ['text' => 'Spectacular In', 'transition' => 'transition-in']) ?>
     <div class="container transition-in">
       <div class="slideshow recipe-slideshow">
-      <? $recipes = page('highball')->children()->visible(); ?>
+      <? $recipes = page('cocktails')->children()->visible(); ?>
       <?php foreach($recipes as $recipe): ?>
         <? $recipeTitle = $recipe->title() ?>
         <? $mixer = $recipe->recipeMixer() ?>
@@ -43,10 +43,10 @@
         <? if ($mixer == $title): ?>
           <div>
             <div class="recipe-card">
-              <div class="image">
+              <a href="<?= $recipe->url(); ?>" class="image">
                 <div class="bg-image" style="background-image: url(<?= $recipe->image()->crop(750, 750)->url() ?>);">
                 </div>
-              </div>
+              </a>
 
               <div class="instructions">
                 <div class="curved-serves">
@@ -85,7 +85,7 @@
       <?php endforeach ?>
       </div>
       <div class="more-btn-wrap">
-        <a href="<?= url() ?>/highball" class="btn">More Recipes</a>
+        <a href="<?= url() ?>/cocktails" class="btn">More Recipes</a>
       </div>
     </div>
     <div class="bg-color" style="background-color: <?= $page->mixerColor() ?>"></div>
@@ -94,7 +94,7 @@
   <section class="other-mixers grey">
     <?php snippet('section-header', ['text' => 'Other Products', 'transition' => 'transition-in']) ?>
     <div class="container">
-      <?php snippet('mixer-list', ['siblings' => 'true', 'limit' => 4, 'order' => 'shuffle']) ?>
+      <?php snippet('mixer-list', ['siblings' => 'true', 'limit' => 6, 'order' => 'shuffle']) ?>
     </div>
   </section>
 

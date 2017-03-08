@@ -183,7 +183,7 @@ section {
 
 section.alternating-blocks {
 	+ section.alternating-blocks {
-		padding-top: $margin * 2;
+		padding-top: $margin / 2;
 	}
 	.row {
 		@include respond($md) {
@@ -335,6 +335,17 @@ section.alternating-blocks {
 .intro-p {
 	margin-top: -2rem;
 	margin-bottom: 3rem;
+	p {
+		a {
+			border-bottom: 1px solid currentcolor;
+			transition: none;
+			&:hover,
+			&:focus,
+			&:active {
+				border-bottom: 2px solid currentcolor;
+			}
+		}
+	}
 	@include respond($md) {
 		margin-top: -4rem;
 		margin-bottom: 3rem;

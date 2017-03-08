@@ -8,7 +8,7 @@ language: en
 role: admin
 history:
   - spectacular-serve
-  - highball/cuba-libre
-  - highball/test
-  - highball
-  - mixers/grapefruit
+  - mixers
+  - about
+  - mixers/the-seventh
+  - mixers/club-soda

@@ -2,6 +2,10 @@ title: Site
 
 pages: true
 
+files:
+  type:
+
+
 fields:
   title:
     label: Title
@@ -14,6 +18,7 @@ fields:
   description:
     label: SEO Description
     type:  textarea
+    buttons: false
 
   keywords:
     label: SEO Keywords
@@ -38,3 +43,18 @@ fields:
   twitterUrl:
     label: Twitter URL
     type: url
+
+  careerspdf:
+    label: Careers PDF
+    type: select
+    options: documents
+
+  privacypdf:
+    label: Privacy Policy PDF
+    type: select
+    options: documents
+
+  termspdf:
+    label: Terms Of Use PDF
+    type: select
+    options: documents

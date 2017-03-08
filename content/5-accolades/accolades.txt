@@ -13,8 +13,8 @@ Headerimage: q-placeholder-1.jpg
 Builder: 
 
 - 
-  quote: Upgrade your fizz
-  by: Bon Appetit
+  quote: Fizzy fizzy fizzy
+  by: Bon Apetit
   _fieldset: accoladeBlock
 - 
   quote: Revelatory

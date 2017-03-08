@@ -5,7 +5,7 @@ main.about {
 	}
 	.split {
 		position: relative;
-		min-height: 60vh;
+		min-height: 30vh;
 		.left {
 			position: relative;
 			height: 30vh;
@@ -40,12 +40,27 @@ main.about {
 			}
 		}
 		.right {
+			.section-header {
+				padding: 0 5%;
+				.container {
+					@include respond($md) {
+						padding-top: 3rem;
+					}
+				}
+				h1, h2, h3, h4, h5 {
+					max-width: 12em;
+					margin: 0 auto;
+					@include respond-smaller-than($huge) {
+						font-size: 1.5rem;
+					}
+				}
+			}
 			@include respond($md) {
 				display: flex;
 				align-items: center;
 				flex-direction: row;
 				width: 50%;
-				min-height: 60vh;
+				min-height: 30vh;
 				margin-left: 50%;
 				> div {
 					width: 100%;
@@ -113,14 +128,14 @@ main.about {
 		.section-header {
 			.container {
 				@include respond($md) {
-					padding: 4rem 0 1.75rem;
+					padding: 4rem 0 1.333rem;
 				}
 			}
 		}
 		section {
-			padding-bottom: 1.75rem;
+			padding-bottom: 1.333rem;
 			&:last-child {
-				padding-bottom: 5rem;
+				padding-bottom: 3rem;
 			}
 		}
 		.follow-icons {
@@ -135,14 +150,14 @@ main.about {
 			}
 		}
 		hr.tiny {
-			margin-bottom: 1.35rem;
+			margin-bottom: 1rem;
 		}
 		h5 {
 			text-transform: uppercase;
 			letter-spacing: $tracked-out;
 			font-weight: 900;
 			font-size: 14px;
-			margin-bottom: .5em;
+			margin-bottom: 0;
 		}
 		p {
 			text-transform: uppercase;

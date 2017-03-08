@@ -10,15 +10,15 @@ Description: The amazing Q Mixers Description Text
 
 ----
 
-Instagramurl: http://mattgordils.com/
+Instagramurl: http://facebook.com/
 
 ----
 
-Facebookurl: http://mattgordils.com/
+Facebookurl: http://facebook.com/
 
 ----
 
-Twitterurl: http://mattgordils.com/
+Twitterurl: http://facebook.com/
 
 ----
 
@@ -27,3 +27,19 @@ Email: info@qdrinks.com
 ----
 
 Phone: 212.748.2345
+
+----
+
+Keywords: 
+
+----
+
+Careerspdf: field-sampler-job-description.pdf
+
+----
+
+Termspdf: field-sampler-job-description.pdf
+
+----
+
+Privacypdf: field-sampler-job-description.pdf

@@ -1,22 +1,30 @@
 main.inspiration {
+	.top-area .top-image.push-down {
+		margin-bottom: $margin;
+		@include respond($md) {
+			margin-bottom: 4rem;
+		}
+	}
 	.text-wrap {
+		max-width: 26em;
+		margin: 0 auto;
 		&:after {
 			content: '';
 			display: block;
 			width: 2rem;
 			height: 2px;
 			background: $text-color;
-			margin: 1em auto 0;
+			margin: 1.5em auto 0;
 		}
 		@include respond($md) {
-			&:after {
-				display: none;
-			}
+			// &:after {
+			// 	display: none;
+			// }
 		}
 	}
 	.inspiration-text {
 		.container {
-			padding: $margin 0 0;
+			padding: 2rem 0 0;
 		}
 	}
 

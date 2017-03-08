@@ -9,7 +9,7 @@
           </div>
         <?php endif; ?>
       </div>
-      <div class="text-overlay">
+      <div class="">
         <div class="container narrow">
           <div class="text-wrap lg right align-center">
             <p><?= $page->topText()->html() ?></p>

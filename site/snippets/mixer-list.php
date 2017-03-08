@@ -27,7 +27,6 @@ if(isset($order))     $mixers = $mixers->shuffle();
 
   <?php foreach($mixers as $mixer): ?>
 
-
     <li class="col transition-in">
       <div class="mixer-thumb">
         <a href="<?= $mixer->url() ?>" title="<?= $mixer->title()->html() ?>" >
