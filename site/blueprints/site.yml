@@ -2,10 +2,6 @@ title: Site
 
 pages: true
 
-files:
-  type: documents
-
-
 fields:
   title:
     label: Title
