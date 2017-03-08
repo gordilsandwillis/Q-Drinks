@@ -27,8 +27,15 @@ main.error {
 		padding: 2rem 0 3rem;
 		.col {
 			width: 50%;
+			margin-bottom: 2rem;
 			@include respond($lg) {
 				width: 25%;
+			}
+			@include respond($xlg) {
+				width: 14.2%;
+				.thumb-title {
+					font-size: 10px;
+				}
 			}
 		}
 	}

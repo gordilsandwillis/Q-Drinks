@@ -8641,11 +8641,21 @@ main.error .mixer-list.inline-grid {
 
 main.error .mixer-list.inline-grid .col {
   width: 50%;
+  margin-bottom: 2rem;
 }
 
 @media only screen and (min-width: 900px) {
   main.error .mixer-list.inline-grid .col {
     width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main.error .mixer-list.inline-grid .col {
+    width: 14.2%;
+  }
+  main.error .mixer-list.inline-grid .col .thumb-title {
+    font-size: 10px;
   }
 }
 

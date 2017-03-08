@@ -38,7 +38,7 @@
     $seoImage = $page->thumbnail()->crop(800, 600)->url();
   elseif ($page->mixerImage()->isNotEmpty()):
     $seoImage = $page->mixerImage()->crop(800, 600)->url();
-  elseif ($page->image()->isNotEmpty()):
+  elseif ($page->image()):
     $seoImage = $page->image()->crop(800, 600)->url();
   else:
     foreach($pages->find('home')->images()->shuffle()->limit(1) as $image):
