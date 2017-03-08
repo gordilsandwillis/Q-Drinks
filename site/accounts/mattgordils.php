@@ -8,7 +8,7 @@ language: en
 role: admin
 history:
   - cocktails/cuba-libre
-  - spectacular-serve
   - mixers
+  - spectacular-serve
   - about
   - mixers/the-seventh

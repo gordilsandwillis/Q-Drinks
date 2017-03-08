@@ -37,7 +37,7 @@
           <h4 class="recipe-section-title">Method</h4>
           <p>
           <?php foreach($page->method()->toStructure() as $step): ?>
-            <?= $step->step()->html() ?>
+            <?= $step->step()->kirbytext() ?>
           <?php endforeach ?>
           </p>
           <ul class="share-recipe">
