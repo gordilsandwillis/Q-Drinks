@@ -1,4 +1,19 @@
 main.serve {
+	.top-area .top-image.push-down {
+		margin-bottom: $margin;
+		@include respond($md) {
+			margin-bottom: 6rem;
+		}
+	}
+	.text-wrap {
+		max-width: 30em;
+		margin: 0 auto;
+		p {
+			@include respond-smaller-than($md) {
+				font-size: 1.125rem;
+			}
+		}
+	}
 	.serve-steps {
 		overflow: hidden;
 		.container {

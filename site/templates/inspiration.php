@@ -2,7 +2,7 @@
 
   <main class="inspiration padded-bottom" role="main">
 
-    <div class="top-area padded-bottom">
+    <div class="top-area">
       <div class="top-image push-down">
         <?php if ($page->images()->find($page->headerImage())) : ?>
           <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->focusCrop(2000, 1500)->url() ?>)">

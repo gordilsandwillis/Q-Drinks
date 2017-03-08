@@ -7,8 +7,8 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
+  - spectacular-serve
   - cocktails/cuba-libre
   - mixers
-  - spectacular-serve
   - about
   - mixers/the-seventh

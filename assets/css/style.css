@@ -10884,6 +10884,27 @@ main.mixer .mixer-list .col img {
   }
 }
 
+main.serve .top-area .top-image.push-down {
+  margin-bottom: 7.5%;
+}
+
+@media only screen and (min-width: 600px) {
+  main.serve .top-area .top-image.push-down {
+    margin-bottom: 6rem;
+  }
+}
+
+main.serve .text-wrap {
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  main.serve .text-wrap p {
+    font-size: 1.125rem;
+  }
+}
+
 main.serve .serve-steps {
   overflow: hidden;
 }
@@ -10905,6 +10926,12 @@ main.inspiration .top-area .top-image.push-down {
 main.inspiration .text-wrap {
   max-width: 26em;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  main.inspiration .text-wrap p {
+    font-size: 1.125rem;
+  }
 }
 
 main.inspiration .text-wrap:after {

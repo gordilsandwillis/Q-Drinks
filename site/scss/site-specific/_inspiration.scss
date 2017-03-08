@@ -8,6 +8,11 @@ main.inspiration {
 	.text-wrap {
 		max-width: 26em;
 		margin: 0 auto;
+		p {
+			@include respond-smaller-than($md) {
+				font-size: 1.125rem;
+			}
+		}
 		&:after {
 			content: '';
 			display: block;
