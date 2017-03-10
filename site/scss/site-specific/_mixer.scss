@@ -61,6 +61,13 @@ main.mixer {
 			padding-bottom: $margin;
 			max-width: 1000px;
 		}
+		.ingredient-block {
+			img {
+				width: 400px;
+				margin: 0 auto;
+				display: block;
+			}
+		}
 	}
 	.mixer-recipes {
 		min-height: 300px;
