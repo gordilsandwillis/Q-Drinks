@@ -75,6 +75,7 @@ if(isset($headerClass)) {
 ?>
 
 <body>
+  <? snippet('analytics') ?>
   <div id="top" class="page">
 	  <div class="content">
 	  <div id="barba-wrapper">
