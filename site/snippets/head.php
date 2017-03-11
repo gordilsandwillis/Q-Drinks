@@ -75,7 +75,17 @@ if(isset($headerClass)) {
 ?>
 
 <body>
-  <? snippet('analytics') ?>
+
+
+  <?php
+    $env = getenv('ENV');
+
+    if(isset($env) && $env == 'prod' ) {
+      snippet('analytics');
+    }
+  ?>
+
+
   <div id="top" class="page">
 	  <div class="content">
 	  <div id="barba-wrapper">
