@@ -32,7 +32,7 @@
             <?php if ($site->email()->isNotEmpty()): ?>
               <section>
                 <h5>Email</h5>
-                <p><a href="<? echo $site->email()->html() ?>"><? echo $site->email()->html() ?></a></p>
+                <p><a href="mailto:<? echo $site->email()->html() ?>"><? echo $site->email()->html() ?></a></p>
               </section>
             <? endif; ?>
             <section>
