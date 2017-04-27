@@ -210,6 +210,18 @@ main.about {
 }
 
 .team-list {
+
+	h2 {
+		margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: $tracked-out;
+    @include respond-smaller-than($md) {
+    	margin-bottom: 2rem;
+    }
+	}
+
 	overflow: hidden;
 	> .container > .flex-grid {
 		// margin-top: -5%;
@@ -223,16 +235,7 @@ main.about {
 			width: 33.333%;
 		}
 	}
-	.team-mixer {
-		display: block;
-		text-align: center;
-		text-transform: capitalize;
-		font-size: .875rem;
-		line-height: 1.333em;
-		@include respond($md) {
-			font-size: 1rem;
-		}
-	}
+
 	.flex-col {
 		width: 100%;
 		flex-shrink: 0;
@@ -251,15 +254,86 @@ main.about {
 		}
 		@include respond(900) {
 			&.show-nipple {
-				.nipple-wrap {
-					height: 10px !important;
-				}
+				// .nipple-wrap {
+				// 	height: 10px !important;
+				// }
 			}
 		}
 	}
 }
 
-.flex-grid {
+.team-list .flex-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-bottom: 3%;
+	margin-left: (-$gutter/1.9);
+  margin-right: (-$gutter/1.9);
+
+  // Thumbnails
+  li.flex-col {
+  	@include respond($md) {
+		  &:nth-of-type(n+0) { order: 0; }
+			&:nth-of-type(n+4) { order: 2; }
+			&:nth-of-type(n+7) { order: 4; }
+			&:nth-of-type(n+10) { order: 6; }
+			&:nth-of-type(n+13) { order: 8; }
+			&:nth-of-type(n+16) { order: 10; }
+			&:nth-of-type(n+19) { order: 12; }
+			&:nth-of-type(n+22) { order: 14; }
+			&:nth-of-type(n+25) { order: 16; }
+			&:nth-of-type(n+28) { order: 18; }
+			&:nth-of-type(n+31) { order: 20; }
+			&:nth-of-type(n+34) { order: 22; }
+			&:nth-of-type(n+37) { order: 24; }
+			&:nth-of-type(n+40) { order: 26; }
+			&:nth-of-type(n+43) { order: 28; }
+			&:nth-of-type(n+46) { order: 30; }
+		}
+
+	}
+	// Recipes
+  div.flex-col {
+  	@include respond($md) {
+		  &:nth-of-type(n+0) { order: 1; }
+			&:nth-of-type(n+4) { order: 3; }
+			&:nth-of-type(n+7) { order: 5; }
+			&:nth-of-type(n+10) { order: 7; }
+			&:nth-of-type(n+13) { order: 9; }
+			&:nth-of-type(n+16) { order: 11; }
+			&:nth-of-type(n+19) { order: 13; }
+			&:nth-of-type(n+22) { order: 15; }
+			&:nth-of-type(n+25) { order: 17; }
+			&:nth-of-type(n+28) { order: 19; }
+			&:nth-of-type(n+31) { order: 21; }
+			&:nth-of-type(n+34) { order: 23; }
+			&:nth-of-type(n+37) { order: 25; }
+			&:nth-of-type(n+40) { order: 27; }
+			&:nth-of-type(n+43) { order: 29; }
+			&:nth-of-type(n+46) { order: 31; }
+
+			&:nth-of-type(n+2):nth-of-type(-n+3),
+			&:nth-of-type(n+5):nth-of-type(-n+6),
+			&:nth-of-type(n+8):nth-of-type(-n+9),
+			&:nth-of-type(n+11):nth-of-type(-n+12),
+			&:nth-of-type(n+14):nth-of-type(-n+15),
+			&:nth-of-type(n+17):nth-of-type(-n+18),
+			&:nth-of-type(n+20):nth-of-type(-n+21),
+			&:nth-of-type(n+23):nth-of-type(-n+24),
+			&:nth-of-type(n+26):nth-of-type(-n+27),
+			&:nth-of-type(n+29):nth-of-type(-n+30),
+			&:nth-of-type(n+32):nth-of-type(-n+33),
+			&:nth-of-type(n+35):nth-of-type(-n+36),
+			&:nth-of-type(n+38):nth-of-type(-n+39),
+			&:nth-of-type(n+41):nth-of-type(-n+42),
+			&:nth-of-type(n+44):nth-of-type(-n+45),
+			&:nth-of-type(n+47):nth-of-type(-n+48) {
+				margin-left: -100%;
+			}
+		}
+	}
+
+
 	.flex-col {
 		.team-thumb-link {
 			display: block;
@@ -269,31 +343,6 @@ main.about {
 					transform-style: preserve-3d;
 					img {
 						transform: translate3d(0, 0, 0) scale(1.03);
-					}
-				}
-			}
-		}
-
-		&:not(.inline-team) {
-			@include respond($md) {
-				.nipple-wrap {
-					width: 20px;
-					height: 10px;
-					position: absolute;
-					bottom: 0;
-					left: 50%;
-					margin-left: -10px;
-					overflow: hidden;
-					transition: height .3s $ease;
-					height: 0; // change to 10px show nipple
-					.nipple {
-						content: '';
-						display: block;
-						width: 0;
-						height: 0;
-						border: 10px solid transparent;
-						border-top: none;
-						border-bottom-color: #ffc99b;
 					}
 				}
 			}
@@ -314,19 +363,45 @@ main.about {
 			height: 0;
 			opacity: 0;
 			transition: height .4s .4s $ease, opacity .3s .4s $ease, color .3s .4s $ease;
+
 			display: block;
+
 			// @include respond($lg) {
 			// 	display: block;
 			// }
+
 			&.nipple-left .nipple-wrap .nipple-container {
 				transform: translate3d(0, 0, 0); // left
+				@include respond-smaller-than($lg) {
+					display: none;
+				}
+				@include respond-smaller-than($md) {
+					display: block;
+					transform: translate3d(#{100% + $gutter*3.25}, 0, 0);
+				}
 			}
+
 			&.nipple-right .nipple-wrap .nipple-container {
 				transform: translate3d(#{200% + $gutter*6.5}, 0, 0); // right
+				@include respond-smaller-than($lg) {
+					display: none;
+				}
+				@include respond-smaller-than($md) {
+					display: block;
+					transform: translate3d(#{100% + $gutter*3.25}, 0, 0);
+				}
 			}
+
 			&.nipple-center .nipple-wrap .nipple-container {
 				transform: translate3d(#{100% + $gutter*3.25}, 0, 0); // center
+				@include respond-smaller-than($lg) {
+					display: none;
+				}
+				@include respond-smaller-than($md) {
+					display: block;
+				}
 			}
+
 			.close-team {
 		    color: red;
 		    position: absolute;
@@ -338,6 +413,10 @@ main.about {
 		    height: 40px;
 		    text-indent: -999px;
 		    overflow: hidden;
+	    	@include respond-smaller-than($md) {
+					top: 20px;
+					right: 0;
+				}
 		    &:after {
 		    	content: '';
 		    	display: block;
@@ -364,6 +443,8 @@ main.about {
 		    }
 			}
 			.nipple-wrap {
+				width: 100%;
+				overflow: visible;
 				position: absolute;
 				top: 1px;
 				left: $gutter/2;
@@ -404,14 +485,12 @@ main.about {
 					transition: opacity .4s $ease;
 				}
 
-				background: red;
 				display: block;
-				// @include respond-smaller-than($lg) {
-				// 	display: none;
-				// }
-				// .inline-team-wrap {
-				// 	overflow: visible;
-				// }
+
+				@include respond-smaller-than($md) {
+					height: auto !important;
+			    margin-bottom: 2rem;
+				}
 			}
 			.inline-team-wrap {
 				height: 100%;
@@ -452,7 +531,6 @@ main.about {
 			}
 			.team-section {
 				margin-top: $base-line-height * 1.5;
-				max-width: 400px;
 				@include respond($lg) {
 					margin-top: 0;
 				}
@@ -520,6 +598,14 @@ main.about {
 							}
 						}
 					}
+				}
+			}
+
+			.team-description {
+				column-count: 2;
+		    column-gap: 30px;
+				@include respond-smaller-than($lg) {
+					column-count: 1;
 				}
 			}
 		}
