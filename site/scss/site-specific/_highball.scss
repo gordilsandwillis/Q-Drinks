@@ -40,9 +40,9 @@
 		}
 		@include respond(900) {
 			&.show-nipple {
-				// .nipple-wrap {
-				// 	height: 10px !important;
-				// }
+				.nipple-wrap {
+					height: 10px !important;
+				}
 			}
 		}
 	}

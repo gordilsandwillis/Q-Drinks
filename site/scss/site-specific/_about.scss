@@ -208,3 +208,320 @@ main.about {
 		}
 	}
 }
+
+.team-list {
+	overflow: hidden;
+	> .container > .flex-grid {
+		// margin-top: -5%;
+	}
+	.col {
+		margin-bottom: $margin;
+		@include respond($sm) {
+			width: 50%;
+		}
+		@include respond($lg) {
+			width: 33.333%;
+		}
+	}
+	.team-mixer {
+		display: block;
+		text-align: center;
+		text-transform: capitalize;
+		font-size: .875rem;
+		line-height: 1.333em;
+		@include respond($md) {
+			font-size: 1rem;
+		}
+	}
+	.flex-col {
+		width: 100%;
+		flex-shrink: 0;
+		margin-bottom: 2rem;
+		@include respond($md) {
+			margin-top: 5%;
+			margin-bottom: 3%;
+			margin-top: 3rem;
+			margin-bottom: 2rem;
+		}
+		@include respond($md) {
+			width: 50%;
+		}
+		@include respond($lg) {
+			width: 33.333%;
+		}
+		@include respond(900) {
+			&.show-nipple {
+				.nipple-wrap {
+					height: 10px !important;
+				}
+			}
+		}
+	}
+}
+
+.flex-grid {
+	.flex-col {
+		.team-thumb-link {
+			display: block;
+			border: none;
+			&:hover {
+				.img-wrap {
+					transform-style: preserve-3d;
+					img {
+						transform: translate3d(0, 0, 0) scale(1.03);
+					}
+				}
+			}
+		}
+
+		&:not(.inline-team) {
+			@include respond($md) {
+				.nipple-wrap {
+					width: 20px;
+					height: 10px;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: -10px;
+					overflow: hidden;
+					transition: height .3s $ease;
+					height: 0; // change to 10px show nipple
+					.nipple {
+						content: '';
+						display: block;
+						width: 0;
+						height: 0;
+						border: 10px solid transparent;
+						border-top: none;
+						border-bottom-color: #ffc99b;
+					}
+				}
+			}
+		}
+
+		&.inline-team {
+			background: blue;
+			min-width: 100%;
+			width: 100%;
+			flex-grow: 1;
+			padding: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+			display: none;
+			position: relative;
+			z-index: 1;
+			margin-bottom: 0;
+			height: 0;
+			opacity: 0;
+			transition: height .4s .4s $ease, opacity .3s .4s $ease, color .3s .4s $ease;
+			display: block;
+			// @include respond($lg) {
+			// 	display: block;
+			// }
+			&.nipple-left .nipple-wrap .nipple-container {
+				transform: translate3d(0, 0, 0); // left
+			}
+			&.nipple-right .nipple-wrap .nipple-container {
+				transform: translate3d(#{200% + $gutter*6.5}, 0, 0); // right
+			}
+			&.nipple-center .nipple-wrap .nipple-container {
+				transform: translate3d(#{100% + $gutter*3.25}, 0, 0); // center
+			}
+			.close-team {
+		    color: red;
+		    position: absolute;
+		    z-index: 5;
+		    right: -30px;
+		    top: 30px;
+		    cursor: pointer;
+		    width: 40px;
+		    height: 40px;
+		    text-indent: -999px;
+		    overflow: hidden;
+		    &:after {
+		    	content: '';
+		    	display: block;
+		    	width: 2px;
+		    	height: 20px;
+		    	transform: rotate(45deg);
+		    	position: absolute;
+		    	top: 50%;
+		    	left: 50%;
+		    	margin: -10px -1px;
+		    	background: $text-color;
+		    }
+		    &:before {
+		    	content: '';
+		    	display: block;
+		    	width: 20px;
+		    	height: 2px;
+		    	transform: rotate(45deg);
+		    	position: absolute;
+		    	top: 50%;
+		    	left: 50%;
+		    	margin: -1px -10px;
+		    	background: $text-color;
+		    }
+			}
+			.nipple-wrap {
+				position: absolute;
+				top: 1px;
+				left: $gutter/2;
+				right: $gutter/2;
+				z-index: 4;
+				opacity: 0;
+				transition: opacity .4s .4s $ease;
+				.nipple-container {
+					width: 33.333% - $gutter/1.5;
+					position: absolute;
+					left: 0;
+					transition: transform .4s ease-in-out;
+					div {
+						width: 0;
+						height: 0;
+						border: 10px solid transparent;
+						border-top: none;
+						border-bottom-color: currentcolor;
+						position: absolute;
+						top: -10px;
+						left: 50%;
+						margin-left: -10px;
+						transition: border .4s ease-in-out;
+					}
+				}
+			}
+			&.visible {
+				height: auto;
+				transition: height .3s $ease, opacity .3s $ease;
+				opacity: 1;
+				.container {
+					transform: translate3d(0, 0, 0);
+					opacity: 1;
+					transition: opacity .2s .4s $ease, transform .2s .4s $ease;
+				}
+				.nipple-wrap {
+					opacity: 1;
+					transition: opacity .4s $ease;
+				}
+
+				background: red;
+				display: block;
+				// @include respond-smaller-than($lg) {
+				// 	display: none;
+				// }
+				// .inline-team-wrap {
+				// 	overflow: visible;
+				// }
+			}
+			.inline-team-wrap {
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+				// transition: overflow 0s .5s $ease;
+			}
+			&:not(.visible) {
+				.bg-color {
+					// background: transparent !important;
+				}
+			}
+			.bg-color {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -100%;
+				right: -100%;
+				margin: 0 -100%;
+				background-color: #ffffff;
+				z-index: 1;
+				transition: background .4s $ease;
+			}
+			.container {
+				color: $text-color;
+				width: 96%;
+				z-index: 1;
+				padding: 0rem 0 4rem;
+				z-index: 2;
+				opacity: 0;
+				transform: translate3d(0, 20px, 0);
+				transition: opacity .15s $ease, transform .15s $ease;
+				@include respond($lg) {
+					padding: 3rem 0;
+				}
+			}
+			.team-section {
+				margin-top: $base-line-height * 1.5;
+				max-width: 400px;
+				@include respond($lg) {
+					margin-top: 0;
+				}
+				h3 {
+					font-weight: 900;
+					text-transform: uppercase;
+					letter-spacing: $tracked-out;
+					font-size: 12px;
+					margin-bottom: 1em;
+				}
+				+ .team-section {
+					@include respond($lg) {
+						margin-top: $base-line-height * 1.5;
+					}
+				}
+				.share-team {
+					li {
+						font-size: 14px;
+						letter-spacing: .05em;
+						position: relative;
+						a {
+							margin-left: 22px;
+							.icon {
+								display: block;
+								width: 16px;
+								position: absolute;
+								left: 0;
+								top: 50%;
+								margin-left: -3px;
+								transform: translate3d(0, -52%, 0);
+								svg {
+									margin: 0 auto;
+									transform: scale(.8);
+									display: block;
+									* {
+										fill: $text-color;
+									}
+								}
+							}
+						}
+					}
+				}
+				.team-steps {
+					counter-reset: step-counter;
+					li {
+						margin-bottom: $base-line-height/2;
+						position: relative;
+						padding-left: 32px;
+						@include respond($lg) {
+							padding-left: 0;
+						}
+						&:before {
+							content: counter(step-counter, decimal-leading-zero);
+							counter-increment: step-counter;
+							position: absolute;
+							left: 0;
+							padding-right: 15px;
+							font-weight: 900;
+							font-size: 12px;
+							top: -2px;
+							letter-spacing: $tracked-out;
+							@include respond($lg) {
+								left: auto;
+								right: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

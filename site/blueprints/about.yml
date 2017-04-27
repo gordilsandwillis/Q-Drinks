@@ -1,58 +1,79 @@
 title: About
 
 files:
-  fields:
-    focus:
-      label: Focus Crop
-      type: focus
+	fields:
+		focus:
+			label: Focus Crop
+			type: focus
 
 pages: false
 
 fields:
-  title:
-    label: Title
-    type:  text
+	title:
+		label: Title
+		type:  text
 
-  headerImage:
-    label: Header Image
-    type: image
+	headerImage:
+		label: Header Image
+		type: image
 
-  availablityIntro:
-    label: Availablity Intro
-    type: textarea
-    buttons: true
+	availablityIntro:
+		label: Availablity Intro
+		type: textarea
+		buttons: true
 
-  logos:
-    label: Logos
-    type: builder
-    fieldsets:
-      logoBlock:
-        label: Add Logo
-        snippet: sections/panel-about-logos
-        fields:
-          logoImage:
-            label: Logo
-            type: image
+	logos:
+		label: Logos
+		type: builder
+		fieldsets:
+			logoBlock:
+				label: Add Logo
+				snippet: sections/panel-about-logos
+				fields:
+					logoImage:
+						label: Logo
+						type: image
 
-  packageIntro:
-    label: Package Configurations Intro
-    type: textarea
-    buttons: false
+	packageIntro:
+		label: Package Configurations Intro
+		type: textarea
+		buttons: false
 
-  packageTypes:
-    label: Package
-    type: builder
-    fieldsets:
-      packageBlock:
-        label: Package
-        snippet: sections/panel-about-pkg
-        fields:
-          packageImage:
-            label: Image
-            type: image
-          volume:
-            label: Volume
-            type: text
-          flavors:
-            label: Flavors Availablity
-            type: text
+	packageTypes:
+		label: Package
+		type: builder
+		fieldsets:
+			packageBlock:
+				label: Package
+				snippet: sections/panel-about-pkg
+				fields:
+					packageImage:
+						label: Image
+						type: image
+					volume:
+						label: Volume
+						type: text
+					flavors:
+						label: Flavors Availablity
+						type: text
+
+	teamMembers:
+			label: Team
+			type: builder
+			fieldsets:
+				teamMember:
+					label: Add Team Member
+					fields:
+						image:
+							label: Image
+							type: image
+						name:
+							label: Name
+							type: text
+						title:
+							label: Job Title
+							type: text
+						description:
+							label: Description
+							type: textarea
+							buttons: false

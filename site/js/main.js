@@ -128,7 +128,7 @@ var newsletterSignup = function() {
     request.done(function(response, textStatus, xhr){
       var form = this.form;
       var resp = JSON.parse(response);
-      console.log(resp); 
+      console.log(resp);
       // resp.status == 'ACTIVE' // Success?
       // resp[0].error_key == json.email.invalid // Not an email
       // resp[0].error_key == json.min.length.violation // Empty
@@ -331,10 +331,11 @@ var highballGrid = function () {
       //Open the inline recipe
       $('.inline-recipe').removeClass('visible');
       $('.flex-col.show-nipple').removeClass('show-nipple');
-      
+
       var headerHeight = $('header > .container').height() - 1;
       var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
       var contentBg = currentTarget.data('bg-color');
+      console.log(contentBg);
 
       setTimeout(function(){
         var itemOffset = currentTarget.offset().top;
@@ -357,7 +358,7 @@ var highballGrid = function () {
       $('.inline-recipe').removeClass('nipple-center');
       $('.inline-recipe').addClass('nipple-right');
     });
-    
+
     $('.recipe-list li:nth-of-type(3n - 1) .recipe-thumb-link').on('click', function(event) {
       $('.inline-recipe').removeClass('nipple-left');
       $('.inline-recipe').addClass('nipple-center');
@@ -376,6 +377,69 @@ var highballGrid = function () {
     });
   }
 }
+
+var teamGrid = function () {
+  var windowWidth = window.innerWidth;
+
+  if (document.querySelector('.team-list') !== null) {
+    console.log('teamGrid happening');
+
+    $('.team-thumb-link').on('click', function(event) {
+      event.stopPropagation();
+      event.preventDefault();
+      //console.log('still clicking')
+      var currentTarget = $(event.currentTarget);
+
+      //Open the inline team
+      $('.inline-team').removeClass('visible');
+      $('.flex-col.show-nipple').removeClass('show-nipple');
+
+      var headerHeight = $('header > .container').height() - 1;
+      var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
+      var contentBg = currentTarget.data('bg-color');
+
+      setTimeout(function(){
+        var itemOffset = currentTarget.offset().top;
+        console.log(itemOffset);
+
+        $('html, body').animate({
+          scrollTop: itemOffset - (headerHeight * 2)
+        }, 500);
+      }, 700);
+
+      currentTarget.parent().parent().addClass('show-nipple');
+      currentTarget.parent().parent().next().addClass('visible');
+
+      $('.inline-team').css({'color' : contentBg})
+      $('.inline-team').css({ 'height' : 0 });
+
+      currentTarget.parent().parent().next().css({ 'height' : contentHeight });
+    });
+    $('.team-list li:nth-of-type(3n) .team-thumb-link').on('click', function(event) {
+      $('.inline-team').removeClass('nipple-left');
+      $('.inline-team').removeClass('nipple-center');
+      $('.inline-team').addClass('nipple-right');
+    });
+
+    $('.team-list li:nth-of-type(3n - 1) .team-thumb-link').on('click', function(event) {
+      $('.inline-team').removeClass('nipple-left');
+      $('.inline-team').addClass('nipple-center');
+      $('.inline-team').removeClass('nipple-right');
+    });
+
+    $('.team-list li:nth-of-type(3n - 2) .team-thumb-link').on('click', function(event) {
+      $('.inline-team').addClass('nipple-left');
+      $('.inline-team').removeClass('nipple-center');
+      $('.inline-team').removeClass('nipple-right');
+    });
+    $('.close-team').on('click', function() {
+      $('.inline-team').css({ 'height' : 0 });
+      $('.inline-team').removeClass('visible');
+      $('.flex-col.show-nipple').removeClass('show-nipple');
+    });
+  }
+}
+
 
 var mobileMenu = function () {
   var menuToggle = document.querySelector('#menu-toggle');
@@ -398,6 +462,7 @@ document.addEventListener("DOMContentLoaded", function() {
   loadedTransitionIn();
   smoothScroll();
   newsletterSignup();
+  teamGrid();
 });
 
 $(window).scroll(function() {
@@ -415,4 +480,5 @@ window.addEventListener('resize', function(event) {
   parallaxblock2();
   transitionIn();
   highballGrid();
+
 });
