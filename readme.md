@@ -1,3 +1,27 @@
+# Development
+
+###Install javascript deps
+
+```
+> npm install
+
+```
+
+###Build/ Watch the app
+
+```
+>gulp
+
+```
+
+###Start a local server
+
+```
+php -S localhost:8000 -c php.ini
+
+```
+
+
 # Kirby
 
 Kirby is a file-based CMS.
