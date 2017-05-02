@@ -8,6 +8,7 @@
 					<li><a href="#availability">Availability</a></li>
 					<li><a href="#find-q">Find Q Near You</a></li>
 					<li><a href="#package">Package Configurations</a></li>
+          <li><a href="#leadership">Leadership</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -104,16 +105,18 @@
 			</div>
 		</section>
 
-		<section id="team" class="white team-list">
-			<div class="container">
-        <?php snippet('section-header', ['text' => 'Leadership']) ?>
-				<ul class="flex-grid">
-					<?php foreach($page->teamMembers()->toStructure() as $section): ?>
-						<?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
-					<?php endforeach ?>
-				</ul>
-			</div>
-		</section>
+    <?php if ($page->teamMembers()->isNotEmpty()): ?>
+  		<section id="leadership" class="white team-list">
+  			<div class="container">
+          <?php snippet('section-header', ['text' => 'Leadership']) ?>
+  				<ul class="flex-grid">
+  					<?php foreach($page->teamMembers()->toStructure() as $section): ?>
+  						<?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
+  					<?php endforeach ?>
+  				</ul>
+  			</div>
+  		</section>
+    <?php endif ?>
 
 	</main>
 

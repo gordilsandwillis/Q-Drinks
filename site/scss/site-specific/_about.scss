@@ -93,7 +93,7 @@ main.about {
 			max-width: 100%;
 			width: 100%;
 		}
-		@include respond($md) {
+		@include respond($md + 100) {
 			display: flex;
 		}
 		li {
@@ -228,7 +228,9 @@ main.about {
 
 	overflow: hidden;
 	> .container > .flex-grid {
-		// margin-top: -5%;
+		@include respond($sm) {
+			margin-top: -3rem;
+		}
 	}
 	.col {
 		margin-bottom: $margin;
@@ -245,7 +247,9 @@ main.about {
 		flex-shrink: 0;
 		margin-bottom: 2rem;
 		@include respond($md) {
+			margin-top: 5%;
 			margin-bottom: 3%;
+			margin-top: 3rem;
 			margin-bottom: 2rem;
 		}
 		@include respond($md) {

@@ -11116,7 +11116,7 @@ main.about nav.secondary .container {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   main.about nav.secondary {
     display: flex;
   }
@@ -11276,6 +11276,12 @@ main.about .about-info p {
   }
 }
 
+@media only screen and (min-width: 450px) {
+  .team-list > .container > .flex-grid {
+    margin-top: -3rem;
+  }
+}
+
 .team-list .col {
   margin-bottom: 7.5%;
 }
@@ -11300,7 +11306,9 @@ main.about .about-info p {
 
 @media only screen and (min-width: 600px) {
   .team-list .flex-col {
+    margin-top: 5%;
     margin-bottom: 3%;
+    margin-top: 3rem;
     margin-bottom: 2rem;
   }
 }
