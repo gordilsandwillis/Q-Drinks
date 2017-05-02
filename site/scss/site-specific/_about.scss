@@ -3,6 +3,9 @@ main.about {
 		position: relative;
 		padding-top: 60px;
 	}
+	+ footer {
+		background: $grey-bg;
+	}
 	.split {
 		position: relative;
 		min-height: 30vh;
@@ -196,6 +199,7 @@ main.about {
 		padding-bottom: $margin/3;
 		*[class^="col"] {
 			margin-bottom: $margin;
+			text-align: center;
 			img {
 				margin-bottom: 1rem;
 			}
@@ -241,9 +245,7 @@ main.about {
 		flex-shrink: 0;
 		margin-bottom: 2rem;
 		@include respond($md) {
-			margin-top: 5%;
 			margin-bottom: 3%;
-			margin-top: 3rem;
 			margin-bottom: 2rem;
 		}
 		@include respond($md) {

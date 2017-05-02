@@ -106,7 +106,7 @@
 
 		<section id="team" class="white team-list">
 			<div class="container">
-				<h2>Leadership</h2>
+        <?php snippet('section-header', ['text' => 'Leadership']) ?>
 				<ul class="flex-grid">
 					<?php foreach($page->teamMembers()->toStructure() as $section): ?>
 						<?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>

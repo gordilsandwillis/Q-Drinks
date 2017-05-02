@@ -63,6 +63,7 @@ fields:
 			fieldsets:
 				teamMember:
 					label: Add Team Member
+					snippet: sections/panel-about-team
 					fields:
 						image:
 							label: Image

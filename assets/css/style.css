@@ -10999,6 +10999,10 @@ main.accolades .accolades-list section .quote-by {
   }
 }
 
+main.about + footer {
+  background: #f2f2f3;
+}
+
 main.about .split {
   position: relative;
   min-height: 30vh;
@@ -11240,6 +11244,7 @@ main.about .about-info p {
 
 .package-configs .inline-grid *[class^="col"] {
   margin-bottom: 7.5%;
+  text-align: center;
 }
 
 .package-configs .inline-grid *[class^="col"] img {
@@ -11295,9 +11300,7 @@ main.about .about-info p {
 
 @media only screen and (min-width: 600px) {
   .team-list .flex-col {
-    margin-top: 5%;
     margin-bottom: 3%;
-    margin-top: 3rem;
     margin-bottom: 2rem;
   }
 }
