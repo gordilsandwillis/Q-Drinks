@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<div class="container transition-in">
-				<div class="inline-grid center bottom">
+				<div class="inline-grid center top">
 					<?php foreach($page->packageTypes()->toStructure() as $section): ?>
 						<div class="col-3">
 							<?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
