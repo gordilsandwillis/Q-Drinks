@@ -10992,7 +10992,7 @@ main.accolades .accolades-list section .quote-by {
   margin-top: .5em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   main.about {
     position: relative;
     padding-top: 60px;
@@ -11276,7 +11276,7 @@ main.about .about-info p {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 600px) {
   .team-list > .container > .flex-grid {
     margin-top: -3rem;
   }
@@ -11292,7 +11292,7 @@ main.about .about-info p {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
   .team-list .col {
     width: 33.333%;
   }
@@ -11314,12 +11314,6 @@ main.about .about-info p {
 }
 
 @media only screen and (min-width: 600px) {
-  .team-list .flex-col {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 900px) {
   .team-list .flex-col {
     width: 33.333%;
   }
@@ -11452,6 +11446,12 @@ main.about .about-info p {
   transform: translate3d(0, 0, 0) scale(1.03);
 }
 
+@media only screen and (max-width: 900px) {
+  .team-list .flex-grid .flex-col .thumb-title {
+    font-size: 12px;
+  }
+}
+
 .team-list .flex-grid .flex-col.inline-team {
   background: blue;
   min-width: 100%;
@@ -11474,12 +11474,6 @@ main.about .about-info p {
   transform: translate3d(0, 0, 0);
 }
 
-@media only screen and (max-width: 900px) {
-  .team-list .flex-grid .flex-col.inline-team.nipple-left .nipple-wrap .nipple-container {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .team-list .flex-grid .flex-col.inline-team.nipple-left .nipple-wrap .nipple-container {
     display: block;
@@ -11491,12 +11485,6 @@ main.about .about-info p {
   transform: translate3d(224.375%, 0, 0);
 }
 
-@media only screen and (max-width: 900px) {
-  .team-list .flex-grid .flex-col.inline-team.nipple-right .nipple-wrap .nipple-container {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .team-list .flex-grid .flex-col.inline-team.nipple-right .nipple-wrap .nipple-container {
     display: block;
@@ -11506,12 +11494,6 @@ main.about .about-info p {
 
 .team-list .flex-grid .flex-col.inline-team.nipple-center .nipple-wrap .nipple-container {
   transform: translate3d(112.1875%, 0, 0);
-}
-
-@media only screen and (max-width: 900px) {
-  .team-list .flex-grid .flex-col.inline-team.nipple-center .nipple-wrap .nipple-container {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -11675,10 +11657,10 @@ main.about .about-info p {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 12px;
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
   .team-list .flex-grid .flex-col.inline-team .team-section + .team-section {
     margin-top: 2.475em;
   }

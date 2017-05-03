@@ -19,7 +19,7 @@
 	</div>
 	<div class="inline-team-wrap">
 		<div class="container">
-			<div class="inline-grid break-lg">
+			<div class="inline-grid break-md">
 				<div class="col-4">
 					<div class="team-section">
 						<h3><?= $data->title()->html() ?></h3>

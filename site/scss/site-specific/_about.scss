@@ -1,5 +1,5 @@
 main.about {
-	@include respond($md) {
+	@include respond($md + 100) {
 		position: relative;
 		padding-top: 60px;
 	}
@@ -228,7 +228,7 @@ main.about {
 
 	overflow: hidden;
 	> .container > .flex-grid {
-		@include respond($sm) {
+		@include respond($md) {
 			margin-top: -3rem;
 		}
 	}
@@ -237,7 +237,7 @@ main.about {
 		@include respond($sm) {
 			width: 50%;
 		}
-		@include respond($lg) {
+		@include respond($md) {
 			width: 33.333%;
 		}
 	}
@@ -252,10 +252,10 @@ main.about {
 			margin-top: 3rem;
 			margin-bottom: 2rem;
 		}
+		// @include respond($md) {
+		// 	width: 50%;
+		// }
 		@include respond($md) {
-			width: 50%;
-		}
-		@include respond($lg) {
 			width: 33.333%;
 		}
 		@include respond(900) {
@@ -354,6 +354,12 @@ main.about {
 			}
 		}
 
+		.thumb-title {
+			@include respond-smaller-than($lg) {
+				font-size: 12px;
+			}
+		}
+
 		&.inline-team {
 			background: blue;
 			min-width: 100%;
@@ -378,9 +384,9 @@ main.about {
 
 			&.nipple-left .nipple-wrap .nipple-container {
 				transform: translate3d(0, 0, 0); // left
-				@include respond-smaller-than($lg) {
-					display: none;
-				}
+				// @include respond-smaller-than($lg) {
+				// 	display: none;
+				// }
 				@include respond-smaller-than($md) {
 					display: block;
 					transform: translate3d(#{100% + $gutter*3.25}, 0, 0);
@@ -389,9 +395,9 @@ main.about {
 
 			&.nipple-right .nipple-wrap .nipple-container {
 				transform: translate3d(#{200% + $gutter*6.5}, 0, 0); // right
-				@include respond-smaller-than($lg) {
-					display: none;
-				}
+				// @include respond-smaller-than($lg) {
+				// 	display: none;
+				// }
 				@include respond-smaller-than($md) {
 					display: block;
 					transform: translate3d(#{100% + $gutter*3.25}, 0, 0);
@@ -400,9 +406,9 @@ main.about {
 
 			&.nipple-center .nipple-wrap .nipple-container {
 				transform: translate3d(#{100% + $gutter*3.25}, 0, 0); // center
-				@include respond-smaller-than($lg) {
-					display: none;
-				}
+				// @include respond-smaller-than($lg) {
+				// 	display: none;
+				// }
 				@include respond-smaller-than($md) {
 					display: block;
 				}
@@ -545,10 +551,10 @@ main.about {
 					text-transform: uppercase;
 					letter-spacing: $tracked-out;
 					font-size: 12px;
-					margin-bottom: 1em;
+					margin-bottom: 0;
 				}
 				+ .team-section {
-					@include respond($lg) {
+					@include respond($md) {
 						margin-top: $base-line-height * 1.5;
 					}
 				}
