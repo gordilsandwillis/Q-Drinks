@@ -75,6 +75,7 @@ Barba.Dispatcher.on('transitionCompleted', function() {
   console.log('Barbara transitionCompleted');
   slideshow();
   highballGrid();
+  teamGrid();
   mobileMenu();
 });
 
@@ -480,5 +481,5 @@ window.addEventListener('resize', function(event) {
   parallaxblock2();
   transitionIn();
   highballGrid();
-
+  teamGrid();
 });
