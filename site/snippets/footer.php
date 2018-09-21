@@ -32,5 +32,17 @@
   </div><!--close .page-->
 
   <?= js('assets/js/main.js') ?>
+
+  <script>
+		window.addEventListener('click', function(e){
+		if(e.target.matches('.newsletter-submit')){
+			ga('send','event','button','click','newsletter');
+			}
+		})
+
+		document.querySelector('[href="#find-q"]').addEventListener('click', function(){
+		ga('send','event','button','click','find q near you');
+		});
+	</script>
 </body>
 </html>
