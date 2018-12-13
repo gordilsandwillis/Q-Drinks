@@ -1,0 +1,43 @@
+Title: Saluki
+
+----
+
+Image: saluki-min.jpg
+
+----
+
+Recipemixer: grapefruit
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 2 oz. good vodka
+  _fieldset: ingredient
+- 
+  ingredient: 6 oz. Q Grapefruit
+  _fieldset: ingredient
+- 
+  ingredient: Two lime wedges
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: 
+
+Fill a highball glass with ice. 
+Pour in the vodka and squeeze in the lime, leaving the lime wedge in the glass. 
+Then pour in the Q Grapefruit (from a fresh bottle), garnish with the lime wedge and gently stir.
+
+----
+
+Variations: Rim the glass with salt for a Sparkling Salty Dog.

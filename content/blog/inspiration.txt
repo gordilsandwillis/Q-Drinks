@@ -1,0 +1,87 @@
+Title: Blog
+
+----
+
+Toptext: How This Entrepreneur is Taking on Schweppes…and winning.
+
+----
+
+Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1227.jpg
+
+----
+
+Inspirationtext: 
+
+It all started in Brooklyn, as most cool things tend to. 
+ 
+Jordan Silbert, then age 30, was having drinks on a hot summer night with friends in his backyard. After a few Gin & Tonics, his teeth began to feel sticky. 
+ 
+He picked up the bottle of Schweppes and inspected the label.
+ 
+“I couldn’t believe it,” Silbert, now 41, tells us, “The tonic water had 32 grams of sugar. It was made from high fructose corn syrup.”
+ 
+Rather than complementing his fancy gin, it was ruining it. There had to be a better way.
+ 
+He knew in that moment that there was a need for a premium all-natural mixer to go along with his premium spirit. Like many entrepreneurs, the idea consumed him. 
+ 
+After months of searching for the best natural ingredients from around the world, Silbert started experimenting with different recipes until it was perfect. He called it Q Tonic, an homage to its main natural ingredient: quinine, which he had found in Peru.  With persistence and grit, he was able to convince a few top restaurants to carry his new tonic water. 
+ 
+Customers began to rave about the natural tonic water that made their cocktails taste even better. Soon, the New York Times and the Wall Street Journal were hailing Silbert’s concoction as revolutionary. Everyone wanted to carry Q. 
+ 
+From that initial success, Silbert, a Yale Business School graduate, has grown the company to be the fastest growing premium mixer company in the country. Top-tier restaurants, hotels, and bars from around the country all proudly carry Q Tonic and their six other premium mixers to make spectacular cocktails for discerning customers. Beyond taste, restaurants and bars are able to charge a premium for cocktails made with Q, leading to an increase in margins which they absolutely love. 
+ 
+Consumers are falling in love with Q Mixers too, which nationally available at retailers like Kroger’s, Whole Foods, Costco, and Target. 
+ 
+Big Soda is taking notice as Q creates a premium category that is encroaching on their long established business. The premium mixer market is expect to grow by 700% by 2022 according to a recent Morgan Stanley study.
+ 
+And Q is just getting started. They are offering a free sample of their mixers to select Food & Beverage managers across the country so they can get familiar with the product line. 
+ 
+In order to get a free sample kit of Q Beverages, you can visit (link: http://www.qdrinks.com/try text: here).
+
+<script type="text/javascript">
+    adroll_adv_id = "EEI6EEIEQRH7RNKLQ4JZWM";
+    adroll_pix_id = "INZWLF6R7REEJEZVYHPYQE";
+ 
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script>
+ 
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '281072669292902'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" 
+src="https://www.facebook.com/tr?id=281072669292902&ev=PageView
+&noscript=1"/>
+</noscript>
+
+----
+
+Signatureimage: 
+
+----
+
+Signaturename: 

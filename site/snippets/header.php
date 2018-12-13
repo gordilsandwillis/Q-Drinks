@@ -25,7 +25,6 @@ if(isset($mobileTextColor)) {
 
 <header class="header font-smooth<?= ' ' . $theHeaderClass ?><?= ' ' . $theDesktopTextColor ?><?= ' ' . $theMobileTextColor ?>" role="banner">
   <div class="container">
-
     <!-- <?php snippet('menu') ?> -->
     <a class="logo" href="<?= url() ?>" rel="home" title="<?= $site->title()->html() ?>">
         <?php snippet('icons/logo') ?>   

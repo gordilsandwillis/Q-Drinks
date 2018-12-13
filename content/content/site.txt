@@ -1,0 +1,45 @@
+Title: Q Drinks
+
+----
+
+Author: Matthew Gordils
+
+----
+
+Description: The amazing Q Mixers Description Text
+
+----
+
+Instagramurl: https://www.instagram.com/qdrinks/
+
+----
+
+Facebookurl: https://www.facebook.com/QDrinks/
+
+----
+
+Twitterurl: http://www.twitter.com/qdrinks
+
+----
+
+Email: info@qdrinks.com
+
+----
+
+Phone: 718.398.6642
+
+----
+
+Keywords: 
+
+----
+
+Careerspdf: noopenings.pdf
+
+----
+
+Privacypdf: q-drinks-privacy-policy.pdf
+
+----
+
+Termspdf: q-drinks-terms-conditions.pdf

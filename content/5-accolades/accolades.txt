@@ -6,17 +6,13 @@ Text:
 
 ----
 
-Headerimage: q-placeholder-1.jpg
+Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1481-mintest.jpg
 
 ----
 
 Builder: 
 
 - 
-  quote: Fizzy fizzy fizzy
-  by: Bon Apetit
-  _fieldset: accoladeBlock
-- 
   quote: Revelatory
   by: Wall Street Journal
   _fieldset: accoladeBlock
@@ -25,10 +21,26 @@ Builder:
   by: New York Times
   _fieldset: accoladeBlock
 - 
-  quote: Revelatory
-  by: Wall Street Journal
+  quote: Upgrade your fizz
+  by: Bon Appetit
   _fieldset: accoladeBlock
 - 
-  quote: Makes a more elegant drink
-  by: New York Times
+  quote: >
+    The real McCoy. Or a souped-up version
+    — it tastes amazing
+  by: Gourmet Magazine
+  _fieldset: accoladeBlock
+- 
+  quote: Q is for Quality
+  by: Los Angeles Times
+  _fieldset: accoladeBlock
+- 
+  quote: >
+    The Moscow Mule has been waiting for a
+    Ginger Beer like this
+  by: Imbibe Magazine
+  _fieldset: accoladeBlock
+- 
+  quote: 'If you are looking to make a superior G & T, then you will need a superior tonic'
+  by: Cocktail Lovers Magazine
   _fieldset: accoladeBlock

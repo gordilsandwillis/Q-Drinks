@@ -13,50 +13,48 @@ Image:
 Builder: 
 
 - 
-  picture: q-step-1.jpg
-  title: "01"
-  description: 'Put ice and your spirit of choice in a highball glass and garnish it. Invidiosum nomen est, infame, suspectum. Deinde prima illa, quae in congressu solemus: Quid tu, inquit.'
+  picture: >
+    q-drinks-photo-shoot-by-daniel-krieger-1275small.jpg
+  title: "1"
+  description: 'Put ice and your spirit of choice into a highball glass and garnish it. Good ice matters - use nice, solid cubes. They won’t melt as quickly.'
   _fieldset: stepBlock
 - 
-  picture: q-placeholder-1.jpg
-  title: "02"
+  picture: >
+    q-drinks-photo-shoot-by-daniel-krieger-1295-min.jpg
+  title: "2"
   description: >
-    Bring the glass and a bottle of Q to
-    your spectacular guest. Invidiosum nomen
-    est, infame, suspectum. Deinde.
+    Bring the glass and the bottle of Q to
+    your guest. A tray is nice, but not
+    necessary. Either way, present the drink
+    like you’re presenting something
+    special. You are.
   _fieldset: stepBlock
 - 
-  picture: q-step-1.jpg
-  title: "03"
+  picture: >
+    q-drinks-photo-shoot-by-daniel-krieger-1300-min.jpg
+  title: "3"
   description: >
-    Open the bottle in front of them and
-    pour it into the glass 3/4 full.
-    Invidiosum nomen est, infame, suspectum.
-    Deinde prima illa, quae in congressu
-    solemu.
+    Open the bottle in front of your guest
+    and pause while it “pops.” Slowly
+    pour into the glass until ¾ full. To
+    maintain carbonation, tilt the glass
+    20° as you pour the liquid down the
+    side.
   _fieldset: stepBlock
 - 
-  picture: q-placeholder-1.jpg
-  title: "02"
+  picture: >
+    q-drinks-photo-shoot-by-daniel-krieger-1315-min.jpg
+  title: "4"
   description: >
-    Bring the glass and a bottle of Q to
-    your spectacular guest. Invidiosum nomen
-    est, infame, suspectum. Deinde.
-  _fieldset: stepBlock
-- 
-  picture: q-step-1.jpg
-  title: "03"
-  description: >
-    Open the bottle in front of them and
-    pour it into the glass 3/4 full.
-    Invidiosum nomen est, infame, suspectum.
-    Deinde prima illa, quae in congressu
-    solemu.
+    Place the glass and the bottle down in
+    front of your guest and encourage them
+    to top off the drink as desired. Leave
+    the bottle cap alongside the glass.
   _fieldset: stepBlock
 
 ----
 
-Headerimage: q-placeholder-1.jpg
+Headerimage: smallq-drinks-photo-shoot-by-daniel-krieger-1197.jpg
 
 ----
 

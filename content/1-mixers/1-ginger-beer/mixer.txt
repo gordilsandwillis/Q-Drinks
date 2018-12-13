@@ -1,0 +1,80 @@
+Title: Ginger Beer
+
+----
+
+Thumbnail: ginger_beerclosed.jpg
+
+----
+
+Mixercolor: #d8ced9
+
+----
+
+Mixerimage: ginger_beer_cap.jpg
+
+----
+
+Description: Other ginger beers try to be both a spicy soda and a mixer. So they end up doing neither well. Q Ginger Beer is a mixer and a mixer only – it  is spicier, more carbonated and less sweet. It is exactly what your vodka, rum, or whiskey is looking for.
+
+----
+
+Builder: 
+
+- 
+  picture: gb_ginger-min.jpg
+  title: Ginger
+  description: >
+    Q Ginger Beer has a strong ginger punch
+    and is very spicy. That’s because we
+    use real ginger, and lots of it. Watch
+    out.
+  _fieldset: ingredientBlock
+- 
+  picture: gb_agave-min.jpg
+  title: Agave
+  description: >
+    Unlike other ginger beers that use tons
+    of high fructose corn syrup or sugar, we
+    craft Q Ginger Beer with a dash of
+    organic agave. This gives it a cleaner,
+    crisper taste and more depth.
+  _fieldset: ingredientBlock
+- 
+  picture: gb_chili-peppers-min.jpg
+  title: Chili Peppers
+  description: >
+    Chili peppers add an extra kick to Q
+    Ginger Beer, particularly at the front
+    of the palate.
+  _fieldset: ingredientBlock
+- 
+  picture: coriander_cardamom.jpg
+  title: Coriander and Cardamom
+  description: >
+    For depth and complexity – the
+    coriander adds warm, nutty, and spicy
+    notes while the cardamom delivers an
+    aromatic, resinous fragrance.
+  _fieldset: ingredientBlock
+- 
+  picture: gb_lime-min.jpg
+  title: Lime
+  description: >
+    To prevent scurvy British sailors were
+    given a daily ration of limes, earning
+    them the nickname “Limeys.” Such
+    drastic measures aren’t needed these
+    days. But limes do give Q Ginger Beer a
+    nice subtle top note.
+  _fieldset: ingredientBlock
+- 
+  picture: gb_carbonation-min.jpg
+  title: Extra Carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to craft Ginger Beer with
+    more carbonation – 4.0 gas volumes to
+    be precise.
+  _fieldset: ingredientBlock

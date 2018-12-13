@@ -61,6 +61,8 @@
 
   <?= css('assets/css/style.css') ?>
 
+  <?= $site->headTagContent()->html() ?>
+
 </head>
 
 <?php

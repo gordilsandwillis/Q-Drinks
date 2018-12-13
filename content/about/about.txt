@@ -1,0 +1,238 @@
+Title: About Us
+
+----
+
+Headerimage: hero-min.jpg
+
+----
+
+Availablityintro: Our carbonated mixers are proudly served by many of America’s leading bars and restaurants from Blue Hill in New York to San Francisco’s Bourbon & Branch and carried nationally by retailers including Whole Foods, Target, Safeway, BevMo, Total Wine and (link: http://www.amazon.com/qdrinks text: Amazon.com). You can also (link: http://shopping.na2.netsuite.com/qtonic text: buy directly) from us, or through (link: https://drizly.com/extras-brands/q-drinks/b2206 text: Drizly) if available in your market.
+
+----
+
+Logos: 
+
+- 
+  logoimage: acme.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: albertsons.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: bevmo.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: binnys.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: fred.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: frys.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: >
+    free-vector-hannaford-0_069008_hannaford-0.png
+  _fieldset: logoBlock
+- 
+  logoimage: harris.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: heb.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: jewel.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: king.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: kroger.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: meijer.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: pavilions.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: ralphs.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: safeway.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: shaws.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: smiths.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: star.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: stop.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: target.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: tom.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: total_wine.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: vons.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: wegmans.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: whole_foods.jpg
+  _fieldset: logoBlock
+
+----
+
+Packageintro: 
+
+----
+
+Packagetypes: 
+
+- 
+  packageimage: q-pkg-4packwopenbottle-750x750.jpg
+  volume: '6.7oz  glass'
+  flavors: 'Ginger Beer, Tonic Water, Ginger Ale, Club Soda, Grapefruit, Kola,  Indian Tonic Water'
+  _fieldset: packageBlock
+- 
+  packageimage: q-pkg-750mlbottle-750x750.jpg
+  volume: 750ml glass
+  flavors: >
+    Ginger Beer, Tonic Water, Ginger Ale,
+    Club Soda, Indian Tonic Water
+  _fieldset: packageBlock
+- 
+  packageimage: club.jpg
+  volume: 500ml glass
+  flavors: >
+    Ginger Beer, Tonic Water, Ginger Ale,
+    Club Soda, Grapefruit, Kola, Indian
+    Tonic Water
+  _fieldset: packageBlock
+- 
+  packageimage: q-pkg-canswcan-750x750.jpg
+  volume: 7.5oz cans
+  flavors: >
+    Ginger Beer, Tonic Water, Ginger Ale,
+    Club Soda, Grapefruit, Kola
+  _fieldset: packageBlock
+
+----
+
+Teammembers: 
+
+- 
+  image: jordan-bio.jpg
+  name: Jordan Silbert
+  title: CEO and Founder
+  description: 'After being struck by a gin-induced flash of inspiration to make a spectacular tonic water, Jordan started Q Drinks out of his kitchen in 2007. Prior to Q, Jordan was the Director of (Post-9/11) Rebuilding Initiatives for the Alliance for Downtown NY and worked for a couple of technology companies in San Francisco.  Jordan has a BA from Brown University and MBA from Yale. He lives in Brooklyn, NY with his wife and two kids.  And he still really likes gin and tonics.'
+  _fieldset: teamMember
+- 
+  image: ben-bio.jpg
+  name: Ben Karlin
+  title: Cofounder and President
+  description: >
+    Ben has held senior operating roles at
+    Bumble and bumble, a premium hair care
+    company now owned by Estee Lauder, and
+    Jurlique, a cosmetics company acquired
+    by the Japanese firm Polar Orbis.
+    Earlier, he was a carpenter and a
+    management consultant. Ben is a graduate
+    of Brown University, Southern Maine
+    Technical College, and the Graduate
+    School of Business at Stanford. He lives
+    in Brookline, MA with his wife and 2
+    kids. Ben and Jordan have been close
+    friends since they were nine, when they
+    went to summer camp together.
+  _fieldset: teamMember
+- 
+  image: ted-bio.jpg
+  name: Ted Roman
+  title: Executive Vice President
+  description: 'Ted is one of the most respected alcohol beverage industry executives in the United States. Prior to Q Drinks, Ted led William Grant & Sons US commercial success, transforming it into one of the most dynamic spirits companies in America. The Company’s profitability tripled during his tenure. Prior to William Grant, Ted was the Senior Vice President of Sales at Pernod Ricard where he led the successful integration of the Allied Domecq portfolio and doubled the company’s U.S. business to $1.4 billion sales revenue. Ted’s favorite drink is Hendrick’s Gin and Q Club Soda with a lemon garnish.'
+  _fieldset: teamMember
+- 
+  image: jaron.jpg
+  name: Jaron Berkhemer
+  title: VP of Marketing
+  description: >
+    Prior to joining Q Drinks, Jaron was the
+    head of marketing at BULLDOG Gin, North
+    America, and played a key role in the
+    brand’s sale to Campari in February,
+    2017. The previous 4 years, Jaron was
+    the director of marketing at Lucas Bols,
+    leading the growth on brands like Bols
+    Genever, Galliano and the Bols Liqueurs.
+    Besides marketing beverages, Jaron knows
+    how to make them too, having worked as a
+    bartender in Amsterdam, London, Dallas
+    and Los Angeles. His favorite drink
+    depends on the day.
+  _fieldset: teamMember
+- 
+  image: shelley.jpg
+  name: Shelley Turner
+  title: 'Sales Lead: RNDC and Young’s Market'
+  description: 'Starting her career in Canada, Shelley helped build notable brands like Mike’s Hard Lemonade, Mission Hill Winery, and Granville Island Brewery from the ground up in the on premise, National Account, and retail arena all across Canada.  She then moved to the US and joined the small team that built and launched Belvedere and Chopin Vodka. In 5 quick years, Belvedere sold to LVMH and Shelley began building brands like Ruinart Champagne and Glenmorangie while continuing to shepherd and build Belvedere vodka in various leadership roles.  Stoli Vodka approached her to build their new sales force for the US and reestablish its brand health.  Once growth was established the greatest challenge of her career unfolded  – building a distributor network in the US and firmly planting Q in the best bars, hotels, restaurants and retail establishments in the US.'
+  _fieldset: teamMember
+- 
+  image: a-donahue-headshot.jpg
+  name: Amy Canepa Donahue
+  title: 'Sales Lead: Breakthru Beverage and others'
+  description: 'Bringing more than 10 years in the beverage business, Amy spent the past seven years at VOSS Water as the Director of National Accounts and Eastern Division Manager.  Prior to her time at VOSS, Amy was a Diageo and Moet-Hennessey Key Account Manager at Martignetti Companies of Massachusetts.  After graduating from UNLV with a degree in Hospitality Management, Amy got her start in the beverage business on the “other side”, as a manager at top performing restaurants & resorts in Nantucket, Boston, and Las Vegas.  She is committed to helping restauranteurs provide their guests with the highest quality beverages and service.'
+  _fieldset: teamMember
+- 
+  image: ashlee.headshots-130copy.jpg
+  name: Ashlee Bennick
+  title: 'Sales Lead: National On-Premise Accounts\'
+  description: 'Prior to joining Q Drinks, Ashlee was instrumental in the On Premise National Account division at The Wine Group, leading the team with the most new national partnerships. The previous 7 years, Ashlee held various roles at Boston Beer Company, ranging from Distributor & People Management/Development in the Southeast Region of the U.S. to On Premise National Accounts. She outpaced company growth & helped to launch two new brands: Rebel IPA & Angry Orchard Cider in On Premise. Her favorite drink ranges pending the environment; but nothing tops a cold bubbly Gin & Q Tonic on warm summer day.'
+  _fieldset: teamMember
+- 
+  image: ianphotoqwebsite2.jpg
+  name: Ian Pilarski
+  title: 'Sales Lead: Conventional Grocery'
+  description: 'Prior to joining Q Drinks, Ian founded and operated an Italian importing and distribution business called Inalca Food & Beverage, North America.  In a few short years, he successfully opened and managed numerous high-profile and national accounts; developing private label programs and curating branded assortments of artisanal Italian foodstuffs.  Before that, he served as the Director of Specialty and Imported Foods for New York City’s iconic Fairway Market, where he worked for 10 years.  Little known fact, but Ian was the buyer that launched Q Drinks at Fairway back in 2008, and he’s stayed in touch with Jordan ever since.  As a former professional soccer player, you’ll find Ian kicking a ball on the streets of Manhattan when he’s not on the road for Q.'
+  _fieldset: teamMember
+- 
+  image: scott.jpg
+  name: Scott Miller
+  title: 'Sales Lead: Key Retail Accounts'
+  description: >
+    Scott has over 25 years of brand
+    building experience in the beverage
+    industry having held senior sales
+    management positions with Fiji Water,
+    Big Red/Thomas Kemper, Talking
+    Rain/Sparkling Ice, and Avalon Water.
+  _fieldset: teamMember
+- 
+  image: tonic-water-6.7oz-cao-off-bubbles.jpg
+  name: Sara Carroll
+  title: 'Sales Lead: Natural and Specialty Grocery'
+  description: >
+    Sara has worked in the natural food
+    industry for more than 20 years. Prior
+    to joining Q Drinks, Sara helped build
+    Lotus Foods, Numi Organic Tea and
+    Scharffen Berger Chocolate Maker into
+    category leading brands. Sara lives in
+    Oakland, CA with her husband and a
+    menagerie of animals including a dog, 2
+    cats, and a flock of chickens. Her
+    favorite drink is an IPA, but when she
+    drinking cocktails, it’s a Paloma.
+  _fieldset: teamMember

@@ -1,0 +1,37 @@
+Title: Indian Tonic Water
+
+----
+
+Thumbnail: indian_tonicdclosed.jpg
+
+----
+
+Mixercolor: #b5e0d8
+
+----
+
+Mixerimage: indian-tonic.jpg
+
+----
+
+Description: Purpose-built to mix with London Dry gins. More bitter and a little sweeter than our original Q Tonic Water but with all the extra carbonation, Q Indian Tonic is crafted to complement the strongest, most juniper-forward gins.
+
+----
+
+Builder: 
+
+- 
+  picture: it_quinine-min.jpg
+  title: Quinine
+  description: 'Quinine comes from the bark of the Cinchona tree. Or at least it used to, back when the gin & tonic was invented. We’ve returned to the original essence of tonic water with quinine from Cinchona bark grown in its native habitat, the slopes of the Peruvian Andes.'
+  _fieldset: ingredientBlock
+- 
+  picture: it_carbonation.jpg
+  title: Extra carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to use 4.3 gas volumes of
+    carbonation.
+  _fieldset: ingredientBlock

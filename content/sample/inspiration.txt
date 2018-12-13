@@ -1,0 +1,26 @@
+Title: sample
+
+----
+
+Toptext: Want to try world’s best carbonated mixers? Please fill out the info below for a sample.*
+
+----
+
+Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1336.jpg
+
+----
+
+Inspirationtext: 
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7Pf7zAQT8-BZCJ-0Vty8rl8tuBEBSCQSLN2Dggs44KVvOzA/viewform?embedded=true" width="450" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+
+#* while supplies last
+
+----
+
+Signatureimage: 
+
+----
+
+Signaturename: 

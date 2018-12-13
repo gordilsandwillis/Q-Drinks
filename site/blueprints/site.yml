@@ -54,3 +54,8 @@ fields:
     label: Terms Of Use PDF
     type: select
     options: documents
+
+  headTagContent:
+    label: HEAD Tage Code
+    type:  textarea
+    buttons: false

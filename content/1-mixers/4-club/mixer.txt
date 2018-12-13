@@ -1,0 +1,44 @@
+Title: Club Soda
+
+----
+
+Thumbnail: club_sodaclosed.jpg
+
+----
+
+Mixercolor: #c0d9e6
+
+----
+
+Mixerimage: club_soda.jpg
+
+----
+
+Description: Spectacular club soda? Yes. As much carbonation as the bottle will physically hold. And a dash of Himalayan salt to make anything you mix with it even tastier.
+
+----
+
+Builder: 
+
+- 
+  picture: cs_himalayan-salt-min.jpg
+  title: Himalayan salt
+  description: >
+    Salt pulls out flavor. That’s why you
+    put in on steak. Himalayan salt is known
+    for its high mineral content. It pulls
+    more subtleties from the great spirits
+    it is mixed with. And it’s why whiskey
+    distillers rave about Q Club Soda.
+  _fieldset: ingredientBlock
+- 
+  picture: cs_carbonation.jpg
+  title: Extra carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to craft Q Club Soda with
+    more carbonation – 4.5 gas volumes to
+    be precise.
+  _fieldset: ingredientBlock

@@ -6,12 +6,8 @@ Projects:
 
 ----
 
-Headerimage: q-placeholder-1.jpg
+Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1206.jpg
 
 ----
 
-Introtext: 
-
-Mixers Longum est enim ad omnia respondere, quae a te dicta sunt. Vide, quantum, inquam, fallare, Torquate. Hoc uno captus Erillus scientiam sum(link: http://google.com/ text: mum bonum esse )defendit nec rem ullam aliam per se expetendam. Nos cum te, M. Hoc loco tenere se Triarius non potuit. At multis malis affectus. Nos vero, inquit ille
-Mixers Longum est enim ad omnia respondere, quae a te dicta sunt. Vide, quantum, inquam, falla
-re, Torquate. Hoc uno captus Erillus scientiam summum bonum esse defendit nec rem ullam aliam per se expetendam. Nos cum te, M. Hoc loco tenere se Triarius non potuit. At multis malis affectus. Nos vero, inquit ille
+Introtext: We make the world's best carbonated mixers — clean, crisp, truly spectacular beverages crafted to enhance the finest spirits. (link: mixers/ginger-beer text: Ginger Beer), (link: mixers/tonic-water text: Tonic Water), (link: mixers/indian-tonic-water text: Indian Tonic Water), (link: mixers/ginger-ale text: Ginger Ale), (link: mixers/club text: Club Soda), (link: mixers/kola text: Kola) and (link: mixers/grapefruit text: Sparkling Grapefruit). Bold flavor, with more carbonation. And less sweet, so the subtleties of great spirits shine through. Q mixers make your drink spectacular.

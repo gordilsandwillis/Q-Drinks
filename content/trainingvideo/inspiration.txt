@@ -1,0 +1,21 @@
+Title: Training Video
+
+----
+
+Toptext: Training Video
+
+----
+
+Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1227-mintesting.jpg
+
+----
+
+Inspirationtext: <iframe width='550' height='324' src="https://www.youtube.com/embed/way4pg0ppRk?&theme=dark&autohide=2&rel=0"frameborder="0"></iframe>
+
+----
+
+Signatureimage: 
+
+----
+
+Signaturename: 
