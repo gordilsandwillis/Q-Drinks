@@ -21,6 +21,11 @@ php -S localhost:8000 -c php.ini
 
 ```
 
+# Persistent storage on Dokku
+
+
+dokku storage:mount q-drunks /var/lib/dokku/data/storage/q-drinks/content:/app/content
+
 
 # Kirby
 
