@@ -1,0 +1,42 @@
+Title: Whiskey and Kola
+
+----
+
+Image: burbon_kola.jpg
+
+----
+
+Recipemixer: kola
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Bourbon
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Kola
+  _fieldset: ingredient
+- 
+  ingredient: Orange slice
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: 
+
+Fill a highball glass with ice. Pour in the bourbon and then add the Q Kola. Gently stir and garnish with an orange
+slice.
+
+----
+
+Variations: Switch the bourbon for a rye for something with more punch. Lemon is also a good variation on the orange slice.

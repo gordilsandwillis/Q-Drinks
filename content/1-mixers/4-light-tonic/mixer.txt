@@ -1,0 +1,48 @@
+Title: Light Tonic Water
+
+----
+
+Thumbnail: light-tonic.png
+
+----
+
+Mixercolor: #6ac8dd
+
+----
+
+Mixerimage: 2-light-tonic.png
+
+----
+
+Description: Everything you love about Q Tonic with fewer than half the calories. Clean, crisp and highly carbonated; crafted to make your spirit shine.
+
+----
+
+Builder: 
+
+- 
+  picture: quinine-light-blue-copy.jpg
+  title: quinine
+  description: >
+    What to do? Sure it prevented malaria.
+    But their bitter quinine medicine was
+    tough to get down. Luckily for us, a few
+    ingenious British officers resolved this
+    quandary by mixing their meds with gin,
+    sugar, and carbonated water. The gin and
+    tonic was born. We’ve returned to the
+    original essence of tonic water with
+    quinine from Cinchona bark grown in its
+    native habitat, the slopes of the
+    Peruvian Andes.
+  _fieldset: ingredientBlock
+- 
+  picture: carbonation_lightblue.jpg
+  title: extra carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to use more carbonation –
+    4.5 gas volumes to be precise.
+  _fieldset: ingredientBlock

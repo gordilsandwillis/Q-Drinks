@@ -17,6 +17,10 @@ fields:
     label: Header Image
     type: image
 
+  headerVideo:
+    label: Header Video (Optional)
+    type: video
+
   builder:
     label: Ingredients
     type: builder

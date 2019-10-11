@@ -17,13 +17,17 @@ fields:
     label: Header Image
     type: image
 
+  headerVideo:
+    label: Header Video (optional)
+    type: video
+
   topText:
-    label: Top Text
+    label: Top Text (optional)
     type:  textarea
     buttons: false
 
   builder:
-    label: Ingredients
+    label: Blocks
     type: builder
     fieldsets:
       stepBlock:
@@ -33,6 +37,14 @@ fields:
           picture:
             label: Image
             type: image
+          coverVideo:
+            label: Cover Video (mp4, short video to loop, optional)
+            type: video
+            width: 1/2
+          fullVideo:
+            label: Full Video (mp4, optional)
+            type: video
+            width: 1/2
           title: 
             label: Title
             type: textarea
@@ -41,3 +53,15 @@ fields:
             label: Description
             type: textarea
             width: 1/2
+          buttonLabel:
+            label: Button label
+            type: text
+            width: 1/3
+          buttonLink: text
+            label: Button Link
+            type: url
+            width: 1/3
+          buttonNewTab: buttonNewTab
+            label: Open Button In New Tab
+            type: checkbox
+            width: 1/3

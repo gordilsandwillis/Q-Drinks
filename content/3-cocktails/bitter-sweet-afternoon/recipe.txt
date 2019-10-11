@@ -1,0 +1,44 @@
+Title: Bitter Sweet Afternoon
+
+----
+
+Image: bitter_sweet_afternoon-min.jpg
+
+----
+
+Recipemixer: tonic-water
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Cocchi Rosa
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Tonic Water
+  _fieldset: ingredient
+- 
+  ingredient: Orange slice
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: 
+
+Fill a highball glass with ice.
+Pour in the Cocchi and then add the Q Tonic Water (from a fresh bottle).
+Gently stir and garnish with an orange slice.
+Ahh.
+
+----
+
+Variations: Bitter, highly carbonated, and only slightly sweet, Q Tonic Water makes great aperitifs. So try it with your favorite white port, vermouth, or liqueur on a warm evening. You won’t regret it.

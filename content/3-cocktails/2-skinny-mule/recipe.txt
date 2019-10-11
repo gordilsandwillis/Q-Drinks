@@ -1,0 +1,39 @@
+Title: Skinny Mule
+
+----
+
+Image: light-ginger-beer.jpg
+
+----
+
+Recipemixer: light-ginger-beer
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Vodka
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Light Ginger Beer
+  _fieldset: ingredient
+- 
+  ingredient: Half a lime
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 1
+
+----
+
+Method: Fill a highball glass or copper mug with ice. Pour in the vodka and squeeze in the lime, leaving the lime shell in the glass. Then pour in the Q Light Ginger Beer, and gently stir. Wow – spicy, bubbly, and clean – and with fewer calories.
+
+----
+
+Variations: Because Q Light Ginger Beer is less sweet than other ginger beers, it leaves more room to add a special flair. Try adding fresh juice (watermelon is great!) or a dash of bitters for some more complexity.

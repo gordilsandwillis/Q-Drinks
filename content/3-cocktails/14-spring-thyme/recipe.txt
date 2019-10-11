@@ -1,0 +1,52 @@
+Title: Spring Thyme
+
+----
+
+Image: spring_thyme_1200.jpg
+
+----
+
+Recipemixer: indian-tonic-water
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 2 oz Premium London Dry Gin
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Indian Tonic Water
+  _fieldset: ingredient
+- 
+  ingredient: ½ oz Blood Orange Liqueur
+  _fieldset: ingredient
+- 
+  ingredient: ½ oz Simple Syrup
+  _fieldset: ingredient
+- 
+  ingredient: ¾ oz Fresh Lime Juice
+  _fieldset: ingredient
+- 
+  ingredient: 2 Strawberries
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: 
+
+Muddle the strawberries in the bottom of a collins glass.  Fill glass with cubed ice and add all ingredients pouring the tonic last. Stir gently to mix the drink and garnish with strawberry slices and a thyme sprig.
+
+Recipe from @apartment_bartender
+
+----
+
+Variations: Scale this recipe up to serve in a punch bowl for your guests to enjoy as a group by multiplying the recipe by 5.

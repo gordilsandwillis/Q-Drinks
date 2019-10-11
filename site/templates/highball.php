@@ -1,14 +1,13 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="highball" role="main">
-    <div class="top-area">
-    	<div class="top-image fancy-entrance">
-    		<?php if ($page->images()->find($page->headerImage())) : ?>
-          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->focusCrop(2000, 1500)->url() ?>)">
-          </div>
-        <?php endif; ?>
-    	</div>
-    </div>
+    <?php snippet('page-hero', [
+      'image' => $page->images()->find($page->headerImage()),
+      'video' => $page->headerVideo(),
+      'limit' => 6,
+      'order' => 'shuffle'
+    ]) ?>
+
     <?php snippet('section-header', array('text' => 'Recipes', 'tag' => 'h1')) ?>
     <?php if ($page->introText()->isNotEmpty()):?>
       <div class="container very-narrow align-center intro-p">

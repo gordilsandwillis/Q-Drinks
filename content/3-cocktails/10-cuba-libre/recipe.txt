@@ -1,0 +1,47 @@
+Title: Cuba Libre
+
+----
+
+Image: cuba_libre_edit_1200.jpg
+
+----
+
+Text: 
+
+----
+
+Related: grapefruit
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Rum
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Kola
+  _fieldset: ingredient
+- 
+  ingredient: Two lime wedges
+  _fieldset: ingredient
+
+----
+
+Method: Fill a highball glass with ice. Pour in the rum and squeeze in a lime. Then pour in the Q Kola. Gently stir and garnish with the other lime wedge.
+
+----
+
+Servings: Makes one drink
+
+----
+
+Variations: Try it with an overproof rum for a bigger kick.
+
+----
+
+Recipemixer: kola
+
+----
+
+Servingsnumber: 01

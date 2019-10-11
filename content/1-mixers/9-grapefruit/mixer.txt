@@ -1,0 +1,27 @@
+Title: Grapefruit
+
+----
+
+Thumbnail: grapefruit.png
+
+----
+
+Mixercolor: #fdd8b8
+
+----
+
+Mixerimage: 2-grapefruit.png
+
+----
+
+Description: We love Palomas. Q Grapefruit exists for one reason: to make your Paloma spectacular. A mixer, not a soda, Q Grapefruit is fresh, bitter, and very tart. Our secret? Grapefruits. There is nothing else like it. Mix it with tequila, or vodka if you prefer. Add a squeeze of lime. Spectacular.
+
+----
+
+Builder: 
+
+- 
+  picture: g_grapefruit-min.jpg
+  title: Grapefruit
+  description: 'Most grapefruit sodas are loaded with sugar. Like they’re trying to hide the grapefruit from us. Q Grapefruit actually tastes like grapefruits – fresh, bitter and tart with just a hint of sweetness.  Why? Because we use lots of real grapefruits from sunny Florida.'
+  _fieldset: ingredientBlock

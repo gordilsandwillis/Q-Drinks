@@ -51,8 +51,8 @@ var FadeTransition = Barba.BaseTransition.extend({
     smoothScroll();
     parallaxblock();
     parallaxblock2();
+    headerActive();
     $el.ready(function(){
-      console.log('loaded');
       $el.animate({ opacity: 1 }, 750, function() {
         /*
          * Do not forget to call .done() as soon your transition is finished!
@@ -72,7 +72,6 @@ Barba.Pjax.getTransition = function() {
 };
 
 Barba.Dispatcher.on('transitionCompleted', function() {
-  console.log('Barbara transitionCompleted');
   slideshow();
   highballGrid();
   teamGrid();
@@ -112,7 +111,7 @@ var newsletterSignup = function() {
   function outputMessage(msg){
     $('.newsletter-form').find('input[type=text]').val('');
     $('.newsletter-form').find('input[type=text]').blur();
-    $('.newsletter-form').find('input[type=text]').attr('placeholder',msg);
+    $('.newsletter-form').find('input[type=text]').attr('placeholder', msg);
   };
 
   form.submit(function(e) {
@@ -129,11 +128,6 @@ var newsletterSignup = function() {
     request.done(function(response, textStatus, xhr){
       var form = this.form;
       var resp = JSON.parse(response);
-      console.log(resp);
-      // resp.status == 'ACTIVE' // Success?
-      // resp[0].error_key == json.email.invalid // Not an email
-      // resp[0].error_key == json.min.length.violation // Empty
-      console.log(xhr);
       if (resp.status == 'ACTIVE') {
         outputMessage('Thank You');
         $('.newsletter-form').find('button.newsletter-submit').removeClass('loading');
@@ -155,6 +149,16 @@ var newsletterSignup = function() {
   });
 
 };
+
+var headerActive = () => {
+  let location = $(window)[0].location.href
+  let navLinks = $('header .nav-link')
+  navLinks.each((index, item) => {
+    if (item.href === location) {
+      item.classList.add('active')
+    }
+  })
+}
 
 // Parallax stuff
 
@@ -195,7 +199,7 @@ var parallaxblock = function() {
       var sectionHeight = section.clientHeight;
       if (sectionTop < windowHeight - 0 && sectionBottom > 60) {
         var speed = sectionTop/windowHeight;
-        section.style.cssText += 'transform: translate3d(0, ' + sectionHeight/3 * speed + 'px, 0)';
+        section.style.cssText += 'transform: translate3d(0, ' + sectionHeight/5 * speed + 'px, 0)';
       }
     }
 
@@ -320,11 +324,9 @@ var highballGrid = function () {
   var windowWidth = window.innerWidth;
 
   if (document.querySelector('.recipe-list') !== null && windowWidth > 900) {
-    console.log('highballGrid happening');
     $('.recipe-thumb-link').on('click', function(event) {
       event.stopPropagation();
       event.preventDefault();
-      console.log('still clicking')
       var currentTarget = $(event.currentTarget);
       //Change the Url of the page
       var path = currentTarget.data('path');
@@ -336,11 +338,9 @@ var highballGrid = function () {
       var headerHeight = $('header > .container').height() - 1;
       var contentHeight = currentTarget.parent().parent().next().find('.container').innerHeight();
       var contentBg = currentTarget.data('bg-color');
-      console.log(contentBg);
 
       setTimeout(function(){
         var itemOffset = currentTarget.offset().top;
-        console.log(itemOffset);
 
         $('html, body').animate({
           scrollTop: itemOffset - (headerHeight * 2)
@@ -383,12 +383,11 @@ var teamGrid = function () {
   var windowWidth = window.innerWidth;
 
   if (document.querySelector('.team-list') !== null) {
-    console.log('teamGrid happening');
 
     $('.team-thumb-link').on('click', function(event) {
       event.stopPropagation();
       event.preventDefault();
-      //console.log('still clicking')
+    
       var currentTarget = $(event.currentTarget);
 
       //Open the inline team
@@ -401,7 +400,6 @@ var teamGrid = function () {
 
       setTimeout(function(){
         var itemOffset = currentTarget.offset().top;
-        console.log(itemOffset);
 
         $('html, body').animate({
           scrollTop: itemOffset - (headerHeight * 2)
@@ -445,13 +443,34 @@ var teamGrid = function () {
 var mobileMenu = function () {
   var menuToggle = document.querySelector('#menu-toggle');
   menuToggle.addEventListener('click', function(event) {
-    console.log('mobile menu');
     document.querySelector('body').classList.toggle('mobile-menu-open');
   });
 }
 
 var closeMobileMenu = function () {
   document.querySelector('body').classList.remove('mobile-menu-open');
+}
+
+var serveVideos = function () {
+  let videos = $('.alternating-blocks .media-wrap.has-full-video')
+  console.log('yey')
+  videos.each((index, item) => {
+    let videoTrigger = $(item).find($('.video-trigger'))
+    let fullVideo = $(item).find($('video.full-video'))[0]
+
+    console.log(fullVideo)
+
+    videoTrigger.click(function() {
+      console.log('rrr')
+      videoTrigger.addClass('playing')
+      fullVideo.play()
+    })
+
+    fullVideo.addEventListener('ended', function() {
+      videoTrigger.removeClass('playing')
+      fullVideo.currentTime = 0
+    })
+  })
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -464,6 +483,8 @@ document.addEventListener("DOMContentLoaded", function() {
   smoothScroll();
   newsletterSignup();
   teamGrid();
+  headerActive();
+  serveVideos();
 });
 
 $(window).scroll(function() {

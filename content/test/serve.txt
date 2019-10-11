@@ -2,7 +2,7 @@ Title: test
 
 ----
 
-Headerimage: 
+Headerimage: q_homepage_3.jpg
 
 ----
 
@@ -11,3 +11,35 @@ Toptext:
 ----
 
 Builder: 
+
+- 
+  picture: q_homepage_3.jpg
+  title: test
+  description: test
+  _fieldset: stepBlock
+  video: ""
+  cover_video: >
+    700_f_187911543_97q20knxjn3nmesinm6btltkj2eftolt_st.mp4
+  covervideo: >
+    700_f_187911543_97q20knxjn3nmesinm6btltkj2eftolt_st.mp4
+  fullvideo: q-mixers-whisky-x-event.mp4
+  buttonlabel: Check out the toolkit
+  buttonlink: http://google.com/
+  buttonnewtab: "0"
+- 
+  picture: q_homepage_3.jpg
+  covervideo: ""
+  fullvideo: q-mixers-whisky-x-event.mp4
+  title: The Q Gin Fizz
+  description: >
+    The bubbles in the Q Mixer are far
+    superior to any other kind of bubble on
+    earth.
+  buttonlabel: ""
+  buttonlink: ""
+  buttonnewtab: "0"
+  _fieldset: stepBlock
+
+----
+
+Headervideo: 700_f_187911543_97q20knxjn3nmesinm6btltkj2eftolt_st.mp4

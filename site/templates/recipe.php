@@ -7,8 +7,21 @@
 
   	<div class="recipe-card" style="background-color: <?= $mixerPage->mixerColor() ?>">
       <div class="image">
-        <div class="bg-image" style="background-image: url(<?= $page->image()->crop(1500)->url() ?>);">
-          <img src="<?= $page->image()->crop(750, 750)->url() ?>" alt="<?= $page->title()->html() ?>" width="750" height="750">
+        <div class="media-wrap">
+          <? if ($page->video()) :?>
+            <video autoplay loop muted playsinline>
+              <source src="<?= $page->video()->url() ?>" type="video/mp4">
+            </video>
+          <? else :?>
+            <img
+              sizes="(max-width: 1000px) 100vw, (max-width: 3000px) 50vw"
+              srcset="<?= $page->image()->crop(800)->url() ?> 800w,
+            <?= $page->image()->crop(1000)->url() ?> 1000w,
+            <?= $page->image()->crop(1500)->url() ?> 1500w,
+            <?= $page->image()->crop(2000)->url() ?> 2000w"
+              src="<?= $page->image()->crop(800)->url() ?>"
+              alt="<?= $page->title()->html() ?>"/>
+          <? endif ?>
         </div>
       </div>
 

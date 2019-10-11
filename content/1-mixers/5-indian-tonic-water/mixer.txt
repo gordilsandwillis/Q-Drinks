@@ -2,7 +2,7 @@ Title: Indian Tonic Water
 
 ----
 
-Thumbnail: indian_tonicdclosed.jpg
+Thumbnail: indian-tonic.png
 
 ----
 
@@ -10,7 +10,7 @@ Mixercolor: #b5e0d8
 
 ----
 
-Mixerimage: indian-tonic.jpg
+Mixerimage: 2-indian-tonic.png
 
 ----
 
@@ -32,6 +32,6 @@ Builder:
     A drink stays fizzier longer when it
     starts with more carbonation. So we use
     a custom, thicker glass bottle that
-    enables us to use 4.3 gas volumes of
+    enables us to use 4.5 gas volumes of
     carbonation.
   _fieldset: ingredientBlock

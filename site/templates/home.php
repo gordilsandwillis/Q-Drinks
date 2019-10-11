@@ -29,9 +29,11 @@
 ?>
   <main class="home" role="main">
   	<div class="top-area">
-	    <div class="top-image fancy-entrance full-height">
-		    <? snippet('sections/homeImageBlock', array('desktopImage' => $desktopImage, 'mobileImage' => $mobileImage)); ?>
-	    </div>
+	    <?php snippet('page-hero', [
+	      'image' => $image->desktopImage()->toFile(),
+	      'mobileImage' => $image->mobileImage()->toFile(),
+	      'fullHeight' => true
+	    ]) ?>
 	    <div class="text-overlay <?= $desktopColorClass ?> <?= $mobileColorClass ?>">
 	    	<div class="container">
 	    		<h1 class="hidden">Q Mixers</h1>

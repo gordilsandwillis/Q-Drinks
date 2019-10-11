@@ -1,14 +1,12 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="accolades" role="main">
-    <div class="top-area">
-      <div class="top-image">
-        <?php if ($page->images()->find($page->headerImage())) : ?>
-          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->focusCrop(2000, 1500)->url() ?>)">
-          </div>
-        <?php endif; ?>
-      </div>
-    </div>
+    <?php snippet('page-hero', [
+      'image' => $page->image($page->headerImage()),
+      'video' => $page->headerVideo(),
+      'pushDown' => $page->topText()->isNotEmpty(),
+      'entrance' => false
+    ]) ?>
 
     <?php snippet('section-header', array('text' => 'Accolades', 'tag' => 'h1')) ?>
 

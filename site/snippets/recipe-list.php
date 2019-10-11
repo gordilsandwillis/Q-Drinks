@@ -31,8 +31,14 @@ if(isset($limit))     $cocktails = $cocktails->limit($limit);
       <? $recipeMixerPage = $pages->find($findString); ?>
       <div class="recipe-thumb">
       <a class="recipe-thumb-link" data-bg-color="<?= $recipeMixerPage->mixerColor()->html() ?>" data-path="<?= $recipe ?>" href="<?= $recipe->url() ?>" title="<?= $recipe->title()->html() ?>" >
-          <div class="img-wrap">
-            <img src="<?= $recipe->image()->focusCrop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
+          <div class="media-wrap">
+            <? if ($recipe->video()): ?>
+              <video autoplay loop muted playsinline>
+                <source src="<?= $recipe->video()->url() ?>" type="video/mp4">
+              </video>
+            <? else : ?>
+              <img src="<?= $recipe->image()->focusCrop(600, 450)->url();?>" alt="<?= $recipe->title()->html() ?>" width="600" height="450" >
+            <? endif ?>
           </div>
           <h3 class="thumb-title"><?= $recipe->title()->html() ?></h3>
           <h6 class="recipe-mixer">Q <?= $recipeMixerPage->title()->html() ?></h6>

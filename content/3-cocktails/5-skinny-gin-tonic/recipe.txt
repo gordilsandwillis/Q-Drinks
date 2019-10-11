@@ -1,0 +1,39 @@
+Title: Skinny Gin and Tonic
+
+----
+
+Image: light-tonic.jpg
+
+----
+
+Recipemixer: light-tonic
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Gin
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Light Tonic Water
+  _fieldset: ingredient
+- 
+  ingredient: Lime wedge
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: Fill a highball glass with ice and add your choice of gin. Then pour in the Q Light Tonic Water. Gently stir and garnish with a lime wedge.
+
+----
+
+Variations: Have some fun. Add a full lime wedge for a citrus boost, Swap in a different garnish, maybe a grapefruit, cucumber, or lime twist. Or muddle in a fresh herb – thyme can be great. Or even add a few dashes of bitters, Angostura or orange bitters work well.

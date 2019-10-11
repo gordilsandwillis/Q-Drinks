@@ -19,13 +19,20 @@ fields:
   title:
     label: Page Title
     type:  text
+
   headerImage:
     label: Header Image
     type: image
+  
+  headerVideo:
+    label: Header Video (Optional)
+    type: video
+  
   introText:
     label: Intro Text
     type:  textarea
     buttons: true
+  
   mixers:
     label: Mixers
     type: subpagelist

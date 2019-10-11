@@ -1,0 +1,42 @@
+Title: Sparkling Greyhound
+
+----
+
+Image: qdrinks-9_edit_1200.jpg
+
+----
+
+Recipemixer: grapefruit
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Vodka
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Grapefruit
+  _fieldset: ingredient
+- 
+  ingredient: Lime wedge
+  _fieldset: ingredient
+- 
+  ingredient: Grapefruit peel
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: Fill a highball glass with ice. Pour in the vodka and squeeze in the lime, leaving the lime wedge in the glass. Then pour in the Q Grapefruit, and garnish with the grapefruit peel and gently stir.
+
+----
+
+Variations: Rim the glass with salt for a Sparkling Salty Dog.

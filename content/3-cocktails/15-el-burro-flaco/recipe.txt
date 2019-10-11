@@ -1,0 +1,43 @@
+Title: El Burro Flaco
+
+----
+
+Image: el_burro_flaco_1200.jpg
+
+----
+
+Recipemixer: light-ginger-beer
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 2 oz Reposado Tequila
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Light Ginger Beer
+  _fieldset: ingredient
+- 
+  ingredient: 2 Dashes orange bitters
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: 
+
+Fill a collins glass with ice. Pour in the tequila and squeeze in a lime wedge and add bitters. Then pour in the Q Ginger Beer. Gently stir and garnish with an orange slice and sage leaves.
+
+Recipe from @the.Cocktail.bandit
+
+----
+
+Variations: Dehydrate citrus garnishes so they stay aromatic for longer.

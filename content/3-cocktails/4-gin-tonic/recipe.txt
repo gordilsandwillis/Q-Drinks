@@ -2,7 +2,7 @@ Title: Gin and Tonic
 
 ----
 
-Image: gin_tonic-min.jpg
+Image: gandt_1200.jpg
 
 ----
 
@@ -13,13 +13,13 @@ Recipemixer: tonic-water
 Ingredients: 
 
 - 
-  ingredient: 2 oz. great gin
+  ingredient: 1.5 oz Premium Gin
   _fieldset: ingredient
 - 
-  ingredient: 6 oz. Q Tonic
+  ingredient: 5 oz Q Tonic Water
   _fieldset: ingredient
 - 
-  ingredient: Two lime wedges
+  ingredient: Lime wedge
   _fieldset: ingredient
 
 ----
@@ -32,8 +32,8 @@ Servingsnumber: 01
 
 ----
 
-Method: Place ice in a highball glass and add your favorite gin. Squeeze in a lime wedge. Then pour in the Q Tonic Water or Q Indian Tonic Water, depending on the gin. London Dry gins should get the Q Indian Tonic Water and more subtle gins should get Q Tonic Water. Gently stir and garnish with a lime wedge.
+Method: Fill a highball glass with ice and add your choice of gin. Then pour in the Q Tonic Water or Q Indian Tonic Water, depending on the gin. London Dry gins should get the Q Indian Tonic Water and more subtle gins should get Q Tonic Water. Gently stir and garnish with a lime wedge.
 
 ----
 
-Variations: Have some fun. Swap in a different garnish, maybe a grapefruit, cucumber, or lime twist. Or muddle in a fresh herb – thyme can be great. Or even add an ounce of liqueur, something like pamplemousse or an elderflower.
+Variations: Have some fun. Add a full lime wedge for a citrus boost. Swap in a different garnish, maybe a grapefruit, cucumber, or lime twist. Or muddle in a fresh herb – thyme can be great. Or even add ½ oz of your favorite liqueur; pamplemousse or  elderflower both work well.

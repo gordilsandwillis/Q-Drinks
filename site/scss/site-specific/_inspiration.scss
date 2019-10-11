@@ -1,5 +1,5 @@
 main.inspiration {
-	.top-area .top-image.push-down {
+	.top-area.push-down {
 		margin-bottom: $margin;
 		@include respond($md) {
 			margin-bottom: 4rem;

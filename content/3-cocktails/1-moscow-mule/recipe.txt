@@ -2,7 +2,7 @@ Title: Moscow Mule
 
 ----
 
-Image: moscow_mule-min.jpg
+Image: ginger-beer.jpg
 
 ----
 
@@ -17,23 +17,18 @@ Related: grapefruit
 Ingredients: 
 
 - 
-  ingredient: 2 oz. good vodka
+  ingredient: '1.5 oz Premium  Vodka'
   _fieldset: ingredient
 - 
-  ingredient: 6 oz. Q Ginger Beer
+  ingredient: 5 oz Q Ginger Beer
   _fieldset: ingredient
 - 
-  ingredient: Half a Lime
+  ingredient: Half a lime
   _fieldset: ingredient
 
 ----
 
-Method: 
-
-Fill a highball glass or copper mug with ice.
-Pour in the vodka and squeeze in the lime, leaving the lime shell in the glass.
-Then pour in the Q Ginger Beer (from a fresh bottle), and gently stir.
-Wow – spicy, bubbly, and clean.
+Method: Fill a highball glass or copper mug with ice. Pour in the vodka and squeeze in the lime, leaving the lime shell in the glass. Then pour in the Q Ginger Beer, and gently stir.
 
 ----
 
@@ -41,7 +36,7 @@ Servings: Makes one drink
 
 ----
 
-Variations: Because Q Ginger Beer is less sweet than other ginger beers, it leaves more room to add a special flair. Try adding fresh juice (watermelon is great!) or a liqueur (use Sorrel for a Flatbush Mule).
+Variations: Because Q Ginger Beer is less sweet than other ginger beers, it leaves more room to add a special flair. Try adding fresh juice (watermelon is great!) or your favorite liqueur to sweeten it up and add a new flavor.
 
 ----
 
@@ -49,4 +44,8 @@ Recipemixer: ginger-beer
 
 ----
 
-Servingsnumber: 01
+Servingsnumber: 1
+
+----
+
+Video: 700_f_187911543_97q20knxjn3nmesinm6btltkj2eftolt_st.mp4

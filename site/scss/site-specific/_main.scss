@@ -70,13 +70,19 @@ main.error {
 	}
 }
 
-.bg-image {
-	background-position: center;
-	background-size: cover;
+.bg-image.cover-media {
+	position: relative;
 	min-height: 200px;
-	background-repeat: no-repeat;
-	img {
-		display: none;
+	position: relative;
+	img,
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
@@ -85,6 +91,11 @@ main {
 	&.padded-bottom {
 		padding-bottom: $margin;
 	}
+}
+
+.bg-image {
+	background-size: cover;
+	background-position: center;
 }
 
 .top-area {
@@ -96,6 +107,7 @@ main {
 		position: relative;
 		background: $grey-bg;
 		overflow: hidden;
+
 		@include respond($md) {
 			height: 40vh;
 		}
@@ -220,6 +232,9 @@ section.alternating-blocks {
 						@include respond($md) {
 							font-size: 20px;
 						}
+					}
+					.btn {
+						margin-top: 2em;
 					}
 				}
 			}

@@ -3,12 +3,14 @@
   <main class="inspiration padded-bottom" role="main">
 
     <div class="top-area">
-      <div class="top-image push-down">
-        <?php if ($page->images()->find($page->headerImage())) : ?>
-          <div class="bg-image parallax-top" style="background-image: url(<?php echo $page->images()->find($page->headerImage())->focusCrop(2000, 1500)->url() ?>)">
-          </div>
-        <?php endif; ?>
-      </div>
+
+      <?php snippet('page-hero', [
+        'image' => $page->image($page->headerImage()),
+        'video' => $page->headerVideo(),
+        'pushDown' => true,
+        'entrance' => false
+      ]) ?>
+
       <div class="">
         <div class="container narrow">
           <div class="text-wrap lg right align-center">

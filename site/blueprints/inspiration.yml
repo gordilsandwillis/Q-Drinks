@@ -22,6 +22,10 @@ fields:
     label: Header Image
     type:  image
 
+  headerVideo:
+    label: Header Video (Optional)
+    type: video
+
   inspirationText:
     label: Text
     type:  textarea

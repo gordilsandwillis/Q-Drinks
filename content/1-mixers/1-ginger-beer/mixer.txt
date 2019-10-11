@@ -2,15 +2,15 @@ Title: Ginger Beer
 
 ----
 
-Thumbnail: ginger_beerclosed.jpg
+Thumbnail: gingerbeer.png
 
 ----
 
-Mixercolor: #d8ced9
+Mixercolor: #be8ca7
 
 ----
 
-Mixerimage: ginger_beer_cap.jpg
+Mixerimage: 2-gingerbeer.png
 
 ----
 
@@ -31,7 +31,7 @@ Builder:
   _fieldset: ingredientBlock
 - 
   picture: gb_agave-min.jpg
-  title: Agave
+  title: Organic Agave
   description: >
     Unlike other ginger beers that use tons
     of high fructose corn syrup or sugar, we

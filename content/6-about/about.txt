@@ -1,112 +1,292 @@
-Title: About Us
+Title: About
 
 ----
 
-Intro: This page demonstrates how you can utilize subpages to store content, like our team members shown below. This approach is especially useful when you have to handle a large number of datasets, many different kinds of data (like page sections) or very complex data with a lot of media files or fields.
+Headerimage: banner.jpg
 
 ----
 
-Text: The approach of using subpages for storing content sections of a page can also be very useful for creating a (link: https://getkirby.com/docs/cookbook/one-pager text: one-page) website, featuring very different kinds of content.
-
-----
-
-Headerimage: q-placeholder-1.jpg
-
-----
-
-Availablityintro: Working Q Drinks carbonated mixers are proudly served by many of America’s leading bars and restaurants from Blue Hill in New York to San Francisco’s (link: http://google.com/ text: Bourbon & Branch) and carried by nationally by retailers including:
-
-----
-
-Packageintro: Q Drinks are packaged in various sizes Nam porttitor massa egeta posuere maleda working.
-
-----
-
-Packagetypes: 
-
-- 
-  packageimage: q-pkg-1.jpg
-  volume: 4 Pack
-  flavors: All Flavors Available
-  _fieldset: packageBlock
-- 
-  packageimage: q-pkg-3.jpg
-  volume: 750 mL
-  flavors: All Flavors Available
-  _fieldset: packageBlock
-- 
-  packageimage: ""
-  volume: 6 Pack
-  flavors: All Flavors Available
-  _fieldset: packageBlock
-
-----
-
-Packagetypess: 
+Availablityintro: Our carbonated mixers are proudly served by many of America’s leading bars and restaurants from Blue Hill in New York to San Francisco’s Bourbon & Branch and carried nationally by retailers including Whole Foods, Target, Safeway, BevMo, Total Wine and (link: https://www.amazon.com/qmixers text: Amazon.com). You can also purchase directly through us at our (link: http://shopping.na2.netsuite.com/qtonic text: webstore).
 
 ----
 
 Logos: 
 
 - 
-  logoimage: ""
+  logoimage: acme.jpg
   _fieldset: logoBlock
 - 
-  logoimage: logo.gif
+  logoimage: albertsons.jpg
   _fieldset: logoBlock
 - 
-  logoimage: logo.gif
+  logoimage: bevmo.jpg
   _fieldset: logoBlock
 - 
-  logoimage: logo.gif
+  logoimage: big-y.png
   _fieldset: logoBlock
 - 
-  logoimage: logo.gif
+  logoimage: cvs.png
   _fieldset: logoBlock
+- 
+  logoimage: fairway.png
+  _fieldset: logoBlock
+- 
+  logoimage: fred.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: frys.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: giant.png
+  _fieldset: logoBlock
+- 
+  logoimage: hannaford.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: harris.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: heb.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: jewel.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: king.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: kroger.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: meijer.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: pavilions.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: qfc.png
+  _fieldset: logoBlock
+- 
+  logoimage: ralphs.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: randalls.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: safeway.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: smiths.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: specs.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: stop.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: target.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: tom.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: total_wine.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: vons.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: wegmans.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: weis.png
+  _fieldset: logoBlock
+- 
+  logoimage: whole_foods.jpg
+  _fieldset: logoBlock
+- 
+  logoimage: walmart.png
+  _fieldset: logoBlock
+
+----
+
+Packageintro: 
+
+----
+
+Packagetypes: 
+
+- 
+  packageimage: btl-4pk.png
+  volume: 6.7 oz Glass
+  flavors: >
+    Ginger Beer, Light Ginger Beer, Tonic,
+    Light Tonic, Indian Tonic, Elderflower
+    Tonic, Ginger Ale, Club Soda,
+    Grapefruit, Kola
+  _fieldset: packageBlock
+- 
+  packageimage: 500-ml.png
+  volume: 500 ml Glass
+  flavors: >
+    Ginger Beer, Light Ginger Beer, Tonic,
+    Light Tonic, Indian Tonic, Elderflower
+    Tonic, Ginger Ale, Club Soda,
+    Grapefruit, Kola
+  _fieldset: packageBlock
+- 
+  packageimage: can-4pk.png
+  volume: 7.5 oz Cans
+  flavors: >
+    Ginger Beer, Light Ginger Beer, Tonic,
+    Light Tonic, Indian Tonic, Elderflower
+    Tonic, Ginger Ale, Club Soda,
+    Grapefruit, Kola
+  _fieldset: packageBlock
+- 
+  packageimage: 750-ml.png
+  volume: 750 ml Glass
+  flavors: >
+    Ginger Beer, Light Ginger Beer, Tonic,
+    Light Tonic, Indian Tonic, Ginger Ale,
+    Club Soda
+  _fieldset: packageBlock
 
 ----
 
 Teammembers: 
 
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Matthew Gordils
-  title: Designer
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: jordan.jpg
+  name: Jordan Silbert
+  title: Founder and CEO
+  description: >
+    After being struck by a gin-induced
+    flash of inspiration to make a
+    spectacular tonic water, Jordan started
+    Q Mixers out of his kitchen in 2007.
+    Prior to Q, Jordan was the Director of
+    (Post-9/11) Rebuilding Initiatives for
+    the Alliance for Downtown NY and worked
+    for a couple of technology companies in
+    San Francisco. Jordan has a BA from
+    Brown University and MBA from Yale. He
+    lives in Brooklyn, NY with his wife and
+    two kids. And he still really likes gin
+    and tonics.
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Another Team Member
-  title: Player
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: ben.jpg
+  name: Ben Karlin
+  title: Cofounder and President
+  description: >
+    Ben has held senior operating roles at
+    Bumble and bumble, a premium hair care
+    company now owned by Estee Lauder, and
+    Jurlique, a cosmetics company acquired
+    by the Japanese firm Polar Orbis.
+    Earlier, he was a carpenter and a
+    management consultant. Ben is a graduate
+    of Brown University, Southern Maine
+    Technical College, and the Graduate
+    School of Business at Stanford. He lives
+    in Brookline, MA with his wife and 2
+    kids. Ben and Jordan have been close
+    friends since they were nine, when they
+    went to summer camp together.
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Hippie
-  title: Horray
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: ted-bio.jpg
+  name: Ted Roman
+  title: Executive Vice President
+  description: 'Ted is one of the most respected alcohol beverage industry executives in the United States. Prior to Q Mixers, Ted led William Grant & Sons U.S. commercial success, transforming it into one of the most dynamic spirits companies in America. The Company’s profitability tripled during his tenure. Prior to William Grant, Ted was the Senior Vice President of Sales at Pernod Ricard where he led the successful integration of the Allied Domecq portfolio and doubled the company’s U.S. business to $1.4 billion sales revenue. Ted’s favorite drink is Hendrick’s Gin and Q Club Soda with a lemon garnish.'
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Ellie
-  title: Stong
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: mike.jpg
+  name: Mike Atkins
+  title: Executive Vice President of Retail
+  description: >
+    Mike has been selling beverages almost
+    his whole life. Going through college he
+    worked for some of the finest bars,
+    restaurants and caterers on the east
+    coast. Right out of college he joined
+    the Perrier Group of America selling
+    brands such as Perrier, San Pellegrino,
+    Poland Spring and Arrowhead. After
+    ascending through fifteen different
+    roles in Sales, Marketing, and General
+    Management Mike found himself leading
+    the two billion dollar US grocery
+    channel for Nestle Waters North America.
+    Mike is now passionate about
+    transforming the mixer category in
+    retail with the Q Team.
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Name
-  title: Title
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: jaron.jpg
+  name: Jaron Berkhemer
+  title: Vice President of Marketing
+  description: >
+    Prior to joining Q Mixers, Jaron was the
+    head of marketing at BULLDOG Gin, North
+    America, and played a key role in the
+    brand’s sale to Campari in February,
+    2017. The previous 4 years, Jaron was
+    the director of marketing at Lucas Bols,
+    leading the growth on brands like Bols
+    Genever, Galliano and the Bols Liqueurs.
+    Besides marketing beverages, Jaron knows
+    how to make them too, having worked as a
+    bartender in Amsterdam, London, Dallas
+    and Los Angeles. His favorite drink
+    depends on the day.
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: Another Name
-  title: Job Title
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: amy.jpg
+  name: Amy Canepa Donahue
+  title: 'Vice President of Liquor Sales: Eastern Region'
+  description: 'Bringing more than 10 years in the beverage business, Amy spent the past seven years at VOSS Water as the Director of National Accounts and Eastern Division Manager. Prior to her time at VOSS, Amy was a Diageo and Moet-Hennessey Key Account Manager at Martignetti Companies of Massachusetts. After graduating from UNLV with a degree in Hospitality Management, Amy got her start in the beverage business on the “other side”, as a manager at top performing restaurants & resorts in Nantucket, Boston, and Las Vegas. She is committed to helping restauranteurs provide their guests with the highest quality beverages and service.'
   _fieldset: teamMember
 - 
-  image: 5032-584f203bd0f5c.jpg
-  name: And Another
-  title: Jooooob
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Illis videtur, qui illud non dubitant bonum dicere -; Pollicetur certe. Duo Reges: constructio interrete. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Quorum sine causa fieri nihil putandum est.'
+  image: abe-w-sq.jpg
+  name: Abe Walczak
+  title: 'VICE PRESIDENT OF LIQUOR SALES: WESTERN REGION'
+  description: 'Abe has enjoyed a successful 20 year career in the adult beverage business with a proven track record of developing high-performance teams, driving extraordinary business results, and building the skills and capabilities of those around him. Prior to Q Mixers, Abe was the Regional Director – Western U.S. for William Grant & Sons, where he oversaw dramatic, industry-leading portfolio growth, building premium brands such as Hendrick’s, the Balvenie, Glenfiddich, and Milagro. Prior to William Grant, Abe managed the California business for Ketel One Vodka, growing the brand from an unknown in the vodka category to a leading brand in the premium vodka space. Abe lives in California with his wife and four children. His favorite drink is a cold vodka and Q Club Soda with an orange slice.'
+  _fieldset: teamMember
+- 
+  image: ashlee.jpg
+  name: Ashlee Lowery
+  title: 'Vice President of National Accounts - On Premise'
+  description: 'Prior to joining Q Mixers, Ashlee was instrumental in the On Premise National Account division at The Wine Group, leading the team with the most new national partnerships. The previous 7 years, Ashlee held various roles at Boston Beer Company, ranging from Distributor & People Management/Development in the Southeast Region of the U.S. to On Premise National Accounts. She outpaced company growth & helped to launch two new brands: Rebel IPA & Angry Orchard Cider in On Premise. Her favorite drink ranges pending the environment; but nothing tops a cold bubbly Gin & Q Tonic on warm summer day.'
+  _fieldset: teamMember
+- 
+  image: scott.jpg
+  name: Scott Miller
+  title: 'Vice President of Sales: Key Retail Accounts'
+  description: >
+    Scott has over 25 years of brand
+    building experience in the beverage
+    industry having held senior sales
+    management positions with Fiji Water,
+    Big Red/Thomas Kemper, Talking
+    Rain/Sparkling Ice, and Avalon Water.
+  _fieldset: teamMember
+- 
+  image: sara.jpg
+  name: Sara Carroll
+  title: 'Vice President of Sales: Natural and Specialty Retail'
+  description: >
+    Sara has worked in the natural food
+    industry for more than 20 years. Prior
+    to joining Q Mixers, Sara helped build
+    Lotus Foods, Numi Organic Tea and
+    Scharffen Berger Chocolate Maker into
+    category leading brands. Sara lives in
+    Oakland, CA with her husband and a
+    menagerie of animals including a dog, 2
+    cats, and a flock of chickens. Her
+    favorite drink is an IPA, but when she
+    drinking cocktails, it’s a Paloma.
   _fieldset: teamMember

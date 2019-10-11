@@ -17,6 +17,10 @@ fields:
     label: Image
     type:  image
 
+  video:
+    label: Video (Optional)
+    type: video
+
   recipeMixer:
     label: Q Mixer
     type: select

@@ -10,4 +10,12 @@ Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1206.jpg
 
 ----
 
-Introtext: We make the world's best carbonated mixers — clean, crisp, truly spectacular beverages crafted to enhance the finest spirits. (link: mixers/ginger-beer text: Ginger Beer), (link: mixers/tonic-water text: Tonic Water), (link: mixers/indian-tonic-water text: Indian Tonic Water), (link: mixers/ginger-ale text: Ginger Ale), (link: mixers/club text: Club Soda), (link: mixers/kola text: Kola) and (link: mixers/grapefruit text: Sparkling Grapefruit). Bold flavor, with more carbonation. And less sweet, so the subtleties of great spirits shine through. Q mixers make your drink spectacular.
+Introtext: 
+
+We make the world's best carbonated mixers — clean, crisp, truly spectacular beverages crafted to enhance the finest spirits. (link: mixers/ginger-beer text: Ginger Beer), (link: mixers/light-ginger-beer text: Light Ginger Beer), (link: mixers/tonic-water text: Tonic Water), (link: mixers/light-tonic text: Light Tonic Water), (link: mixers/indian-tonic-water text: Indian Tonic Water), (link: mixers/elderflower-tonic text: Elderflower Tonic Water), (link: mixers/ginger-ale text: Ginger Ale), (link: mixers/club text: Club Soda), (link: mixers/kola text: Kola) and (link: mixers/grapefruit text: Sparkling Grapefruit). Bold flavor, with more carbonation. And less sweet, so the subtleties of great spirits shine through. Q Mixers make your drink spectacular.
+
+Our spectacular mixers are verified non-GMO and certified kosher through OU.
+
+----
+
+Headervideo: 

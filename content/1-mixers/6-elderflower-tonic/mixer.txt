@@ -1,0 +1,37 @@
+Title: Elderflower Tonic Water
+
+----
+
+Thumbnail: elderflower.png
+
+----
+
+Mixercolor: #abddd3
+
+----
+
+Mixerimage: 2-elderflower.png
+
+----
+
+Description: Q Elderflower Tonic Water is fragrant, crisp, and clean with high carbonation, so it adds an unmistakable floral edge to your favorite cocktail.
+
+----
+
+Builder: 
+
+- 
+  picture: elderflowerbotanical.jpg
+  title: Elderflower
+  description: 'Elderflowers are the beautiful blossoms of the elderberry plant. They can only be harvested  for a few fleeting weeks in Spring, and then must be infused into syrup carefully yet extremely rapidly. The good news: if you do it right, the result is a sublime addition to your favorite cocktail.'
+  _fieldset: ingredientBlock
+- 
+  picture: carbonation-copy.jpg
+  title: extra carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to use more carbonation –
+    4.5 gas volumes to be precise.
+  _fieldset: ingredientBlock

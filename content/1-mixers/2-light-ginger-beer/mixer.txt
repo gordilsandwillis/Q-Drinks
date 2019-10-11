@@ -1,0 +1,70 @@
+Title: Light Ginger Beer
+
+----
+
+Thumbnail: light-ginger-beer.png
+
+----
+
+Mixercolor: #6ac8dd
+
+----
+
+Mixerimage: 2-light-ginger-beer.png
+
+----
+
+Description: Crafted to make your Skinny Mule spectacular with fewer than half the calories of the Q Ginger Beer. High carbonation, a kick of spice, and packed with real ginger.
+
+----
+
+Builder: 
+
+- 
+  picture: ginglightblu.jpg
+  title: Ginger
+  description: >
+    Q Light Ginger Beer has a strong ginger
+    punch and is very spicy. That’s
+    because we use real ginger, and lots of
+    it. Watch out.
+  _fieldset: ingredientBlock
+- 
+  picture: chili-peppers-light-blue-copy.jpg
+  title: CHILI PEPPERS
+  description: >
+    Chili peppers add an extra kick to Q
+    Light Ginger Beer, particularly at the
+    front of the palate.
+  _fieldset: ingredientBlock
+- 
+  picture: coriander_cardamom-light-blue-copy.jpg
+  title: CORIANDER AND CARDAMOM
+  description: >
+    For depth and complexity – the
+    coriander adds warm, nutty, and spicy
+    notes while the cardamom delivers an
+    aromatic, resinous fragrance.
+  _fieldset: ingredientBlock
+- 
+  picture: lime-light-blue-copy.jpg
+  title: Lime
+  description: >
+    To prevent scurvy British sailors were
+    given a daily ration of limes, earning
+    them the nickname “Limeys.” Such
+    drastic measures aren’t needed these
+    days. But limes do give Q Light Ginger
+    Beer a nice subtle top note.
+  _fieldset: ingredientBlock
+- 
+  picture: carbonation_lightblue.jpg
+  title: Extra Carbonation
+  description: >
+    A drink stays fizzier longer when it
+    starts with more carbonation. So we use
+    a custom, thicker glass bottle that
+    enables us to craft Q Light Ginger Beer
+    with more carbonation – 4.0 gas
+    volumes to be precise.
+  _fieldset: ingredientBlock

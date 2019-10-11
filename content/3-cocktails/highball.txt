@@ -15,3 +15,7 @@ Headerimage: q-drinks-photo-shoot-by-daniel-krieger-1380-min.jpg
 ----
 
 Introtext: The highball – a simple combination of a spirit and a carbonated mixer served over ice with a garnish – is as good as it gets. That is, assuming you use a great spirit, great ice, a great garnish, and a great mixer. Here are a few of our favorites:
+
+----
+
+Headervideo: 

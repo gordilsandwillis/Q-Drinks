@@ -1,0 +1,39 @@
+Title: Paloma
+
+----
+
+Image: paloma_1200.jpg
+
+----
+
+Recipemixer: grapefruit
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Tequila
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Grapefruit
+  _fieldset: ingredient
+- 
+  ingredient: Two lime wedges
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: Fill a highball glass with ice. Pour in the tequila and squeeze in a lime. Then pour in the Q Grapefruit. Gently stir and garnish with a lime.
+
+----
+
+Variations: To create a spicy salt rim, mix salt and jalapeno and spread out on a plate. Run a lime along the rim of a highball, then dip the rim into the salt mixture .  Try mezcal rather than tequila for a smokier drink.  A tiny splash of agave is a fun way to add some sweetness if preferred.

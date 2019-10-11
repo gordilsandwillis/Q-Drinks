@@ -1,0 +1,39 @@
+Title: Cold Brew and Tonic
+
+----
+
+Image: cold_brew.jpg
+
+----
+
+Recipemixer: tonic-water
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 4 oz Cold Brew Coffee
+  _fieldset: ingredient
+- 
+  ingredient: 3 oz Q Tonic Water
+  _fieldset: ingredient
+- 
+  ingredient: Lemon Peel
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: Fill a highball glass with ice.  Pour in coffee and tonic and stir gently to mix. Garnish with a lemon peel by expressing the oils in the skin over the top of the drink.
+
+----
+
+Variations: Add some agave for those who like it sweet. Rosemary is a great addition as a garnish.

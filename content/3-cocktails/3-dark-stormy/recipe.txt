@@ -2,7 +2,7 @@ Title: Dark and Stormy
 
 ----
 
-Image: dark_stormy-min.jpg
+Image: dark-stormy.jpg
 
 ----
 
@@ -13,10 +13,10 @@ Recipemixer: ginger-beer
 Ingredients: 
 
 - 
-  ingredient: 2 oz. dark rum
+  ingredient: 1.5 oz Premium Dark Rum
   _fieldset: ingredient
 - 
-  ingredient: 6 oz. Q Ginger Beer
+  ingredient: 5 oz Q Ginger Beer
   _fieldset: ingredient
 - 
   ingredient: Half a lime
@@ -34,11 +34,9 @@ Servingsnumber: 01
 
 Method: 
 
-Fill a highball glass with fresh ice. 
-Pour in the Q Ginger Beer and squeeze in the lime.
-Top with the rum so it floats on the top, looking like a dark storm cloud that will force you to stay at the bar all afternoon.
-Stay at the bar all afternoon.
+Fill a highball glass with ice. 
+Pour in the Q Ginger Beer and squeeze in the lime. Top with the rum so it floats on the top, looking like a dark storm cloud that will force you to stay at the bar all afternoon. Stay at the bar all afternoon.
 
 ----
 
-Variations: Because Q Ginger Beer is less sweet than other ginger beers, it leaves more room to add a modifier. Try adding 2 oz. fresh juice – pineapple for a Summer Storm or apple cider for a Dark, Stormy, and Cidery.
+Variations: Because Q Ginger Beer is less sweet than other ginger beers, it leaves more room to add a modifier. Try adding 2 oz fresh juice – pineapple for a Summer Storm or apple cider for a Dark, Stormy, and Cidery.

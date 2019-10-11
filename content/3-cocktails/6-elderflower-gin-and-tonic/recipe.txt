@@ -1,0 +1,39 @@
+Title: Elderflower Gin and Tonic
+
+----
+
+Image: elderflower.jpg
+
+----
+
+Recipemixer: elderflower-tonic
+
+----
+
+Ingredients: 
+
+- 
+  ingredient: 1.5 oz Premium Gin
+  _fieldset: ingredient
+- 
+  ingredient: 5 oz Q Elderflower Tonic Water
+  _fieldset: ingredient
+- 
+  ingredient: Lemon wheel
+  _fieldset: ingredient
+
+----
+
+Servings: Makes one drink
+
+----
+
+Servingsnumber: 01
+
+----
+
+Method: Fill a highball glass with ice and add your choice of gin. Then pour in the Q Elderflower Tonic Water. Gently stir and garnish with a lemon wheel.
+
+----
+
+Variations: Have some fun. Swap in a different garnish, maybe a grapefruit, mint sprig, cucumber, or lime twist.

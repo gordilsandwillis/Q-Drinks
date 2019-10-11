@@ -39,14 +39,14 @@ if(isset($mobileTextColor)) {
     <nav>
     <div>
         <div class="left">
-    		<a href="<?= url() ?>/mixers">Our Mixers</a>
-    		<a href="<?= url() ?>/inspiration">Inspiration</a>
-    		<a href="<?= url() ?>/cocktails">Cocktails</a>
+    		<a class="nav-link" href="<?= url() ?>/mixers">Our Mixers</a>
+    		<a class="nav-link" href="<?= url() ?>/inspiration">Inspiration</a>
+    		<a class="nav-link" href="<?= url() ?>/cocktails">Cocktails</a>
         </div>
         <div class="right">
-    		<a href="<?= url() ?>/spectacular-serve">Spectacular Serve</a>
-    		<a href="<?= url() ?>/accolades">Accolades</a>
-    		<a href="<?= url() ?>/about">About Us</a>
+    		<a class="nav-link" href="<?= url() ?>/spectacular-serve">Spectacular Serve</a>
+    		<a class="nav-link" href="<?= url() ?>/accolades">Accolades</a>
+    		<a class="nav-link" href="<?= url() ?>/about">About Us</a>
         </div>
     </div>
     </nav>
