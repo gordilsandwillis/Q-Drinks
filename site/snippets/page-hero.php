@@ -1,9 +1,9 @@
 <?
 	if(!isset($pushDown)) $pushDown = false;
 	if(!isset($entrance)) $entrance = true;
-	if(!isset($image)) $image = false;
-	if(!isset($mobileImage)) $mobileImage = false;
-	if(!isset($video)) $video = false;
+	if(!isset($image)) $image = '';
+	if(!isset($mobileImage)) $mobileImage = '';
+	if(!isset($video)) $video = '';
 	if(!isset($fullHeight)) $fullHeight = false;
 ?>
 
@@ -16,7 +16,7 @@
 		      <source src="<?= $page->url() . '/' . $video ?>" type="video/mp4">
 		    </video>
 	    <? elseif ($image->isNotEmpty()) : ?>
-	    	<? if ($mobileImage) : ?>
+	    	<? if ($mobileImage->isNotEmpty()) : ?>
 					<picture className="img">
 							<source
 								srcset="<?= $image->focusCrop(800)->url() ?> 800w,
