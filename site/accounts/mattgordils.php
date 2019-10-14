@@ -7,8 +7,8 @@ email: mattgordils@gmail.com
 language: en
 role: admin
 history:
+  - test
   - cocktails/moscow-mule
   - cocktails
-  - test
   - accolades
   - spectacular-serve

@@ -29,7 +29,7 @@
 ?>
   <main class="home" role="main">
   	<div class="top-area">
-	    <?php snippet('page-hero', [
+	    <? snippet('page-hero', [
 	      'image' => $image->desktopImage()->toFile(),
 	      'mobileImage' => $image->mobileImage()->toFile(),
 	      'fullHeight' => true

@@ -1,11 +1,13 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="serve padded-bottom" role="main">
-    <?php snippet('page-hero', [
+    <? if ( $page->headerImage()->isNotEmpty() or $page->headerVideo()->isNotEmpty() ):?>
+    <? snippet('page-hero', [
       'image' => $page->image($page->headerImage()),
       'video' => $page->headerVideo(),
       'pushDown' => $page->topText()->isNotEmpty()
     ]) ?>
+    <? endif ?>
 
     <? if ( $page->topText()->isNotEmpty() ): ?>
       <div>

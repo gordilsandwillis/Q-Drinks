@@ -2,7 +2,7 @@
 
   <main class="mixers" role="main">
 
-    <?php snippet('page-hero', [
+    <? snippet('page-hero', [
       'image' => $page->image($page->headerImage()),
       'video' => $page->headerVideo()
     ]) ?>

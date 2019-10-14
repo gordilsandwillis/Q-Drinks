@@ -1,7 +1,7 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="highball" role="main">
-    <?php snippet('page-hero', [
+    <? snippet('page-hero', [
       'image' => $page->images()->find($page->headerImage()),
       'video' => $page->headerVideo(),
       'limit' => 6,

@@ -1,7 +1,7 @@
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
 
   <main class="accolades" role="main">
-    <?php snippet('page-hero', [
+    <? snippet('page-hero', [
       'image' => $page->image($page->headerImage()),
       'video' => $page->headerVideo(),
       'pushDown' => $page->topText()->isNotEmpty(),

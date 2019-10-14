@@ -4,7 +4,7 @@
 
     <div class="top-area">
 
-      <?php snippet('page-hero', [
+      <? snippet('page-hero', [
         'image' => $page->image($page->headerImage()),
         'video' => $page->headerVideo(),
         'pushDown' => true,

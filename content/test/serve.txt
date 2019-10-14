@@ -2,7 +2,7 @@ Title: test
 
 ----
 
-Headerimage: q_homepage_3.jpg
+Headerimage: 
 
 ----
 
@@ -42,4 +42,4 @@ Builder:
 
 ----
 
-Headervideo: 700_f_187911543_97q20knxjn3nmesinm6btltkj2eftolt_st.mp4
+Headervideo: 
