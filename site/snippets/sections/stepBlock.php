@@ -1,4 +1,4 @@
-<? if ($data->picture()->isNotEmpty()): ?>
+<? if ($data->picture()->isNotEmpty() || $data->coverVideo->isNotEmpty()): ?>
 <section class="alternating-blocks">
 	<div class="ingredient-block <?= $data->style()->html() ?>">
 		<div class="row transition-in">
