@@ -21,6 +21,10 @@ fields:
     label: Header Video (optional)
     type: video
 
+  headerText:
+    label: Header Text (optional) <span class="panel-field-description">If left empty "Step By Step" will be used</span>
+    type:  text
+
   topText:
     label: Top Text (optional)
     type:  textarea
@@ -38,21 +42,26 @@ fields:
             label: Image
             type: image
           coverVideo:
-            label: Cover Video (mp4, short video to loop, optional)
+            label: Cover Video <span class="panel-field-description">(mp4, short video to loop, optional)</span>
             type: video
             width: 1/2
           fullVideo:
-            label: Full Video (mp4, optional)
-            type: video
+            label: Full Video (YouTube Vimeo ID) <span class="panel-field-description">ie. https://www.youtube.com/watch?v=<b>way4pg0ppRk</b></span>
+            type: text
             width: 1/2
           title: 
             label: Title
             type: textarea
-            width: 1/2
           description: 
             label: Description
             type: textarea
             width: 1/2
+            buttons: true
+          ingredients: 
+            label: Ingredients <span class="panel-field-description">must put a '-' and space before each list item</span>
+            type: textarea
+            width: 1/2
+            buttons: false
           buttonLabel:
             label: Button label
             type: text
@@ -65,3 +74,27 @@ fields:
             label: Open Button In New Tab
             type: checkbox
             width: 1/3
+
+  
+  formHeader:
+    label: Contact Form Header
+    type: text
+    width: 1/3
+  formIntroText:
+    label: Contact Form Intro Text
+    type: textarea
+    buttons: false
+    width: 1/3
+  showForm:
+    label: Show contact form
+    type: checkbox
+    width: 1/3
+    
+  showLocator:
+    label: Show "Find Q Near You" section <span class="panel-field-description">Same module from the about page</span>
+    type: checkbox
+    width: 1/2
+  showBottomVideo:
+    label: Show video at bottom (YouTube Vimeo ID) <span class="panel-field-description">ie. https://www.youtube.com/watch?v=<b>way4pg0ppRk</b></span>
+    type: text
+    width: 1/2

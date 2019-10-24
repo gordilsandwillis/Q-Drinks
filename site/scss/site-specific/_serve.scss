@@ -1,3 +1,54 @@
+.yt-embed-wrap {
+	position: relative;
+	padding-bottom: (9/16) * 100%;
+	padding-bottom: 56.25%;
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.serve-form {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	form {
+		margin-top: 2.5em;
+		&.error {
+			border: 2px solid red;
+		}
+	}
+	.section-header {
+		.container {
+			padding-top: 0;
+			padding-bottom: 1.5em;
+		}
+	}
+	button {
+		margin-top: 2em;
+	}
+	input[type="text"] {
+		-webkit-appearance: none;
+	  appearance: none;
+	  border: 2px solid #333;
+	  font-size: 14px;
+	  text-transform: uppercase;
+	  letter-spacing: 0.15em;
+	  font-weight: 700;
+	  outline: none;
+	  height: 40px;
+	  line-height: 40px;
+	  padding: 0 12px;
+	  width: 100%;
+	  background: transparent;
+	  margin-bottom: 1.5em;
+	}
+}
+
 main.serve {
 	.top-area.push-down {
 		margin-bottom: $margin;

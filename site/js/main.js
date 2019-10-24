@@ -453,17 +453,13 @@ var closeMobileMenu = function () {
 
 var serveVideos = function () {
   let videos = $('.alternating-blocks .media-wrap.has-full-video')
-  console.log('yey')
   videos.each((index, item) => {
     let videoTrigger = $(item).find($('.video-trigger'))
-    let fullVideo = $(item).find($('video.full-video'))[0]
-
-    console.log(fullVideo)
+    let fullVideo = $(item).find($('.full-video'))[0]
 
     videoTrigger.click(function() {
-      console.log('rrr')
       videoTrigger.addClass('playing')
-      fullVideo.play()
+      fullVideo.src += '&autoplay=1';
     })
 
     fullVideo.addEventListener('ended', function() {
@@ -471,6 +467,68 @@ var serveVideos = function () {
       fullVideo.currentTime = 0
     })
   })
+
+  //   $('.video-container').click(function(){
+  //     $(this).find('.video-player-cover').css('display','none');
+  //     $(this).find('.play-button').css('display','none');
+  //     $(this).find('.lazy-video-container').css('display','none');
+  //     $(this).find('iframe').css('display','block');
+  //     const theID = $(this).find('.video-player-cover').attr('cover-for');
+  //     $('#video-' + theID )[0].src += '?autoplay=1';
+  //   })
+}
+
+var serveForm = function () {
+
+  // get the form elements defined in your form HTML above    
+  var form = $("form.serve-form-element");
+  var button = $("form.serve-form-element button");
+
+  console.log(button)
+
+  // Success and Error functions for after the form is submitted
+  function success() {
+    console.log('success')
+    button.removeClass('loading')
+    button.addClass('success')
+    form[0].reset();
+    setTimeout(() => {
+      button.removeClass('success')
+    }, 1000)
+  }
+
+  function error() {
+    console.log('shake')
+    button.removeClass('loading')
+    form.addClass('shake');
+    setTimeout(() => {
+      form.removeClass('shake');
+    }, 1000)
+  }
+
+  // handle the form submission event
+  form[0].addEventListener("submit", function(ev) {
+    ev.preventDefault();
+    var data = new FormData(form[0]);
+    ajax('POST', 'https://formspree.io/mrgzqbzb', data, success, error);
+    button.addClass('loading')
+  });
+
+  // helper function for sending an AJAX request
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -485,6 +543,7 @@ document.addEventListener("DOMContentLoaded", function() {
   teamGrid();
   headerActive();
   serveVideos();
+  serveForm();
 });
 
 $(window).scroll(function() {

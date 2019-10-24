@@ -511,10 +511,15 @@ video {
 
 /* Better fonts */
 .panel-field-description {
-  opacity: .4;
+  color: rgba(0, 0, 0, .4);
   font-size: .85em;
   line-height: 1.4em;
   display: block;
+}
+
+.panel-field-description b {
+  color: #000;
+  font-weight: normal;
 }
 
 /* Style tweaks */

@@ -8315,6 +8315,16 @@ button.medium {
   line-height: 36px;
 }
 
+.btn.large,
+input[type="submit"].large,
+button.large {
+  font-size: .95em;
+  height: 56px;
+  max-height: 56px;
+  padding: 0px 30px 2px 30px;
+  line-height: 52px;
+}
+
 .btn.tiny,
 input[type="submit"].tiny,
 button.tiny {
@@ -8387,18 +8397,19 @@ button:after {
 input[type="submit"].loading,
 button.loading {
   color: transparent;
-  background-color: rgba(128, 128, 128, 0);
+  background-color: #b3b3b3;
   border: 2px solid #333;
-  border-color: rgba(128, 128, 128, 0);
+  border-color: #b3b3b3;
   cursor: default;
+  opacity: .4;
 }
 
 .btn.loading:before,
 input[type="submit"].loading:before,
 button.loading:before {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-top-color: #fff;
-  border-right-color: #fff;
+  border: 2px solid rgba(51, 51, 51, 0.3);
+  border-top-color: #333;
+  border-right-color: #333;
   -webkit-animation: rotate 0.5s linear infinite;
   -moz-animation: rotate 0.5s linear infinite;
   -o-animation: rotate 0.5s linear infinite;
@@ -8876,6 +8887,35 @@ section.alternating-blocks .row *[class^="col-"] .info div {
   }
 }
 
+section.alternating-blocks .row .col .info div p, section.alternating-blocks .row .col .info div ul, section.alternating-blocks .row .col .info div ol,
+section.alternating-blocks .row *[class^="col-"] .info div p,
+section.alternating-blocks .row *[class^="col-"] .info div ul,
+section.alternating-blocks .row *[class^="col-"] .info div ol {
+  margin: 1em 0;
+  font-size: .9rem;
+}
+
+@media only screen and (max-width: 600px) {
+  section.alternating-blocks .row .col .info div p, section.alternating-blocks .row .col .info div ul, section.alternating-blocks .row .col .info div ol,
+  section.alternating-blocks .row *[class^="col-"] .info div p,
+  section.alternating-blocks .row *[class^="col-"] .info div ul,
+  section.alternating-blocks .row *[class^="col-"] .info div ol {
+    font-size: 1.125rem;
+  }
+}
+
+section.alternating-blocks .row .col .info div ol,
+section.alternating-blocks .row *[class^="col-"] .info div ol {
+  list-style-type: decimal;
+  padding-left: 1.1em;
+}
+
+section.alternating-blocks .row .col .info div ul,
+section.alternating-blocks .row *[class^="col-"] .info div ul {
+  list-style-type: disc;
+  padding-left: 1.1em;
+}
+
 section.alternating-blocks .row .col .info div.centered,
 section.alternating-blocks .row *[class^="col-"] .info div.centered {
   text-align: center;
@@ -8901,7 +8941,7 @@ section.alternating-blocks .row *[class^="col-"] .info div h5 {
 
 section.alternating-blocks .row .col .info div .btn,
 section.alternating-blocks .row *[class^="col-"] .info div .btn {
-  margin-top: 2em;
+  margin-top: 1.2em;
 }
 
 @media only screen and (min-width: 600px) {
@@ -9920,6 +9960,35 @@ footer .container ul li.q-footer-title {
   }
 }
 
+.shake {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -10920,6 +10989,61 @@ main.mixer .mixer-list .col img {
     left: auto;
     right: 100%;
   }
+}
+
+.yt-embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-bottom: 56.25%;
+}
+
+.yt-embed-wrap iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.serve-form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.serve-form form {
+  margin-top: 2.5em;
+}
+
+.serve-form form.error {
+  border: 2px solid red;
+}
+
+.serve-form .section-header .container {
+  padding-top: 0;
+  padding-bottom: 1.5em;
+}
+
+.serve-form button {
+  margin-top: 2em;
+}
+
+.serve-form input[type="text"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #333;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  outline: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 1.5em;
 }
 
 main.serve .top-area.push-down {

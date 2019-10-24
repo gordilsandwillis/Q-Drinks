@@ -17,11 +17,10 @@
 					<? endif ?>
 
 					<? if ( $data->fullVideo->isNotEmpty()): ?>
-						<video class="full-video" playsinline controls>
-				      <source src="<?= $page->url() . '/' . $data->fullVideo() ?>" type="video/mp4">
-				    </video>
+				    <div class="yt-embed-wrap">
+							<iframe class="full-video" width="560" height="315" src="https://www.youtube.com/embed/<?= $data->fullVideo() ?>?rel=0&controls=1&showinfo=0&loop=1&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					<? endif ?>
-
 				</div>
 			</div>
 			<div class="col-6 parallax-block-opposite">
@@ -29,6 +28,9 @@
 					<div>
 						<h5><?= $data->title()->html() ?></h5>
 						<p><?= $data->description()->html() ?></p>
+						<? if($data->ingredients()->isNotEmpty()) : ?>
+							<?= $data->ingredients()->kirbytext() ?>
+						<? endif; ?>
 						<? if ($data->buttonLabel()->isNotEmpty() && $data->buttonLink()->isNotEmpty()) : ?>
 							<a href="<?= $data->buttonLink()->html() ?>" target="<? if ($data->buttonNewTab()->isNotEmpty()) : ?>_blank<? endif ?>" class="btn lg"><?= $data->buttonLabel()->html() ?></a>
 						<? endif ?>

@@ -52,6 +52,14 @@ button {
     line-height: $btn-medium-height - 4px;
   }
 
+  &.large {
+    font-size: .95em;
+    height: $btn-large-height;
+    max-height: $btn-large-height;
+    padding: $btn-large-padding;
+    line-height: $btn-large-height - 4px;
+  }
+
   &.tiny {
     // font-size: .857em;
     height: $btn-tiny-height;
@@ -106,14 +114,15 @@ button {
 
   &.loading {
     color: transparent;
-    background-color: lighten($btn-bg, 50%);
+    background-color: lighten($btn-color, 50%);
     border: $btn-border;
-    border-color: lighten($btn-bg, 50%);
+    border-color: lighten($btn-color, 50%);
     cursor: default;
+    opacity: .4;
     &:before {
-      border: 2px solid rgba($bg-color, .5);
-      border-top-color: $bg-color;
-      border-right-color: $bg-color;
+      border: 2px solid rgba($btn-color, .3);
+      border-top-color: $btn-color;
+      border-right-color: $btn-color;
       @include animation(rotate $spinner-speed linear infinite);
       opacity: 1;
       visibility: visible;
