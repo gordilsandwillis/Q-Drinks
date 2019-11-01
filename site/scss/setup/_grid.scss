@@ -173,6 +173,42 @@ Containers columns
   
 }
 
+.flex-row {
+  padding: 0;
+  list-style: none;
+
+  &:not(.no-break):not(.break-lg):not(.break-xlg):not(.break-sm) {
+    @include respond($md) {
+      @include col-container();
+      @include create-cols();
+      display: flex;
+    }
+  }
+
+  &.no-break {
+    @include col-container();
+    @include create-cols();
+    display: flex;
+  }
+  
+  &.break-lg {
+    @include respond($lg) {
+      @include col-container();
+      @include create-cols();
+      display: flex;
+    }
+  }
+
+  &.break-xlg {
+    @include respond($xlg) {
+      @include col-container();
+      @include create-cols();
+      display: flex;
+    }
+  }
+  
+}
+
 .inline-grid {
   padding: 0;
   list-style: none;

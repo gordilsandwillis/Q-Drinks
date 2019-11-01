@@ -1,7 +1,7 @@
 <? if ($data->picture()->isNotEmpty() || $data->coverVideo->isNotEmpty()): ?>
 <section class="alternating-blocks">
 	<div class="ingredient-block <?= $data->style()->html() ?>">
-		<div class="row transition-in">
+		<div class="flex-row transition-in">
 			<div class="col-6 parallax-block">
 				<div class="media-wrap<? if ( $data->fullVideo->isNotEmpty()): ?> has-full-video<? endif ?>">
 					<? if ( $data->coverVideo->isNotEmpty()): ?>
@@ -23,7 +23,7 @@
 					<? endif ?>
 				</div>
 			</div>
-			<div class="col-6 parallax-block-opposite">
+			<div class="col-6 text parallax-block-opposite">
 				<div class="info">
 					<div>
 						<h5><?= $data->title()->html() ?></h5>

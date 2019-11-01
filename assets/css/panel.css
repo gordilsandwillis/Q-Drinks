@@ -511,7 +511,7 @@ video {
 
 /* Better fonts */
 .panel-field-description {
-  color: rgba(0, 0, 0, .4);
+  color: rgba(0, 0, 0, 0.4);
   font-size: .85em;
   line-height: 1.4em;
   display: block;
@@ -519,7 +519,6 @@ video {
 
 .panel-field-description b {
   color: #000;
-  font-weight: normal;
 }
 
 /* Style tweaks */

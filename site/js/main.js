@@ -498,7 +498,7 @@ var serveForm = function () {
   }
 
   function error() {
-    console.log('shake')
+    console.log('error')
     button.removeClass('loading')
     form.addClass('shake');
     setTimeout(() => {
