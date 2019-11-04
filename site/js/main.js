@@ -482,23 +482,60 @@ var serveForm = function () {
 
   // get the form elements defined in your form HTML above    
   var form = $("form.serve-form-element");
+  var formInputs = $("form.serve-form-element input");
   var button = $("form.serve-form-element button");
 
-  console.log(button)
+  const validateEmail = (email = '') => {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+
+  function validateForm() {
+    var isValid = true;
+    $(formInputs).each(function() {
+      if ( $(this).attr('validation') === 'email' ) {
+        if ( !validateEmail($(this).val()) ) {
+          isValid = false;
+        }
+      } else if ( $(this).val() === '' ) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      button.prop( "disabled", false )
+    } else {
+      button.prop( "disabled", true )
+    }
+  }
+
+  formInputs.each(function() {
+    console.log(this)
+    $(this).keyup((event) => {
+      console.log(event.target.value)
+      validateForm()
+    })
+  })
 
   // Success and Error functions for after the form is submitted
   function success() {
     console.log('success')
     button.removeClass('loading')
     button.addClass('success')
-    form[0].reset();
+    form.removeClass('loading')
+    form.addClass('success')
     setTimeout(() => {
       button.removeClass('success')
-    }, 1000)
+      form.removeClass('success')
+      form[0].reset();
+      button.prop( "disabled", true )
+    }, 3000)
   }
 
   function error() {
     console.log('error')
+    form.removeClass('loading')
     button.removeClass('loading')
     form.addClass('shake');
     setTimeout(() => {
@@ -512,6 +549,7 @@ var serveForm = function () {
     var data = new FormData(form[0]);
     ajax('POST', 'https://formspree.io/mrgzqbzb', data, success, error);
     button.addClass('loading')
+    form.addClass('loading')
   });
 
   // helper function for sending an AJAX request

@@ -17,9 +17,41 @@
 	margin-right: auto;
 	text-align: center;
 	form {
+		position: relative;
 		margin-top: 2.5em;
+		transition: opacity .3s $ease;
 		&.error {
 			border: 2px solid red;
+		}
+		&.loading {
+			input, button {
+				opacity: .4;
+			}
+		}
+		&.success {
+			input, button {
+				opacity: .2;
+			}
+			&:before {
+				transform: translate3d(-50%, -50%, 0);
+				opacity: 1;
+			}
+		}
+		&:before {
+			transition: opacity .3s $ease, transform .3s $ease;
+			content: 'Thank You';
+			display: block;
+			position: absolute;
+			z-index: 3;
+			top: 30%;
+			left: 50%;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			opacity: .0;
+			pointer-events: none;
+			transform: translate3d(-50%, -60%, 0);
 		}
 	}
 	.section-header {

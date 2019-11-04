@@ -9792,11 +9792,6 @@ button:after {
 input[type="submit"].loading,
 button.loading {
   color: transparent;
-  background-color: #b3b3b3;
-  border: 2px solid #333;
-  border-color: #b3b3b3;
-  cursor: default;
-  opacity: .4;
 }
 
 .btn.loading:before,
@@ -9811,6 +9806,19 @@ button.loading:before {
   animation: rotate 0.5s linear infinite;
   opacity: 1;
   visibility: visible;
+}
+
+.btn.loading, .btn:disabled,
+input[type="submit"].loading,
+input[type="submit"]:disabled,
+button.loading,
+button:disabled {
+  background-color: #b3b3b3;
+  border: 2px solid #333;
+  border-color: #b3b3b3;
+  cursor: default;
+  opacity: .4;
+  pointer-events: none;
 }
 
 .btn.success,
@@ -12408,11 +12416,43 @@ main.mixer .mixer-list .col img {
 }
 
 .serve-form form {
+  position: relative;
   margin-top: 2.5em;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .serve-form form.error {
   border: 2px solid red;
+}
+
+.serve-form form.loading input, .serve-form form.loading button {
+  opacity: .4;
+}
+
+.serve-form form.success input, .serve-form form.success button {
+  opacity: .2;
+}
+
+.serve-form form.success:before {
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+}
+
+.serve-form form:before {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  content: 'Thank You';
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 30%;
+  left: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .0;
+  pointer-events: none;
+  transform: translate3d(-50%, -60%, 0);
 }
 
 .serve-form .section-header .container {

@@ -114,11 +114,11 @@ button {
 
   &.loading {
     color: transparent;
-    background-color: lighten($btn-color, 50%);
-    border: $btn-border;
-    border-color: lighten($btn-color, 50%);
-    cursor: default;
-    opacity: .4;
+    // background-color: lighten($btn-color, 50%);
+    // border: $btn-border;
+    // border-color: lighten($btn-color, 50%);
+    // cursor: default;
+    // opacity: .4;
     &:before {
       border: 2px solid rgba($btn-color, .3);
       border-top-color: $btn-color;
@@ -127,6 +127,16 @@ button {
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  &.loading,
+  &:disabled {
+    background-color: lighten($btn-color, 50%);
+    border: $btn-border;
+    border-color: lighten($btn-color, 50%);
+    cursor: default;
+    opacity: .4;
+    pointer-events: none;
   }
 
   &.success {

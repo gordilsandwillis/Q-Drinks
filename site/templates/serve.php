@@ -52,13 +52,13 @@
 
           <form class="serve-form-element">
             <div class="row">
-              <div class="col-6"><input type="text" name="Name" required placeholder="Name"></div>
-              <div class="col-6"><input type="text" name="Email" required placeholder="Email"></div>
-              <div class="col-6"><input type="text" name="Instagram" placeholder="Instagram Handle"></div>
-              <div class="col-6"><input type="text" name="Birthday" placeholder="Birthday (MM/DD/YY)"></div>
-              <div class="col-12"><input type="text" name="Address" required placeholder="Address"></div>
+              <div class="col-6"><input type="text" name="Name" required placeholder="Name*"></div>
+              <div class="col-6"><input type="text" name="Email" required placeholder="Email*" validation="email"></div>
+              <div class="col-6"><input type="text" name="Instagram" required placeholder="Instagram Handle*"></div>
+              <div class="col-6"><input type="text" name="Birthday" required placeholder="Birthday (MM/DD/YY)*"></div>
+              <div class="col-12"><input type="text" name="Address" required placeholder="Address*"></div>
             </div>
-            <button type="submit" class="large">Submit</button>
+            <button type="submit" class="large" disabled="false">Submit</button>
           </form>
         </div>
       </section>
