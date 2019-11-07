@@ -103,52 +103,47 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
     $newPageHead.find( headTags ).appendTo( 'head' ); // Append new tags to the head
 });
 
-
-// Newletter Signup
-var newsletterSignup = function() {
-  var form = $('.newsletter-form');
-
-  function outputMessage(msg){
-    $('.newsletter-form').find('input[type=text]').val('');
-    $('.newsletter-form').find('input[type=text]').blur();
-    $('.newsletter-form').find('input[type=text]').attr('placeholder', msg);
-  };
-
-  form.submit(function(e) {
-
-    e.preventDefault();
-    $('.newsletter-form').find('button.newsletter-submit').addClass('loading');
-    var form = this.form,
-      link = '/assets/includes/cc_subscribe.php',
-      request = $.ajax({
-                  url: link,
-                  type: 'POST',
-                  data : $('.newsletter-form').serialize()
-                });
-    request.done(function(response, textStatus, xhr){
-      var form = this.form;
-      var resp = JSON.parse(response);
-      if (resp.status == 'ACTIVE') {
-        outputMessage('Thank You');
-        $('.newsletter-form').find('button.newsletter-submit').removeClass('loading');
-        $('.newsletter-form').find('button.newsletter-submit').addClass('check');
-        setTimeout(function(){
-          $('.newsletter-form').find('button.newsletter-submit').removeClass('check');
-        }, 3000);
-      }
-      else {
-        outputMessage('Invalid Email');
-        $('.newsletter-form').addClass('shake animated');
-        $('.newsletter-form').find('button.newsletter-submit').removeClass('loading');
-        setTimeout(function(){
-          $('.newsletter-form').removeClass('shake animated');
-        }, 1200);
-      }
+// Newsletter Signup
+var mailchimpSignup = {
+  init : function() {
+    var self = this;
+    $('.newsletter-form').submit(function(e){
+      self.subscribe(e, self);
     });
+  },
+  form : $('.newsletter-form'),
 
-  });
+  subscribe : function(e, self){
+    e.preventDefault();
+    var form = self.form,
+        link = '/assets/includes/mc_subscribe.php',
+        request = $.ajax({
+                    url: link,
+                    type: 'POST',
+                    data : $('.newsletter-form').serialize()
+                  });
+    request.done(self.handleResponse);
+  },
 
-};
+  handleResponse : function(response){
+    function outputMessage(msg){
+      $('.newsletter-form').find('input[type=text]').val('');
+      $('.newsletter-form').find('input[type=text]').blur();
+      $('.newsletter-form').find('input[type=text]').attr('placeholder',msg);
+    };
+    var form = this.form;
+    var resp = JSON.parse(response);
+    if (resp.title == 'Member Exists') {
+      outputMessage('Thanks Times 2!');        
+    } else if (resp.title == 'Invalid Resource' || resp.title == 'Internal Server Error') {
+      outputMessage('Invalid Email');
+    } else if (resp.status == 'subscribed') {
+      outputMessage('Thanks');
+    } else {
+      outputMessage('Invalid Response');
+    }
+  }
+} // End mailchimpSignup
 
 var headerActive = () => {
   let location = $(window)[0].location.href
@@ -577,7 +572,8 @@ document.addEventListener("DOMContentLoaded", function() {
   parallaxblock2();
   loadedTransitionIn();
   smoothScroll();
-  newsletterSignup();
+  mailchimpSignup.init(mailchimpSignup);
+  // newsletterSignup();
   teamGrid();
   headerActive();
   serveVideos();
