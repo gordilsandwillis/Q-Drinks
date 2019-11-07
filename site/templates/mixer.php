@@ -44,7 +44,8 @@
           <div>
             <div class="recipe-card">
               <a href="<?= $recipe->url(); ?>" class="image">
-                <div class="bg-image" style="background-image: url(<?= $recipe->image()->crop(750, 750)->url() ?>);">
+                <div class="media-wrap">
+                  <img src="<?= $recipe->image()->crop(1000, 1000)->url() ?>" alt="<?= $recipe->title() ?>">
                 </div>
               </a>
 
