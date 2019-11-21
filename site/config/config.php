@@ -19,8 +19,9 @@ c::set('license', 'K2-PRO-bff6144031c9fffee393624131a00643');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
 
-/*
 c::set('panel.install', true);
+
+/*
 
 ---------------------------------------
 Kirby Configuration
