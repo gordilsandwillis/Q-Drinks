@@ -1,0 +1,34 @@
+title: Store Locator
+
+files: true
+  fields:
+    focus:
+      label: Focus Crop
+      type: focus
+
+pages: false
+  hide: true
+  template: mixer
+
+options: 
+  template: false  
+  status: false  
+  url: false  
+
+fields:
+  title:
+    label: Page Title
+    type:  text
+
+  headerImage:
+    label: Header Image
+    type: image
+  
+  headerVideo:
+    label: Header Video (Optional)
+    type: video
+  
+  introText:
+    label: Intro Text
+    type:  textarea
+    buttons: true

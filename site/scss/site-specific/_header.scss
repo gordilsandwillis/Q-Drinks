@@ -294,6 +294,10 @@ header {
 		}
 	}
 
+	&.grey {
+		background: $grey-bg;
+	}
+
 	&.transparent {
 		background: transparent;
 	}

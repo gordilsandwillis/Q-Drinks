@@ -10988,6 +10988,10 @@ header.inverted .menu-icon .center:before {
   background: #fff;
 }
 
+header.grey {
+  background: #f2f2f3;
+}
+
 header.transparent {
   background: transparent;
 }
@@ -11333,6 +11337,10 @@ footer .container ul li.q-footer-title {
   footer .container ul li.q-footer-title {
     font-size: 18px;
   }
+}
+
+footer.grey {
+  background: #f2f2f3;
 }
 
 @-webkit-keyframes transition-in {
