@@ -3,8 +3,8 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title><?= $site->title()->html() ?><?php if($page->isHomePage()): ?><?php else: ?> | <?= $page->title()->html() ?><?php endif ?></title>
 
   <?
@@ -50,7 +50,6 @@
   <meta name="description" content="<?= $description ?>">
   <meta name="keywords" content="<?= $keywords ?>">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <link rel="shortcut icon" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon.png" />
 

@@ -223,7 +223,7 @@ section.alternating-blocks {
 						margin: 1em 0;
 						font-size: .9rem;
 						@include respond-smaller-than($md) {
-							font-size: 1.125rem;
+							font-size: 1rem;
 						}
 					}
 					ol {

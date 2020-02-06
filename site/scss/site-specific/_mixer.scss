@@ -52,6 +52,9 @@ main.mixer {
 				+ p {
 					animation-delay: $fade-in-speed + .2;
 				}
+				@include respond-smaller-than($md) {
+					font-size: 1rem;
+				}
 			}
 		}
 	}

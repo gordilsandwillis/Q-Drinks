@@ -10301,7 +10301,7 @@ section.alternating-blocks .flex-row *[class^="col-"] .info div ol {
   section.alternating-blocks .flex-row *[class^="col-"] .info div p,
   section.alternating-blocks .flex-row *[class^="col-"] .info div ul,
   section.alternating-blocks .flex-row *[class^="col-"] .info div ol {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
@@ -11232,6 +11232,12 @@ footer .container ul li {
   font-size: 10px;
 }
 
+@media only screen and (max-width: 900px) {
+  footer .container ul li {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   footer .container ul li:nth-child(-n + 3) {
     text-align: right;
@@ -11802,6 +11808,12 @@ main.mixer .mixer-intro .text-wrap p {
 
 main.mixer .mixer-intro .text-wrap p + p {
   animation-delay: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+  main.mixer .mixer-intro .text-wrap p {
+    font-size: 1rem;
+  }
 }
 
 main.mixer .ingredient-images {
