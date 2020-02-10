@@ -2,6 +2,14 @@
 <html lang="<?= site()->language() ? site()->language()->code() : 'en' ?>">
 <head>
 
+  <?php
+    $env = getenv('ENV');
+
+    if(isset($env) && $env == 'prod' ) {
+      snippet('tag-manager-1');
+    }
+  ?>
+
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -82,7 +90,7 @@ if(isset($headerClass)) {
     $env = getenv('ENV');
 
     if(isset($env) && $env == 'prod' ) {
-      snippet('analytics');
+      snippet('tag-manager-2');
     }
   ?>
 
