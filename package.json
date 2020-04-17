@@ -1,12 +1,12 @@
 {
-  "name": "hypersite",
+  "name": "q-mixers",
   "version": "1.0.0",
-  "description": "Hypersite",
+  "description": "Q Mixers",
   "repository": {
     "type": "git",
     "url": "test"
   },
-  "author": "Hyperlink | Steve",
+  "author": "Q Mixers",
   "license": "ISC",
   "devDependencies": {
     "barba.js": "^1.0.0",
