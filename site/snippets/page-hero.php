@@ -14,7 +14,7 @@
 	  	<div class="bg-image cover-media">
 				<? if ($video && $video->isNotEmpty()) : ?>
 					<video autoplay loop muted playsinline>
-			      <source src="<?= $page->url() . '/' . $video ?>" type="video/mp4">
+			      <source src="<?= $page->video()->url() ?>" type="video/mp4">
 			    </video>
 		    <? elseif ($image->isNotEmpty()) : ?>
 		    	<? if ($mobileImage) : ?>
