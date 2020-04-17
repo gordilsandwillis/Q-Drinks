@@ -4,7 +4,7 @@
 		<nav class="secondary">
 			<div class="container">
 				<ul>
-					<li><a href="#availability">Availability</a></li>
+					<li><a href="#top">Availability</a></li>
 					<li><a href="#find-q">Find Q Near You</a></li>
 					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#package">Package Configurations</a></li>
