@@ -13,7 +13,6 @@
 		<div class="top-image<? if ( $entrance ): ?> fancy-entrance<? endif ?><? if ( $fullHeight ): ?> full-height<? endif ?>">
 	  	<div class="bg-image cover-media">
 				<? if ($video && $video->isNotEmpty()) : ?>
-					<?= $video ?>
 					<video autoplay loop muted playsinline>
 			      <source src="<?= $page->url() . '/' . $video ?>" type="video/mp4">
 			    </video>

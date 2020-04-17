@@ -6,7 +6,7 @@
 				<ul>
 					<li><a href="#availability">Availability</a></li>
 					<li><a href="#find-q">Find Q Near You</a></li>
-					<li><a href="#top">Contact Us</a></li>
+					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#package">Package Configurations</a></li>
           <li><a href="#leadership">Leadership</a></li>
 				</ul>
@@ -42,7 +42,7 @@
 			</div>
 		</section>
 
-		<section class="white split">
+		<section id="contact" class="grey split">
 			<div class="left">
 				<div class="top-image">
 					<div class="bg-image" style="background-image: url(<?= $page->images()->find($page->headerImage())->focusCrop(1000, 1000)->url() ?>)">
