@@ -452,15 +452,19 @@ var serveVideos = function () {
     let videoTrigger = $(item).find($('.video-trigger'))
     let fullVideo = $(item).find($('.full-video'))[0]
 
-    videoTrigger.click(function() {
-      videoTrigger.addClass('playing')
-      fullVideo.src += '&autoplay=1';
-    })
+    if (videoTrigger) {
+      videoTrigger.click(function() {
+        videoTrigger.addClass('playing')
+        fullVideo.src += '&autoplay=1';
+      })
+    }
 
-    fullVideo.addEventListener('ended', function() {
-      videoTrigger.removeClass('playing')
-      fullVideo.currentTime = 0
-    })
+    if (fullVideo) {
+      fullVideo.addEventListener('ended', function() {
+        videoTrigger.removeClass('playing')
+        fullVideo.currentTime = 0
+      })
+    }
   })
 
   //   $('.video-container').click(function(){
@@ -539,13 +543,15 @@ var serveForm = function () {
   }
 
   // handle the form submission event
-  form[0].addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    var data = new FormData(form[0]);
-    ajax('POST', 'https://formspree.io/mrgzqbzb', data, success, error);
-    button.addClass('loading')
-    form.addClass('loading')
-  });
+  if (form) {
+    form[0].addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form[0]);
+      ajax('POST', 'https://formspree.io/mrgzqbzb', data, success, error);
+      button.addClass('loading')
+      form.addClass('loading')
+    });
+  }
 
   // helper function for sending an AJAX request
   function ajax(method, url, data, success, error) {
