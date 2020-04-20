@@ -4,8 +4,7 @@
 		<nav class="secondary">
 			<div class="container">
 				<ul>
-					<li><a href="#availability">Availability</a></li>
-					<li><a href="#find-q">Find Q Near You</a></li>
+					<li><a href="#top">Find Q Near You</a></li>
 					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#package">Package Configurations</a></li>
           <li><a href="#leadership">Leadership</a></li>
@@ -13,12 +12,12 @@
 			</div>
 		</nav>
 
+		<?php /*
 		<section id="availability" class="availability grey transition-in">
 			<?php snippet('section-header', ['text' => 'Availability']) ?>
 			<div class="container very-narrow align-center intro-p">
 				<?= $page->availablityIntro()->kirbytext() ?>
 			</div>
-			<?php /*
 			<div class="container narrow">
 				<div class="inline-grid center middle logos break-sm">
 					<?php foreach($page->logos()->toStructure() as $section): ?>
@@ -28,11 +27,14 @@
 					<?php endforeach ?>
 				</div>
 			</div>
-			*/ ?>
 		</section>
+		*/ ?>
 
 		<section id="find-q" class="white transition-in">
 			<?php snippet('section-header', ['text' => 'Find Q Near You']) ?>
+			<div class="container very-narrow align-center intro-p">
+				<?= $page->availablityIntro()->kirbytext() ?>
+			</div>
 			<div class="container">
 				<div class="easy-locator-wrap">
 					<!-- Begin Easy Locator Store Locator Service //-->
