@@ -11459,6 +11459,10 @@ iframe#EasyLocator {
   height: 472px !important;
 }
 
+.destini-locator-wrap iframe#destini {
+  margin-bottom: 3rem;
+}
+
 .home .text-overlay {
   color: #fff;
   width: 100%;

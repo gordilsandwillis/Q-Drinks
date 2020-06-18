@@ -3,7 +3,7 @@
   if($page->headerText()->isNotEmpty())
     $headerText = $page->headerText();
   else
-    $headerText = 'Step By Step';
+    $headerText = '';
 ?>
 
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
@@ -26,8 +26,10 @@
         </div>
       </div>
     <? endif ?>
-
-    <?php snippet('section-header', array('text' => $headerText, 'tag' => 'h1')) ?>
+    
+    <? if ( $page->headerText()->isNotEmpty() ):?>
+      <?php snippet('section-header', array('text' => $headerText, 'tag' => 'h1')) ?>
+    <? endif ?>
 
     <section class="serve-steps">
       <div class="container">
@@ -68,10 +70,8 @@
       <section class="white transition-in" <? if($page->showBottomVideo()->isNotEmpty()): ?>style="margin-bottom: 7.5%"<? endif; ?>>
         <?php snippet('section-header', ['text' => 'Find Q Near You']) ?>
         <div class="container">
-          <div class="easy-locator-wrap">
-            <!-- Begin Easy Locator Store Locator Service //-->
-            <iframe id="EasyLocator" width="780" height="530" scrolling="no" frameborder="0" src="https://www.easylocator.net/search/map3/Q Drinks 2017" allowtransparency="true"></iframe>
-            <!-- End Easy Locator Store Locator Service //-->
+          <div class="destini-locator-wrap">
+            <script src="//destinilocators.com/qmixers/site/install/?MM=panel2"></script>
           </div>
         </div>
       </section>

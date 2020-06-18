@@ -7,7 +7,7 @@
 					<li><a href="#top">Find Q Near You</a></li>
 					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#package">Package Configurations</a></li>
-          <li><a href="#leadership">Leadership</a></li>
+          <!-- <li><a href="#leadership">Leadership</a></li> -->
 				</ul>
 			</div>
 		</nav>
@@ -36,10 +36,8 @@
 				<?= $page->availablityIntro()->kirbytext() ?>
 			</div>
 			<div class="container">
-				<div class="easy-locator-wrap">
-					<!-- Begin Easy Locator Store Locator Service //-->
-					<iframe id="EasyLocator" width="780" height="530" scrolling="no" frameborder="0" src="https://www.easylocator.net/search/map3/Q Drinks 2017" allowtransparency="true"></iframe>
-					<!-- End Easy Locator Store Locator Service //-->
+				<div class="destini-locator-wrap">
+					<script src="//destinilocators.com/qmixers/site/install/?MM=panel2"></script>
 				</div>
 			</div>
 		</section>
@@ -109,7 +107,7 @@
 			</div>
 		</section>
 
-    <?php if ($page->teamMembers()->isNotEmpty()): ?>
+    <!-- <?php if ($page->teamMembers()->isNotEmpty()): ?>
   		<section id="leadership" class="white team-list">
   			<div class="container">
           <?php snippet('section-header', ['text' => 'Leadership']) ?>
@@ -120,7 +118,7 @@
   				</ul>
   			</div>
   		</section>
-    <?php endif ?>
+    <?php endif ?> -->
 
 	</main>
 

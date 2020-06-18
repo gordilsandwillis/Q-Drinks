@@ -1,23 +1,28 @@
 .easy-locator-wrap {
-	padding-bottom: $margin;
-	iframe#EasyLocator {
-		width: 100% !important;
-		@include respond($md) {
-			// height: 600px !important;
-		}
-		body {
-			border: 3px solid red;
-		}
-		input {
-			border: 2px solid red !important;
-		}
-	}
-	#container {
-		width: 100% !important;
-		background: blue !important;
-	}
+  padding-bottom: $margin;
+  iframe#EasyLocator {
+    width: 100% !important;
+    @include respond($md) {
+      // height: 600px !important;
+    }
+    body {
+      border: 3px solid red;
+    }
+    input {
+      border: 2px solid red !important;
+    }
+  }
+  #container {
+    width: 100% !important;
+    background: blue !important;
+  }
 }
 
 iframe#EasyLocator {
-	height: 472px !important;
+  height: 472px !important;
+}
+.destini-locator-wrap {
+  iframe#destini {
+    margin-bottom: 3rem;
+  }
 }
