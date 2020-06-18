@@ -7,7 +7,7 @@
 					<li><a href="#top">Find Q Near You</a></li>
 					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#package">Package Configurations</a></li>
-          <li><a href="#leadership">Leadership</a></li>
+          <!-- <li><a href="#leadership">Leadership</a></li> -->
 				</ul>
 			</div>
 		</nav>
