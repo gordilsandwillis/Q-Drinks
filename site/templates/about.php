@@ -37,7 +37,7 @@
 			</div>
 			<div class="container">
 				<div class="destini-locator-wrap">
-					<script src="http://destinilocators.com/qmixers/site/install/?MM=panel2"></script>
+					<script src="//destinilocators.com/qmixers/site/install/?MM=panel2"></script>
 				</div>
 			</div>
 		</section>
