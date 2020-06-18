@@ -3,7 +3,7 @@
   if($page->headerText()->isNotEmpty())
     $headerText = $page->headerText();
   else
-    $headerText = 'Step By Step';
+    $headerText = '';
 ?>
 
 <?php snippet('head', array('headerClass' => 'inverted')) ?>
