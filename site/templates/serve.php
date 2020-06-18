@@ -26,8 +26,10 @@
         </div>
       </div>
     <? endif ?>
-
-    <?php snippet('section-header', array('text' => $headerText, 'tag' => 'h1')) ?>
+    
+    <? if ( $page->headerText()->isNotEmpty() ):?>
+      <?php snippet('section-header', array('text' => $headerText, 'tag' => 'h1')) ?>
+    <? endif ?>
 
     <section class="serve-steps">
       <div class="container">
