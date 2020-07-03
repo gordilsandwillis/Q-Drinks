@@ -46,7 +46,7 @@ if(isset($mobileTextColor)) {
         <div class="right">
     		<a class="nav-link" href="<?= url() ?>/spectacular-serve">Spectacular Serve</a>
     		<a class="nav-link" href="<?= url() ?>/accolades">Accolades</a>
-    		<a class="nav-link" href="<?= url() ?>/about">About Us</a>
+    		<a class="nav-link no-barba" href="<?= url() ?>/about">About Us</a>
         </div>
     </div>
     </nav>

@@ -10,7 +10,7 @@
 					</a>
 				</li>
 				<li class="placeholder-li"></li>
-				<li><a href="<?= url() ?>/about" title="About Us">About Us</a></li>
+				<li><a class="no-barba" href="<?= url() ?>/about" title="About Us">About Us</a></li>
 				<li>
 					<a target="_blank" href="<? if ($site->document($site->privacypdf())) : ?><?= $site->document($site->privacypdf())->url() ?><? endif; ?>" title="Privacy Policy">
 						Privacy Policy
